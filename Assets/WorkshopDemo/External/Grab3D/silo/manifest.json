@@ -1,0 +1,55 @@
+{
+ "slug": "silo",
+ "triangles": 29372,
+ "texture_px": 2048,
+ "triangles_light": 14686,
+ "texture_px_light": 1024,
+ "files": {
+  "glb": {
+   "name": "silo.glb",
+   "bytes": 1958536
+  },
+  "blend": {
+   "name": "silo.blend",
+   "bytes": 1764758
+  },
+  "fbx": {
+   "name": "silo.fbx",
+   "bytes": 3369868
+  },
+  "obj": {
+   "name": "silo-obj.zip",
+   "bytes": 1937961
+  },
+  "usdz": {
+   "name": "silo.usdz",
+   "bytes": 3099318
+  },
+  "glb_light": {
+   "name": "silo-light.glb",
+   "bytes": 1025292
+  },
+  "fbx_light": {
+   "name": "silo-light.fbx",
+   "bytes": 1767772
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "5.161 x 4.736 x 12.230",
+  "triangles": 29372,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-10-19",
+  "real_size": "industrial bulk storage silo, 4 m diameter, approx. 12 m tall",
+  "notes": "light grey steel shell with dark stiffening rings on a conical hopper bottom with slide gate, yellow handwheel and outlet spout; teal cone roof with manhole, vent filter, level sensor and yellow roof railing; six teal support legs with cross bracing on concrete footings, yellow and dark warning stripes at the leg feet; yellow caged access ladder; white side fill pipe with flanges, clamps and capped inlet; soft baked patina on edges; front = -Y; no moving parts; no text, no numbers",
+  "set": "Cozy Industrial & Factory Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

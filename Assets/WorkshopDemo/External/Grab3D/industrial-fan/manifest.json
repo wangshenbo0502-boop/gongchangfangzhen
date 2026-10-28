@@ -1,0 +1,47 @@
+{
+ "slug": "industrial-fan",
+ "triangles": 18692,
+ "texture_px": 2048,
+ "triangles_light": null,
+ "texture_px_light": null,
+ "files": {
+  "glb": {
+   "name": "industrial-fan.glb",
+   "bytes": 1564300
+  },
+  "blend": {
+   "name": "industrial-fan.blend",
+   "bytes": 1356777
+  },
+  "fbx": {
+   "name": "industrial-fan.fbx",
+   "bytes": 2859580
+  },
+  "obj": {
+   "name": "industrial-fan-obj.zip",
+   "bytes": 1676136
+  },
+  "usdz": {
+   "name": "industrial-fan.usdz",
+   "bytes": 2650851
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "2.319 x 1.131 x 2.129",
+  "triangles": 18692,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-10-19",
+  "real_size": "industrial drum fan, rotor diameter 1.5 m, approx. 2.2 x 0.9 x 2.1 m",
+  "notes": "teal square housing with round air tunnel, rolled lips and rivets, steel safety grilles front and back, five broad yellow blades with hub, dark motor with cooling fins on four struts, steel stand with tilt joints and yellow clamp knobs, skids with rubber feet, hazard striped cross beam, yellow switch box with speed knob and glowing indicator lamp, cable and carry handle. Moving part: 'rotor' (blades and hub) spins about the Y axis, pivot on the axis. Front = -Y. No text, no logo",
+  "set": "Cozy Industrial & Factory Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

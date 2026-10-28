@@ -1,0 +1,47 @@
+{
+ "slug": "water-pump",
+ "triangles": 10844,
+ "texture_px": 2048,
+ "triangles_light": null,
+ "texture_px_light": null,
+ "files": {
+  "glb": {
+   "name": "water-pump.glb",
+   "bytes": 891580
+  },
+  "blend": {
+   "name": "water-pump.blend",
+   "bytes": 801575
+  },
+  "fbx": {
+   "name": "water-pump.fbx",
+   "bytes": 1535292
+  },
+  "obj": {
+   "name": "water-pump-obj.zip",
+   "bytes": 887824
+  },
+  "usdz": {
+   "name": "water-pump.usdz",
+   "bytes": 1439186
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "1.210 x 0.505 x 0.877",
+  "triangles": 10844,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-10-19",
+  "real_size": "electric centrifugal water pump on base frame, 1.2 m long, approx. 0.85 m tall",
+  "notes": "end suction pump: teal electric motor with cooling fins, fan cowl with grille, terminal box and lifting eye; yellow coupling guard; steel bearing bracket and spiral volute casing with axial suction nozzle (+X) and vertical discharge nozzle, both flanged with hex nuts; pressure gauge with tick scale and no numbers on the discharge side; dark base frame with anchor nuts; shaft axis along X at 0.40 m; front = -Y; no moving parts; no text",
+  "set": "Cozy Industrial & Factory Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

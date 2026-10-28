@@ -1,0 +1,46 @@
+# Unity-generated caches and local editor state
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/MemoryCaptures/
+/Recordings/
+
+# Original downloads and resumable archive fragments are not runtime assets
+/Downloads/
+
+# IDE-generated files
+/.vs/
+/.idea/
+/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+*.pdb
+*.mdb
+*.tmp
+*.log
+
+# Machine-specific bridge state, commands and desktop capture
+/Evidence/editor-command.txt
+/Evidence/editor-state.txt
+/Evidence/extraction-lock.txt
+/Evidence/editor-desktop.png
+
+# Local credentials and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini

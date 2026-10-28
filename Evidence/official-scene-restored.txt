@@ -1,0 +1,3 @@
+Restored 2026-10-28T15:14:45
+Scene: Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Official models, materials, textures and layout preserved.

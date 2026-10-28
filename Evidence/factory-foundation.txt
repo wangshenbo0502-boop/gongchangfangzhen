@@ -1,0 +1,4 @@
+Existing official Factory Training scene copied with its original asset references.
+Source: Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Working copy: Assets/WorkshopDemo/Scenes/FactoryFoundation.unity
+Monitoring and inspection integration remains separate work.

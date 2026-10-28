@@ -1,0 +1,6 @@
+Started 2026-10-28T15:34:13
+PASS Outline resolves to layer 8; renderer mask is 256.
+PASS 16 real training parts highlighted/restored three times each.
+Runtime errors: 0
+PASS startup, repeated highlighting, 18-second runtime and stop. Scene unchanged.
+COMPLETE

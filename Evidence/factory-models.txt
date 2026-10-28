@@ -1,0 +1,8 @@
+Assets/WorkshopDemo/External/Barrel_02/Barrel_02.fbx
+Assets/WorkshopDemo/External/Grab3D/electrical-cabinet/electrical-cabinet.fbx
+Assets/WorkshopDemo/External/Grab3D/industrial-fan/industrial-fan.fbx
+Assets/WorkshopDemo/External/Grab3D/silo/silo.fbx
+Assets/WorkshopDemo/External/Grab3D/water-pump/water-pump.fbx
+Assets/WorkshopDemo/External/industrial_storage_cart/industrial_storage_cart.fbx
+Assets/WorkshopDemo/External/metal_tool_chest/metal_tool_chest.fbx
+Assets/WorkshopDemo/External/modular_industrial_pipes_01/modular_industrial_pipes_01.fbx

@@ -1,0 +1,47 @@
+{
+ "slug": "electrical-cabinet",
+ "triangles": 11036,
+ "texture_px": 2048,
+ "triangles_light": null,
+ "texture_px_light": null,
+ "files": {
+  "glb": {
+   "name": "electrical-cabinet.glb",
+   "bytes": 1775672
+  },
+  "blend": {
+   "name": "electrical-cabinet.blend",
+   "bytes": 1065568
+  },
+  "fbx": {
+   "name": "electrical-cabinet.fbx",
+   "bytes": 2550140
+  },
+  "obj": {
+   "name": "electrical-cabinet-obj.zip",
+   "bytes": 1327440
+  },
+  "usdz": {
+   "name": "electrical-cabinet.usdz",
+   "bytes": 2614067
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "1.240 x 0.611 x 2.064",
+  "triangles": 11036,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-10-19",
+  "real_size": "industrial electrical switch cabinet, 1.2 m wide, 0.5 m deep, 2.0 m tall",
+  "notes": "two door leaves are separate objects (door_left, door_right) with their origin on the hinge axis: rotate around local Z, door_left opens with a negative angle, door_right with a positive angle (up to about 110 degrees); the three indicator lamps on the left door glow (emissive) and are parented to it; inside: cream mounting plate with three rows of circuit breakers, cable ducts and terminal strip; plinth with yellow and dark hazard stripes; front = -Y; no text, no symbols",
+  "set": "Cozy Industrial & Factory Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}

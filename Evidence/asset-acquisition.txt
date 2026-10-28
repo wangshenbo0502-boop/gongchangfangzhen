@@ -1,0 +1,4 @@
+Factory Training (344832), official Unity package service.
+Editor login available: True
+https://packages.unity.com/-/api/product/344832: HTTP 200
+https://packages.unity.com/-/api/legacy-package-download-info/344832: HTTP 401

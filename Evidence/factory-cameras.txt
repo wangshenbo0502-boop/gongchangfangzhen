@@ -1,0 +1,2 @@
+Main Camera enabled=True position=(5.85, 3.21, -3.68) rotation=(17.91, 311.20, 0.00) near=0.3 far=1000
+CameraRT enabled=True position=(-4.83, 5.23, 4.92) rotation=(24.61, 0.00, 0.00) near=0.3 far=1000

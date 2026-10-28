@@ -1,0 +1,3 @@
+Scene: Assets/WorkshopDemo/Scenes/FactoryFoundation.unity
+Root objects: 15
+Missing MonoBehaviour scripts: 0
