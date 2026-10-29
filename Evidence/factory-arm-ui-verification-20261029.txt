@@ -1,0 +1,30 @@
+Time=2026-10-29T20:30:52.6503759+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; slider 0/50/100%; visible sprite bounds; GPU screenshots.
+Scope=Arm UI at 1920x1080 and 1280x720. Other training flows and Windows player are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+PASS Render size 1920x1080
+PASS Arm diagram inside panel and below slider at 0
+PASS Visible arm centered and enlarged at 0
+PASS Compact slider handle at 0
+PASS Arm percentage at 0
+BOUNDS value=0 visible=Center: (178.35, -144.35, 0.00), Extents: (111.65, 40.25, 0.00) slider=Center: (180.00, -73.00, 0.00), Extents: (152.00, 16.00, 0.00)
+SCREENSHOT Evidence/factory-ui-arm-0-2260-20261029.png
+PASS Arm diagram inside panel and below slider at 0.5
+PASS Visible arm centered and enlarged at 0.5
+PASS Compact slider handle at 0.5
+PASS Arm percentage at 0.5
+BOUNDS value=0.5 visible=Center: (178.35, -144.35, 0.00), Extents: (111.65, 40.25, 0.00) slider=Center: (180.00, -73.00, 0.00), Extents: (152.00, 16.00, 0.00)
+SCREENSHOT Evidence/factory-ui-arm-50-2260-20261029.png
+PASS Arm diagram inside panel and below slider at 1
+PASS Visible arm centered and enlarged at 1
+PASS Compact slider handle at 1
+PASS Arm percentage at 1
+BOUNDS value=1 visible=Center: (181.85, -144.35, 0.00), Extents: (115.15, 40.25, 0.00) slider=Center: (180.00, -73.00, 0.00), Extents: (152.00, 16.00, 0.00)
+SCREENSHOT Evidence/factory-ui-arm-100-1920-20261029.png
+FAIL System.InvalidOperationException: Render size 1280x720
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:523 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__16.MoveNext () [0x0022a] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:134 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x00086] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:101 
+Result=FAILED
+End=2026-10-29T20:31:04.1520141+08:00

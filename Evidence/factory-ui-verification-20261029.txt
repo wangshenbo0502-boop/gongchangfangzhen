@@ -1,0 +1,34 @@
+Time=2026-10-29T20:18:10.9429441+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; queued keyboard input, button and training events; GPU screenshots.
+Scope=Training UI only. Mouse dragging and Windows player are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+PASS 1920x1080 render size (actual 1920x1080)
+PASS Navigation 组装
+PASS Navigation 使用
+PASS Navigation 远景
+PASS Navigation 近景
+PASS Equipment yellow selection with dark text
+PASS Sliced rounded button surface
+PASS Corner shortcut buttons removed
+PASS Keyboard available
+PASS H hides all canvases and blocks UI raycasts
+PASS A toggles audio while UI is hidden
+PASS Holding A does not retrigger audio
+PASS A does not steer robots
+PASS A restores audio
+PASS H restores prior canvas and raycaster states
+PASS Holding H does not retrigger visibility
+FAIL System.InvalidOperationException: Arrow keys control robots
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:444 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<CheckShortcuts>d__16.MoveNext () [0x004cf] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:366 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__13.MoveNext () [0x00342] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:132 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x00086] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:91 
+RUNTIME ERROR The file could not be read: Could not find file "D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\FactoryUIVerification.json"
+UnityEngine.Debug:LogError (object)
+ImmersiveTraining.Management.JsonFileUtility:ReadJsonFromFile<ImmersiveTraining.Management.TimeDataCollection> (string) (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/JsonFileUtility.cs:72)
+ImmersiveTraining.Management.TimeManager:WriteTimeLogToConsole (string) (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/TimeManager.cs:238)
+ImmersiveTraining.Management.TimeManager:OnDisable () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/TimeManager.cs:49)
+
+Result=FAILED
+End=2026-10-29T20:18:22.5849087+08:00

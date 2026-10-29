@@ -1,0 +1,218 @@
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity Playing=False
+CANVAS ImmersiveTraining/immersiveTraining_screen_prefab/immersiveTraining_screen/immersiveTraining_GRP_screen_GRP/Canvas WorldSpace
+Canvas active=True
+  Button active=True BUTTON
+    Text (TMP) active=True TMP=演示装配
+CANVAS ImmersiveTraining/ModalCanvas ScreenSpaceOverlay
+ModalCanvas active=True
+  ModalPanel active=False
+    Image active=False
+    Text (TMP) active=True TMP=工序完成
+    Button active=True BUTTON
+      Text (TMP) active=False TMP=OK
+      UI_Label active=True TMP=继续
+CANVAS ImmersiveTraining/FullscreenPanel ScreenSpaceOverlay
+FullscreenPanel active=True
+  Instruction active=False
+    Text (TMP) active=False TMP=1.Attach the front bumper to the main frame\n\n2.Plug the cables to the back of the main frame\n\n3.Place the frame cove on top of the main frame\n\n4.Place the bridge mount on top of the frame, at the end of the main body\n\n5.Put the cable housing at the base of the bridge mount, at the upper side where cables are linked\n\n6.Take the robot arm chassis, slide it into the cutout of the bridge mount\n\n7.Find the chassis support, a rectangular frame with four rod, attach it to the front opening of the arm chassis\n\n8.Take the motor battery, attach it at the rear side of the arm chassis by the side\n\n9.Take the outer arm tube and put it inside the chassis support\n\n10.Take the inner arm tube, attach it inside the outer arm tube\n\n11.Take the claw and attach it to the front of the arm chassis\n\n12.Take two of the gliders and place them on top of the main body\n\n13.Take the two glider wheels and attach them to the front side of the gliders vertically
+    Panel active=False
+      Image active=True
+        Text (TMP) active=True TMP=01
+          step_text active=True TMP=Attach the front bumper to the main frame
+      Image (1) active=True
+        Text (TMP) active=True TMP=02
+          step_text active=True TMP=Plug the cables to the back of the main frame
+      Image (2) active=True
+        Text (TMP) active=True TMP=03
+          step_text active=True TMP=Place the frame cover on top of the main frame
+      Image (3) active=True
+        Text (TMP) active=True TMP=04
+          step_text active=True TMP=Place the bridge mount on top of the frame, at the end of the main body
+      Image (4) active=True
+        Text (TMP) active=True TMP=05
+          step_text active=True TMP=Put the cable housing at the base of the bridge mount, at the upper side where cables are linked
+      Image (5) active=True
+        Text (TMP) active=True TMP=06
+          step_text active=True TMP=Take the robot arm chassis, slide it into the cutout of the bridge mount
+      Image (6) active=True
+        Text (TMP) active=True TMP=07
+          step_text active=True TMP=Find the chassis support, a rectangular frame with four rod, attach it to the front opening of the arm chassis
+      Image (7) active=True
+        Text (TMP) active=True TMP=08
+          step_text active=True TMP=Take the motor battery, attach it at the rear side of the arm chassis by the side
+      Image (8) active=True
+        Text (TMP) active=True TMP=09
+          step_text active=True TMP=Take the outer arm tube and put it inside the chassis support
+      Image (9) active=True
+        Text (TMP) active=True TMP=10
+          step_text active=True TMP=Take the inner arm tube, attach it inside the outer arm tube
+      Image (10) active=True
+        Text (TMP) active=True TMP=11
+          step_text active=True TMP=Take the claw and attach it inside the chassis assembly
+      Image (11) active=True
+        Text (TMP) active=True TMP=12
+          step_text active=True TMP=Take two of the gliders and place them on top of the main body
+      Image (12) active=True
+        Text (TMP) active=True TMP=13
+          step_text active=True TMP=Take the two glider wheels and attach them to the front side of the gliders vertically\n
+    UI_Content active=True
+      Title active=True TMP=组装工序
+      Close active=True BUTTON
+        UI_Label active=True TMP=×
+      Step0 active=True
+        Number active=True TMP=01
+        Instruction active=True TMP=将前保险杠安装到主机架前端。
+      Step1 active=True
+        Number active=True TMP=02
+        Instruction active=True TMP=将线缆连接到主机架后部。
+      Step2 active=True
+        Number active=True TMP=03
+        Instruction active=True TMP=将机身盖板安装到主机架上方。
+      Step3 active=True
+        Number active=True TMP=04
+        Instruction active=True TMP=将桥架底座安装到主机架后端。
+      Step4 active=True
+        Number active=True TMP=05
+        Instruction active=True TMP=将线缆护罩安装到底座上方的线缆接口处。
+      Step5 active=True
+        Number active=True TMP=06
+        Instruction active=True TMP=将机械臂底架滑入桥架底座的槽口。
+      Step6 active=True
+        Number active=True TMP=07
+        Instruction active=True TMP=将支撑框安装到机械臂底架的前端开口。
+      Step7 active=True
+        Number active=True TMP=08
+        Instruction active=True TMP=将驱动电机安装到机械臂底架后部。
+      Step8 active=True
+        Number active=True TMP=09
+        Instruction active=True TMP=将外伸缩臂插入支撑框。
+      Step9 active=True
+        Number active=True TMP=10
+        Instruction active=True TMP=将内伸缩臂装入外伸缩臂。
+      Step10 active=True
+        Number active=True TMP=11
+        Instruction active=True TMP=将夹爪组件安装到机械臂前端。
+      Step11 active=True
+        Number active=True TMP=12
+        Instruction active=True TMP=将左右滑轨安装到机身上方。
+      Step12 active=True
+        Number active=True TMP=13
+        Instruction active=True TMP=将左右滑轮竖直安装到滑轨前端。
+  TimesUpPanel active=False
+    UI_Surface active=True
+    Text (TMP) active=True TMP=本轮操作超时
+    Text (TMP) (1) active=True TMP=考核已结束，请返回引导装配重新开始。
+    Image active=False
+    TrainingButton active=True BUTTON
+      Text (TMP) active=False TMP=TRAINING MODE
+      UI_Label active=True TMP=返回引导装配
+  FinishPanel active=False
+    UI_Surface active=True
+    Text (TMP)  active=True TMP=组装完成
+    FinalTimeText active=True TMP=装配总用时   0 秒
+    StepsTimePanel active=True
+      Text (TMP) (1) active=True TMP=01   前保险杠    未记录
+      Text (TMP) (2) active=True TMP=02   后部线缆    未记录
+      Text (TMP) (3) active=True TMP=03   机身盖板    未记录
+      Text (TMP) (4) active=True TMP=04   桥架底座    未记录
+      Text (TMP) (5) active=True TMP=05   线缆护罩    未记录
+      Text (TMP) (6) active=True TMP=06   机械臂底架    未记录
+      Text (TMP) (7) active=True TMP=07   底架支撑框    未记录
+      Text (TMP) (8) active=True TMP=08   驱动电机    未记录
+      Text (TMP) (9) active=True TMP=09   外伸缩臂    未记录
+      Text (TMP) (10) active=True TMP=10   内伸缩臂    未记录
+      Text (TMP) (11) active=True TMP=11   夹爪组件    未记录
+      Text (TMP) (12) active=True TMP=12   左侧滑轨    未记录
+      Text (TMP) (13) active=True TMP=13   右侧滑轨    未记录
+      Text (TMP) (14) active=True TMP=14   左侧滑轮    未记录
+      Text (TMP) (15) active=True TMP=15   右侧滑轮    未记录
+    Image active=False
+    Button active=True BUTTON
+      Text (TMP) active=False TMP=TEST ME
+      UI_Label active=True TMP=重新装配
+CANVAS Canvas ScreenSpaceOverlay
+Canvas active=True
+  TopLeftPanel active=True
+    Text_Cameras active=True TMP=工业车间 · 设备实训
+    cam01_BTN active=True BUTTON
+      Text (TMP) active=False TMP=
+      UI_Label active=True TMP=组装
+    cam02_BTN active=True BUTTON
+      Text (TMP) active=False TMP=
+      UI_Label active=True TMP=使用
+    cam03_BTN active=True BUTTON
+      Text (TMP) active=False TMP=
+      UI_Label active=True TMP=远景
+    cam04_BTN active=True BUTTON
+      Text (TMP) active=False TMP=
+      UI_Label active=True TMP=近景
+    subMenu active=True
+      subMenu_01 active=True
+        Panel_02 active=False
+        startStopBTN active=True BUTTON
+          Text (TMP) active=False TMP=Start
+          Text (Legacy) active=False TEXT=AUTO MODE ON
+          UI_Label active=True TMP=启动自动运行
+        key_W active=True
+          Image active=False
+          Text (TMP) active=True TMP=↑
+        key_A active=True
+          Image active=False
+          Text (TMP) active=True TMP=←
+        key_S active=True
+          Image active=False
+          Text (TMP) active=True TMP=↓
+        key_D active=True
+          Image active=False
+          Text (TMP) active=True TMP=→
+        GameObject active=False
+        UI_DriveTitle active=True TMP=底盘运行
+        UI_KeyCaption0 active=True TMP=前进
+        UI_KeyCaption1 active=True TMP=左转
+        UI_KeyCaption2 active=True TMP=后退
+        UI_KeyCaption3 active=True TMP=右转
+      subMenu_02 active=True
+        Panel_03 active=False
+        Text_ArmController active=True TMP=机械臂伸缩
+        slider_Translate active=True
+          Background active=True
+          Fill Area active=True
+            Fill active=True
+          Handle Slide Area active=True
+            Handle active=True
+          GameObject active=False
+        motoIcon active=True
+          motto_01 active=True
+          motto_02 active=True
+            motto_03 active=True
+        UI_ArmValue active=True TMP=0%
+      UI_Divider active=True
+    trainingSubMenu active=True
+      subMenu_01 active=True
+        Panel_02 active=False
+        TrainingModeButton active=True BUTTON
+          Text (TMP) active=False TMP=Start
+          Text (Legacy) active=False TEXT=TRAINING MODE
+          UI_Label active=True TMP=切换考核
+        Timer active=True
+          Image active=False
+          TimeText active=True TMP=0:00
+          UI_GuidedTime active=True TMP=不限时
+        line active=False
+        info_btn active=True BUTTON
+          Text (TMP) active=False TMP=i
+          UI_Label active=True TMP=工序清单
+        UI_Mode active=True TMP=引导装配
+        UI_Step active=True TMP=当前工序   1 / 15
+        UI_TimerCaption active=True TMP=步骤剩余时间
+        UI_Reset active=True BUTTON
+          UI_Label active=True TMP=重置装配
+    low_BTN active=False BUTTON
+      Text (TMP) active=True TMP=
+    medium_BTN active=False BUTTON
+      Text (TMP) active=True TMP=
+    high_BTN active=False BUTTON
+      Text (TMP) active=True TMP=
+    UI_Accent active=True
+TOGGLE Canvas/TopLeftPanel/trainingSubMenu/subMenu_01/info_btn => ImmersiveTraining/FullscreenPanel/Instruction
+MODE OBJECTS ImmersiveTraining/immersiveTraining_screen_prefab, ImmersiveTraining/CameraRT, ImmersiveTraining/assembly_instruction Variant

@@ -9,6 +9,7 @@ namespace DistributionCenter
         public float rotationSpeed = 90f;
         public float moveSpeed = 3.5f;
         public float controlTimeout = 5f;
+        public bool useArrowKeys;
 
         [Header("Audio Controls")]
         public AudioSource moveAudio;
@@ -47,15 +48,16 @@ namespace DistributionCenter
 
         void Update()
         {
-            if (agent == null || !agent.enabled) return;
+            var keyboard = Keyboard.current;
+            if (agent == null || !agent.enabled || keyboard == null) return;
 
             float forward = 0f;
             float rotate = 0f;
 
-            bool w = Keyboard.current.wKey.isPressed;
-            bool s = Keyboard.current.sKey.isPressed;
-            bool a = Keyboard.current.aKey.isPressed;
-            bool d = Keyboard.current.dKey.isPressed;
+            bool w = (useArrowKeys ? keyboard.upArrowKey : keyboard.wKey).isPressed;
+            bool s = (useArrowKeys ? keyboard.downArrowKey : keyboard.sKey).isPressed;
+            bool a = (useArrowKeys ? keyboard.leftArrowKey : keyboard.aKey).isPressed;
+            bool d = (useArrowKeys ? keyboard.rightArrowKey : keyboard.dKey).isPressed;
 
             if (w) forward = 1f;
             if (s) forward = -1f;

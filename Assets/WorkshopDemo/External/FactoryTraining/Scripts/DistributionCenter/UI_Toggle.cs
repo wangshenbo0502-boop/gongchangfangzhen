@@ -13,14 +13,7 @@ namespace DistributionCenter
 
         void Start()
         {
-            isEnabled = startEnabled;
-
-            if (objectsToToggle != null)
-            {
-                foreach (var obj in objectsToToggle)
-                    if (obj != null)
-                        obj.SetActive(isEnabled);
-            }
+            SetVisible(startEnabled);
 
             if (toggleButton != null)
                 toggleButton.onClick.AddListener(ToggleObjects);
@@ -28,8 +21,13 @@ namespace DistributionCenter
 
         public void ToggleObjects()
         {
-            isEnabled = !isEnabled;
+            SetVisible(!isEnabled);
+        }
 
+        public void SetVisible(bool visible)
+        {
+            isEnabled = visible;
+            if (objectsToToggle == null) return;
             foreach (var obj in objectsToToggle)
                 if (obj != null)
                     obj.SetActive(isEnabled);

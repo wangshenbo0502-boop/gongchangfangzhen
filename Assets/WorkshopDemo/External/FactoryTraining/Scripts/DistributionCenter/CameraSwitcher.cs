@@ -47,7 +47,8 @@ namespace DistributionCenter
                 for (int i = 0; i < cameras.Length; i++)
                 {
                     cameras[i].SetActive(i == index);
-                    switchButtons[i].GetComponent<Image>().color = (i == index) ? Color.black : Color.white;
+                    switchButtons[i].GetComponent<Image>().color = (i == index)
+                        ? WorkshopDemo.FactoryTrainingUI.Accent : WorkshopDemo.FactoryTrainingUI.Raised;
                 }
 
                 if (subMenu != null)

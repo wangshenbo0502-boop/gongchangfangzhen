@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using ImmersiveTraining.Management;
 using TMPro;
@@ -36,15 +35,23 @@ namespace ImmersiveTraining.TrainingInteractions
             if (_timeManager != null)
             {
                 int totalTime = _timeManager.GetTotalTime();
-                _finalTimeText.text = $"You finished the assembly in: {totalTime} seconds!";
+                _finalTimeText.text = $"装配总用时   {totalTime} 秒";
 
                 List<TimeData> timeDataList = _timeManager.StepTimeLog;
-
-            
+                var states = FindFirstObjectByType<StateManager_Training>().GetTrainingStates();
                 for (int i = 0; i < _stepTimeTextList.Count; i++)
                 {
-                    TimeData currentTimeData = timeDataList[i + 1]; //start at 1 to skip the total time entry at 0
-                    _stepTimeTextList[i].text = currentTimeData.StepName.Substring(currentTimeData.StepName.IndexOf("Step", StringComparison.Ordinal)) + " : " + currentTimeData.TimeInSeconds + " seconds";
+                    int seconds = 0;
+                    bool recorded = false;
+                    foreach (var entry in timeDataList)
+                        if (i < states.Count && entry.StepName == states[i].StateName)
+                        {
+                            seconds += entry.TimeInSeconds;
+                            recorded = true;
+                        }
+                    string duration = recorded ? $"{seconds} 秒" : "未记录";
+                    _stepTimeTextList[i].text =
+                        $"{i + 1:00}   {WorkshopDemo.FactoryTrainingUI.StepTitle(i)}    {duration}";
                 }
             }
         }

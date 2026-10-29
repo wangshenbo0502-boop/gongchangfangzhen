@@ -33,6 +33,11 @@ namespace WorkshopDemo.Editor
             if (command == "import-factory") FactoryTrainingImport.Import();
             if (command == "inventory-factory") FactoryTrainingImport.Inventory();
             if (command == "capture-factory") FactoryTrainingImport.CaptureScene();
+            if (command == "inspect-factory-ui") FactoryTrainingUIEditor.Inspect();
+            if (command == "apply-factory-ui") FactoryTrainingUIEditor.Apply();
+            if (command == "verify-factory-ui") FactoryTrainingUIValidation.Begin();
+            if (command == "verify-factory-arm-ui") FactoryTrainingUIValidation.BeginArmLayout();
+            if (command == "refresh-assets") AssetDatabase.Refresh();
             if (command == "prepare-foundation") FactoryTrainingImport.CreateFoundation();
             if (command == "begin-extract")
             {

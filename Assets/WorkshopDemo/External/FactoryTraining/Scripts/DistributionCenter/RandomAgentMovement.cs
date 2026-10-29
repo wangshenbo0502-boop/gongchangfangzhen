@@ -34,10 +34,7 @@ namespace DistributionCenter
         private Dictionary<NavMeshAgent, Coroutine> movementCoroutines = new Dictionary<NavMeshAgent, Coroutine>();
 
         private bool isAgent0Running = false;
-        private Coroutine animateColorRoutine;
-
-        private Color colorA = new Color32(0x16, 0xB5, 0x53, 0xFF);
-        private Color colorB = new Color32(0xFF, 0x00, 0x00, 0xFF);
+        public bool IsAutoRunning => isAgent0Running;
 
         void Start()
         {
@@ -167,15 +164,10 @@ namespace DistributionCenter
                     movementCoroutines[agent] = null;
                 }
 
-                if (animateColorRoutine != null)
-                    StopCoroutine(animateColorRoutine);
             }
             else
             {
                 AssignRandomTarget(agent, 0);
-                if (animateColorRoutine != null)
-                    StopCoroutine(animateColorRoutine);
-                animateColorRoutine = StartCoroutine(AnimateButtonColor());
             }
 
             UpdateButtonUI();
@@ -184,36 +176,16 @@ namespace DistributionCenter
         void UpdateButtonUI()
         {
             if (startStopBTNText != null)
-                startStopBTNText.text = isAgent0Running ? "AUTO MODE ON" : "AUTO MODE ON";
+                startStopBTNText.text = isAgent0Running ? "停止自动运行" : "启动自动运行";
 
-            if (!isAgent0Running)
+            if (startStopBTN != null)
             {
                 ColorBlock cb = startStopBTN.colors;
-                cb.normalColor = colorA;
-                cb.highlightedColor = colorA;
-                cb.pressedColor = colorA;
-                cb.selectedColor = colorA;
+                cb.normalColor = Color.white;
+                cb.highlightedColor = new Color32(255, 244, 211, 255);
+                cb.pressedColor = new Color32(205, 192, 153, 255);
+                cb.selectedColor = Color.white;
                 startStopBTN.colors = cb;
-            }
-        }
-
-        IEnumerator AnimateButtonColor()
-        {
-            float t = 0f;
-            while (true)
-            {
-                t += Time.deltaTime;
-                float lerp = (Mathf.Sin(t * buttonAnimSpeed) + 1f) / 2f;
-                Color lerpedColor = Color.Lerp(colorA, colorB, lerp);
-
-                ColorBlock cb = startStopBTN.colors;
-                cb.normalColor = lerpedColor;
-                cb.highlightedColor = lerpedColor;
-                cb.pressedColor = lerpedColor;
-                cb.selectedColor = lerpedColor;
-                startStopBTN.colors = cb;
-
-                yield return null;
             }
         }
     }
