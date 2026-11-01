@@ -134,6 +134,20 @@ namespace WorkshopDemo
                 Capture("equipment-" + id);
             }
 
+            var canvas = FindFirstObjectByType<WorkshopUI>().GetComponent<Canvas>();
+            var raycaster = canvas.GetComponent<GraphicRaycaster>();
+            InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.H));
+            yield return null;
+            Require(!canvas.enabled && !raycaster.enabled, "H hides UI and disables UI raycasts");
+            InputSystem.QueueStateEvent(keyboard, new KeyboardState());
+            yield return null;
+            InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.H));
+            yield return null;
+            Require(canvas.enabled && raycaster.enabled, "H restores UI and raycasts");
+            InputSystem.QueueStateEvent(keyboard, new KeyboardState());
+            yield return null;
+            Canvas.ForceUpdateCanvases();
+
             var inspector = simulation.inspector;
             foreach (var step in Click(Button("手动驾驶"))) yield return step;
             Require(inspector.ManualControl, "Mouse enables manual driving");

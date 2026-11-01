@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
@@ -31,20 +32,22 @@ namespace WorkshopDemo
         Button faultButton, dispatchButton, resolveButton, operationButton, alarmTab, recordTab;
         Button autoButton, manualButton, followButton;
         RectTransform eventContent, viewport, tableHeader;
+        Canvas canvas;
+        GraphicRaycaster raycaster;
         Toggle roofToggle;
-        bool showRecords;
+        bool showRecords, uiVisible = true;
         int eventSignature = -1, lastWidth, lastHeight;
         const float Left = 214, Right = 242, Header = 52, Bottom = 184;
 
         void Awake()
         {
-            var canvas = gameObject.AddComponent<Canvas>();
+            canvas = gameObject.AddComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             var scaler = gameObject.AddComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1440, 900);
             scaler.matchWidthOrHeight = .5f;
-            gameObject.AddComponent<GraphicRaycaster>();
+            raycaster = gameObject.AddComponent<GraphicRaycaster>();
             if (!EventSystem.current)
             {
                 var events = new GameObject("Workshop Event System", typeof(EventSystem), typeof(InputSystemUIInputModule));
@@ -60,6 +63,17 @@ namespace WorkshopDemo
         }
 
         void Start() { Refresh(); }
+
+        void Update()
+        {
+            var keyboard = Keyboard.current;
+            if (keyboard != null && keyboard.hKey.wasPressedThisFrame)
+            {
+                uiVisible = !uiVisible;
+                canvas.enabled = uiVisible;
+                raycaster.enabled = uiVisible;
+            }
+        }
 
         void OnDisable()
         {
