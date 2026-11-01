@@ -1,0 +1,55 @@
+Time=2026-11-01T14:38:08.7812580+08:00
+Unity=6000.3.8f1
+Method=Queued Input System mouse/keyboard events, UI raycasts, business assertions, actual navigation and GPU captures.
+Scene=Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Resolution=2560x1600
+PASS Eight devices running
+PASS One EventSystem
+PASS Animation references
+PASS Conveyor and fan animate
+PASS Complete path CV-01
+PASS Mouse selects CV-01
+PASS Complete path M-01
+PASS Mouse selects M-01
+PASS Complete path P-01
+PASS Mouse selects P-01
+PASS Complete path P-02
+PASS Mouse selects P-02
+PASS Complete path TK-01
+PASS Mouse selects TK-01
+PASS Complete path TK-02
+PASS Mouse selects TK-02
+PASS Complete path F-01
+PASS Mouse selects F-01
+PASS Complete path PLC-01
+PASS Mouse selects PLC-01
+PASS Mouse stops selected device
+PASS Mouse starts selected device
+PASS Text fits and camera viewport usable
+PASS Nonblank camera capture overview
+SCREENSHOT overview.png
+PASS Nonblank camera capture equipment-CV-01
+SCREENSHOT equipment-CV-01.png
+PASS Nonblank camera capture equipment-M-01
+SCREENSHOT equipment-M-01.png
+PASS Nonblank camera capture equipment-P-01
+SCREENSHOT equipment-P-01.png
+PASS Nonblank camera capture equipment-P-02
+SCREENSHOT equipment-P-02.png
+PASS Nonblank camera capture equipment-TK-01
+SCREENSHOT equipment-TK-01.png
+PASS Nonblank camera capture equipment-TK-02
+SCREENSHOT equipment-TK-02.png
+PASS Nonblank camera capture equipment-F-01
+SCREENSHOT equipment-F-01.png
+PASS Nonblank camera capture equipment-PLC-01
+SCREENSHOT equipment-PLC-01.png
+PASS Mouse enables manual driving
+PASS Up arrow physically drives forward
+PASS Down arrow physically reverses
+PASS Right arrow turns robot
+PASS Left arrow turns robot
+PASS Mouse returns to automatic mode
+PASS Text fits and camera viewport usable
+PASS No runtime errors
+COMPLETE

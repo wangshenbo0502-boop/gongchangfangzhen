@@ -7,8 +7,8 @@
 - Unity `6000.3.8f1`，URP、新 Input System；配置以工程文件为准，沿用现有环境。
 - 当前默认构建入口为 `Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity`（官方训练样例）。
 - 自研监控巡检场景为 `Assets/WorkshopDemo/Scenes/WorkshopDemo.unity`，核心源码位于 `Assets/WorkshopDemo/Scripts/`。
-- 历史 Demo 越界失败保存在 `Evidence/runtime-verification-before-20261101.txt`；本分支 `Evidence/runtime-verification.txt` 为 11 月 1 日 Editor 业务通过记录。EXE 验收尚未完整通过，细节见交接文档本次更新；官方高亮验证不能替代自研业务验收。
-- `WorkshopFoundationBuilder.Build()` / `Tools/Workshop Demo/Build Demo` 会从官方样例重建、覆盖 Demo；本分支已加入旧 Demo 备份并保留构建场景列表。它不读取 `FactoryFoundation.unity`，也不是 EXE 构建；本次未执行重建。
+- 历史 Demo 越界失败保存在 `Evidence/runtime-verification-before-20261101.txt`；11 月 1 日新版巡检 EXE 完整业务验收在 1280×720、1920×1080 通过，2560×1600 通过界面/驾驶冒烟。证据目录、最终构建与旧失败区别见交接文档最新节；官方高亮验证不能替代自研业务验收。
+- `WorkshopFoundationBuilder.Build()` / `Tools/Workshop Demo/Build Demo` 会从官方样例重建、覆盖 Demo；本分支已加入旧 Demo 备份并保留构建场景列表，11 月 1 日已执行重建。它不读取 `FactoryFoundation.unity`，也不是 EXE 构建；新版 EXE 由 `InspectionDemoAutomation.BuildUpgradePlayer()` 构建至 `Build/WorkshopInspectionV2/`。
 
 ## 修改约定
 

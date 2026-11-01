@@ -1,5 +1,5 @@
-Built 2026-10-28T15:09:36
+Built 2026-11-01T14:27:41
 Scene: Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
 Devices: 8
-NavMesh vertices: 358
-Source factory scene preserved. Official asset references retained.
+NavMesh vertices: 1528
+Source factory scene and default build entry preserved. Official asset references retained.

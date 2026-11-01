@@ -70,6 +70,7 @@ namespace WorkshopDemo.Editor
                     DateTime.Now.ToString("yyyyMMdd-HHmmssfff") + ".unity");
             Directory.CreateDirectory(Generated);
             AssetDatabase.Refresh();
+            WorkshopEquipmentArt.Prepare();
             // Always derive this generated scene from the untouched official sample.
             var scene = EditorSceneManager.OpenScene(FactoryTrainingImport.OriginalScene);
             foreach (var root in scene.GetRootGameObjects())
@@ -102,21 +103,20 @@ namespace WorkshopDemo.Editor
             var deviceRoot = new GameObject("Monitored equipment").transform;
             deviceRoot.SetParent(generated.transform);
             var devices = new[] {
-                Equipment(deviceRoot, "CV-01", "装配输送线", DeviceKind.Conveyor, "conveyor-belt", new Vector3(-7,0,-3), 1.35f, font, cyan, alarm),
-                Equipment(deviceRoot, "M-01", "输送驱动电机", DeviceKind.Motor, "motor", new Vector3(-2,0,-3), 4, font, cyan, alarm),
-                Equipment(deviceRoot, "P-01", "循环水泵", DeviceKind.Pump, "water-pump", new Vector3(2,0,-3), 1.8f, font, cyan, alarm),
-                Equipment(deviceRoot, "P-02", "备用循环泵", DeviceKind.Pump, "water-pump", new Vector3(5,0,-3), 1.8f, font, cyan, alarm),
-                Equipment(deviceRoot, "TK-01", "工艺储罐", DeviceKind.Tank, "silo", new Vector3(-8,0,3), .35f, font, cyan, alarm),
-                Equipment(deviceRoot, "TK-02", "稳压储罐", DeviceKind.Tank, "pressure-tank", new Vector3(-4,0,3), 1.25f, font, cyan, alarm),
-                Equipment(deviceRoot, "F-01", "车间排风机", DeviceKind.Fan, "industrial-fan", new Vector3(0,0,3), 1.1f, font, cyan, alarm),
-                Equipment(deviceRoot, "PLC-01", "设备控制柜", DeviceKind.Cabinet, "electrical-cabinet", new Vector3(4,0,3), 1.2f, font, cyan, alarm)
+                Equipment(deviceRoot, "CV-01", "装配输送线", DeviceKind.Conveyor, "conveyor-belt", new Vector3(-12,0,-14), 1.35f, font, cyan, alarm),
+                Equipment(deviceRoot, "M-01", "输送驱动电机", DeviceKind.Motor, "motor", new Vector3(-4,0,-15), 4, font, cyan, alarm),
+                Equipment(deviceRoot, "P-01", "循环水泵", DeviceKind.Pump, "water-pump", new Vector3(4,0,-7), 1.8f, font, cyan, alarm),
+                Equipment(deviceRoot, "P-02", "备用循环泵", DeviceKind.Pump, "water-pump", new Vector3(6,0,2), 1.8f, font, cyan, alarm),
+                Equipment(deviceRoot, "TK-01", "工艺储罐", DeviceKind.Tank, "silo", new Vector3(-13,0,13), .35f, font, cyan, alarm),
+                Equipment(deviceRoot, "TK-02", "稳压储罐", DeviceKind.Tank, "pressure-tank", new Vector3(-4,0,16), 1.25f, font, cyan, alarm),
+                Equipment(deviceRoot, "F-01", "车间排风机", DeviceKind.Fan, "industrial-fan", new Vector3(7,0,15), 1.1f, font, cyan, alarm),
+                Equipment(deviceRoot, "PLC-01", "设备控制柜", DeviceKind.Cabinet, "electrical-cabinet", new Vector3(-21,0,-1), 1.2f, font, cyan, alarm)
             };
             simulation.devices = devices;
             foreach (var d in devices)
             {
                 d.nominalTemperature = d.kind == DeviceKind.Cabinet ? 32 : d.kind == DeviceKind.Tank ? 25 : 42;
                 d.nominalRpm = d.kind == DeviceKind.Conveyor ? 120 : d.kind == DeviceKind.Fan ? 980 : 1450;
-                d.inspectionPoint = d.transform.position + new Vector3(0, 0, d.transform.position.z > 0 ? -1.8f : 1.8f);
             }
 
             var cameraObject = new GameObject("Workshop Camera", typeof(Camera), typeof(AudioListener));
@@ -140,7 +140,7 @@ namespace WorkshopDemo.Editor
             surface.useGeometry = NavMeshCollectGeometry.PhysicsColliders;
             surface.overrideVoxelSize = true;
             surface.voxelSize = .08f;
-            Collision(navigation.transform, "Floor collision", new Bounds(new Vector3(-2, -.15f, 0), new Vector3(24, .3f, 19)), false);
+            Collision(navigation.transform, "Floor collision", new Bounds(new Vector3(-4, -.15f, -1), new Vector3(38, .3f, 46)), false);
             foreach (var d in devices)
                 Collision(navigation.transform, d.deviceId + " clearance", BoundsOf(d.transform.GetChild(0).gameObject), true);
             // Include actual nearby stock-scene obstacles; overhead ductwork and floor decals are excluded.
@@ -148,8 +148,8 @@ namespace WorkshopDemo.Editor
             {
                 var b = renderer.bounds;
                 if (b.max.y < .3f || b.min.y > 1.7f || b.size.x < .12f || b.size.z < .12f ||
-                    b.size.x > 15 || b.size.z > 15 || b.max.x < -14 || b.min.x > 10 ||
-                    b.max.z < -9.5f || b.min.z > 9.5f) continue;
+                    b.size.x > 15 || b.size.z > 15 || b.max.x < -23 || b.min.x > 15 ||
+                    b.max.z < -24 || b.min.z > 22) continue;
                 Collision(navigation.transform, "Stock " + renderer.name, b, true);
             }
             surface.BuildNavMesh();
@@ -165,6 +165,26 @@ namespace WorkshopDemo.Editor
             else AssetDatabase.CreateAsset(surface.navMeshData, navPath);
             simulation.inspector = Inspector(generated.transform, cyan);
             simulation.inspector.simulation = simulation;
+            foreach (var d in devices)
+            {
+                var b = BoundsOf(d.transform.GetChild(0).gameObject);
+                var directions = new[] { Vector3.forward, Vector3.back, Vector3.right, Vector3.left }
+                    .OrderBy(v => Vector3.Distance(d.transform.position + v * 2, new Vector3(-4, 0, 0)));
+                bool reachable = false;
+                foreach (var direction in directions)
+                {
+                    float offset = Mathf.Abs(direction.x) > 0 ? b.extents.x + 1 : b.extents.z + 1;
+                    var candidate = d.transform.position + direction * offset;
+                    var path = new NavMeshPath();
+                    if (!NavMesh.SamplePosition(candidate, out var hit, 1.2f, NavMesh.AllAreas) ||
+                        !NavMesh.CalculatePath(simulation.inspector.transform.position, hit.position, NavMesh.AllAreas, path) ||
+                        path.status != NavMeshPathStatus.PathComplete) continue;
+                    d.inspectionPoint = hit.position;
+                    reachable = true;
+                    break;
+                }
+                if (!reachable) throw new InvalidOperationException("No reachable inspection point: " + d.deviceId);
+            }
             var ui = new GameObject("Workshop UI", typeof(RectTransform)).AddComponent<WorkshopUI>();
             ui.transform.SetParent(generated.transform);
             ui.simulation = simulation;
@@ -219,8 +239,10 @@ namespace WorkshopDemo.Editor
             var model = (GameObject)PrefabUtility.InstantiatePrefab(asset, root.transform);
             model.name = "Source model - " + modelName;
             model.transform.localPosition = Vector3.zero;
-            model.transform.localRotation = Quaternion.identity;
+            // FBX root rotation converts its native Z-up mesh into Unity's Y-up space.
+            model.transform.localRotation = asset.transform.localRotation;
             model.transform.localScale = Vector3.one * scale;
+            WorkshopEquipmentArt.Apply(model, kind, id);
             foreach (var script in model.GetComponentsInChildren<MonoBehaviour>(true))
                 if (script) script.enabled = false;
             var bounds = BoundsOf(model);
@@ -249,7 +271,7 @@ namespace WorkshopDemo.Editor
             var text = label.AddComponent<TextMesh>();
             text.font = font; text.fontSize = 48; text.characterSize = .032f;
             text.anchor = TextAnchor.MiddleCenter;
-            text.color = new Color(.85f, 1, .95f);
+            text.color = new Color(.95f, .98f, 1);
             text.text = id + " RUN";
             text.GetComponent<MeshRenderer>().sharedMaterial = font.material;
             device.worldLabel = text;
@@ -265,7 +287,7 @@ namespace WorkshopDemo.Editor
             if (rotor)
             {
                 var pivot = new GameObject("Rotor pivot").transform;
-                pivot.SetParent(model.transform, true);
+                pivot.SetParent(root.transform, true);
                 pivot.position = rotor.GetComponent<Renderer>().bounds.center;
                 rotor.SetParent(pivot, true);
                 device.rotor = pivot;
@@ -323,11 +345,21 @@ namespace WorkshopDemo.Editor
             foreach (var audio in robot.GetComponentsInChildren<AudioSource>()) audio.enabled = false;
             var agent = robot.GetComponent<NavMeshAgent>();
             if (!agent) agent = robot.AddComponent<NavMeshAgent>();
+            agent.enabled = false;
             agent.radius = .4f; agent.height = 1.2f; agent.speed = 2.8f;
             agent.acceleration = 6; agent.angularSpeed = 220; agent.stoppingDistance = .4f;
-            if (!NavMesh.SamplePosition(new Vector3(-10, 0, -6), out var hit, 3, NavMesh.AllAreas))
+            if (!NavMesh.SamplePosition(new Vector3(0, 0, -2), out var hit, 3, NavMesh.AllAreas))
                 throw new InvalidOperationException("Inspector spawn has no walkable NavMesh");
             robot.transform.position = hit.position;
+            var wheels = robot.GetComponentInChildren<DistributionCenter.wheelRotation>(true);
+            if (wheels)
+            {
+                wheels.botObj = robot;
+                wheels.Wheel_ARR = robot.GetComponentsInChildren<Transform>(true)
+                    .Where(t => t.name.StartsWith("wheel") && t.GetComponent<MeshRenderer>())
+                    .Select(t => t.gameObject).ToArray();
+                wheels.enabled = true;
+            }
             var route = new GameObject("Inspection route").AddComponent<LineRenderer>();
             route.transform.SetParent(robot.transform);
             route.sharedMaterial = routeMaterial;

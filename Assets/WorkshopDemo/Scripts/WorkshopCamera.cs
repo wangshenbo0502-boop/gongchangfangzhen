@@ -9,9 +9,9 @@ namespace WorkshopDemo
     {
         public static Camera Main { get; private set; }
         public WorkshopSimulation simulation;
-        public Vector3 overviewTarget = new Vector3(-2, .8f, 0);
-        public float overviewDistance = 25;
-        public float overviewPitch = 38;
+        public Vector3 overviewTarget = new Vector3(-4, 1, 0);
+        public float overviewDistance = 48;
+        public float overviewPitch = 56;
         public bool Following { get; private set; }
         Vector3 target = new Vector3(0, .8f, 0);
         Vector3 smoothTarget;
@@ -42,8 +42,9 @@ namespace WorkshopDemo
         public void Focus(WorkshopDevice device)
         {
             Following = false;
-            target = device.transform.position + Vector3.up * 1.1f;
-            distance = device.kind == DeviceKind.Conveyor ? 9 : device.kind == DeviceKind.Tank ? 10 : 6;
+            target = device.transform.position + Vector3.up * (device.deviceId == "TK-01" ? 2 : 1.1f);
+            yaw = device.deviceId == "TK-01" ? -90 : device.kind == DeviceKind.Cabinet ? 158 : -22;
+            distance = device.kind == DeviceKind.Conveyor ? 9 : device.deviceId == "TK-01" ? 10 : 6;
             pitch = 32;
         }
 
@@ -84,10 +85,10 @@ namespace WorkshopDemo
                         Vector3 right = Quaternion.Euler(0, yaw, 0) * Vector3.right;
                         Vector3 forward = Quaternion.Euler(0, yaw, 0) * Vector3.forward;
                         target += (-right * delta.x - forward * delta.y) * distance * .0012f;
-                        target.x = Mathf.Clamp(target.x, -13, 9);
-                        target.z = Mathf.Clamp(target.z, -10, 10);
+                        target.x = Mathf.Clamp(target.x, -26, 18);
+                        target.z = Mathf.Clamp(target.z, -27, 25);
                     }
-                    distance = Mathf.Clamp(distance - mouse.scroll.ReadValue().y * .012f, 3, 32);
+                    distance = Mathf.Clamp(distance - mouse.scroll.ReadValue().y * .012f, 3, 65);
                     if (mouse.leftButton.wasReleasedThisFrame && !dragged && pointerBeganInScene)
                     {
                         var ray = view.ScreenPointToRay(pos);

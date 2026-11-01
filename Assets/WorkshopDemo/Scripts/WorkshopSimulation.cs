@@ -50,7 +50,9 @@ namespace WorkshopDemo
         {
             get { int n = 0; foreach (var a in Alarms) if (!a.resolved) n++; return n; }
         }
-        public WorkshopAlarm ActiveAlarm => Alarms.Find(a => !a.resolved);
+        public WorkshopAlarm ActiveAlarm => inspector && inspector.IsBusy ? inspector.TargetAlarm :
+            Alarms.Find(a => !a.resolved && a.device == Selected) ?? Alarms.FindLast(a => !a.resolved);
+        public bool CanFaultSelected => Selected && Selected.Status != DeviceStatus.Fault;
         public bool CanDispatch => ActiveAlarm != null && !inspector.IsBusy && ActiveAlarm.progress == "未派发";
         public bool CanResolve => ActiveAlarm != null && inspector.HasArrived &&
             inspector.TargetAlarm == ActiveAlarm;
@@ -85,16 +87,14 @@ namespace WorkshopDemo
 
         public void TriggerFault()
         {
-            if (ActiveAlarm != null) { Notify("当前故障尚未处理"); return; }
-            var d = Array.Find(devices, x => x.kind == DeviceKind.Pump);
-            if (!d) return;
+            if (!CanFaultSelected) { Notify("该设备已有未处理故障"); return; }
+            var d = Selected;
             d.SetFault(true);
             Alarms.Insert(0, new WorkshopAlarm {
                 id = "ALM-" + (++alarmSequence).ToString("000"),
                 device = d, occurredAt = SimulationTime
             });
-            Select(d);
-            Notify(d.deviceId + " 超温 92°C，设备已保护停机");
+            Notify(d.deviceId + " " + d.FaultText + "，设备已保护停机");
         }
 
         public void Dispatch()
@@ -109,8 +109,8 @@ namespace WorkshopDemo
 
         public void InspectorArrived()
         {
-            if (ActiveAlarm == null || inspector.TargetAlarm != ActiveAlarm) return;
-            ActiveAlarm.progress = "待处理";
+            if (inspector.TargetAlarm == null) return;
+            inspector.TargetAlarm.progress = "待处理";
             Notify("巡检员已到达，等待确认处理");
         }
 
@@ -123,7 +123,7 @@ namespace WorkshopDemo
             alarm.device.SetFault(false);
             Records.Insert(0, new InspectionRecord {
                 alarmId = alarm.id, deviceName = alarm.device.deviceId + " " + alarm.device.displayName,
-                completedAt = SimulationTime, action = "完成冷却检查并复位，设备恢复正常"
+                completedAt = SimulationTime, action = alarm.device.RepairText
             });
             inspector.Complete();
             Notify("故障已解除，巡检记录已生成");

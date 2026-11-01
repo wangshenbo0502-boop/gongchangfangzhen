@@ -29,7 +29,12 @@ namespace WorkshopDemo
         public bool HasRpm => kind != DeviceKind.Tank && kind != DeviceKind.Cabinet;
         public bool HasVibration => kind != DeviceKind.Tank && kind != DeviceKind.Cabinet;
         public bool IsRunning => Status == DeviceStatus.Running;
-        public string StatusText => Status == DeviceStatus.Fault ? "超温故障" :
+        public string FaultText => kind == DeviceKind.Conveyor ? "驱动过载" :
+            kind == DeviceKind.Tank ? "温度异常" : kind == DeviceKind.Cabinet ? "控制柜超温" : "超温故障";
+        public string RepairText => kind == DeviceKind.Conveyor ? "检查输送驱动并复位，恢复运行" :
+            kind == DeviceKind.Tank ? "检查温控并复位，恢复运行" :
+            kind == DeviceKind.Cabinet ? "检查柜内散热并复位，恢复运行" : "完成冷却检查并复位，恢复运行";
+        public string StatusText => Status == DeviceStatus.Fault ? FaultText :
             Status == DeviceStatus.Stopped ? "已停机" : "运行正常";
         public string KindText => new[] { "辊道输送机", "三相异步电机", "离心循环泵", "工艺储罐", "轴流风机", "PLC 控制柜" }[(int)kind];
         MaterialPropertyBlock propertyBlock;
@@ -104,7 +109,7 @@ namespace WorkshopDemo
                 statusLamp.SetPropertyBlock(propertyBlock);
             }
             if (faultMarker) faultMarker.SetActive(Status == DeviceStatus.Fault);
-            if (worldLabel) worldLabel.text = deviceId + "  " + (Status == DeviceStatus.Fault ? "! FAULT" :
+            if (worldLabel) worldLabel.text = deviceId + "  " + (Status == DeviceStatus.Fault ? "" :
                 IsRunning ? "RUN" : "STOP");
         }
 

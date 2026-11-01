@@ -36,6 +36,9 @@
 /Evidence/editor-state.txt
 /Evidence/extraction-lock.txt
 /Evidence/editor-desktop.png
+# Generated local scene safety copies and exploratory geometry audit
+/Evidence/inspection-scene-before-build-*.unity
+/Evidence/inspection-layout-audit.txt
 
 # Local credentials and operating-system files
 .env
