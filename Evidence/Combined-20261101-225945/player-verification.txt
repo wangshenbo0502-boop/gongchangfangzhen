@@ -1,0 +1,96 @@
+Time=2026-11-01T22:59:45.2634509+08:00
+Unity=6000.3.8f1
+Method=Visible standalone, Input System keyboard/mouse events, scene isolation, navigation and GPU captures.
+PASS Two-scene standalone
+PASS Assembly is startup scene
+Resolution=1280x720
+PASS Isolated assembly round 0
+PASS One persistent switcher
+PASS One loaded scene and EventSystem
+PASS Assembly view 0
+PASS Assembly view 1
+PASS Assembly view 2
+PASS Assembly view 3
+PASS Assembly view 1
+PASS Assembly automatic movement starts
+PASS Assembly robot physically moves
+PASS Current scene key preserves assembly state
+PASS Assembly automatic movement stops
+PASS Nonblank 3D capture assembly-0
+PASS H hides every canvas, raycaster and world label
+PASS Nonblank 3D capture assembly-hidden-0
+PASS Assembly H restores UI
+PASS Keyboard switches Digit2 to Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+PASS Old assembly objects destroyed
+PASS Fresh isolated inspection
+PASS One persistent switcher
+PASS One loaded scene and EventSystem
+PASS Scene switch resets pause and mute
+PASS Inspection UI visible after assembly H
+PASS Inspection path CV-01
+PASS Inspection path M-01
+PASS Inspection path P-01
+PASS Inspection path P-02
+PASS Inspection path TK-01
+PASS Inspection path TK-02
+PASS Inspection path F-01
+PASS Inspection path PLC-01
+PASS Inspection manual driving works
+PASS Current scene key preserves inspection state
+PASS Inspection task dispatched
+PASS Inspection physically arrives after scene switch
+PASS Inspection fault recovered once
+PASS Nonblank 3D capture inspection-0
+PASS H hides every canvas, raycaster and world label
+PASS Inspection hidden view fills window
+PASS Nonblank 3D capture inspection-hidden-0
+PASS Inspection H restores UI, labels and viewport
+PASS Keyboard switches Digit1 to Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+PASS Inspection task and UI destroyed on switch
+PASS Assembly returns with visible UI and initial view
+PASS Isolated assembly round 1
+PASS One persistent switcher
+PASS One loaded scene and EventSystem
+PASS Assembly view 0
+PASS Assembly view 1
+PASS Assembly view 2
+PASS Assembly view 3
+PASS Assembly view 1
+PASS Assembly automatic movement starts
+PASS Assembly robot physically moves
+PASS Current scene key preserves assembly state
+PASS Assembly automatic movement stops
+PASS Nonblank 3D capture assembly-1
+PASS H hides every canvas, raycaster and world label
+PASS Nonblank 3D capture assembly-hidden-1
+PASS Assembly H restores UI
+PASS Keyboard switches Numpad2 to Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+PASS Old assembly objects destroyed
+PASS Fresh isolated inspection
+PASS One persistent switcher
+PASS One loaded scene and EventSystem
+PASS Scene switch resets pause and mute
+PASS Inspection UI visible after assembly H
+PASS Inspection path CV-01
+PASS Inspection path M-01
+PASS Inspection path P-01
+PASS Inspection path P-02
+PASS Inspection path TK-01
+PASS Inspection path TK-02
+PASS Inspection path F-01
+PASS Inspection path PLC-01
+PASS Inspection manual driving works
+PASS Current scene key preserves inspection state
+PASS Inspection task dispatched
+PASS Nonblank 3D capture inspection-1
+PASS H hides every canvas, raycaster and world label
+PASS Inspection hidden view fills window
+PASS Nonblank 3D capture inspection-hidden-1
+PASS Inspection H restores UI, labels and viewport
+PASS Keyboard switches Numpad1 to Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+PASS Inspection task and UI destroyed on switch
+PASS Assembly returns with visible UI and initial view
+PASS One persistent switcher
+PASS One loaded scene and EventSystem
+PASS No runtime errors
+COMPLETE

@@ -33,9 +33,9 @@ namespace WorkshopDemo
         Button autoButton, manualButton, followButton;
         RectTransform eventContent, viewport, tableHeader;
         Canvas canvas;
-        GraphicRaycaster raycaster;
         Toggle roofToggle;
-        bool showRecords, uiVisible = true;
+        readonly WorkshopInterfaceVisibility visibility = new WorkshopInterfaceVisibility();
+        bool showRecords;
         int eventSignature = -1, lastWidth, lastHeight;
         const float Left = 214, Right = 242, Header = 52, Bottom = 184;
 
@@ -47,7 +47,7 @@ namespace WorkshopDemo
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1440, 900);
             scaler.matchWidthOrHeight = .5f;
-            raycaster = gameObject.AddComponent<GraphicRaycaster>();
+            gameObject.AddComponent<GraphicRaycaster>();
             if (!EventSystem.current)
             {
                 var events = new GameObject("Workshop Event System", typeof(EventSystem), typeof(InputSystemUIInputModule));
@@ -69,14 +69,14 @@ namespace WorkshopDemo
             var keyboard = Keyboard.current;
             if (keyboard != null && keyboard.hKey.wasPressedThisFrame)
             {
-                uiVisible = !uiVisible;
-                canvas.enabled = uiVisible;
-                raycaster.enabled = uiVisible;
+                visibility.Toggle();
+                lastWidth = -1;
             }
         }
 
         void OnDisable()
         {
+            visibility.Restore();
             if (!simulation) return;
             simulation.Changed -= Refresh;
             simulation.Sampled -= RefreshMetrics;
@@ -407,12 +407,17 @@ namespace WorkshopDemo
         void LateUpdate()
         {
             Segment(followButton, simulation.cameraRig.Following);
+            var camera = simulation.cameraRig.GetComponent<Camera>();
+            if (!visibility.Visible)
+            {
+                camera.rect = new Rect(0, 0, 1, 1);
+                return;
+            }
             if (Screen.width == lastWidth && Screen.height == lastHeight) return;
             lastWidth = Screen.width; lastHeight = Screen.height;
             Canvas.ForceUpdateCanvases();
             var corners = new Vector3[4];
             viewport.GetWorldCorners(corners);
-            var camera = simulation.cameraRig.GetComponent<Camera>();
             float toolbarHeight = 46 * GetComponent<Canvas>().scaleFactor;
             camera.rect = new Rect(corners[0].x / Screen.width, corners[0].y / Screen.height,
                 (corners[2].x - corners[0].x) / Screen.width,

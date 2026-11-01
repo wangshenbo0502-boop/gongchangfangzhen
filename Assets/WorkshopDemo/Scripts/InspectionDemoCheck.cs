@@ -136,9 +136,17 @@ namespace WorkshopDemo
 
             var canvas = FindFirstObjectByType<WorkshopUI>().GetComponent<Canvas>();
             var raycaster = canvas.GetComponent<GraphicRaycaster>();
+            var camera = simulation.cameraRig.GetComponent<Camera>();
+            Rect interfaceViewport = camera.rect;
             InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.H));
             yield return null;
+            yield return new WaitForEndOfFrame();
             Require(!canvas.enabled && !raycaster.enabled, "H hides UI and disables UI raycasts");
+            Require(FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None).All(c => !c.enabled) &&
+                FindObjectsByType<TextMesh>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+                    .All(t => !t.GetComponent<Renderer>().enabled) &&
+                camera.rect == new Rect(0, 0, 1, 1), "H hides all labels and expands camera to full window");
+            Capture("ui-hidden");
             InputSystem.QueueStateEvent(keyboard, new KeyboardState());
             yield return null;
             InputSystem.QueueStateEvent(keyboard, new KeyboardState(Key.H));
@@ -147,6 +155,9 @@ namespace WorkshopDemo
             InputSystem.QueueStateEvent(keyboard, new KeyboardState());
             yield return null;
             Canvas.ForceUpdateCanvases();
+            Require(camera.rect == interfaceViewport &&
+                simulation.devices.All(d => d.worldLabel.GetComponent<Renderer>().enabled),
+                "H restores labels and original viewport");
 
             var inspector = simulation.inspector;
             foreach (var step in Click(Button("手动驾驶"))) yield return step;

@@ -1,0 +1,9 @@
+Date=2026-11-01
+Player=Build/WorkshopCombined/WorkshopSystem.exe
+Resolution=1280x720
+Method=Ordinary visible standalone without acceptance flags; Windows SendInput scan codes; full client-area screenshots with per-monitor DPI awareness.
+Sequence=H,H,2,H,H,1
+Reviewed=assembly-hidden.png,assembly-restored.png,inspection-hidden.png,inspection-restored.png
+Result=Both scenes hide and restore their interface. Inspection hidden camera fills the window.
+SceneSwitchEvidence=inspection-visible.png,assembly-returned.png
+Boundary=Windows input injection and screenshot review, not a person pressing a physical keyboard. See Combined player-verification reports for state assertions and runtime error counts.

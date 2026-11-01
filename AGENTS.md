@@ -6,6 +6,7 @@
 
 - Unity `6000.3.8f1`，URP、新 Input System；配置以工程文件为准，沿用现有环境。
 - 当前默认构建入口为 `Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity`（官方训练样例）。
+- 合并 EXE 为 `Build/WorkshopCombined/WorkshopSystem.exe`，由 `InspectionDemoAutomation.BuildCombinedPlayer()` 显式打入装配与巡检两个现有场景，不改默认构建列表。`WorkshopSceneSwitcher` 只在两场景均可加载时安装，数字键/小键盘 1、2 单场景切换；重新进入重置进度。H 的共享隐藏逻辑为 `WorkshopInterfaceVisibility`，巡检隐藏后相机全屏。
 - 自研监控巡检场景为 `Assets/WorkshopDemo/Scenes/WorkshopDemo.unity`，核心源码位于 `Assets/WorkshopDemo/Scripts/`。
 - 历史 Demo 越界失败保存在 `Evidence/runtime-verification-before-20261101.txt`；11 月 1 日新版巡检 EXE 完整业务验收在 1280×720、1920×1080 通过，2560×1600 通过界面/驾驶冒烟。证据目录、最终构建与旧失败区别见交接文档最新节；官方高亮验证不能替代自研业务验收。
 - `WorkshopFoundationBuilder.Build()` / `Tools/Workshop Demo/Build Demo` 会从官方样例重建、覆盖 Demo；本分支已加入旧 Demo 备份并保留构建场景列表，11 月 1 日已执行重建。它不读取 `FactoryFoundation.unity`，也不是 EXE 构建；新版 EXE 由 `InspectionDemoAutomation.BuildUpgradePlayer()` 构建至 `Build/WorkshopInspectionV2/`。

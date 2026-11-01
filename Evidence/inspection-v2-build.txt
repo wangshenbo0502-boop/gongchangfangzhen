@@ -1,5 +1,5 @@
-Time=2026-11-01T16:12:14.7229772+08:00
+Time=2026-11-01T23:01:24.7223385+08:00
 Scene=Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
 Result=Succeeded
 Errors=0
-Size=1179669459
+Size=1179689257

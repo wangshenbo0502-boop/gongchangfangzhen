@@ -74,6 +74,25 @@ namespace WorkshopDemo.Editor
                 throw new InvalidOperationException("Inspection upgrade build failed.");
         }
 
+        [MenuItem("Tools/Workshop Demo/Build Combined Player")]
+        public static void BuildCombinedPlayer()
+        {
+            Directory.CreateDirectory("Build/WorkshopCombined");
+            Directory.CreateDirectory("Evidence");
+            var scenes = new[] { WorkshopSceneSwitcher.AssemblyScene, WorkshopSceneSwitcher.InspectionScene };
+            var result = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
+                scenes = scenes,
+                locationPathName = "Build/WorkshopCombined/WorkshopSystem.exe",
+                target = BuildTarget.StandaloneWindows64,
+                options = BuildOptions.None
+            });
+            File.WriteAllText("Evidence/combined-player-build.txt",
+                $"Time={DateTime.Now:O}\nScenes={string.Join(",", scenes)}\n" +
+                $"Result={result.summary.result}\nErrors={result.summary.totalErrors}\nSize={result.summary.totalSize}\n");
+            if (result.summary.result != BuildResult.Succeeded)
+                throw new InvalidOperationException("Combined player build failed.");
+        }
+
         public static void InspectLayout()
         {
             EditorSceneManager.OpenScene(WorkshopFoundationBuilder.DemoScene);

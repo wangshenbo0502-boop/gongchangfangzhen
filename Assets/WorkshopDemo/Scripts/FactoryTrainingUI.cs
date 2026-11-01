@@ -38,7 +38,7 @@ namespace WorkshopDemo
         public GameObject[] trainingDialogs;
         public AudioMuter audioMuter;
         public Canvas[] interfaceCanvases;
-        readonly Dictionary<Behaviour, bool> hiddenUIState = new Dictionary<Behaviour, bool>();
+        readonly WorkshopInterfaceVisibility visibility = new WorkshopInterfaceVisibility();
         List<StateTrainingWithPass> states;
 
         void Start() { states = training.GetTrainingStates(); }
@@ -48,36 +48,10 @@ namespace WorkshopDemo
             var keyboard = Keyboard.current;
             if (keyboard == null) return;
             if (keyboard.aKey.wasPressedThisFrame && audioMuter) audioMuter.ToggleAudio();
-            if (keyboard.hKey.wasPressedThisFrame) ToggleInterface();
+            if (keyboard.hKey.wasPressedThisFrame) visibility.Toggle();
         }
 
-        void ToggleInterface()
-        {
-            if (hiddenUIState.Count > 0)
-            {
-                RestoreInterface();
-                return;
-            }
-            foreach (var canvas in interfaceCanvases)
-            {
-                if (!canvas) continue;
-                hiddenUIState[canvas] = canvas.enabled;
-                canvas.enabled = false;
-                var raycaster = canvas.GetComponent<GraphicRaycaster>();
-                if (!raycaster) continue;
-                hiddenUIState[raycaster] = raycaster.enabled;
-                raycaster.enabled = false;
-            }
-        }
-
-        void RestoreInterface()
-        {
-            foreach (var entry in hiddenUIState)
-                if (entry.Key) entry.Key.enabled = entry.Value;
-            hiddenUIState.Clear();
-        }
-
-        void OnDisable() { RestoreInterface(); }
+        void OnDisable() { visibility.Restore(); }
 
         public static readonly string[] StepNames =
         {
