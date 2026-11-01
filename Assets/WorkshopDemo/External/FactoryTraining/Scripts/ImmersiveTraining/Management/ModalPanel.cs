@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace ImmersiveTraining.Management
 {
@@ -9,19 +8,26 @@ namespace ImmersiveTraining.Management
         [SerializeField] private GameObject _modalPanel;
         [SerializeField] private TextMeshProUGUI _panelText;
         [SerializeField] private Animator _animator;
-        [SerializeField] private TrainingTypeManager _trainingMode;
-        [SerializeField] private Button _continueButton;
-        [SerializeField, Min(.1f)] private float _assessmentDisplaySeconds = 1.8f;
+        [SerializeField, Min(.1f)] private float _displaySeconds = 2.4f;
+        [SerializeField, Min(.01f)] private float _dismissSeconds = .2f;
+        [SerializeField, Min(0)] private float _dismissDistance = 14f;
         private static readonly int PlayNotification = Animator.StringToHash("PlayNotification");
         private float _hideAt = float.PositiveInfinity;
+        private CanvasGroup _canvasGroup;
+        private RectTransform _panelRect;
+        private Vector2 _shownPosition;
+        private float _dismissAt;
+        private bool _dismissing;
         private bool _started;
         private EventManager _events;
 
         void Start()
         {
-            if (!_trainingMode) _trainingMode = FindFirstObjectByType<TrainingTypeManager>();
-            if (!_continueButton) _continueButton = _modalPanel.GetComponentInChildren<Button>(true);
             _started = true;
+            _panelRect = _modalPanel.GetComponent<RectTransform>();
+            _shownPosition = _panelRect.anchoredPosition;
+            _canvasGroup = _modalPanel.GetComponent<CanvasGroup>();
+            if (!_canvasGroup) _canvasGroup = _modalPanel.AddComponent<CanvasGroup>();
             HidePanel(null);
             Subscribe();
         }
@@ -54,21 +60,48 @@ namespace ImmersiveTraining.Management
 
         void Update()
         {
-            if (Time.unscaledTime >= _hideAt) HidePanel(null);
+            if (_dismissing)
+            {
+                float progress = Mathf.Clamp01((Time.unscaledTime - _dismissAt) / _dismissSeconds);
+                float eased = progress * progress * (3 - 2 * progress);
+                _canvasGroup.alpha = 1 - eased;
+                _panelRect.anchoredPosition = _shownPosition + Vector2.down * (_dismissDistance * eased);
+                if (progress >= 1) HidePanel(null);
+            }
+            else if (Time.unscaledTime >= _hideAt) Dismiss();
         }
 
         public void ClosePanel()
         {
             if (!_modalPanel.activeSelf) return;
-            bool guided = !_trainingMode || _trainingMode.IsTrainingMode;
-            HidePanel(null);
-            if (guided) EventManager.TriggerEvent(EventTypes.RESET_TIMER, _modalPanel);
+            Dismiss();
+        }
+
+        void Dismiss()
+        {
+            if (_dismissing) return;
+            _hideAt = float.PositiveInfinity;
+            _dismissAt = Time.unscaledTime;
+            _dismissing = true;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
         }
 
         void HidePanel(GameObject caller)
         {
             _hideAt = float.PositiveInfinity;
+            _dismissing = false;
             if (_modalPanel) _modalPanel.SetActive(false);
+            RestoreAppearance();
+        }
+
+        void RestoreAppearance()
+        {
+            if (_panelRect) _panelRect.anchoredPosition = _shownPosition;
+            if (!_canvasGroup) return;
+            _canvasGroup.alpha = 1;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
         }
 
         void OnTimerReset(GameObject caller)
@@ -80,10 +113,10 @@ namespace ImmersiveTraining.Management
         private void PopModalPanelWithMessageFromObject(GameObject callingObject)
         {
             _panelText.text = callingObject.GetComponent<IMessageForModalPanel>()?.MessageForModal();
-            bool guided = !_trainingMode || _trainingMode.IsTrainingMode;
-            if (_continueButton) _continueButton.gameObject.SetActive(guided);
             // The next state already owns its timer; dismissing a notice must not restart it.
-            _hideAt = guided ? float.PositiveInfinity : Time.unscaledTime + _assessmentDisplaySeconds;
+            _dismissing = false;
+            RestoreAppearance();
+            _hideAt = Time.unscaledTime + _displaySeconds;
             _modalPanel.SetActive(true);
             if (_animator && _animator.isActiveAndEnabled)
                 _animator.SetTrigger(PlayNotification);

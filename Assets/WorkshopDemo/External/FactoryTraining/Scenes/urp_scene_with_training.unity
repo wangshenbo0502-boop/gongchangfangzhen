@@ -50211,6 +50211,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4670938217093952381, guid: ca017cde21b58be4aaa6643aa9573b8e, type: 3}
   m_PrefabInstance: {fileID: 1364651705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366458685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 983772540798432033, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
+  m_PrefabInstance: {fileID: 1453544412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1372397273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52798,6 +52803,14 @@ PrefabInstance:
       propertyPath: _continueButton
       value: 
       objectReference: {fileID: 1468562608}
+    - target: {fileID: 4848893778024708995, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
+      propertyPath: _dismissSeconds
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848893778024708995, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
+      propertyPath: _displaySeconds
+      value: 2.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4863608267937805641, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0.6
@@ -53032,7 +53045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979545185462915174, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 420
+      value: 416
       objectReference: {fileID: 0}
     - target: {fileID: 7979545185462915174, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -53069,9 +53082,15 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1410629056}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 983772540798432033, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1453544421}
     - targetCorrespondingSourceObject: {fileID: 5937098806093128574, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1453544416}
+    - targetCorrespondingSourceObject: {fileID: 5937098806093128574, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1453544423}
   m_SourcePrefab: {fileID: 100100000, guid: b18064ff9e0c8fe4e95129d5be27b6c1, type: 3}
 --- !u!224 &1453544413 stripped
 RectTransform:
@@ -53118,6 +53137,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
+--- !u!114 &1453544421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366458685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!225 &1453544423
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453544414}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1459858945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81031,15 +81079,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
       propertyPath: m_Spacing.x
-      value: 47.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
       propertyPath: m_Spacing.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
+      propertyPath: m_CellSize.x
+      value: 620
+      objectReference: {fileID: 0}
+    - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
       propertyPath: m_CellSize.y
-      value: 52.3
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7193792045110314002, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
+      propertyPath: m_ConstraintCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7323269937871553980, guid: 57d0a64432785b24ba97dc7c6d21bddd, type: 3}
       propertyPath: m_text

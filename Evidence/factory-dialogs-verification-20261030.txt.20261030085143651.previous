@@ -1,0 +1,85 @@
+Time=2026-10-30T08:45:11.6629927+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; queued mouse input and EventSystem raycasts; training events; bounds and GPU screenshots.
+Scope=Step notices in both modes; completion and retry at 1920x1080, 1280x720 and 1024x768. Windows player and manual dragging are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+PASS Game view rendered frames
+PASS Render size 1920x1080 (actual 1920x1080)
+PASS Game view rendered frames
+PASS Mode guided at (1920, 1080)
+PASS Step notice and Continue visible
+PASS Continue inside notice
+SCREENSHOT Evidence/factory-dialogs-notice-guided-1920-20261030.png
+PASS Game view rendered frames
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits Button
+PASS Mouse available
+PASS Game view rendered frames
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_interactable (System.Boolean value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Dismiss () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:86)
+ImmersiveTraining.Management.ModalPanel.ClosePanel () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:77)
+UnityEngine.Events.InvokableCall.Invoke () (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.UI.Button.Press () (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/Button.cs:70)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/Button.cs:114)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/ExecuteEvents.cs:57)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/ExecuteEvents.cs:272)
+UnityEngine.EventSystems.EventSystem:Update() (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:514)
+
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+PASS Game view rendered frames
+FAIL UnityEngine.MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <6a469c5cf96a43eab23a293167261e20>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <6a469c5cf96a43eab23a293167261e20>:0 
+  at UnityEngine.CanvasGroup.get_blocksRaycasts () [0x00006] in <47ed1e7ebade4cf89825dfe8531ea28e>:0 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<CheckDialogs>d__18.MoveNext () [0x00480] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:368 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__17.MoveNext () [0x001ce] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:138 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x00086] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:110 
+RUNTIME ERROR MissingComponentException: There is no 'CanvasGroup' attached to the "ModalPanel" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "ModalPanel". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.CanvasGroup.set_alpha (System.Single value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+ImmersiveTraining.Management.ModalPanel.Update () (at Assets/WorkshopDemo/External/FactoryTraining/Scripts/ImmersiveTraining/Management/ModalPanel.cs:67)
+
+Result=FAILED
+End=2026-10-30T08:45:21.6827916+08:00

@@ -1,0 +1,58 @@
+{
+    "TimeDataLog": [
+        {
+            "StepName": "Total Time",
+            "TimeInSeconds": 8,
+            "FormattedTime": "0:08",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 2,
+            "FormattedTime": "0:02",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 1,
+            "FormattedTime": "0:01",
+            "InTrainingMode": true
+        }
+    ]
+}

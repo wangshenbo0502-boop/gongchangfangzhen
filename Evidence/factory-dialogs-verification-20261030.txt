@@ -1,0 +1,125 @@
+Time=2026-10-30T09:21:50.1686230+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; queued mouse input and EventSystem raycasts; training events; bounds and GPU screenshots.
+Scope=Mouse navigation, automatic movement and arm slider dragging; step notices in both modes; completion and retry at 1920x1080, 1280x720 and 1024x768; robot enable/disable. Windows player and manual assembly dragging are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+PASS Game view rendered frames (start=8, current=11, paused=False)
+PASS Render size 1920x1080 (actual 1920x1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam02_BTN; actual=Canvas/TopLeftPanel/cam02_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=11, current=13, paused=False)
+PASS Game view rendered frames (start=13, current=16, paused=False)
+PASS Mouse switches camera 1 at (1920, 1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam01_BTN; actual=Canvas/TopLeftPanel/cam01_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=16, current=18, paused=False)
+PASS Game view rendered frames (start=18, current=21, paused=False)
+PASS Mouse switches camera 0 at (1920, 1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam03_BTN; actual=Canvas/TopLeftPanel/cam03_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=21, current=24, paused=False)
+PASS Game view rendered frames (start=24, current=31, paused=False)
+PASS Mouse switches camera 2 at (1920, 1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam04_BTN; actual=Canvas/TopLeftPanel/cam04_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=31, current=38, paused=False)
+PASS Game view rendered frames (start=38, current=44, paused=False)
+PASS Mouse switches camera 3 at (1920, 1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam02_BTN; actual=Canvas/TopLeftPanel/cam02_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=44, current=49, paused=False)
+PASS Game view rendered frames (start=49, current=51, paused=False)
+PASS Mouse switches camera 1 at (1920, 1080)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits startStopBTN; actual=Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN, Canvas/TopLeftPanel/subMenu
+PASS Mouse available
+PASS Game view rendered frames (start=51, current=53, paused=False)
+PASS Game view rendered frames (start=53, current=56, paused=False)
+PASS Mouse starts automatic movement
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits startStopBTN; actual=Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN, Canvas/TopLeftPanel/subMenu
+PASS Mouse available
+PASS Game view rendered frames (start=107, current=115, paused=False)
+PASS Game view rendered frames (start=115, current=117, paused=False)
+PASS Mouse stops automatic movement
+PASS EventSystem reaches slider handle
+PASS Game view rendered frames (start=117, current=125, paused=False)
+PASS Game view rendered frames (start=125, current=133, paused=False)
+PASS Game view rendered frames (start=133, current=139, paused=False)
+PASS Game view rendered frames (start=139, current=147, paused=False)
+PASS Game view rendered frames (start=147, current=154, paused=False)
+PASS Game view rendered frames (start=154, current=161, paused=False)
+PASS Game view rendered frames (start=161, current=169, paused=False)
+PASS Game view rendered frames (start=169, current=177, paused=False)
+PASS Game view rendered frames (start=177, current=183, paused=False)
+PASS Mouse drags arm slider to 75%
+PASS Arm physically follows slider drag
+PASS EventSystem reaches slider handle
+PASS Game view rendered frames (start=183, current=191, paused=False)
+PASS Game view rendered frames (start=191, current=198, paused=False)
+PASS Game view rendered frames (start=198, current=206, paused=False)
+PASS Game view rendered frames (start=206, current=214, paused=False)
+PASS Game view rendered frames (start=214, current=221, paused=False)
+PASS Game view rendered frames (start=221, current=229, paused=False)
+PASS Game view rendered frames (start=229, current=236, paused=False)
+PASS Game view rendered frames (start=236, current=244, paused=False)
+PASS Game view rendered frames (start=244, current=251, paused=False)
+PASS Mouse drags arm slider to 25%
+PASS Arm physically follows slider drag
+SCREENSHOT Evidence/factory-dialogs-usage-input-1920-20261030.png
+PASS Game view rendered frames (start=251, current=260, paused=False)
+PASS Game view rendered frames (start=278, current=285, paused=False)
+PASS Render size 1280x720 (actual 1280x720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam02_BTN; actual=Canvas/TopLeftPanel/cam02_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=285, current=293, paused=False)
+PASS Game view rendered frames (start=293, current=301, paused=False)
+PASS Mouse switches camera 1 at (1280, 720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam01_BTN; actual=Canvas/TopLeftPanel/cam01_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=301, current=304, paused=False)
+PASS Game view rendered frames (start=304, current=307, paused=False)
+PASS Mouse switches camera 0 at (1280, 720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam03_BTN; actual=Canvas/TopLeftPanel/cam03_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=307, current=310, paused=False)
+PASS Game view rendered frames (start=310, current=318, paused=False)
+PASS Mouse switches camera 2 at (1280, 720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam04_BTN; actual=Canvas/TopLeftPanel/cam04_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=318, current=323, paused=False)
+PASS Game view rendered frames (start=323, current=325, paused=False)
+PASS Mouse switches camera 3 at (1280, 720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits cam02_BTN; actual=Canvas/TopLeftPanel/cam02_BTN, Canvas/TopLeftPanel
+PASS Mouse available
+PASS Game view rendered frames (start=325, current=327, paused=False)
+PASS Game view rendered frames (start=327, current=331, paused=False)
+PASS Mouse switches camera 1 at (1280, 720)
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits startStopBTN; actual=Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN, Canvas/TopLeftPanel/subMenu
+PASS Mouse available
+PASS Game view rendered frames (start=331, current=335, paused=False)
+PASS Game view rendered frames (start=335, current=339, paused=False)
+PASS Mouse starts automatic movement
+PASS Button has enabled GraphicRaycaster and is interactable
+PASS EventSystem top raycast hits startStopBTN; actual=Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN, Canvas/TopLeftPanel/subMenu
+PASS Mouse available
+PASS Game view rendered frames (start=343, current=351, paused=False)
+PASS Game view rendered frames (start=351, current=359, paused=False)
+FAIL System.InvalidOperationException: Mouse stops automatic movement
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:915 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<CheckAgentLifecycle>d__19.MoveNext () [0x00389] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:415 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__18.MoveNext () [0x001cc] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:199 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x000fa] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:171 
+Result=FAILED
+End=2026-10-30T09:22:09.2571753+08:00

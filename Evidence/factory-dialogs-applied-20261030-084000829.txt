@@ -1,0 +1,5 @@
+Time=2026-10-30T08:40:02.1248419+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Completion list uses one column inside its surface; modal canvas has a GraphicRaycaster.
+Continue starts dismissal immediately; both modes wait 1.8 unscaled seconds before automatic dismissal.
+Dismissal fades and slides down 14 UI units over 0.16 unscaled seconds.

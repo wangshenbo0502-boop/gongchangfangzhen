@@ -1,0 +1,4 @@
+Time=2026-10-29T20:16:07.0011305+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Chinese UI saved; equipment yellow #F5C525; sliced 8px rounded surfaces.
+Corner toolbar removed; A/H shortcuts; separated slider and diagram; timed assessment notices.

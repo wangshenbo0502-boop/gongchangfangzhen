@@ -122,6 +122,8 @@ namespace DistributionCenter
 
             Image image = panel.AddComponent<Image>();
             image.color = hotboxColor;
+            // Camera exclusion uses the rect directly; these overlays must let UI input through.
+            image.raycastTarget = false;
 
             panel.transform.SetAsFirstSibling();
 

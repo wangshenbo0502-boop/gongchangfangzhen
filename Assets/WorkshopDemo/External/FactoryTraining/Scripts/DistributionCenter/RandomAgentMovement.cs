@@ -30,11 +30,31 @@ namespace DistributionCenter
         public float buttonAnimSpeed = 2f;
 
         private Dictionary<NavMeshAgent, Queue<int>> agentRecentTargets = new Dictionary<NavMeshAgent, Queue<int>>();
-        private Dictionary<NavMeshAgent, float> agentMaxSpeeds = new Dictionary<NavMeshAgent, float>();
+        // Retain full speeds across Play-mode script reloads, even while an agent is slowing down.
+        [SerializeField, HideInInspector] private float[] agentMaxSpeeds;
         private Dictionary<NavMeshAgent, Coroutine> movementCoroutines = new Dictionary<NavMeshAgent, Coroutine>();
 
         private bool isAgent0Running = false;
         public bool IsAutoRunning => isAgent0Running;
+
+        void OnEnable()
+        {
+            if (agentMaxSpeeds == null || agentMaxSpeeds.Length != navAgentArr.Length)
+            {
+                agentMaxSpeeds = new float[navAgentArr.Length];
+                for (int i = 0; i < navAgentArr.Length; i++)
+                    if (navAgentArr[i]) agentMaxSpeeds[i] = navAgentArr[i].speed;
+            }
+            if (startStopBTN) startStopBTN.onClick.AddListener(ToggleAgent0);
+            UpdateButtonUI();
+        }
+
+        void OnDisable()
+        {
+            if (startStopBTN) startStopBTN.onClick.RemoveListener(ToggleAgent0);
+            StopAllCoroutines();
+            movementCoroutines.Clear();
+        }
 
         void Start()
         {
@@ -49,18 +69,13 @@ namespace DistributionCenter
                     continue;
                 }
 
+                if (!agent) continue;
                 agent.autoBraking = false;
-                agentMaxSpeeds[agent] = agent.speed;
                 agentRecentTargets[agent] = new Queue<int>();
 
                 if (i != 0)
                     AssignRandomTarget(agent, i);
             }
-
-            if (startStopBTN != null)
-                startStopBTN.onClick.AddListener(ToggleAgent0);
-
-            UpdateButtonUI();
         }
 
         void Update()
@@ -71,6 +86,8 @@ namespace DistributionCenter
                     continue;
 
                 var agent = navAgentArr[i];
+                if (!agent || !agent.isActiveAndEnabled || !agent.isOnNavMesh)
+                    continue;
 
                 if (i == 0 && !isAgent0Running)
                     continue;
@@ -83,11 +100,11 @@ namespace DistributionCenter
                 if (remainingDistance <= slowDownDistance)
                 {
                     float speedFactor = Mathf.Lerp(minSpeedFactor, 1f, remainingDistance / slowDownDistance);
-                    agent.speed = agentMaxSpeeds[agent] * speedFactor;
+                    agent.speed = agentMaxSpeeds[i] * speedFactor;
                 }
                 else
                 {
-                    agent.speed = agentMaxSpeeds[agent];
+                    agent.speed = agentMaxSpeeds[i];
                 }
 
                 if (remainingDistance <= agent.stoppingDistance && (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
@@ -110,6 +127,7 @@ namespace DistributionCenter
 
         public void AssignRandomTarget(NavMeshAgent agent, int agentIndex)
         {
+            if (!agent || !agent.isActiveAndEnabled || !agent.isOnNavMesh) return;
             if (agentTargetsArr == null || agentIndex >= agentTargetsArr.Length)
                 return;
 
@@ -153,6 +171,7 @@ namespace DistributionCenter
                 return;
 
             var agent = navAgentArr[0];
+            if (!agent || !agent.isActiveAndEnabled || !agent.isOnNavMesh) return;
             isAgent0Running = !isAgent0Running;
 
             if (!isAgent0Running)

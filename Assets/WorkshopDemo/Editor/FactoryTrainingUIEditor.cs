@@ -127,6 +127,35 @@ namespace WorkshopDemo.Editor
         static T Find<T>() where T : UnityEngine.Object =>
             UnityEngine.Object.FindFirstObjectByType<T>(FindObjectsInactive.Include);
 
+        [MenuItem("Tools/Workshop Demo/Fix Factory Training Dialogs")]
+        public static void ApplyDialogs()
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode ||
+                SceneManager.GetActiveScene().path != ScenePath)
+                throw new InvalidOperationException("请在停止运行的装配训练场景中修复弹窗。");
+
+            Directory.CreateDirectory("Evidence");
+            string stamp = DateTime.Now.ToString("yyyyMMdd-HHmmssfff");
+            File.Copy(ScenePath, $"Evidence/factory-scene-before-dialog-fix-{stamp}.unity");
+            PrepareFont();
+            PrepareRoundedSurface();
+            var ui = Find<FactoryTrainingUI>();
+            LayoutDialogs(ui);
+            // Keep the targeted fix reproducible without reapplying unrelated UI layouts.
+            foreach (var root in SceneManager.GetActiveScene().GetRootGameObjects())
+                foreach (var component in root.GetComponentsInChildren<Component>(true))
+                    if (component && PrefabUtility.IsPartOfPrefabInstance(component))
+                        PrefabUtility.RecordPrefabInstancePropertyModifications(component);
+            EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+            EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
+            AssetDatabase.SaveAssets();
+            File.WriteAllText($"Evidence/factory-dialogs-applied-{stamp}.txt",
+                $"Time={DateTime.Now:O}\nScene={ScenePath}\n" +
+                "Completion list uses one column inside its surface; modal canvas has a GraphicRaycaster.\n" +
+                "Continue starts dismissal immediately; both modes wait 2.4 unscaled seconds before automatic dismissal.\n" +
+                "Dismissal fades and slides down 14 UI units over 0.2 unscaled seconds.\n");
+        }
+
         static void PrepareRoundedSurface()
         {
             roundedSurface = AssetDatabase.LoadAllAssetsAtPath(RoundedPath).OfType<Sprite>().FirstOrDefault();
@@ -414,6 +443,16 @@ namespace WorkshopDemo.Editor
             complete.Find("Image").gameObject.SetActive(false);
             var steps = complete.Find("StepsTimePanel");
             CenterPlace(steps, 30, 126, 620, 480, 680, 718);
+            var grid = steps.GetComponent<GridLayoutGroup>();
+            grid.enabled = true;
+            grid.padding = new RectOffset();
+            grid.startCorner = GridLayoutGroup.Corner.UpperLeft;
+            grid.startAxis = GridLayoutGroup.Axis.Vertical;
+            grid.childAlignment = TextAnchor.UpperLeft;
+            grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+            grid.constraintCount = 1;
+            grid.cellSize = new Vector2(620, 31);
+            grid.spacing = Vector2.zero;
             var stepsImage = steps.GetComponent<Image>();
             if (stepsImage) stepsImage.enabled = false;
             var list = steps.GetComponentsInChildren<TMP_Text>(true);
@@ -444,8 +483,17 @@ namespace WorkshopDemo.Editor
             train.onClick = new Button.ButtonClickedEvent();
             UnityEventTools.AddPersistentListener(train.onClick, ui.ResetAssembly);
 
-            var modal = GameObject.Find("ImmersiveTraining/ModalCanvas").transform.Find("ModalPanel");
-            // The controller dismisses assessment notices and preserves guided confirmation.
+            var modalCanvas = GameObject.Find("ImmersiveTraining/ModalCanvas");
+            var raycaster = modalCanvas.GetComponent<GraphicRaycaster>();
+            if (!raycaster) raycaster = modalCanvas.AddComponent<GraphicRaycaster>();
+            raycaster.enabled = true;
+            var modal = modalCanvas.transform.Find("ModalPanel");
+            var group = modal.GetComponent<CanvasGroup>();
+            if (!group) group = modal.gameObject.AddComponent<CanvasGroup>();
+            group.alpha = 1;
+            group.interactable = true;
+            group.blocksRaycasts = true;
+            // The controller owns dismissal; legacy animation must not move the notice offscreen.
             var animator = modal.GetComponent<Animator>();
             if (animator) animator.enabled = false;
             Place(modal, 0, 24, 600, 102, new Vector2(.5f, 0), new Vector2(.5f, 0));
@@ -453,7 +501,7 @@ namespace WorkshopDemo.Editor
             modal.Find("Image").gameObject.SetActive(false);
             var notification = modal.Find("Text (TMP)").GetComponent<TMP_Text>();
             SetText(notification, "工序完成", 20, FactoryTrainingUI.Ink);
-            Place(notification.transform, 24, 15, 420, 72);
+            Place(notification.transform, 24, 15, 416, 72);
             var ok = modal.Find("Button").GetComponent<Button>();
             ok.gameObject.SetActive(true);
             Place(ok.transform, 464, 30, 112, 42);
@@ -462,9 +510,9 @@ namespace WorkshopDemo.Editor
             var controller = Find<ModalPanel>();
             UnityEventTools.AddPersistentListener(ok.onClick, controller.ClosePanel);
             var modalSettings = new SerializedObject(controller);
-            modalSettings.FindProperty("_trainingMode").objectReferenceValue = ui.trainingMode;
-            modalSettings.FindProperty("_continueButton").objectReferenceValue = ok;
-            modalSettings.FindProperty("_assessmentDisplaySeconds").floatValue = 1.8f;
+            modalSettings.FindProperty("_displaySeconds").floatValue = 2.4f;
+            modalSettings.FindProperty("_dismissSeconds").floatValue = .2f;
+            modalSettings.FindProperty("_dismissDistance").floatValue = 14f;
             modalSettings.ApplyModifiedPropertiesWithoutUndo();
             ui.trainingDialogs = new[] { complete.gameObject, timeout.gameObject, modal.gameObject };
             modal.gameObject.SetActive(false);

@@ -1,0 +1,16 @@
+{
+    "TimeDataLog": [
+        {
+            "StepName": "Total Time",
+            "TimeInSeconds": 2,
+            "FormattedTime": "0:02",
+            "InTrainingMode": true
+        },
+        {
+            "StepName": "MotoAssemblyTrainingStep1",
+            "TimeInSeconds": 2,
+            "FormattedTime": "0:02",
+            "InTrainingMode": true
+        }
+    ]
+}

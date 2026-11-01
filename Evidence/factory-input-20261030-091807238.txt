@@ -1,0 +1,84 @@
+Time=2026-10-30T09:18:07.2432834+08:00
+Playing=True Screen=2255x1369 EventSystem=<b>Selected:</b>
+
+
+EventSystem (UnityEngine.InputSystem.UI.InputSystemUIInputModule)
+ Module=EventSystem (UnityEngine.InputSystem.UI.InputSystemUIInputModule)
+TARGET Canvas/TopLeftPanel/cam01_BTN at=(120.03, 1203.10)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/cam01_BTN module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=2
+  HIT Canvas/TopLeftPanel module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=0
+TARGET Canvas/TopLeftPanel/cam02_BTN at=(238.59, 1203.10)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/cam02_BTN module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=4
+  HIT Canvas/TopLeftPanel module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=0
+TARGET Canvas/TopLeftPanel/cam03_BTN at=(357.15, 1203.10)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/cam03_BTN module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=6
+  HIT Canvas/TopLeftPanel module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=0
+TARGET Canvas/TopLeftPanel/cam04_BTN at=(475.72, 1203.10)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/cam04_BTN module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=8
+  HIT Canvas/TopLeftPanel module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=0
+TARGET Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN at=(298.60, 1001.10)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/subMenu/subMenu_01/startStopBTN module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=11
+  HIT Canvas/TopLeftPanel/subMenu module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=10
+TARGET Canvas/TopLeftPanel/subMenu/subMenu_02/slider_Translate at=(298.60, 708.35)
+  HIT ImmersiveTraining/ModalCanvas/LeftHotboxPanel module=Name: ModalCanvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 10
+renderOrderPriority: 2 order=10 depth=1
+  HIT Canvas/TopLeftPanel/subMenu/subMenu_02/slider_Translate/Background module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=27
+  HIT Canvas/TopLeftPanel/subMenu module=Name: Canvas (UnityEngine.GameObject)
+eventCamera: 
+sortOrderPriority: 0
+renderOrderPriority: 0 order=0 depth=10

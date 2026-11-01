@@ -57,8 +57,10 @@ namespace ImmersiveTraining.Management
 
         public static void StartListening(EventTypes eventType, UnityAction<GameObject> listener)
         {
+            var manager = Instance;
+            manager.Initialize();
             UnityObjectEvent thisEvent = null;
-            if (Instance.objectEventDictionary.TryGetValue(eventType, out thisEvent))
+            if (manager.objectEventDictionary.TryGetValue(eventType, out thisEvent))
             {
                 thisEvent.AddListener(listener);
             }
@@ -66,14 +68,16 @@ namespace ImmersiveTraining.Management
             {
                 thisEvent = new UnityObjectEvent();
                 thisEvent.AddListener(listener);
-                Instance.objectEventDictionary.Add(eventType, thisEvent);
+                manager.objectEventDictionary.Add(eventType, thisEvent);
             }
         }
 
         public static void StopListening(EventTypes e, UnityAction<GameObject> listener)
         {
+            // Unsubscribing during teardown must not search for a destroyed manager.
+            if (!instance || instance.objectEventDictionary == null) return;
             UnityObjectEvent thisEvent = null;
-            if (Instance.objectEventDictionary.TryGetValue(e, out thisEvent))
+            if (instance.objectEventDictionary.TryGetValue(e, out thisEvent))
             {
                 thisEvent.RemoveListener(listener);
             }
@@ -81,8 +85,10 @@ namespace ImmersiveTraining.Management
 
         public static void TriggerEvent(EventTypes e, GameObject invoker)
         {
+            var manager = Instance;
+            manager.Initialize();
             UnityObjectEvent thisEvent = null;
-            if (Instance.objectEventDictionary.TryGetValue(e, out thisEvent))
+            if (manager.objectEventDictionary.TryGetValue(e, out thisEvent))
             {
                 thisEvent.Invoke(invoker);
             }

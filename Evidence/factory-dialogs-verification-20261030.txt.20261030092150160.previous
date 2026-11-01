@@ -1,0 +1,19 @@
+Time=2026-10-30T09:10:05.1529316+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; queued mouse input and EventSystem raycasts; training events; bounds and GPU screenshots.
+Scope=Step notices in both modes; completion and retry at 1920x1080, 1280x720 and 1024x768; robot enable/disable and automatic movement. Windows player and manual dragging are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+PASS Game view rendered frames (start=153, current=159, paused=False)
+PASS Render size 1920x1080 (actual 1920x1080)
+PASS Game view rendered frames (start=159, current=163, paused=False)
+PASS Game view rendered frames (start=163, current=171, paused=False)
+PASS Game view rendered frames (start=171, current=175, paused=False)
+PASS Button has enabled GraphicRaycaster and is interactable
+FAIL System.InvalidOperationException: EventSystem top raycast hits startStopBTN
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:828 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Click>d__23.MoveNext () [0x000dd] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:600 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<CheckAgentLifecycle>d__18.MoveNext () [0x0025f] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:384 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__17.MoveNext () [0x001cc] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:174 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x000fa] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:146 
+Result=FAILED
+End=2026-10-30T09:10:12.5123676+08:00

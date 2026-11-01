@@ -1,0 +1,14 @@
+Time=2026-10-30T08:51:43.6519183+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; queued mouse input and EventSystem raycasts; training events; bounds and GPU screenshots.
+Scope=Step notices in both modes; completion and retry at 1920x1080, 1280x720 and 1024x768. Windows player and manual dragging are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+FAIL System.InvalidOperationException: Game view rendered frames
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:764 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<WaitFrames>d__20.MoveNext () [0x00089] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:505 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<RenderAt>d__21.MoveNext () [0x000fc] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:518 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<CheckDialogs>d__18.MoveNext () [0x001ad] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:347 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__17.MoveNext () [0x001ce] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:138 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x00086] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:110 
+Result=FAILED
+End=2026-10-30T08:52:01.6473935+08:00

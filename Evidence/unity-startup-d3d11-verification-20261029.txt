@@ -1,0 +1,74 @@
+Unity editor startup recovery verification
+Date: 2026-10-29
+Recorded clock: local machine +08:00; do not interpret as America/Los_Angeles.
+Unity: 6000.3.8f1
+Scene: Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+Driver: 32.0.15.6626
+
+Original failure:
+Four native DX12 crashes occurred at approximately 20:48-20:52 +08:00.
+Crash folder names use a different clock representation:
+  Crash_2026-10-29_124803215
+  Crash_2026-10-29_124832551
+  Crash_2026-10-29_125001589
+  Crash_2026-10-29_125213674
+Selected diagnostic messages:
+  d3d12: Device failed error (887a0005).
+  d3d12: Device removed reason (887a0006).
+  Unrecoverable D3D12 device error!
+Native stacks include D3D12SwapChain::Present and GfxDeviceD3D12::QueuePresent.
+Evidence identifies a DX12 graphics device failure, not a confirmed driver or
+hardware root cause. Original logs did not report GPU memory exhaustion.
+Original crash records remain in the local Unity Editor Crashes directory.
+Raw editor/crash logs are not copied here because startup headers contain tokens.
+
+Persistent change:
+ProjectSettings/ProjectSettings.asset -> m_BuildTargetGraphicsAPIs:
+  m_BuildTarget: WindowsStandaloneSupport
+  m_APIs: 02000000
+  m_Automatic: 0
+Windows now explicitly selects Direct3D 11.
+No Unity/package upgrade, render pipeline replacement or scene rebuild performed.
+
+Verification method and observations:
+1. Requested an ordinary Unity launch using only -projectPath.
+   A concurrent ordinary launch acquired the project first; the extra launch
+   exited because the project was already open. Do not attribute the successful
+   editor session exclusively to the agent's launch request.
+2. Successful editor PID 26120 started at 20:55:27 +08:00.
+   Its command line targeted this project and contained no -force-d3d11 override.
+   Selected Editor.log graphics output confirmed:
+     Direct3D:
+       Version: Direct3D 11.0 [level 11.1]
+       Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28e0)
+3. The official training scene loaded and entered Play by 20:56:03.
+   Editor remained responsive during observation; bridge heartbeat was current
+   at 20:57:06. The bridge's Transition=True represents
+   isPlayingOrWillChangePlaymode and is also true during normal Play.
+4. Desktop screenshot taken at 20:57:08 was visually inspected:
+   Unity title displayed DX11, Play was active, factory geometry rendered,
+   and no native crash dialog was present.
+   Evidence/editor-desktop.png is a transient, ignored capture and may be
+   overwritten by subsequent tooling; it is not a permanent evidence artifact.
+5. Current-session log scan found no C# compilation/exception headers or the
+   original graphics device failure. URP shadow atlas warnings were present.
+6. By 20:58:08 PID 26120 had exited. Log showed normal shutdown, including
+   scene restoration after Play, layout saving, Internal_EditorApplicationQuit,
+   input/physics shutdown, mono cleanup, "Found no leaked weakptrs.", and
+   Package Manager shutdown. Some mono thread/debugger shutdown messages also
+   remained; no new native crash record accompanied the exit.
+7. Crash directory check at 21:00:35 +08:00 still showed only the four failures
+   listed above; the newest was the original 20:52 crash.
+
+Result:
+PASS: persistent DX11 selection on an ordinary launch.
+PASS: brief startup, rendered official training scene and Play smoke check.
+OBSERVED: subsequent normal editor shutdown without a new native crash record.
+
+Limits:
+This was a brief observation, not a long-duration stability test.
+Full training, self-developed WorkshopDemo business flows and standalone EXE
+were not verified. The historical WorkshopUI.Refresh failure remains separate.
+Evidence/editor-state.txt last updated at 20:57:18 and became stale after exit;
+it is not proof that the editor is currently open.

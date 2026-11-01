@@ -1,0 +1,17 @@
+Time=2026-10-29T19:43:16.1227258+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Method=Editor Play; button events and training completion events; GPU screenshots.
+Scope=Training UI only. Mouse dragging and Windows player are not covered.
+PASS Chinese UI component loaded; Play entered successfully
+FAIL System.InvalidOperationException: 1920x1080 render size
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Require (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:303 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation+<Run>d__13.MoveNext () [0x0014b] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:116 
+  at WorkshopDemo.Editor.FactoryTrainingUIValidation.Update () [0x00086] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\FactoryTrainingUIValidation.cs:89 
+RUNTIME ERROR Invalid index 0 7 1
+System.Reflection.MethodBase:Invoke (object,object[])
+WorkshopDemo.Editor.FactoryTrainingUIValidation:Stop () (at Assets/WorkshopDemo/Editor/FactoryTrainingUIValidation.cs:316)
+WorkshopDemo.Editor.FactoryTrainingUIValidation:Update () (at Assets/WorkshopDemo/Editor/FactoryTrainingUIValidation.cs:99)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+Result=FAILED
+End=2026-10-29T19:43:24.6129668+08:00
