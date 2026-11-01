@@ -1,0 +1,50 @@
+Time=2026-11-01T13:25:17.0891373+08:00
+Scene=Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Unity=6000.3.8f1 Editor=False
+Method=Real Input System mouse events, EventSystem raycasts, complete NavMesh paths, state assertions and GPU captures.
+LoadedScene=Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+PASS Eight devices running
+PASS One active EventSystem
+PASS Animation references
+PASS Conveyor and fan move
+PASS Complete path CV-01
+PASS Complete path M-01
+PASS Complete path P-01
+PASS Complete path P-02
+PASS Complete path TK-01
+PASS Complete path TK-02
+PASS Complete path F-01
+PASS Complete path PLC-01
+PASS Resolution (1280, 720)
+PASS Layout and usable camera viewport
+PASS Mouse selects CV-01
+PASS Mouse selects M-01
+PASS Mouse selects P-01
+PASS Mouse selects P-02
+PASS Mouse selects TK-01
+PASS Mouse selects TK-02
+PASS Mouse selects F-01
+PASS Mouse selects PLC-01
+PASS Mouse stops device
+PASS Mouse starts device
+SCREENSHOT overview-1280.png
+PASS Mouse triggers visible P-01 fault
+PASS Duplicate fault and early resolve blocked
+PASS Mouse dispatches once
+PASS Follow camera enabled
+PASS Robot physically arrives at inspection point
+PASS Arrival enables confirmation
+PASS Layout and usable camera viewport
+SCREENSHOT arrived-1280.png
+PASS Recovery and exactly one record
+PASS Record visible in UI
+PASS Layout and usable camera viewport
+SCREENSHOT record-1280.png
+PASS Consecutive resets clear state
+PASS Resolution (1920, 1080)
+PASS Layout and usable camera viewport
+PASS Mouse selects CV-01
+FAILED System.InvalidOperationException: Mouse selects M-01
+  at WorkshopDemo.InspectionDemoCheck.Require (System.Boolean condition, System.String message, System.Boolean record) [0x00003] in <46265769aacd4324af0c98ace533da7b>:0 
+  at WorkshopDemo.InspectionDemoCheck+<Run>d__11.MoveNext () [0x004fd] in <46265769aacd4324af0c98ace533da7b>:0 
+  at WorkshopDemo.InspectionDemoCheck+<Advance>d__10.MoveNext () [0x00041] in <46265769aacd4324af0c98ace533da7b>:0 

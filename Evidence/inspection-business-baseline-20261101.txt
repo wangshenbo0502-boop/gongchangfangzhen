@@ -1,0 +1,31 @@
+Started 2026-11-01T13:11:26
+PASS Eight devices running
+PASS Select CV-01
+PASS Inspection point CV-01
+PASS Select M-01
+PASS Inspection point M-01
+PASS Select P-01
+PASS Inspection point P-01
+PASS Select P-02
+PASS Inspection point P-02
+PASS Select TK-01
+PASS Inspection point TK-01
+PASS Select TK-02
+PASS Inspection point TK-02
+PASS Select F-01
+PASS Inspection point F-01
+PASS Select PLC-01
+PASS Inspection point PLC-01
+PASS Downloaded conveyor packages
+PASS Downloaded fan rotor
+PASS Conveyor animation
+PASS Fan animation
+PASS Fault and duplicate protection
+PASS Cannot resolve before arrival
+PASS Navigation dispatched once
+PASS NavMesh arrival
+PASS Resolve, recover, one record
+PASS Two consecutive resets
+PASS Dispatch again after reset
+PASS Second full cycle
+COMPLETE

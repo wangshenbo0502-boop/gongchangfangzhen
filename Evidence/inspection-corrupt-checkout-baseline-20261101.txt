@@ -1,0 +1,7 @@
+Started 2026-11-01T13:07:43
+PASS Eight devices running
+PASS Select CV-01
+FAIL Inspection point CV-01
+FAILED System.InvalidOperationException: Inspection point CV-01
+  at WorkshopDemo.Editor.WorkshopVerification.Check (System.Boolean condition, System.String message) [0x0002e] in D:\UnityProjects\WorkshopInspectionDemo\Assets\WorkshopDemo\Editor\WorkshopVerification.cs:43 
+  at WorkshopDemo.Editor.WorkshopVerification.Tick () [0x00100] in D:\UnityProjects\WorkshopInspectionDemo\Assets\WorkshopDemo\Editor\WorkshopVerification.cs:61 

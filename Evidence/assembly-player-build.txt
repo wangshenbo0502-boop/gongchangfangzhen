@@ -1,0 +1,5 @@
+Time=2026-11-01T13:25:54.9162923+08:00
+Scene=Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Result=Succeeded
+Errors=0
+Size=1172944403

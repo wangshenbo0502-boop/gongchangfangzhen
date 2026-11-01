@@ -62,6 +62,12 @@ namespace WorkshopDemo.Editor
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode)
                 throw new InvalidOperationException("Exit Play Mode before building the demo.");
+            if (EditorSceneManager.GetActiveScene().isDirty)
+                throw new InvalidOperationException("Save the current scene before regenerating the inspection demo.");
+            Directory.CreateDirectory("Evidence");
+            if (File.Exists(DemoScene))
+                File.Copy(DemoScene, "Evidence/inspection-scene-before-build-" +
+                    DateTime.Now.ToString("yyyyMMdd-HHmmssfff") + ".unity");
             Directory.CreateDirectory(Generated);
             AssetDatabase.Refresh();
             // Always derive this generated scene from the untouched official sample.
@@ -164,12 +170,11 @@ namespace WorkshopDemo.Editor
             ui.simulation = simulation;
             ui.chineseFont = font;
             EditorSceneManager.SaveScene(scene, DemoScene);
-            EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(DemoScene, true) };
             AssetDatabase.SaveAssets();
             File.WriteAllText("Evidence/demo-build.txt", "Built " + DateTime.Now.ToString("s") +
                 "\nScene: " + DemoScene + "\nDevices: " + devices.Length +
                 "\nNavMesh vertices: " + NavMesh.CalculateTriangulation().vertices.Length +
-                "\nSource factory scene preserved. Official asset references retained.");
+                "\nSource factory scene and default build entry preserved. Official asset references retained.");
         }
 
         static Material Material(string name, Color color, bool emission)
