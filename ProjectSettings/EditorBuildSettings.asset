@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+    guid: 807b623ac553f8547be58aacc542dd05
+  - enabled: 1
     path: Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
     guid: 929160706162bbf48b9f7b4c182d62dd
   m_configObjects:

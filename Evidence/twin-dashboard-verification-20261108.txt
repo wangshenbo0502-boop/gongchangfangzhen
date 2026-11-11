@@ -1,0 +1,84 @@
+Started 2026-11-08T16:26:39.3814595+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Method Editor Play / D3D11 / UGUI raycasts
+PASS Resolution (1920, 1080)
+PASS Central 3D viewport has usable area
+PASS Text fits: 工业车间 · 数字孪生监控中心
+PASS Text fits: Text
+PASS Text fits: 
+PASS Text fits: 本地模拟数据  /  SCENE A
+PASS Text fits: 接入设备
+PASS Text fits: 
+PASS Text fits: 运行设备
+PASS Text fits: 
+PASS Text fits: 活动告警
+PASS Text fits: 
+PASS Text fits: 完成巡检
+PASS Text fits: 
+PASS Text fits: 设备台账
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 选中设备温度
+PASS Text fits: 
+PASS Text fits: 100°C
+PASS Text fits: 20°C
+PASS Text fits: 最近 30 秒
+PASS Text fits: 总览
+PASS Text fits: 自由观察
+PASS Text fits: 巡检跟随
+PASS Text fits: 屋顶
+PASS Text fits: 
+PASS Text fits: 设备详情
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 停止设备
+PASS Text fits: 场景解答助手
+PASS Text fits: 清空
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 分析当前设备
+PASS Text fits: 如何处理告警
+PASS Text fits: 发送
+PASS Text fits: DeepSeek  /  pgvector
+PASS Text fits: 告警
+PASS Text fits: 巡检记录
+PASS Text fits: 演示故障
+PASS Text fits: 派发巡检
+PASS Text fits: 确认处理
+PASS Text fits: 重置
+PASS Text fits: 暂无告警 · 设备运行正常
+PASS Text fits: 
+PASS Button enabled: P-02
+PASS Top UI raycast: P-02
+PASS Device ledger selects actual device
+PASS Button enabled: 停止设备
+PASS Top UI raycast: 停止设备
+PASS Stop updates business state
+PASS Button enabled: 停止设备
+PASS Top UI raycast: 停止设备
+PASS Start updates business state
+PASS Button enabled: 演示故障
+PASS Top UI raycast: 演示故障
+PASS Fault button selects pump and creates one alarm
+PASS Premature resolution disabled
+PASS Button enabled: 派发巡检
+PASS Top UI raycast: 派发巡检
+PASS Dispatch creates task and prevents repeat
+PASS Screenshot saved Evidence/twin-dashboard-1920-20261108.png
+PASS Screenshot dimensions
+PASS Rendered pixels are nonblank (563 colors)
+FAIL System.InvalidOperationException: Resolution (1280, 720)
+  at WorkshopDemo.Editor.WorkshopTwinValidation.Check (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:207 
+  at WorkshopDemo.Editor.WorkshopTwinValidation+<Verify>d__16.MoveNext () [0x00134] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:105 
+  at WorkshopDemo.Editor.WorkshopTwinValidation.Tick () [0x00167] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:74 
+FAILED

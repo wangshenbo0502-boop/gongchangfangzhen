@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-11T19:15:38.249655+08:00",
+  "source": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\water-pump.blend",
+  "scene": "01_ASSEMBLED",
+  "frame": 1,
+  "scope": "Guard supports, mounting sills and their component ownership only.",
+  "limits": "Touch/intersection is accepted for modeled welded/cast joints; this does not certify full interference, thread engagement, welds or sealing.",
+  "washer_tolerance_mm": 0.2,
+  "joint_separation_tolerance_mm": 1,
+  "washers": [],
+  "joints": [
+    {
+      "joint": "guard mounting sill / bed",
+      "object": "PMP_03_Guard_MountingSill",
+      "support": "PMP_00_Base_MachinedBed",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard mounting sill / bed",
+      "object": "PMP_03_Guard_MountingSill.003",
+      "support": "PMP_00_Base_MachinedBed",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard post / mounting sill",
+      "object": "PMP_03_Guard_SupportPost",
+      "support": "PMP_03_Guard_MountingSill",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard post / mounting sill",
+      "object": "PMP_03_Guard_SupportPost.003",
+      "support": "PMP_03_Guard_MountingSill.003",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard post / mounting sill",
+      "object": "PMP_03_Guard_SupportPost.006",
+      "support": "PMP_03_Guard_MountingSill",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard post / mounting sill",
+      "object": "PMP_03_Guard_SupportPost.009",
+      "support": "PMP_03_Guard_MountingSill.003",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "guard post / upper rail",
+      "object": "PMP_03_Guard_SupportPost",
+      "support": "PMP_03_Guard_BottomRail",
+      "surface_separation_mm": 0.41426136158406734,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "guard post / upper rail",
+      "object": "PMP_03_Guard_SupportPost.003",
+      "support": "PMP_03_Guard_BottomRail.001",
+      "surface_separation_mm": 0.41426136158406734,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "guard post / upper rail",
+      "object": "PMP_03_Guard_SupportPost.006",
+      "support": "PMP_03_Guard_BottomRail",
+      "surface_separation_mm": 0.41426136158406734,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "guard post / upper rail",
+      "object": "PMP_03_Guard_SupportPost.009",
+      "support": "PMP_03_Guard_BottomRail.001",
+      "surface_separation_mm": 0.41426136158406734,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    }
+  ],
+  "guard_supports_follow_guard": true,
+  "focused_contact_checks_pass": true
+}

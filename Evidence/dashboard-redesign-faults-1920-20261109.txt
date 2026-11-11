@@ -1,0 +1,502 @@
+Started 2026-11-09T23:57:00.8238104+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Method Editor Play / D3D11 / UGUI raycasts
+PASS Fault suite resolution 1920
+PASS 24 unique fault mechanisms
+PASS ODB protocol interpolation and end clamp (synthetic fixture)
+PASS ODB device mismatch rejected
+PASS ODB duplicate time rejected
+PASS ODB undeclared conversion rejected
+PASS Button enabled: 演示故障
+PASS Top UI raycast: 演示故障
+PASS Dropdown option raycast P-02
+PASS Dropdown selected P-02
+PASS Dropdown option raycast P-CAV
+PASS Dropdown selected P-CAV
+PASS Button enabled: 注入故障
+PASS Top UI raycast: 注入故障
+PASS Menus and injection select P-02 cavitation
+PASS Warning keeps equipment running
+PASS Button enabled: 故障工况
+PASS Top UI raycast: 故障工况
+PASS Fault UI text fits 工业车间数字孪生监控中心
+PASS Fault UI text fits WORKSHOP / DIGITAL TWIN
+PASS Fault UI text fits 车间 A / 设备监控
+PASS Fault UI text fits SIMULATION  ·  本地模拟数据
+PASS Fault UI text fits 
+PASS Fault UI text fits 设备监测 / 交互巡检
+PASS Fault UI text fits 接入设备
+PASS Fault UI text fits ASSETS
+PASS Fault UI text fits 
+PASS Fault UI text fits 运行设备
+PASS Fault UI text fits RUNNING
+PASS Fault UI text fits 
+PASS Fault UI text fits 活动告警
+PASS Fault UI text fits OPEN ALARMS
+PASS Fault UI text fits 
+PASS Fault UI text fits 完成巡检
+PASS Fault UI text fits INSPECTIONS
+PASS Fault UI text fits 
+PASS Fault UI text fits 设备运行态势
+PASS Fault UI text fits 01
+PASS Fault UI text fits 
+PASS Fault UI text fits 正常运行率
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 设备台账
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 温度趋势
+PASS Fault UI text fits 
+PASS Fault UI text fits 120°C
+PASS Fault UI text fits 20°C
+PASS Fault UI text fits 最近 30 秒
+PASS Fault UI text fits 总览
+PASS Fault UI text fits 自由观察
+PASS Fault UI text fits 巡检跟随
+PASS Fault UI text fits 三维车间 / 实时场景
+PASS Fault UI text fits 屋顶
+PASS Fault UI text fits 
+PASS Fault UI text fits 3D / WORKSHOP A
+PASS Fault UI text fits 设备详情
+PASS Fault UI text fits 02
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 温度
+PASS Fault UI text fits 振动
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 停止设备
+PASS Fault UI text fits 故障工况
+PASS Fault UI text fits 场景知识助手
+PASS Fault UI text fits 清空
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits 分析当前设备
+PASS Fault UI text fits 如何处理告警
+PASS Fault UI text fits 发送
+PASS Fault UI text fits 场景知识库 / 回答仅供演示参考
+PASS Fault UI text fits 告警
+PASS Fault UI text fits 巡检记录
+PASS Fault UI text fits 演示故障
+PASS Fault UI text fits 派发巡检
+PASS Fault UI text fits 确认处理
+PASS Fault UI text fits 重置
+PASS Fault UI text fits 
+PASS Fault UI text fits 
+PASS Fault UI text fits Text
+PASS Fault UI text fits 
+PASS Fault UI text fits 设备故障工况
+PASS Fault UI text fits 关闭
+PASS Fault UI text fits 
+PASS Fault UI text fits ▼
+PASS Fault UI text fits 
+PASS Fault UI text fits ▼
+PASS Fault UI text fits 
+PASS Fault UI text fits 注入故障
+PASS Fault UI text fits 定位设备
+PASS Fault UI text fits 教学注入 / 三维特效为示意
+PASS Fault detail content starts inside scroll viewport
+PASS Button enabled: 关闭
+PASS Top UI raycast: 关闭
+PASS CV-01 has four compatible faults
+PASS Inject CV-01/CV-JAM
+PASS Duplicate protection CV-JAM
+PASS Operating policy CV-JAM
+PASS No fabricated Abaqus solution CV-JAM
+PASS Early resolve blocked CV-JAM
+PASS Schematic visual active CV-JAM
+PASS Motion and measurement CV-JAM
+PASS Single dispatch CV-JAM
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record CV-01/CV-JAM
+PASS Effect cleared CV-JAM
+PASS Inject CV-01/CV-TRACK
+PASS Duplicate protection CV-TRACK
+PASS Operating policy CV-TRACK
+PASS No fabricated Abaqus solution CV-TRACK
+PASS Early resolve blocked CV-TRACK
+PASS Schematic visual active CV-TRACK
+PASS Motion and measurement CV-TRACK
+PASS Single dispatch CV-TRACK
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record CV-01/CV-TRACK
+PASS Effect cleared CV-TRACK
+PASS Inject CV-01/CV-BEAR
+PASS Duplicate protection CV-BEAR
+PASS Operating policy CV-BEAR
+PASS No fabricated Abaqus solution CV-BEAR
+PASS Early resolve blocked CV-BEAR
+PASS Schematic visual active CV-BEAR
+PASS Motion and measurement CV-BEAR
+PASS Single dispatch CV-BEAR
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record CV-01/CV-BEAR
+PASS Effect cleared CV-BEAR
+PASS Inject CV-01/CV-SLIP
+PASS Duplicate protection CV-SLIP
+PASS Operating policy CV-SLIP
+PASS No fabricated Abaqus solution CV-SLIP
+PASS Early resolve blocked CV-SLIP
+PASS Schematic visual active CV-SLIP
+PASS Motion and measurement CV-SLIP
+PASS Single dispatch CV-SLIP
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record CV-01/CV-SLIP
+PASS Effect cleared CV-SLIP
+PASS M-01 has four compatible faults
+PASS Inject M-01/M-OVER
+PASS Duplicate protection M-OVER
+PASS Operating policy M-OVER
+PASS No fabricated Abaqus solution M-OVER
+PASS Early resolve blocked M-OVER
+PASS Schematic visual active M-OVER
+PASS Motion and measurement M-OVER
+PASS Single dispatch M-OVER
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record M-01/M-OVER
+PASS Effect cleared M-OVER
+PASS Inject M-01/M-BEAR
+PASS Duplicate protection M-BEAR
+PASS Operating policy M-BEAR
+PASS No fabricated Abaqus solution M-BEAR
+PASS Early resolve blocked M-BEAR
+PASS Schematic visual active M-BEAR
+PASS Motion and measurement M-BEAR
+PASS Single dispatch M-BEAR
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record M-01/M-BEAR
+PASS Effect cleared M-BEAR
+PASS Inject M-01/M-PHASE
+PASS Duplicate protection M-PHASE
+PASS Operating policy M-PHASE
+PASS No fabricated Abaqus solution M-PHASE
+PASS Early resolve blocked M-PHASE
+PASS Schematic visual active M-PHASE
+PASS Motion and measurement M-PHASE
+PASS Single dispatch M-PHASE
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record M-01/M-PHASE
+PASS Effect cleared M-PHASE
+PASS Inject M-01/M-ALIGN
+PASS Duplicate protection M-ALIGN
+PASS Operating policy M-ALIGN
+PASS No fabricated Abaqus solution M-ALIGN
+PASS Early resolve blocked M-ALIGN
+PASS Schematic visual active M-ALIGN
+PASS Motion and measurement M-ALIGN
+PASS Single dispatch M-ALIGN
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record M-01/M-ALIGN
+PASS Effect cleared M-ALIGN
+PASS P-01 has four compatible faults
+PASS Inject P-01/P-HOT
+PASS Duplicate protection P-HOT
+PASS Operating policy P-HOT
+PASS No fabricated Abaqus solution P-HOT
+PASS Early resolve blocked P-HOT
+PASS Schematic visual active P-HOT
+PASS Motion and measurement P-HOT
+PASS Single dispatch P-HOT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-01/P-HOT
+PASS Effect cleared P-HOT
+PASS Inject P-01/P-CAV
+PASS Duplicate protection P-CAV
+PASS Operating policy P-CAV
+PASS No fabricated Abaqus solution P-CAV
+PASS Early resolve blocked P-CAV
+PASS Schematic visual active P-CAV
+PASS Motion and measurement P-CAV
+PASS Cavitation process values
+PASS Single dispatch P-CAV
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-01/P-CAV
+PASS Effect cleared P-CAV
+PASS Inject P-01/P-SEAL
+PASS Duplicate protection P-SEAL
+PASS Operating policy P-SEAL
+PASS No fabricated Abaqus solution P-SEAL
+PASS Early resolve blocked P-SEAL
+PASS Schematic visual active P-SEAL
+PASS Motion and measurement P-SEAL
+PASS Single dispatch P-SEAL
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-01/P-SEAL
+PASS Effect cleared P-SEAL
+PASS Inject P-01/P-BEAR
+PASS Duplicate protection P-BEAR
+PASS Operating policy P-BEAR
+PASS No fabricated Abaqus solution P-BEAR
+PASS Early resolve blocked P-BEAR
+PASS Schematic visual active P-BEAR
+PASS Motion and measurement P-BEAR
+PASS Single dispatch P-BEAR
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-01/P-BEAR
+PASS Effect cleared P-BEAR
+PASS P-02 has four compatible faults
+PASS Inject P-02/P-HOT
+PASS Duplicate protection P-HOT
+PASS Operating policy P-HOT
+PASS No fabricated Abaqus solution P-HOT
+PASS Early resolve blocked P-HOT
+PASS Schematic visual active P-HOT
+PASS Motion and measurement P-HOT
+PASS Single dispatch P-HOT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-02/P-HOT
+PASS Effect cleared P-HOT
+PASS Inject P-02/P-CAV
+PASS Duplicate protection P-CAV
+PASS Operating policy P-CAV
+PASS No fabricated Abaqus solution P-CAV
+PASS Early resolve blocked P-CAV
+PASS Schematic visual active P-CAV
+PASS Motion and measurement P-CAV
+PASS Cavitation process values
+PASS Single dispatch P-CAV
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-02/P-CAV
+PASS Effect cleared P-CAV
+PASS Inject P-02/P-SEAL
+PASS Duplicate protection P-SEAL
+PASS Operating policy P-SEAL
+PASS No fabricated Abaqus solution P-SEAL
+PASS Early resolve blocked P-SEAL
+PASS Schematic visual active P-SEAL
+PASS Motion and measurement P-SEAL
+PASS Single dispatch P-SEAL
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-02/P-SEAL
+PASS Effect cleared P-SEAL
+PASS Inject P-02/P-BEAR
+PASS Duplicate protection P-BEAR
+PASS Operating policy P-BEAR
+PASS No fabricated Abaqus solution P-BEAR
+PASS Early resolve blocked P-BEAR
+PASS Schematic visual active P-BEAR
+PASS Motion and measurement P-BEAR
+PASS Single dispatch P-BEAR
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record P-02/P-BEAR
+PASS Effect cleared P-BEAR
+PASS TK-01 has four compatible faults
+PASS Inject TK-01/TK-PRESS
+PASS Duplicate protection TK-PRESS
+PASS Operating policy TK-PRESS
+PASS No fabricated Abaqus solution TK-PRESS
+PASS Early resolve blocked TK-PRESS
+PASS Schematic visual active TK-PRESS
+PASS Single dispatch TK-PRESS
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-01/TK-PRESS
+PASS Effect cleared TK-PRESS
+PASS Inject TK-01/TK-LEAK
+PASS Duplicate protection TK-LEAK
+PASS Operating policy TK-LEAK
+PASS No fabricated Abaqus solution TK-LEAK
+PASS Early resolve blocked TK-LEAK
+PASS Schematic visual active TK-LEAK
+PASS Single dispatch TK-LEAK
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-01/TK-LEAK
+PASS Effect cleared TK-LEAK
+PASS Inject TK-01/TK-LEVEL
+PASS Duplicate protection TK-LEVEL
+PASS Operating policy TK-LEVEL
+PASS No fabricated Abaqus solution TK-LEVEL
+PASS Early resolve blocked TK-LEVEL
+PASS Schematic visual active TK-LEVEL
+PASS High-level values
+PASS Single dispatch TK-LEVEL
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-01/TK-LEVEL
+PASS Effect cleared TK-LEVEL
+PASS Inject TK-01/TK-SUPPORT
+PASS Duplicate protection TK-SUPPORT
+PASS Operating policy TK-SUPPORT
+PASS No fabricated Abaqus solution TK-SUPPORT
+PASS Early resolve blocked TK-SUPPORT
+PASS Schematic visual active TK-SUPPORT
+PASS Single dispatch TK-SUPPORT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-01/TK-SUPPORT
+PASS Effect cleared TK-SUPPORT
+PASS TK-02 has four compatible faults
+PASS Inject TK-02/TK-PRESS
+PASS Duplicate protection TK-PRESS
+PASS Operating policy TK-PRESS
+PASS No fabricated Abaqus solution TK-PRESS
+PASS Early resolve blocked TK-PRESS
+PASS Schematic visual active TK-PRESS
+PASS Single dispatch TK-PRESS
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-02/TK-PRESS
+PASS Effect cleared TK-PRESS
+PASS Inject TK-02/TK-LEAK
+PASS Duplicate protection TK-LEAK
+PASS Operating policy TK-LEAK
+PASS No fabricated Abaqus solution TK-LEAK
+PASS Early resolve blocked TK-LEAK
+PASS Schematic visual active TK-LEAK
+PASS Single dispatch TK-LEAK
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-02/TK-LEAK
+PASS Effect cleared TK-LEAK
+PASS Inject TK-02/TK-LEVEL
+PASS Duplicate protection TK-LEVEL
+PASS Operating policy TK-LEVEL
+PASS No fabricated Abaqus solution TK-LEVEL
+PASS Early resolve blocked TK-LEVEL
+PASS Schematic visual active TK-LEVEL
+PASS High-level values
+PASS Single dispatch TK-LEVEL
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-02/TK-LEVEL
+PASS Effect cleared TK-LEVEL
+PASS Inject TK-02/TK-SUPPORT
+PASS Duplicate protection TK-SUPPORT
+PASS Operating policy TK-SUPPORT
+PASS No fabricated Abaqus solution TK-SUPPORT
+PASS Early resolve blocked TK-SUPPORT
+PASS Schematic visual active TK-SUPPORT
+PASS Single dispatch TK-SUPPORT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record TK-02/TK-SUPPORT
+PASS Effect cleared TK-SUPPORT
+PASS F-01 has four compatible faults
+PASS Inject F-01/F-IMBAL
+PASS Duplicate protection F-IMBAL
+PASS Operating policy F-IMBAL
+PASS No fabricated Abaqus solution F-IMBAL
+PASS Early resolve blocked F-IMBAL
+PASS Schematic visual active F-IMBAL
+PASS Motion and measurement F-IMBAL
+PASS Single dispatch F-IMBAL
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record F-01/F-IMBAL
+PASS Effect cleared F-IMBAL
+PASS Inject F-01/F-BLOCK
+PASS Duplicate protection F-BLOCK
+PASS Operating policy F-BLOCK
+PASS No fabricated Abaqus solution F-BLOCK
+PASS Early resolve blocked F-BLOCK
+PASS Schematic visual active F-BLOCK
+PASS Motion and measurement F-BLOCK
+PASS Single dispatch F-BLOCK
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record F-01/F-BLOCK
+PASS Effect cleared F-BLOCK
+PASS Inject F-01/F-BEAR
+PASS Duplicate protection F-BEAR
+PASS Operating policy F-BEAR
+PASS No fabricated Abaqus solution F-BEAR
+PASS Early resolve blocked F-BEAR
+PASS Schematic visual active F-BEAR
+PASS Motion and measurement F-BEAR
+PASS Single dispatch F-BEAR
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record F-01/F-BEAR
+PASS Effect cleared F-BEAR
+PASS Inject F-01/F-CRACK
+PASS Duplicate protection F-CRACK
+PASS Operating policy F-CRACK
+PASS No fabricated Abaqus solution F-CRACK
+PASS Early resolve blocked F-CRACK
+PASS Schematic visual active F-CRACK
+PASS Motion and measurement F-CRACK
+PASS Single dispatch F-CRACK
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record F-01/F-CRACK
+PASS Effect cleared F-CRACK
+PASS PLC-01 has four compatible faults
+PASS Inject PLC-01/PLC-HOT
+PASS Duplicate protection PLC-HOT
+PASS Operating policy PLC-HOT
+PASS No fabricated Abaqus solution PLC-HOT
+PASS Early resolve blocked PLC-HOT
+PASS Schematic visual active PLC-HOT
+PASS Single dispatch PLC-HOT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record PLC-01/PLC-HOT
+PASS Effect cleared PLC-HOT
+PASS Inject PLC-01/PLC-LOW
+PASS Duplicate protection PLC-LOW
+PASS Operating policy PLC-LOW
+PASS No fabricated Abaqus solution PLC-LOW
+PASS Early resolve blocked PLC-LOW
+PASS Schematic visual active PLC-LOW
+PASS Undervoltage values
+PASS Single dispatch PLC-LOW
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record PLC-01/PLC-LOW
+PASS Effect cleared PLC-LOW
+PASS Inject PLC-01/PLC-COMM
+PASS Duplicate protection PLC-COMM
+PASS Operating policy PLC-COMM
+PASS No fabricated Abaqus solution PLC-COMM
+PASS Early resolve blocked PLC-COMM
+PASS Schematic visual active PLC-COMM
+PASS Communication fault values
+PASS Single dispatch PLC-COMM
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record PLC-01/PLC-COMM
+PASS Effect cleared PLC-COMM
+PASS Inject PLC-01/PLC-CONTACT
+PASS Duplicate protection PLC-CONTACT
+PASS Operating policy PLC-CONTACT
+PASS No fabricated Abaqus solution PLC-CONTACT
+PASS Early resolve blocked PLC-CONTACT
+PASS Schematic visual active PLC-CONTACT
+PASS Single dispatch PLC-CONTACT
+PASS Robot arrives via complete NavMesh path
+PASS Full navigation/resolve/typed record PLC-01/PLC-CONTACT
+PASS Effect cleared PLC-CONTACT
+PASS All 32 device/fault combinations completed
+PASS Cross-kind fault rejected
+PASS Warning preserves manual stop
+PASS Robot arrives via complete NavMesh path
+PASS Resolve restores prior manual stop
+PASS Three simultaneous device alarms
+PASS Selection cannot steal active robot task
+PASS Robot arrives via complete NavMesh path
+PASS Pending alarm is dispatchable
+PASS Robot arrives via complete NavMesh path
+PASS Pending alarm is dispatchable
+PASS Robot arrives via complete NavMesh path
+PASS Concurrent alarms all recovered
+PASS Two resets clear faults, replay, queue and records
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-dialog-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-dialog-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Jam-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Jam-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Vibration-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Vibration-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Heat-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Heat-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Electrical-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Electrical-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Leak-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Leak-1920-20261109.png
+PASS Screenshot dimensions Evidence/dashboard-redesign-fault-Deformation-1920-20261109.png
+PASS Nonblank rendered pixels Evidence/dashboard-redesign-fault-Deformation-1920-20261109.png
+COMPLETE

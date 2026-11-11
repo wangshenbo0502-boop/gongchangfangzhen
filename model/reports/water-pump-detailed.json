@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-11T19:15:39.582952+08:00",
+  "blender": "5.3.0",
+  "stages": "Source review; isolated Unity viewer; main workshop integration pending",
+  "mesh_count": 349,
+  "triangles_evaluated": 119696,
+  "min_xyz_m": [
+    -0.949999988079071,
+    -0.5,
+    0.0
+  ],
+  "max_xyz_m": [
+    0.949999988079071,
+    0.5,
+    1.350000023841858
+  ],
+  "width_depth_height_m": [
+    1.899999976158142,
+    1.0,
+    1.350000023841858
+  ],
+  "groups": [
+    {
+      "name": "PMP_00_Base",
+      "meshes": 34
+    },
+    {
+      "name": "PMP_01_Motor",
+      "meshes": 92
+    },
+    {
+      "name": "PMP_02_Coupling",
+      "meshes": 9
+    },
+    {
+      "name": "PMP_03_Guard",
+      "meshes": 18
+    },
+    {
+      "name": "PMP_04_Volute",
+      "meshes": 76
+    },
+    {
+      "name": "PMP_05_InletCover",
+      "meshes": 42
+    },
+    {
+      "name": "PMP_06_SealBearing",
+      "meshes": 23
+    },
+    {
+      "name": "PMP_07_Impeller",
+      "meshes": 10
+    },
+    {
+      "name": "PMP_08_TerminalLid",
+      "meshes": 18
+    },
+    {
+      "name": "PMP_09_ImpellerFrontShroud",
+      "meshes": 1
+    },
+    {
+      "name": "PMP_10_BearingHousing",
+      "meshes": 2
+    },
+    {
+      "name": "PMP_11_BearingSet",
+      "meshes": 24
+    }
+  ],
+  "geometry_issues": [],
+  "checks": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true,
+    "G9": true,
+    "G10": true,
+    "G11": true,
+    "G12": true
+  },
+  "source_pivot_axis_world": [
+    1.0,
+    -7.549790126404332e-08,
+    7.549790126404332e-08
+  ],
+  "uv": {
+    "method": "Reopened mesh loop-triangle measurements; no UV edits during verification",
+    "objects_checked": 349,
+    "max_anisotropy": 1.200316252293682,
+    "max_area_ratio_to_object_median": 1.1547007804512779,
+    "sub_1e_14_m2_triangles_excluded": 0,
+    "failures": [],
+    "pass": true
+  }
+}

@@ -1,0 +1,1141 @@
+{
+  "date": "2026-11-11T19:00:49.488174+08:00",
+  "blender": "5.3.0",
+  "reopened_file": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\water-pump.blend",
+  "scene_names": [
+    "01_ASSEMBLED",
+    "02_EXPLODED",
+    "03_INTERNAL"
+  ],
+  "mesh_count": 349,
+  "triangles": 119696,
+  "components": {
+    "coordinateSystem": "Blender XYZ metres; Z up",
+    "motionVersion": 3,
+    "durationSeconds": 14,
+    "meshCount": 349,
+    "parts": [
+      {
+        "name": "PMP_00_Base",
+        "label": "底座",
+        "start": 0,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchor": "PMP_00_Base_Tag",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_00_Base_AnchorPad",
+          "PMP_00_Base_AnchorPad.001",
+          "PMP_00_Base_AnchorPad.002",
+          "PMP_00_Base_AnchorPad.003",
+          "PMP_00_Base_Anchor_HexHead",
+          "PMP_00_Base_Anchor_HexHead.001",
+          "PMP_00_Base_Anchor_HexHead.002",
+          "PMP_00_Base_Anchor_HexHead.003",
+          "PMP_00_Base_Anchor_HexNut",
+          "PMP_00_Base_Anchor_HexNut.001",
+          "PMP_00_Base_Anchor_HexNut.002",
+          "PMP_00_Base_Anchor_HexNut.003",
+          "PMP_00_Base_Anchor_Stud",
+          "PMP_00_Base_Anchor_Stud.001",
+          "PMP_00_Base_Anchor_Stud.002",
+          "PMP_00_Base_Anchor_Stud.003",
+          "PMP_00_Base_Anchor_Washer",
+          "PMP_00_Base_Anchor_Washer.001",
+          "PMP_00_Base_Anchor_Washer.002",
+          "PMP_00_Base_Anchor_Washer.003",
+          "PMP_00_Base_Grout",
+          "PMP_00_Base_LongitudinalChannel",
+          "PMP_00_Base_LongitudinalChannel.001",
+          "PMP_00_Base_MachinedBed",
+          "PMP_00_Base_Stiffener",
+          "PMP_00_Base_Stiffener.001",
+          "PMP_00_Base_Stiffener.002",
+          "PMP_00_Base_Stiffener.003",
+          "PMP_00_Base_Tag",
+          "PMP_00_Base_TagText",
+          "PMP_01_Motor_FootBolt_HexNut",
+          "PMP_01_Motor_FootBolt_HexNut.001",
+          "PMP_01_Motor_FootBolt_HexNut.002",
+          "PMP_01_Motor_FootBolt_HexNut.003"
+        ]
+      },
+      {
+        "name": "PMP_01_Motor",
+        "label": "驱动电机",
+        "start": 18,
+        "offset": {
+          "x": 1,
+          "y": 0,
+          "z": 0.06
+        },
+        "anchor": "PMP_01_Motor_Nameplate",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.12,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.15,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.06
+            }
+          },
+          {
+            "time": 0.24,
+            "offset": {
+              "x": 1,
+              "y": 0,
+              "z": 0.06
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_01_Motor_AlignmentShim",
+          "PMP_01_Motor_AlignmentShim.001",
+          "PMP_01_Motor_AlignmentShim.002",
+          "PMP_01_Motor_AlignmentShim.003",
+          "PMP_01_Motor_Cable",
+          "PMP_01_Motor_CableGland",
+          "PMP_01_Motor_CastHousing",
+          "PMP_01_Motor_CoolingFin_01",
+          "PMP_01_Motor_CoolingFin_02",
+          "PMP_01_Motor_CoolingFin_03",
+          "PMP_01_Motor_CoolingFin_04",
+          "PMP_01_Motor_CoolingFin_05",
+          "PMP_01_Motor_CoolingFin_06",
+          "PMP_01_Motor_CoolingFin_07",
+          "PMP_01_Motor_CoolingFin_08",
+          "PMP_01_Motor_CoolingFin_09",
+          "PMP_01_Motor_CoolingFin_10",
+          "PMP_01_Motor_CoolingFin_11",
+          "PMP_01_Motor_CoolingFin_12",
+          "PMP_01_Motor_CoolingFin_13",
+          "PMP_01_Motor_CoolingFin_14",
+          "PMP_01_Motor_CoolingFin_15",
+          "PMP_01_Motor_CoolingFin_16",
+          "PMP_01_Motor_CoolingFin_17",
+          "PMP_01_Motor_CoolingFin_18",
+          "PMP_01_Motor_CoolingFin_19",
+          "PMP_01_Motor_CoolingFin_20",
+          "PMP_01_Motor_CoolingFin_21",
+          "PMP_01_Motor_CoolingFin_22",
+          "PMP_01_Motor_CoolingFin_23",
+          "PMP_01_Motor_CoolingFin_24",
+          "PMP_01_Motor_CoolingFin_25",
+          "PMP_01_Motor_CoolingFin_26",
+          "PMP_01_Motor_CoolingFin_27",
+          "PMP_01_Motor_CoolingFin_28",
+          "PMP_01_Motor_CoolingFin_29",
+          "PMP_01_Motor_CoolingFin_30",
+          "PMP_01_Motor_CoolingFin_31",
+          "PMP_01_Motor_CoolingFin_32",
+          "PMP_01_Motor_EndBell",
+          "PMP_01_Motor_EndBell.001",
+          "PMP_01_Motor_Foot",
+          "PMP_01_Motor_Foot.001",
+          "PMP_01_Motor_FootBolt_HexHead",
+          "PMP_01_Motor_FootBolt_HexHead.001",
+          "PMP_01_Motor_FootBolt_HexHead.002",
+          "PMP_01_Motor_FootBolt_HexHead.003",
+          "PMP_01_Motor_FootBolt_Stud",
+          "PMP_01_Motor_FootBolt_Stud.001",
+          "PMP_01_Motor_FootBolt_Stud.002",
+          "PMP_01_Motor_FootBolt_Stud.003",
+          "PMP_01_Motor_FootBolt_Washer",
+          "PMP_01_Motor_FootBolt_Washer.001",
+          "PMP_01_Motor_FootBolt_Washer.002",
+          "PMP_01_Motor_FootBolt_Washer.003",
+          "PMP_01_Motor_FootWeb",
+          "PMP_01_Motor_FootWeb.001",
+          "PMP_01_Motor_FootWeb.002",
+          "PMP_01_Motor_FootWeb.003",
+          "PMP_01_Motor_LiftingEye",
+          "PMP_01_Motor_LiftingEyeStud",
+          "PMP_01_Motor_Nameplate",
+          "PMP_01_Motor_PlateMount",
+          "PMP_01_Motor_PlateMount.001",
+          "PMP_01_Motor_PlateRivet",
+          "PMP_01_Motor_PlateRivet.001",
+          "PMP_01_Motor_PlateRivet.002",
+          "PMP_01_Motor_PlateRivet.003",
+          "PMP_01_Motor_PlateText",
+          "PMP_01_Motor_PlateText.001",
+          "PMP_01_Motor_PlateText.002",
+          "PMP_01_Motor_RearFanHood",
+          "PMP_01_Motor_RearGrilleHub",
+          "PMP_01_Motor_RearGrilleRing",
+          "PMP_01_Motor_RearGrilleRing.001",
+          "PMP_01_Motor_RearGrilleRing.002",
+          "PMP_01_Motor_RearGrilleRing.003",
+          "PMP_01_Motor_RearGrilleRing.004",
+          "PMP_01_Motor_RearGrilleSpoke",
+          "PMP_01_Motor_RearGrilleSpoke.001",
+          "PMP_01_Motor_RearGrilleSpoke.002",
+          "PMP_01_Motor_RearGrilleSpoke.003",
+          "PMP_01_Motor_RearGrilleSpoke.004",
+          "PMP_01_Motor_RearGrilleSpoke.005",
+          "PMP_01_Motor_RearGrilleSpoke.006",
+          "PMP_01_Motor_RearGrilleSpoke.007",
+          "PMP_01_Motor_RearGrilleSpoke.008",
+          "PMP_01_Motor_RearGrilleSpoke.009",
+          "PMP_01_Motor_RearGrilleSpoke.010",
+          "PMP_01_Motor_RearGrilleSpoke.011",
+          "PMP_01_Motor_TerminalBox",
+          "PMP_01_Motor_TerminalMount"
+        ]
+      },
+      {
+        "name": "PMP_02_Coupling",
+        "label": "联轴器与轴",
+        "start": 79,
+        "offset": {
+          "x": 0.8,
+          "y": -0.6,
+          "z": 0.15
+        },
+        "anchor": "PMP_02_Coupling_MachinedHalf",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.53,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.63,
+            "offset": {
+              "x": 0.8,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.66,
+            "offset": {
+              "x": 0.8,
+              "y": -0.6,
+              "z": 0.15
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_02_Coupling_ElastomerJaw",
+          "PMP_02_Coupling_ElastomerJaw.001",
+          "PMP_02_Coupling_ElastomerJaw.002",
+          "PMP_02_Coupling_ElastomerJaw.003",
+          "PMP_02_Coupling_ElastomerJaw.004",
+          "PMP_02_Coupling_ElastomerJaw.005",
+          "PMP_02_Coupling_GuardBracket",
+          "PMP_02_Coupling_GuardBracket.001",
+          "PMP_02_Coupling_GuardStand",
+          "PMP_02_Coupling_GuardStand.001",
+          "PMP_02_Coupling_GuardStand.002",
+          "PMP_02_Coupling_GuardStand.003",
+          "PMP_02_Coupling_MachinedHalf",
+          "PMP_02_Coupling_MachinedHalf.001",
+          "PMP_02_Coupling_PumpShaft"
+        ]
+      },
+      {
+        "name": "PMP_03_Guard",
+        "label": "安全护罩",
+        "start": 0,
+        "offset": {
+          "x": 0.08,
+          "y": -0.5,
+          "z": 0.6
+        },
+        "anchor": "PMP_03_Guard_Perforated1mmSheet",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.02,
+            "offset": {
+              "x": -0.055,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.08,
+            "offset": {
+              "x": -0.055,
+              "y": 0,
+              "z": 0.4
+            }
+          },
+          {
+            "time": 0.12,
+            "offset": {
+              "x": 0.08,
+              "y": -0.5,
+              "z": 0.6
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_03_Guard_BottomRail",
+          "PMP_03_Guard_BottomRail.001",
+          "PMP_03_Guard_Handle",
+          "PMP_03_Guard_Hinge",
+          "PMP_03_Guard_Hinge.001",
+          "PMP_03_Guard_Hinge.002",
+          "PMP_03_Guard_Hinge.003",
+          "PMP_03_Guard_Perforated1mmSheet",
+          "PMP_03_Guard_RolledEdge",
+          "PMP_03_Guard_RolledEdge.001",
+          "PMP_03_Guard_WarningLabel",
+          "PMP_03_Guard_WarningText"
+        ]
+      },
+      {
+        "name": "PMP_04_Volute",
+        "label": "泵体蜗壳",
+        "start": 0,
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "anchor": "PMP_04_Volute_DataPlate",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_04_Volute_CastFoot",
+          "PMP_04_Volute_DataPlate",
+          "PMP_04_Volute_DataText",
+          "PMP_04_Volute_DataText.001",
+          "PMP_04_Volute_DataText.002",
+          "PMP_04_Volute_DischargeFlange12mm",
+          "PMP_04_Volute_DischargeRaisedFace",
+          "PMP_04_Volute_DrainBoss",
+          "PMP_04_Volute_DrainPlug",
+          "PMP_04_Volute_FootRib",
+          "PMP_04_Volute_FootRib.001",
+          "PMP_04_Volute_FrontRegister",
+          "PMP_04_Volute_GaugeBezel",
+          "PMP_04_Volute_GaugeCase",
+          "PMP_04_Volute_GaugeDial",
+          "PMP_04_Volute_GaugeNeedle",
+          "PMP_04_Volute_GaugeStem",
+          "PMP_04_Volute_GaugeTick",
+          "PMP_04_Volute_GaugeTick.001",
+          "PMP_04_Volute_GaugeTick.002",
+          "PMP_04_Volute_GaugeTick.003",
+          "PMP_04_Volute_GaugeTick.004",
+          "PMP_04_Volute_GaugeTick.005",
+          "PMP_04_Volute_GaugeTick.006",
+          "PMP_04_Volute_GaugeTick.007",
+          "PMP_04_Volute_GaugeTick.008",
+          "PMP_04_Volute_GaugeTick.009",
+          "PMP_04_Volute_GaugeTick.010",
+          "PMP_04_Volute_GaugeTick.011",
+          "PMP_04_Volute_GaugeTick.012",
+          "PMP_04_Volute_GaugeTick.013",
+          "PMP_04_Volute_GaugeTick.014",
+          "PMP_04_Volute_GaugeTick.015",
+          "PMP_04_Volute_GaugeTick.016",
+          "PMP_04_Volute_GaugeTick.017",
+          "PMP_04_Volute_GaugeTick.018",
+          "PMP_04_Volute_GaugeTick.019",
+          "PMP_04_Volute_GaugeTick.020",
+          "PMP_04_Volute_GaugeUnion",
+          "PMP_04_Volute_GaugeUnits",
+          "PMP_04_Volute_GrowingSpiral12mm",
+          "PMP_04_Volute_HoldDown_HexHead",
+          "PMP_04_Volute_HoldDown_HexHead.001",
+          "PMP_04_Volute_HoldDown_HexHead.002",
+          "PMP_04_Volute_HoldDown_HexHead.003",
+          "PMP_04_Volute_HoldDown_HexNut",
+          "PMP_04_Volute_HoldDown_HexNut.001",
+          "PMP_04_Volute_HoldDown_HexNut.002",
+          "PMP_04_Volute_HoldDown_HexNut.003",
+          "PMP_04_Volute_HoldDown_Stud",
+          "PMP_04_Volute_HoldDown_Stud.001",
+          "PMP_04_Volute_HoldDown_Stud.002",
+          "PMP_04_Volute_HoldDown_Stud.003",
+          "PMP_04_Volute_HoldDown_Washer",
+          "PMP_04_Volute_HoldDown_Washer.001",
+          "PMP_04_Volute_HoldDown_Washer.002",
+          "PMP_04_Volute_HoldDown_Washer.003",
+          "PMP_04_Volute_InstrumentBoss",
+          "PMP_04_Volute_InstrumentTube",
+          "PMP_04_Volute_InstrumentUnion",
+          "PMP_04_Volute_PlateMount",
+          "PMP_04_Volute_PlateMount.001",
+          "PMP_04_Volute_PlateRivet",
+          "PMP_04_Volute_PlateRivet.001",
+          "PMP_05_InletCover_Bolt_01_HexNut",
+          "PMP_05_InletCover_Bolt_02_HexNut",
+          "PMP_05_InletCover_Bolt_03_HexNut",
+          "PMP_05_InletCover_Bolt_04_HexNut",
+          "PMP_05_InletCover_Bolt_05_HexNut",
+          "PMP_05_InletCover_Bolt_06_HexNut",
+          "PMP_05_InletCover_Bolt_07_HexNut",
+          "PMP_05_InletCover_Bolt_08_HexNut",
+          "PMP_05_InletCover_Bolt_09_HexNut",
+          "PMP_05_InletCover_Bolt_10_HexNut",
+          "PMP_05_InletCover_Bolt_11_HexNut",
+          "PMP_05_InletCover_Bolt_12_HexNut"
+        ]
+      },
+      {
+        "name": "PMP_05_InletCover",
+        "label": "吸入端盖",
+        "start": 36,
+        "offset": {
+          "x": -0.95,
+          "y": -0.5,
+          "z": 0.08
+        },
+        "anchor": "PMP_05_InletCover_ContouredCover",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.24,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.36,
+            "offset": {
+              "x": -0.95,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.43,
+            "offset": {
+              "x": -0.95,
+              "y": -0.5,
+              "z": 0.08
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_05_InletCover_Bolt_01_HexHead",
+          "PMP_05_InletCover_Bolt_01_Stud",
+          "PMP_05_InletCover_Bolt_01_Washer",
+          "PMP_05_InletCover_Bolt_02_HexHead",
+          "PMP_05_InletCover_Bolt_02_Stud",
+          "PMP_05_InletCover_Bolt_02_Washer",
+          "PMP_05_InletCover_Bolt_03_HexHead",
+          "PMP_05_InletCover_Bolt_03_Stud",
+          "PMP_05_InletCover_Bolt_03_Washer",
+          "PMP_05_InletCover_Bolt_04_HexHead",
+          "PMP_05_InletCover_Bolt_04_Stud",
+          "PMP_05_InletCover_Bolt_04_Washer",
+          "PMP_05_InletCover_Bolt_05_HexHead",
+          "PMP_05_InletCover_Bolt_05_Stud",
+          "PMP_05_InletCover_Bolt_05_Washer",
+          "PMP_05_InletCover_Bolt_06_HexHead",
+          "PMP_05_InletCover_Bolt_06_Stud",
+          "PMP_05_InletCover_Bolt_06_Washer",
+          "PMP_05_InletCover_Bolt_07_HexHead",
+          "PMP_05_InletCover_Bolt_07_Stud",
+          "PMP_05_InletCover_Bolt_07_Washer",
+          "PMP_05_InletCover_Bolt_08_HexHead",
+          "PMP_05_InletCover_Bolt_08_Stud",
+          "PMP_05_InletCover_Bolt_08_Washer",
+          "PMP_05_InletCover_Bolt_09_HexHead",
+          "PMP_05_InletCover_Bolt_09_Stud",
+          "PMP_05_InletCover_Bolt_09_Washer",
+          "PMP_05_InletCover_Bolt_10_HexHead",
+          "PMP_05_InletCover_Bolt_10_Stud",
+          "PMP_05_InletCover_Bolt_10_Washer",
+          "PMP_05_InletCover_Bolt_11_HexHead",
+          "PMP_05_InletCover_Bolt_11_Stud",
+          "PMP_05_InletCover_Bolt_11_Washer",
+          "PMP_05_InletCover_Bolt_12_HexHead",
+          "PMP_05_InletCover_Bolt_12_Stud",
+          "PMP_05_InletCover_Bolt_12_Washer",
+          "PMP_05_InletCover_ContouredCover",
+          "PMP_05_InletCover_ORing",
+          "PMP_05_InletCover_RegisterORing",
+          "PMP_05_InletCover_SuctionFlange12mm",
+          "PMP_05_InletCover_SuctionPipe",
+          "PMP_05_InletCover_SuctionRaisedFace"
+        ]
+      },
+      {
+        "name": "PMP_06_SealBearing",
+        "label": "机械密封与支座",
+        "start": 125,
+        "offset": {
+          "x": 0.28,
+          "y": 0.65,
+          "z": 0.12
+        },
+        "anchor": "PMP_06_SealBearing_SealChamber",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.91,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.955,
+            "offset": {
+              "x": 0.28,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 1,
+            "offset": {
+              "x": 0.28,
+              "y": 0.65,
+              "z": 0.12
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_06_SealBearing_BaseShim",
+          "PMP_06_SealBearing_GlandBolt_HexHead",
+          "PMP_06_SealBearing_GlandBolt_HexHead.001",
+          "PMP_06_SealBearing_GlandBolt_HexHead.002",
+          "PMP_06_SealBearing_GlandBolt_HexHead.003",
+          "PMP_06_SealBearing_GlandBolt_HexNut",
+          "PMP_06_SealBearing_GlandBolt_HexNut.001",
+          "PMP_06_SealBearing_GlandBolt_HexNut.002",
+          "PMP_06_SealBearing_GlandBolt_HexNut.003",
+          "PMP_06_SealBearing_GlandBolt_Stud",
+          "PMP_06_SealBearing_GlandBolt_Stud.001",
+          "PMP_06_SealBearing_GlandBolt_Stud.002",
+          "PMP_06_SealBearing_GlandBolt_Stud.003",
+          "PMP_06_SealBearing_GlandBolt_Washer",
+          "PMP_06_SealBearing_GlandBolt_Washer.001",
+          "PMP_06_SealBearing_GlandBolt_Washer.002",
+          "PMP_06_SealBearing_GlandBolt_Washer.003",
+          "PMP_06_SealBearing_PedestalWeb",
+          "PMP_06_SealBearing_PedestalWeb.001",
+          "PMP_06_SealBearing_RotatingSealFace",
+          "PMP_06_SealBearing_SealChamber",
+          "PMP_06_SealBearing_StaticSealFace",
+          "PMP_06_SealBearing_SupportFoot"
+        ]
+      },
+      {
+        "name": "PMP_07_Impeller",
+        "label": "叶轮与叶片",
+        "start": 64,
+        "offset": {
+          "x": -0.62,
+          "y": 0.28,
+          "z": 0.16
+        },
+        "anchor": "PMP_07_Impeller_BackShroud",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.43,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.53,
+            "offset": {
+              "x": -0.62,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.62,
+            "offset": {
+              "x": -0.62,
+              "y": 0.28,
+              "z": 0.16
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_07_Impeller_BackShroud",
+          "PMP_07_Impeller_BackwardBlade_01",
+          "PMP_07_Impeller_BackwardBlade_02",
+          "PMP_07_Impeller_BackwardBlade_03",
+          "PMP_07_Impeller_BackwardBlade_04",
+          "PMP_07_Impeller_BackwardBlade_05",
+          "PMP_07_Impeller_BackwardBlade_06",
+          "PMP_07_Impeller_Hub",
+          "PMP_07_Impeller_LockNut",
+          "water-pump_rotor"
+        ]
+      },
+      {
+        "name": "PMP_08_TerminalLid",
+        "label": "接线盒盖",
+        "start": 18,
+        "offset": {
+          "x": 1,
+          "y": 0,
+          "z": 0.41
+        },
+        "anchor": "PMP_01_Motor_TerminalLid",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.12,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.15,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.06
+            }
+          },
+          {
+            "time": 0.24,
+            "offset": {
+              "x": 1,
+              "y": 0,
+              "z": 0.06
+            }
+          },
+          {
+            "time": 0.3,
+            "offset": {
+              "x": 1,
+              "y": 0,
+              "z": 0.41
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_01_Motor_LidGasket",
+          "PMP_01_Motor_LidScrew_HexHead",
+          "PMP_01_Motor_LidScrew_HexHead.001",
+          "PMP_01_Motor_LidScrew_HexHead.002",
+          "PMP_01_Motor_LidScrew_HexHead.003",
+          "PMP_01_Motor_LidScrew_HexNut",
+          "PMP_01_Motor_LidScrew_HexNut.001",
+          "PMP_01_Motor_LidScrew_HexNut.002",
+          "PMP_01_Motor_LidScrew_HexNut.003",
+          "PMP_01_Motor_LidScrew_Stud",
+          "PMP_01_Motor_LidScrew_Stud.001",
+          "PMP_01_Motor_LidScrew_Stud.002",
+          "PMP_01_Motor_LidScrew_Stud.003",
+          "PMP_01_Motor_LidScrew_Washer",
+          "PMP_01_Motor_LidScrew_Washer.001",
+          "PMP_01_Motor_LidScrew_Washer.002",
+          "PMP_01_Motor_LidScrew_Washer.003",
+          "PMP_01_Motor_TerminalLid"
+        ]
+      },
+      {
+        "name": "PMP_09_ImpellerFrontShroud",
+        "label": "叶轮前盖板",
+        "start": 64,
+        "offset": {
+          "x": -1.15,
+          "y": 0.12,
+          "z": 0.5
+        },
+        "anchor": "PMP_07_Impeller_ConicalFrontShroud",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.43,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.53,
+            "offset": {
+              "x": -0.62,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.62,
+            "offset": {
+              "x": -0.62,
+              "y": 0.28,
+              "z": 0.16
+            }
+          },
+          {
+            "time": 0.7,
+            "offset": {
+              "x": -1.15,
+              "y": 0.28,
+              "z": 0.16
+            }
+          },
+          {
+            "time": 0.76,
+            "offset": {
+              "x": -1.15,
+              "y": 0.12,
+              "z": 0.5
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_07_Impeller_ConicalFrontShroud"
+        ]
+      },
+      {
+        "name": "PMP_10_BearingHousing",
+        "label": "轴承外壳",
+        "start": 104,
+        "offset": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.25
+        },
+        "anchor": "PMP_06_SealBearing_BearingHousing",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.66,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.74,
+            "offset": {
+              "x": 0.5,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.8,
+            "offset": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.25
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_06_SealBearing_BearingHousing",
+          "PMP_06_SealBearing_GreaseNipple"
+        ]
+      },
+      {
+        "name": "PMP_11_BearingSet",
+        "label": "轴承总成",
+        "start": 104,
+        "offset": {
+          "x": 0.22,
+          "y": -0.35,
+          "z": 0.25
+        },
+        "anchor": "PMP_06_SealBearing_BearingOuterRace",
+        "path": [
+          {
+            "time": 0,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.66,
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.74,
+            "offset": {
+              "x": 0.5,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "time": 0.8,
+            "offset": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.25
+            }
+          },
+          {
+            "time": 0.86,
+            "offset": {
+              "x": 0.22,
+              "y": 0.5,
+              "z": 0.25
+            }
+          },
+          {
+            "time": 0.91,
+            "offset": {
+              "x": 0.22,
+              "y": -0.35,
+              "z": 0.25
+            }
+          }
+        ],
+        "meshes": [
+          "PMP_06_SealBearing_Ball",
+          "PMP_06_SealBearing_Ball.001",
+          "PMP_06_SealBearing_Ball.002",
+          "PMP_06_SealBearing_Ball.003",
+          "PMP_06_SealBearing_Ball.004",
+          "PMP_06_SealBearing_Ball.005",
+          "PMP_06_SealBearing_Ball.006",
+          "PMP_06_SealBearing_Ball.007",
+          "PMP_06_SealBearing_Ball.008",
+          "PMP_06_SealBearing_Ball.009",
+          "PMP_06_SealBearing_Ball.010",
+          "PMP_06_SealBearing_Ball.011",
+          "PMP_06_SealBearing_Ball.012",
+          "PMP_06_SealBearing_Ball.013",
+          "PMP_06_SealBearing_Ball.014",
+          "PMP_06_SealBearing_Ball.015",
+          "PMP_06_SealBearing_Ball.016",
+          "PMP_06_SealBearing_Ball.017",
+          "PMP_06_SealBearing_Ball.018",
+          "PMP_06_SealBearing_Ball.019",
+          "PMP_06_SealBearing_BearingInnerRace",
+          "PMP_06_SealBearing_BearingInnerRace.001",
+          "PMP_06_SealBearing_BearingOuterRace",
+          "PMP_06_SealBearing_BearingOuterRace.001"
+        ]
+      }
+    ]
+  },
+  "width_depth_height_m": [
+    1.899999976158142,
+    1.0,
+    1.350000023841858
+  ],
+  "non_manifold_objects": [],
+  "non_positive_volume_objects": [],
+  "uv_failed_objects": [],
+  "uv_max_anisotropy": 1.200316252293682,
+  "uv_max_density_area_ratio": 1.1547007804512779,
+  "uv_sub_1e_14_m2_triangles_excluded": 0,
+  "packed_file_images": 16,
+  "total_file_images": 16,
+  "animation_offsets_at_150": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.06000000238418579
+    ],
+    [
+      0.800000011920929,
+      -0.6000000238418579,
+      0.15000003576278687
+    ],
+    [
+      0.07999999821186066,
+      -0.5,
+      0.5999999642372131
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.949999988079071,
+      -0.5,
+      0.07999998331069946
+    ],
+    [
+      0.2800000011920929,
+      0.6499999761581421,
+      0.12000000476837158
+    ],
+    [
+      -0.6200000047683716,
+      0.2800000011920929,
+      0.1600000262260437
+    ],
+    [
+      0.9999999403953552,
+      0.0,
+      0.4099999666213989
+    ],
+    [
+      -1.1500000953674316,
+      0.11999999731779099,
+      0.5000000596046448
+    ],
+    [
+      0.5,
+      0.5,
+      0.25
+    ],
+    [
+      0.2199999988079071,
+      -0.3499999940395355,
+      0.25
+    ]
+  ],
+  "animation_exploded_pass": true,
+  "animation_max_home_error_m": 0.0,
+  "animation_shared_path_error_m": 1.3328003749250113e-07,
+  "animation_reverse_path_error_m": 0,
+  "review_operators": [
+    {
+      "state": 0,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    },
+    {
+      "state": 1,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    },
+    {
+      "state": 2,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    }
+  ],
+  "review_slider_home_pass": true,
+  "review_slider_exploded_pass": true,
+  "source_checks_pass": true
+}

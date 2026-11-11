@@ -1,0 +1,225 @@
+{
+  "materials": [
+    {
+      "name": "Clean cement grout",
+      "color": [
+        0.2199999988079071,
+        0.22499999403953552,
+        0.2199999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "family": "",
+      "relief": 0.00018
+    },
+    {
+      "name": "Dial / ceramic white",
+      "color": [
+        0.7699999809265137,
+        0.7900000214576721,
+        0.7699999809265137,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.47999998927116394,
+      "family": "",
+      "relief": 1e-05
+    },
+    {
+      "name": "EPDM rubber",
+      "color": [
+        0.009999999776482582,
+        0.010999999940395355,
+        0.012000000104308128,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8999999761581421,
+      "family": "rubber",
+      "relief": 2e-05
+    },
+    {
+      "name": "Fasteners / zinc plated",
+      "color": [
+        0.5299999713897705,
+        0.5600000023841858,
+        0.5899999737739563,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3199999928474426,
+      "family": "machined",
+      "relief": 9e-06
+    },
+    {
+      "name": "Gauge needle",
+      "color": [
+        0.5,
+        0.024000000208616257,
+        0.014999999664723873,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.41999998688697815,
+      "family": "",
+      "relief": 1e-05
+    },
+    {
+      "name": "Impeller / cast bronze vanes",
+      "color": [
+        0.3799999952316284,
+        0.23499999940395355,
+        0.07999999821186066,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.4300000071525574,
+      "family": "",
+      "relief": 6e-05
+    },
+    {
+      "name": "Impeller / machined bronze",
+      "color": [
+        0.4300000071525574,
+        0.2750000059604645,
+        0.0949999988079071,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3499999940395355,
+      "family": "",
+      "relief": 1.2e-05
+    },
+    {
+      "name": "Machined steel",
+      "color": [
+        0.41999998688697815,
+        0.44999998807907104,
+        0.47999998927116394,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.30000001192092896,
+      "family": "machined",
+      "relief": 7e-06
+    },
+    {
+      "name": "Nameplate / satin aluminium",
+      "color": [
+        0.6700000166893005,
+        0.6899999976158142,
+        0.7099999785423279,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3799999952316284,
+      "family": "machined",
+      "relief": 4e-06
+    },
+    {
+      "name": "Paint / blue grey",
+      "color": [
+        0.03799999877810478,
+        0.0689999982714653,
+        0.0860000029206276,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5099999904632568,
+      "family": "cast",
+      "relief": 7e-05
+    },
+    {
+      "name": "Paint / industrial grey",
+      "color": [
+        0.14000000059604645,
+        0.1550000011920929,
+        0.1599999964237213,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5299999713897705,
+      "family": "cast",
+      "relief": 1.4e-05
+    },
+    {
+      "name": "Powder coat / graphite",
+      "color": [
+        0.017999999225139618,
+        0.020999999716877937,
+        0.023000000044703484,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5400000214576721,
+      "family": "",
+      "relief": 2.5e-05
+    },
+    {
+      "name": "Safety yellow enamel",
+      "color": [
+        0.7200000286102295,
+        0.3700000047683716,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.4699999988079071,
+      "family": "cast",
+      "relief": 1e-05
+    },
+    {
+      "name": "Sand cast / blue grey",
+      "color": [
+        0.041999999433755875,
+        0.07599999755620956,
+        0.09000000357627869,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6899999976158142,
+      "family": "cast",
+      "relief": 0.00018
+    },
+    {
+      "name": "Seal / carbon graphite",
+      "color": [
+        0.04500000178813934,
+        0.04800000041723251,
+        0.05000000074505806,
+        1.0
+      ],
+      "metallic": 0.05000000074505806,
+      "roughness": 0.2800000011920929,
+      "family": "",
+      "relief": 1e-05
+    },
+    {
+      "name": "Seal / silicon carbide",
+      "color": [
+        0.25,
+        0.27000001072883606,
+        0.28999999165534973,
+        1.0
+      ],
+      "metallic": 0.30000001192092896,
+      "roughness": 0.18000000715255737,
+      "family": "",
+      "relief": 1e-05
+    },
+    {
+      "name": "Shaft / ground steel",
+      "color": [
+        0.6200000047683716,
+        0.6499999761581421,
+        0.6800000071525574,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.2199999988079071,
+      "family": "machined",
+      "relief": 3e-06
+    }
+  ]
+}

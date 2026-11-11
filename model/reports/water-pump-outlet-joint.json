@@ -1,0 +1,11 @@
+{
+  "source": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\model\\source\\water-pump.blend",
+  "object": "PMP_04_Volute_GrowingSpiral12mm",
+  "connected_shell_vertex_counts": [
+    5528
+  ],
+  "boundary_edges": 0,
+  "non_manifold_edges": 0,
+  "scope": "Joined volute and outlet mesh topology, plus front/back visual review; not a pressure test.",
+  "topology_pass": true
+}

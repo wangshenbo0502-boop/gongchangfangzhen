@@ -1,0 +1,25 @@
+{
+    "utc": "2026-11-11T09:33:52.5560456Z",
+    "width": 1600,
+    "height": 900,
+    "components": 8,
+    "meshes": 349,
+    "triangles": 119696,
+    "assembledSize": {
+        "x": 1.899999976158142,
+        "y": 1.3499999046325684,
+        "z": 0.9999999403953552
+    },
+    "returnErrorM": 1.1920928955078126e-7,
+    "explodedMotorTravelM": 1.0,
+    "meanFrameMs": 16.39668083190918,
+    "explodedProgress": 1.0,
+    "assembledProgress": 0.0,
+    "allShadersSupported": true,
+    "noPinkPixels": true,
+    "imageHasContrast": true,
+    "cameraMoved": true,
+    "allPartsInFrame": true,
+    "passed": true,
+    "errors": []
+}

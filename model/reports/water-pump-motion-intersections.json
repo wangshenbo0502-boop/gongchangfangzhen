@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-11T19:15:41.540091+08:00",
+  "samples": 300,
+  "mesh_objects": 349,
+  "method": "BVH polygon surface intersections, 300 forward poses; reverse uses identical poses. Baseline penetrations are not excluded. Only contacts with AABB overlap <=10 micrometres on at least one axis are classified as seating contact. This does not certify containment, tolerances or manufacturing feasibility.",
+  "baseline": [
+    {
+      "meshes": [
+        "PMP_00_Base_MachinedBed",
+        "PMP_03_Guard_MountingSill"
+      ],
+      "face_pairs": 8
+    },
+    {
+      "meshes": [
+        "PMP_00_Base_MachinedBed",
+        "PMP_03_Guard_MountingSill.003"
+      ],
+      "face_pairs": 8
+    },
+    {
+      "meshes": [
+        "PMP_01_Motor_TerminalBox",
+        "PMP_01_Motor_LidGasket"
+      ],
+      "face_pairs": 8
+    }
+  ],
+  "unresolved_baseline": [],
+  "seating_contacts": [
+    {
+      "meshes": [
+        "PMP_00_Base_MachinedBed",
+        "PMP_03_Guard_MountingSill"
+      ],
+      "samples": 6
+    },
+    {
+      "meshes": [
+        "PMP_00_Base_MachinedBed",
+        "PMP_03_Guard_MountingSill.003"
+      ],
+      "samples": 6
+    },
+    {
+      "meshes": [
+        "PMP_01_Motor_TerminalBox",
+        "PMP_01_Motor_LidGasket"
+      ],
+      "samples": 72
+    }
+  ],
+  "new_intersections": [],
+  "existing_intersections_during_motion": [],
+  "no_new_surface_intersections": true,
+  "surface_checks_pass": true
+}

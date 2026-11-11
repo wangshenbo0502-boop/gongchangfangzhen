@@ -1,12 +1,136 @@
 # 工业车间设备三维可视化监控与交互巡检系统
 
-基于 Unity 的三维交互课程项目，面向工业车间设备监控与运维教学，将设备空间位置、模拟运行指标、故障告警和虚拟巡检操作放在同一车间场景中展示。
+基于 Unity 的工业车间监控与运维教学项目，包含 **三维设备监控巡检** 和 **小车装配训练/使用演示** 两套场景。前者展示设备、故障、告警和巡检闭环，后者展示现有工业机器人小车的分部件装配与运动。
 
-项目围绕“看清设备位置、查看运行状态、定位异常、派发巡检、确认处理、形成记录”展开，重点体现三维场景与业务状态的联动。所有监测数据均为本地模拟数据，不代表真实工厂或传感器的采集结果。
+**接手先看：** 本工程默认打开数字孪生监控场景；要查看小车部件和装配交互，请打开官方训练场景。现有小车是后续四类设备建模的外观与拆装交互参考。全部监控指标为本地模拟数据，故障示意不等于真实工业诊断或 Abaqus 求解。
 
-本文按方案评估的“系统主题、开发目标、技术路线、必须人工完成的部分”组织，并补充运行与演示说明。状态核对日期为 **2026 年 10 月 30 日**；已更新工厂训练场景的中文界面、步骤提示、完成统计与输入修复，实际验证范围见第七节。
+文档核对日期：**2026-11-11**。统一平台保留七个业务入口：AI问答、模型展示、故障分析、设备台账、维修工单、实训复盘、知识导入，并在同一程序内切换原小车装配训练。仓库中共五个模型：小车，以及泵、罐、风机、控制柜四台受监控设备。储罐、水泵、控制柜沿仓库右侧设备区排齐，风机位于侧边，操作面朝向巡检通道，避开白色网格区和绿色人行道。已移除小地图，保留自动巡检与方向键手动驾驶；两场景统一使用 `H` 隐藏/恢复 UI、`M` 静音/恢复声音。功能来源与边界见 [整合清单](Evidence/version-integration-20261111.md)，本次验收见 [统一平台与布局验证](Evidence/platform-layout-20261111.md)。
 
-> **查阅提示：** 监控巡检业务场景是 `Assets/WorkshopDemo/Scenes/WorkshopDemo.unity`。当前默认构建列表指向另一个工厂训练场景，不能直接把默认构建结果当作监控系统。业务流程已有代码和生成场景，但历史自动验证因 UI 异常中断，完整闭环尚待修复后复验。
+## 快速启动与版本区分
+
+| 目的 | 入口 | 说明 |
+| --- | --- | --- |
+| 运行统一平台 | [WorkshopPlatform.exe](Build/WorkshopPlatform/WorkshopPlatform.exe) | 日常统一入口；包含监控平台与原小车装配训练 |
+| 运行本工程监控大屏 | [WorkshopDemo.unity](Assets/WorkshopDemo/Scenes/WorkshopDemo.unity) | 当前默认构建场景；也可用 `Tools/Workshop Demo/Open Digital Twin` 打开 |
+| 查看小车装配和使用 | [urp_scene_with_training.unity](Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity) | 官方样例保留；统一程序内通过“小车装配训练”进入并返回 |
+| 查看环境工作副本 | `Assets/WorkshopDemo/Scenes/FactoryFoundation.unity` | 环境工作副本，不是监控入口 |
+| 查看此前合并版程序 | `D:\UnityProjects\WorkshopInspectionDemo\Build\WorkshopCombined\WorkshopSystem.exe` | 属于另一个开发副本；按 `1` 进入装配，按 `2` 进入巡检，`H` 隐藏/恢复界面 |
+
+本 README 描述当前目录 `D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统`。旧开发副本中的设备观察器、渐进裂口和故障参考分析已按源码迁移到统一平台；当前结果以本工程的新验证报告为准。2026-11-11 经用户确认，四个旧车间构建已移入回收站；受保护的 `WorkshopCombined` 副本保持原样，当前统一入口为 `Build/WorkshopPlatform/WorkshopPlatform.exe`。清单见 [旧构建清理记录](Evidence/version-cleanup-20261111.md)。
+
+1. 用 Unity Hub 添加当前工程，使用 **Unity 6000.3.8f1** 打开，等待导入和编译完成。
+2. 选择上表中的目标场景，点击 Play。日常运行无需重建场景、安装 Blender 或启动 Abaqus。
+3. 需要知识问答时，再运行下列脚本启动 Docker 服务；监控和巡检可独立演示。
+
+```powershell
+.\Tools\Start-WorkshopAssistant.ps1
+```
+
+知识检索已具备历史验证记录，但 DeepSeek 接口曾返回 **401**，尚无有效密钥下真实在线回答通过的证据。配置见 [知识助手说明](Services/WorkshopAssistant/README.md)，密钥仅放在被忽略的 `.env`，不要提交。
+
+通过 Git 获取资源时先执行 `git lfs install`、`git lfs pull` 和 `git lfs fsck`。迁移时保留 `Assets` 及全部 `.meta`、`Packages`、`ProjectSettings`；资源缺失应先检查 LFS，不要重新提取全部美术资源。
+
+Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 Release 附件发布。`Build/`、本机缓存、建模过程快照和密钥不提交，下载程序后应保留解压目录内全部配套文件。
+
+## 小车模型与交互
+
+### 模型来源与用途
+
+这里的“小车”指 **Factory Training – Industry Sample** 中的工业机器人，资源名称使用 `moto` / `moto_bot`，并非跑车。整机、装配部件、材质和装配逻辑来自已有样例，中文界面及巡检业务在此基础上定制。
+
+它在项目中有两种用途：
+
+- **训练场景：** 通过独立部件、定位提示、拖装与自动演示学习装配；“使用”页演示小车运动和机械臂滑动。
+- **监控场景：** 复用完整小车的外观，由 `WorkshopInspector` 控制它前往故障设备，展示路径、到达和任务完成。
+
+资源来源及许可记录见 [SOURCES.md](Assets/WorkshopDemo/External/SOURCES.md)。小车资源记录为 **Unity Companion License**，不属于目录中其他 CC0 工业素材。
+
+### 从哪里找到模型
+
+以下资源均位于 `Assets/WorkshopDemo/External/FactoryTraining/`：
+
+| 相对路径 | 用途 |
+| --- | --- |
+| [Prefabs/moto_bot/moto_prefab.prefab](Assets/WorkshopDemo/External/FactoryTraining/Prefabs/moto_bot/moto_prefab.prefab) | 完整小车；监控场景生成器实例化的资源 |
+| [Prefabs/moto_bot/moto_bot_forassembly.prefab](Assets/WorkshopDemo/External/FactoryTraining/Prefabs/moto_bot/moto_bot_forassembly.prefab) | 装配版小车 |
+| [Prefabs/moto_part/](Assets/WorkshopDemo/External/FactoryTraining/Prefabs/moto_part/) | 16 个独立部件预制体 |
+| [Prefabs/moto_training_parts/](Assets/WorkshopDemo/External/FactoryTraining/Prefabs/moto_training_parts/) | 对应的 16 个训练部件预制体 |
+| [Fbx/moto_bot.fbx](Assets/WorkshopDemo/External/FactoryTraining/Fbx/moto_bot.fbx) | 完整模型网格源资源 |
+| [Fbx/moto_bot_forassembly.fbx](Assets/WorkshopDemo/External/FactoryTraining/Fbx/moto_bot_forassembly.fbx) | 装配版网格源资源 |
+| [Materials/moto/](Assets/WorkshopDemo/External/FactoryTraining/Materials/moto/) | 金属、镀铬、塑料、橡胶、灯光及反光件材质 |
+| [Textures/moto/](Assets/WorkshopDemo/External/FactoryTraining/Textures/moto/) | Base Color、Normal、Roughness、Metallic 等贴图 |
+| [Animations/](Assets/WorkshopDemo/External/FactoryTraining/Animations/) | 装配示意 Animator、步骤动画和 UI 动画 |
+
+查看整机外观可先打开完整 prefab；查看实际拖装效果应进入训练场景，单独打开 FBX 不会运行训练逻辑。
+
+### 部件组成
+
+下表按现有资源名分组，中文仅作查找说明，精确位置以 prefab 层级和场景绑定为准：
+
+| 分组 | 部件 prefab 名称 |
+| --- | --- |
+| 车体与支撑 | `body_main`、`body_front`、`chassis_support`、`frame_cover` |
+| 机械臂底座与桥架 | `arm_chassis`、`bridge` |
+| 左右滑动组件 | `gliders_left`、`gliders_right`、`shelf_Gliders_GRP_left`、`shelf_Gliders_GRP_right` |
+| 轴系 | `inner_shaft`、`outer_shaft` |
+| 驱动与夹持件 | `motor`、`claw` |
+| 线缆与线缆护罩 | `cables`、`cable_housing` |
+
+**16 个部件预制体不等于 16 道训练工序。** 现有训练统计界面按 15 项工序展示，实际步骤由状态管理器的 `_stateData` 配置决定，不能仅按文件数推算。
+
+### 装配、观察和使用
+
+训练场景顶部提供“组装、使用、远景、近景”入口。“组装”包含引导训练和独立考核；部件高亮、目标虚影、步骤提示、计时与完成统计共同构成训练流程。
+
+1. 当前步骤指定可操作部件、拖动参考平面和正确装配位置。
+2. 鼠标选中并拖动部件；拖动受步骤配置约束，并非任意空间自由移动。
+3. 松开后检查与目标位置的距离：正确时吸附归位并推进步骤，错误时播放返回动画。
+4. 步骤还提供自动演示/完成入口；重置恢复训练。装配示意由步骤状态和 Animator 配合，不能理解为任意模型都能自动生成拆装。
+
+“使用”页通过滑条移动指定机械臂对象；官方 `AgentMovement` 提供键盘移动，按对象的 `useArrowKeys` 配置使用方向键或 WASD，`RandomAgentMovement` 负责自动游走，`wheelRotation` 提供轮子视觉旋转。滑条和轮子属于 Transform 动画，不是关节载荷、轮胎接触或整车动力学求解。
+
+训练界面支持 `M` 静音/恢复声音、`H` 隐藏/恢复界面。步骤提示可点击“继续”收起，也会约 2.4 秒后开始淡出，淡出约 0.2 秒。详细历史交互验证边界见后文，不能据此宣称完整 15 步本次重新验收通过。
+
+### 小车代码导航
+
+官方逻辑在 `Assets/WorkshopDemo/External/FactoryTraining/Scripts/`，下表路径相对此目录：
+
+| 脚本 | 负责什么 |
+| --- | --- |
+| `ImmersiveTraining/Management/StateManager_Training.cs` | 步骤顺序、当前部件、推进/完成/重置 |
+| `ImmersiveTraining/StateHandling/StateTrainingWithPass.cs` | 部件、目标虚影、拖动平面、目标位置、吸附判定和步骤示意 |
+| `ImmersiveTraining/TrainingInteractions/TrainingPartMover.cs` | 射线选取、拖动、释放检查、错误回位和自动演示 |
+| `ImmersiveTraining/TrainingInteractions/HighlightManager.cs` | 部件高亮 |
+| `ImmersiveTraining/Management/TrainingTypeManager.cs` | 引导训练与独立考核切换 |
+| `ImmersiveTraining/Management/ModalPanel.cs`、`TimeManager.cs` | 步骤提示、计时和统计 |
+| `DistributionCenter/AgentMovement.cs`、`RandomAgentMovement.cs` | 官方场景手动移动与自动游走 |
+| `DistributionCenter/GOTranslator.cs` | 滑条到机械臂对象位移的映射 |
+| `DistributionCenter/wheelRotation.cs` | 轮子视觉动画 |
+| `DistributionCenter/CameraSwitcher.cs`、`CamInput.cs` | 官方场景视角与输入 |
+
+自定义训练界面在 [FactoryTrainingUI.cs](Assets/WorkshopDemo/Scripts/FactoryTrainingUI.cs)，编辑器配置在 [FactoryTrainingUIEditor.cs](Assets/WorkshopDemo/Editor/FactoryTrainingUIEditor.cs)。
+
+### 在巡检系统中的接入
+
+[WorkshopFoundationBuilder.cs](Assets/WorkshopDemo/Editor/WorkshopFoundationBuilder.cs) 的 `Inspector(...)` 实例化完整小车并命名为 `Inspection robot`，关闭继承的 `MonoBehaviour` 和音频，再配置 `NavMeshAgent`、路线 `LineRenderer` 和 [WorkshopInspector.cs](Assets/WorkshopDemo/Scripts/WorkshopInspector.cs)。
+
+当前工程由 `WorkshopInspector` 检查完整可达路径、移动、更新路线、朝向目标和报告到达；`WorkshopSimulation` 决定能否派发与处理。统一平台已接入手动接管、方向键驾驶和轮子转动；手动离开维修点会撤销到达许可，恢复自动后继续原任务。不要同时启用官方游走和巡检导航，以免两个控制器争用位置。
+
+维护模型时保留原部件层级、枢轴、装配目标、碰撞体、材质槽、UV 和 `.meta`。改网格后需要同时检查拖装、虚影、动画和巡检导航尺寸。`Outline` 使用第 8 层，与描边 renderer 的 mask `256` 配套。
+
+### 后续四类设备的建模状态
+
+计划保留小车，重做离心泵、立式储罐、轴流风机和控制柜；要求结构、材质与拆装体验向现有小车看齐。原规范按八个主要组件设计；离心泵按用户后续要求改为 **12 个总成**，Blender 与 Unity 使用同一分组和拆装配置，不把每颗螺栓单列成步骤。要求见 [建模目标与验收标准](model/建模目标与验收标准.md)。
+
+**离心泵正在独立展示器中审核；其余三类尚未开始。** 双击 [WaterPumpViewer.exe](model/WaterPumpViewer/WaterPumpViewer.exe) 可查看整机、12 总成拆装、内部结构、旋转和缩放，无需安装 Unity。源文件为 [water-pump.blend](model/source/water-pump.blend)，含整机/拆开/内部三个 Scene，以及 1–320 帧拆开再组装动画。运行 `.\model\scripts\Open-PumpReview.ps1` 可在 Blender 打开观察侧栏。
+
+独立 Unity 工程为 `model/PumpViewerProject`，复现构建运行 `.\model\scripts\Build-PumpViewer.ps1`。FBX、线性材质参数、微法线/粗糙度和工作室反射图从源模型转接；渲染使用 URP HDR、4× MSAA、宽高各 2 倍超采样及轻度细节锐化，保留现有材质色调。默认启动按桌面尺寸选择较大窗口（最高 2240×1260），可调整窗口；显式传入分辨率参数时使用指定尺寸。它是实时展示器，与 Blender Cycles 不保证逐像素一致。
+
+拆解与组装单程约 14 秒，采用分段退出、移开、内部件分离的路径，组装沿原路返回。2026-11-11 修正叶轮腔、护罩端部、紧固件通孔及支座间隙，并拉开端盖与叶轮盖板；保留已确认的组件标注与短引导线。当前 12 总成、349 网格、119,696 三角面；源模型重新打开检查与 300 个拆解位置的表面相交检查通过。该检查不等于制造公差或完整装配干涉认证。
+
+同日按用户截图修正护罩下方悬空支架：四根立柱上接护罩、下接落地底梁，底梁贴合设备底板；支架归安全护罩总成，拆解时先整体抬起再侧移。总成数、网格数及三角面数保持不变。
+
+实际网格、自检结果和限制见 [离心泵报告](model/reports/water-pump.md)、[重新打开验证](model/reports/water-pump-reopen-verification.json) 与 [独立展示器验证](Evidence/pump-viewer-20261111.md)。精细泵尚未替换主车间模型；当前四类设备仍使用程序化名义结构，支持部件拆装和预设损坏演化，小车保持原资源。独立查看器通过不等于主车间巡检和导航已验证。
 
 ## 一、系统主题
 
@@ -14,7 +138,7 @@
 
 系统名称为 **工业车间设备三维可视化监控与交互巡检系统**。
 
-以一个包含 8 台设备的虚拟车间为载体，把原本分散的设备台账、运行参数和告警信息对应到具体三维对象。用户既可以从列表查设备，也可以直接在场景中点选设备，再通过故障与巡检演示理解设备运维过程。
+以四台设备和一台巡检小车的虚拟车间为载体，把原本分散的设备台账、运行参数和告警信息对应到具体三维对象。用户既可以从列表查设备，也可以直接在场景中点选设备，再通过故障与巡检演示理解设备运维过程。
 
 ### 1.2 交互特色与应用价值
 
@@ -42,7 +166,7 @@
 
 建立一个能说明完整业务逻辑的三维原型：设备状态由统一模块管理，用户通过鼠标和中文界面完成观察、查询、故障触发、巡检派发与处理操作；支持重置，便于课堂重复演示。
 
-验收目标包括 8 台设备选择、相机操作、运行与停机表现、故障巡检闭环、重复操作防护、中文显示、两种目标分辨率以及 Windows 独立运行。上述内容是验收目标，实际通过范围见第七节。
+验收目标包括四台设备选择、相机操作、运行与停机表现、报修至验收闭环、重复操作防护、中文显示、两种目标分辨率以及 Windows 独立运行。实际通过范围见 [本次验收](Evidence/platform-layout-20261111.md)；第七节保留此前历史记录。
 
 ## 三、功能与业务流程
 
@@ -50,39 +174,41 @@
 
 ### 3.1 车间与设备
 
-监控场景配置了输送机、电机、水泵、储罐、风机和控制柜，共 6 类、8 台设备：
+监控场景共四类、四台设备，加一台原巡检小车：
 
-- `CV-01` 装配输送线。
-- `M-01` 输送驱动电机。
 - `P-01` 循环水泵。
-- `P-02` 备用循环泵。
 - `TK-01` 工艺储罐。
-- `TK-02` 稳压储罐。
 - `F-01` 车间排风机。
 - `PLC-01` 设备控制柜。
 
-每台设备具有唯一编号、名称、类别、场景位置和状态。运行状态分为“运行正常”“已停机”“超温故障”，通过文字、状态灯和故障标记反馈；选中设备显示选择框。
+每台设备具有唯一编号、名称、类别、场景位置和状态。正常、人工停机、故障及预警通过文字、状态灯和故障标记反馈；预警可继续运行，联锁类故障会停机，选中设备显示选择框。
 
 ### 3.2 模拟监控与界面
 
 系统约每 0.25 秒更新一次模拟指标。正常温度、振动和转速在标称值附近平滑变化；储罐和控制柜的转速、振动显示为“不适用”。界面标注“本地模拟”及“模拟数据”，避免与真实采集混淆。
 
-界面由顶部运行统计与模拟时间、左侧可滚动设备台账、中间三维视口、右侧设备详情、底部告警与巡检记录组成。设备列表选择会触发相机聚焦，场景点选用于选择设备并同步详情。
+界面包含顶部统计、设备矩阵、三维视口与空间标签、选中设备详情及温度曲线、告警/巡检记录和知识助手。设备台账选择会触发相机聚焦，场景点选同步设备详情。
 
 设备支持启动与停机。输送包裹移动、转子旋转等动画与运行状态关联，停机或故障时停止运动。
 
 ### 3.3 故障与巡检闭环
 
-当前为单机器人、单活动告警的确定性演示流程：
+当前四台设备各支持四种故障，共 **16 组可操作设备故障组合**，目录见 [WorkshopFaultCatalog.cs](Assets/WorkshopDemo/Scripts/WorkshopFaultCatalog.cs)。旧输送线、电机故障目录与参考算例作为资源保留，不再额外生成展示模型。
 
-1. 点击“触发演示故障”，使 `P-01` 循环水泵进入超温故障，温度约为 92°C，转速归零，并产生一条告警。
-2. 系统选中故障设备；也可点击告警行重新定位。告警显示编号、时间、设备、超温类型、严重程度及处理状态。
-3. 点击“派发巡检”，先检查目标路径是否完整可达，再由巡检机器人沿导航路径前往设备巡检点，并显示路线。
-4. 到达后任务转为“待处理”，允许用户点击“确认处理”。
-5. 确认后设备恢复运行，告警转为“已处理”，生成包含告警编号、设备、完成时间和处理说明的巡检记录。
-6. 点击“重置演示”，清空告警和记录，恢复设备、机器人位置及总览视角，隐藏屋顶。
+1. 选择设备，通过故障工况弹窗选择并注入适用故障；指标、外观、告警和统计同步更新。
+2. 可为多台设备注入并存告警，同一设备已有未处理故障时禁止重复注入。
+3. 在维修工单填写报修人、部门和现象，再填写维修责任人与处理时限派工；检查完整路径后由小车前往巡检点，单台小车一次执行一个任务。
+4. 实际到达后填写原因、措施和配件并提交维修，释放小车；设备仍保留故障，等待使用方验收。验收驳回回到待派工，重新到场复查。
+5. 验收通过才清除故障并归档；设备恢复故障前的启停状态，原先人工停机的设备保持停机。
+6. “重置演示”清空告警和记录，恢复设备、机器人及观察状态。
 
-代码中已设置提前处理、重复派发、重复处理和活动告警重复触发的限制。这些保护机制仍需在业务场景修复后一起复验。
+故障参数是教学设定，不能当作材料断裂极限。现有 Abaqus 接口用于导入 ODB 导出的区域极值时序，详见 [Abaqus 接入说明](Tools/Abaqus/README.md)；有接口不代表已有真实求解或逐节点断裂网格。当前验收使用内存合成协议数据，没有真实 Abaqus 求解结果。
+
+### 3.4 数字孪生大屏与场景助手
+
+大屏展示设备总数、运行数、活动告警、完成验收、设备台账、三维车间、选中设备温度曲线、详情及工单/记录。保留设备屏幕投影标签、选中框及实际导航路径，原 XZ 小地图已移除。UI 直接读取业务状态，温度曲线使用实际模拟样本。
+
+左栏“AI问答”将问题与当次 Unity 快照发送到本机 Docker 服务，使用中文向量模型检索 pgvector 中的场景资料，再请求 DeepSeek，显示知识引用与错误状态。“知识导入”支持标题正文或 UTF-8 MD/TXT 文件。知识索引有历史入库和中文检索记录；真实模型回答受当前密钥鉴权失败阻塞。助手不直接操作设备。
 
 ## 四、技术路线
 
@@ -109,6 +235,11 @@ Windows 编辑器图形配置沿用 10 月 29 日的修复，已固定为 Direct
 - `WorkshopInspector.cs`：巡检路径检查、导航移动、到达判断及路线显示。
 - `WorkshopCamera.cs`：三维点选、轨道观察、聚焦、总览、跟随及 UI 输入隔离。
 - `WorkshopUI.cs`：创建中文界面，响应业务事件，刷新台账、指标、告警及记录。
+- `WorkshopTrendGraphic.cs`：绘制实际模拟温度样本曲线。
+- `WorkshopAssistantClient.cs`：知识服务健康检查、业务快照、问答、引用与错误显示。
+- `WorkshopFaultCatalog.cs`、`WorkshopFaultVisual.cs`：故障目录、教学参数与对应示意表现。
+- `WorkshopAbaqusResult.cs`：外部结果的单位、元数据、设备绑定校验及极值时序读取。
+- `WorkshopHudGraphic.cs`、`WorkshopSceneOverlay.cs`、`WorkshopDashboardGraphic.cs`：HUD 图形、空间标签及状态可视化。
 
 设备状态以 `WorkshopDevice` 为基础，业务流程由 `WorkshopSimulation` 协调。界面从业务模块读取数据，通过事件刷新，不在面板内部独立生成另一套监控数据。
 
@@ -123,21 +254,17 @@ Windows 编辑器图形配置沿用 10 月 29 日的修复，已固定为 Direct
 
 导航实现面向当前静态布局，不应据此认定复杂动态避障或全厂区路径规划已经完成。
 
-## 五、课程设计与人工工作
+## 五、独立开发与维护
 
-方案评估要求说明系统主题、开发目标、技术路线和必须人工完成的部分。项目的主题、面向用户、需求痛点及实现方法已在前文展开。
+项目当前由个人独立开发，以本 README、现有源码及 `Evidence/` 中的验证记录为维护依据。新增功能、模型和运行入口发生变化时同步更新对应说明，明确已实现、已验证和计划中的内容。
 
-根据课程指导，设计阶段的系统架构图、功能模块图、流程图，以及数据表格式、字段、类型和属性设计，需要由小组成员使用 Office、Visio 等工具人工设计、制作。需求取舍、数据来源、架构与逻辑设计也需要由成员理解并说明。
-
-本 README 用于解释当前工程，不替代上述人工设计成果，也不证明这些材料已经完成。课程汇报时，应另行准备成员实际制作的图表，保证其内容与当前代码、场景及验证结果一致。
-
-工程中已有 `工业车间三维监控与交互巡检_答辩视觉增强版_15页.pptx`。该文件的存在不代表内容已与本版工程逐项核对，也不代表满足人工制作要求，提交前仍需由小组检查。
+修改设备业务优先查看 `WorkshopSimulation` / `WorkshopDevice`；修改小车优先查看前面的模型与交互章节。生成场景中的长期改动应同步到生成器或配置，避免下次重建丢失。
 
 ## 六、打开与运行
 
 ### 6.1 准备工程
 
-通过 Unity Hub 添加工程根目录，使用 **Unity 6000.3.8f1** 打开，等待依赖恢复、资源导入和脚本编译完成。首次打开或恢复依赖可能需要联网；业务运行逻辑不依赖云服务、账号或真实硬件。
+通过 Unity Hub 添加工程根目录，使用 **Unity 6000.3.8f1** 打开，等待依赖恢复、资源导入和脚本编译完成。首次打开或恢复依赖可能需要联网；基础监控、装配与巡检不依赖在线问答或真实硬件。
 
 工程使用 Git LFS 管理模型、贴图、音频、字体和演示文稿。若通过 Git 获取工程，请在工程根目录确认已安装 Git LFS，并执行：
 
@@ -156,11 +283,11 @@ git lfs fsck
 3. 点击 Play，在 Game 视图查看监控界面。
 4. 若出现 UI 初始化异常或界面不完整，应先停止运行并排查第七节的问题，避免继续演示时误判功能状态。
 
-当前构建列表启用的是 `Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity`，用于工厂环境与装配训练展示。它与监控巡检业务场景不同，其高亮验证结果不能替代监控流程验收。
+官方参考场景 `Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity` 继续保留，用于工厂环境与装配训练展示。其高亮验证结果不能替代监控流程验收。数字孪生构建入口可由 `Tools/Workshop Demo/Set Digital Twin Build Entry` 设置，该操作先备份构建列表，不会重建场景。
 
 `Assets/WorkshopDemo/Scenes/FactoryFoundation.unity` 是环境工作副本，也不是监控业务入口。
 
-工厂训练场景现采用深色面板、设备黄色强调色与圆角控件，顶部入口为“组装、使用、远景、近景”。机械臂滑条与示意图分区显示，示意图已居中并放大。按 `A` 切换静音，按 `H` 隐藏或恢复界面；原静音和隐藏按钮已移除。
+工厂训练场景现采用深色面板、设备黄色强调色与圆角控件，顶部入口为“组装、使用、远景、近景”。机械臂滑条与示意图分区显示，示意图已居中并放大。按 `M` 切换静音，按 `H` 隐藏或恢复界面；原静音和隐藏按钮已移除。
 
 引导装配与独立考核的步骤提示均支持点击“继续”立即开始收起；未点击时，约 **2.4 秒**后自动开始收起。收起动画在约 **0.2 秒**内轻微下移并淡出，保持下一工序计时。完成统计采用单列 15 项工序布局。“使用”页和顶部按钮曾被透明相机热区拦截，现已在热区创建代码中关闭射线拦截；当前验收范围见第七节。
 
@@ -173,7 +300,9 @@ git lfs fsck
 - 点击设备台账或告警行：选中并聚焦对应设备。
 - “总览”：恢复整体视角；“自由观察”：退出跟随；“巡检跟随”：切换跟随状态。
 - “屋顶”：切换屋顶显示；“启动设备／停止设备”：切换选中设备运行状态。
-- 底部按钮：触发演示故障、派发巡检、确认处理及重置演示。
+- “手动接管”：方向键前进、倒车和转向；按钮切换为“恢复自动”，点击后继续尚未完成的巡检任务。
+- `H`：隐藏/恢复界面；`M`：静音/恢复声音。填写输入框时不触发监控快捷键。
+- 业务命令：选择故障工况、派发巡检、确认处理及重置演示。
 
 故障设备不能通过普通启停按钮解除故障，需要完成巡检处理流程。
 
@@ -183,53 +312,64 @@ git lfs fsck
 
 该菜单用于重新生成场景，不是导出 EXE。它会覆盖 `WorkshopDemo.unity` 和相关生成资源，并替换构建场景列表；生成前必须保护需要保留的人工场景修改。需要长期保留的生成配置应同步到 `WorkshopFoundationBuilder.cs`。
 
-Windows 构建可通过 Unity Build Profiles 选择 Windows 平台并确认仅包含正确业务场景；工程另有 `WorkshopVerification.BuildPlayer()` 构建方法，固定使用监控场景，输出到 `Build/WorkshopDemo/WorkshopDemo.exe`。
+统一 Windows 构建使用 `Tools/Workshop Demo/Build Unified Platform EXE` / `WorkshopPlatformBuild.Build()`，包含监控及原装配两场景，输出到 `Build/WorkshopPlatform/WorkshopPlatform.exe`。`WorkshopVerification.BuildPlayer()` 是仅构建监控的旧入口。
 
-构建后应保留同目录配套文件，并实际启动检查。构建成功与独立程序功能验收是两件事，当前没有独立运行通过的证据。
+构建后应保留同目录配套文件。2026-11-11 统一构建成功，独立程序已实际启动并检查 1280×720 画面、H 隐藏界面、方向键手动前进和恢复自动模式；完整 Windows 业务流程与声音采集仍未验收，详情见 [本次记录](Evidence/platform-layout-20261111.md)。
 
 ## 七、当前进度与验证状态
 
 ### 7.1 已有工程内容
 
-当前工程已包含 8 台设备配置、监控场景、5 个运行时业务模块、界面与导航实现，以及场景生成和自动验证工具。这些内容可以用于检查实现思路与继续开发。
+当前统一平台包含四台设备和一台小车、七栏后台界面、故障参考分析、拆装观察、导航/手动接管及报修验收闭环。原装配场景和独立 Docker 知识服务保留。当前验证见 [本次记录](Evidence/platform-layout-20261111.md)；以下 2026-11-10 的八设备 HUD 报告为历史版本。
+
+此前监控验证记录为 [2026-11-10 空间 HUD 验收](Evidence/dashboard-hud-20261110.md)：
+
+| 范围 | 历史报告 | 结果 |
+| --- | --- | --- |
+| 1280×720 HUD 与业务闭环 | [dashboard-hud-1280-20261110.txt](Evidence/dashboard-hud-1280-20261110.txt) | COMPLETE |
+| 1920×1080 HUD 与业务闭环 | [dashboard-hud-1920-20261110.txt](Evidence/dashboard-hud-1920-20261110.txt) | COMPLETE |
+| 1920×1080 的 24 机制 / 32 组合故障回归 | [dashboard-hud-faults-1920-20261110.txt](Evidence/dashboard-hud-faults-1920-20261110.txt) | COMPLETE |
+
+上述为 **Editor Play 历史验证**，覆盖 UI 射线、选择/启停、实际导航到达、处理记录、并存告警和连续重置；本次 README 更新没有重跑。未包含 Windows EXE、完整官方装配流程、OS 鼠标相机拖动/悬停或真实在线模型回答。更早知识服务和 UI 修复见 [2026-11-08 联调记录](Evidence/twin-integration-20261108.md)。
 
 ### 7.2 历史验证记录
 
 - **2026 年 10 月 28 日 15:09:36：** 场景生成报告记录了 8 台设备和 358 个导航顶点，见 `Evidence/demo-build.txt`。该报告只证明当次生成结果。
-- **2026 年 10 月 28 日 15:11:01 开始：** 监控自动验证通过“8 台设备运行”检查，随后在 `WorkshopUI.Refresh()` 发生列表索引越界，验证中断，没有 `COMPLETE`，见 `Evidence/runtime-verification.txt`。
+- **2026 年 10 月 28 日 15:11:01 开始：** 监控自动验证通过“8 台设备运行”检查，随后在 `WorkshopUI.Refresh()` 发生列表索引越界，验证中断，没有 `COMPLETE`；原报告已备份至 `Evidence/runtime-verification-before-twin-20261108-162249.txt`。
 - **2026 年 10 月 28 日 15:34:13 开始：** 工厂训练场景完成图层与 16 个部件重复高亮、恢复及运行检查，报告记录运行错误为 0，见 `Evidence/factory-layer-validation.txt`。此结果仅适用于该训练场景的已测范围。
 
-**当前不能宣称监控系统已完成全部验收。** 优先事项是修复 UI 刷新异常，再复验点选、故障、派发、到达、处理、记录及重置流程。
+**上述 UI 越界属于历史失败，2026-11-08 已修复并完成业务脚本复测。** Windows EXE 的本次启动与驾驶检查见 6.4；真实设备接入和有效密钥下的真实模型回答仍未验收。
 
 **2026 年 10 月 29 日训练界面更新：** 中文界面、黄色圆角样式、快捷键及机械臂布局已保存到训练场景，并同步至 `FactoryTrainingUIEditor`。本轮 Play 检查中，机械臂滑条在 0%、50%、100% 时的可见图案居中、尺寸及间距检查通过，并查看了 1920×1080 截图。双分辨率自动检查因 Game 视图尺寸切换未达到预期而中断，见 `Evidence/factory-arm-ui-verification-20261029.txt`，不能据此宣称双分辨率通过；完整训练 UI 检查也未通过全部检查，见 `Evidence/factory-ui-verification-20261029.txt`。本轮未验证监控业务闭环或 Windows 独立程序。
 
 **2026 年 10 月 30 日训练交互修复：** 已实现两种模式统一的 2.4 秒提示、点击“继续”立即启动 0.2 秒淡出下移动画，并保持下一工序计时；完成统计改为固定单列，提示 Canvas 补充鼠标射线支持。随后定位到运行时透明 `LeftHotboxPanel` 覆盖左侧 UI，将左右相机热区的 `raycastTarget` 设为 `false`，恢复导航、自动运行按钮和滑条的输入通路；同时处理机器人速度缓存和事件退订的生命周期问题。场景布局与对应生成代码均已保留。
 
-**本次验证及用户反馈：** 10 月 30 日 09:21:50–09:22:09（+08:00），Editor Play 通过排队鼠标输入验证了 **1920×1080** 的四个导航入口、自动启停、滑条拖至 75%/25% 及机械臂实际移动，截图为 `Evidence/factory-dialogs-usage-input-1920-20261030.png`。**1280×720** 导航和自动启动通过，随后在停止断言处中断，`Evidence/factory-dialogs-verification-20261030.txt` 仍记录 `FAILED`。用户其后确认“改好了”；本次仅同步文档，未重跑，不能把该反馈写成完整自动验收通过。1024×768、完整提示时序与计时保持、15 步完成/重试、三维部件鼠标拖装和 Windows 独立运行仍待复验。详细修复位置、命令和报告边界见 `项目交接文档.md` 的 10 月 30 日更新。
+**2026-10-30 验证及用户反馈：** 当日 09:21:50–09:22:09（+08:00），Editor Play 通过排队鼠标输入验证了 **1920×1080** 的四个导航入口、自动启停、滑条拖至 75%/25% 及机械臂实际移动，截图为 `Evidence/factory-dialogs-usage-input-1920-20261030.png`。**1280×720** 导航和自动启动通过，随后在停止断言处中断，`Evidence/factory-dialogs-verification-20261030.txt` 仍记录 `FAILED`。用户其后确认“改好了”，但该反馈不能视为完整自动验收通过。1024×768、完整提示时序与计时保持、15 步完成/重试、三维部件鼠标拖装和 Windows 独立运行仍待复验。
 
 ### 7.3 复验范围
 
-修复后应至少检查：正常启动、8 台设备的台账与三维选择、相机与 UI 输入隔离、停机动画、唯一告警、完整可达路径、提前处理限制、重复点击保护、记录生成、连续两次重置和第二轮完整流程。
+修改后应至少检查：正常启动、四台设备的台账与三维选择、相机与 UI 输入隔离、停机动画、多设备并存告警、完整可达路径、提前处理限制、重复点击保护、验收和驳回、记录生成、连续两次重置和第二轮完整流程。改动小车后，还应在训练场景检查部件拖装、自动示意、滑条、视角及完整工序，并单独复验巡检。
 
 还需在 **1280×720** 与 **1920×1080** 检查中文、布局及文字溢出，并在 Windows 独立程序中复验。已有 `WorkshopVerification` 工具可辅助检查，但程序调用选择不等于真实鼠标交互验收；`verify-demo` 只验证当前场景，不会自动打开监控场景。
 
 ### 7.4 当前限制
 
 - 数据均由本地脚本模拟，未接入真实设备、传感器或工业通信协议。
-- 故障固定作用于 `P-01`，一次只处理一个活动告警，未实现多机器人调度或并行任务队列。
-- 告警和巡检记录仅保存在运行期内存中，重置会清空，退出运行后不保留；没有数据库或后端服务。
-- 未实现监控设备的爆炸拆解功能；独立的装配训练展示不能算作该功能已经完成。
-- 当前场景使用现有模型与材质搭建，与早期“全部采用基础几何体、不依赖下载模型”的设想存在差异，需结合最终课程要求说明。
-- UI 初始化、目标分辨率适配和独立运行仍需完成相应修复或验收。
+- 已支持多设备、多类型并存告警；单台巡检小车一次执行一个任务，未实现多机器人调度或并行任务队列。
+- 告警和巡检记录仅保存在运行期内存中，重置会清空，退出运行后不保留；新增数据库与后端只保存、检索知识资料。
+- 小车保留原装配训练；四类设备的名义模型已有拆装观察，不能等同于精细建模目标全部完成。
+- 故障表现以教学示意为主；没有真实材料极限求解、真实 Abaqus 断裂结果或整车动力学求解。
+- 当前场景使用现有模型与材质搭建，资源来源及许可分别记录；离心泵精细 Blender 源模型已生成，尚未接入场景，其余三类待制作。
+- 本工程 Windows 已通过启动、画面、H 隐藏界面及手动前进/恢复自动模式检查；完整独立程序业务流程、M 的系统声音采集与真实模型在线回答仍待验收。当前双分辨率七栏平台、自动任务实际到达与 H/M 状态检查见 2026-11-11 专项记录，2026-11-10 HUD 为历史记录。
 
 ## 八、建议课堂演示顺序
 
-以下约三分钟流程用于**业务场景修复并通过复验之后**的演示准备；当前失败记录不能作为完整流程通过的依据。
+以下约三分钟流程用于课堂演示；业务脚本已通过本轮复测，真实鼠标与独立程序仍需人工试演。
 
 1. **0:00～0:30，介绍主题与边界：** 说明系统面向设备运维教学，展示车间总览，明确所有指标是模拟数据。
 2. **0:30～1:00，观察与查询：** 选择设备，展示台账、详情及三维选择联动；旋转、缩放并切换屋顶显示。
 3. **1:00～1:20，运行状态：** 展示输送或风机动画，停止并重新启动一台设备，观察状态、指标和统计同步变化。
-4. **1:20～1:45，异常定位：** 触发 `P-01` 超温，说明故障标记、告警及保护停机的联动，点击告警定位。
+4. **1:20～1:45，异常定位：** 选择一个设备故障，例如 `P-01` 超温，说明故障标记、告警及保护停机的联动，点击告警定位。
 5. **1:45～2:30，巡检与处理：** 派发机器人，展示路线及跟随视角；到达后确认处理，查看设备恢复与巡检记录。
 6. **2:30～3:00，重置与说明：** 重置演示，介绍统一状态来源、导航技术和当前限制。
 
@@ -248,11 +388,16 @@ Packages/        包依赖与锁定文件
 ProjectSettings/ Unity 版本、渲染、输入及构建设置
 Evidence/        历史生成报告、验证记录和截图
 Tools/           资源整理与恢复辅助工具
+Services/WorkshopAssistant/ Docker、知识文档、接口和测试
+model/           建模规范、离心泵精细源文件、贴图、预览、复现脚本与检查报告
 ```
 
-- [项目交接文档](项目交接文档.md)：详细模块关系、工具边界、问题清单与人工验收项。
-- [开发说明](开发说明.txt)：早期开发需求，阅读时应与当前实现和验证状态对照。
-- [AGENTS.md](AGENTS.md)：后续开发协作的入口和工程约束。
+- [小车资源](Assets/WorkshopDemo/External/FactoryTraining/Prefabs/moto_bot/)：完整模型与装配版。
+- [最新 HUD 验收](Evidence/dashboard-hud-20261110.md)：当前监控界面的验证范围和复跑方法。
+- [建模目标](model/建模目标与验收标准.md)：四类设备的质量要求、制作进度和验收项。
+- [离心泵建模记录](Evidence/pump-modeling-20261111.md)：本轮源模型、Blender 交互验证与未完成项。
+- [知识助手](Services/WorkshopAssistant/README.md) / [Abaqus 接口](Tools/Abaqus/README.md)：两个独立集成的配置与边界。
+- [AGENTS.md](AGENTS.md)：编码助手的工程导航与修改约束。
 
 迁移工程时应保留 `Assets` 及其全部 `.meta`、`Packages` 和 `ProjectSettings`；文档、工具及验证证据一并保留。`Library`、`Temp`、`Logs` 等缓存可重新生成，构建产物和原始下载归档不纳入版本管理。部分资源恢复工具依赖归档或远端文件，不属于日常运行步骤。
 

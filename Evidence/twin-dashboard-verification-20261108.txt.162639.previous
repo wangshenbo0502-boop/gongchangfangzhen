@@ -1,0 +1,6 @@
+Started 2026-11-08T16:25:22.7172273+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Method Editor Play / D3D11 / UGUI raycasts
+FAIL System.TimeoutException: Dashboard verification
+  at WorkshopDemo.Editor.WorkshopTwinValidation.Tick () [0x00071] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:60 
+FAILED

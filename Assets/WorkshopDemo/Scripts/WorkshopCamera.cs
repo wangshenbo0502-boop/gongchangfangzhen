@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 namespace WorkshopDemo
 {
@@ -27,6 +28,10 @@ namespace WorkshopDemo
         void Awake()
         {
             Main = view = GetComponent<Camera>();
+            view.cullingMask &= ~((1 << 27) | (1 << 28) | (1 << 29) | (1 << 30) | (1 << 31));
+            // The training scene's global bloom overwhelms monitoring overlays at close range.
+            if (TryGetComponent<UniversalAdditionalCameraData>(out var cameraData))
+                cameraData.renderPostProcessing = false;
             Overview();
             smoothTarget = target;
             smoothDistance = distance;

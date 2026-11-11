@@ -1,0 +1,16 @@
+{
+  "source": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\model\\source\\water-pump.blend",
+  "output": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\model\\PumpViewerProject\\Assets\\Textures\\inspection-studio.exr",
+  "resolution": [
+    2048,
+    1024
+  ],
+  "softboxes": 4,
+  "camera_blender_xyz_m": [
+    0.0,
+    0.0,
+    0.6600000262260437
+  ],
+  "linear_hdr": true,
+  "method": "Source area lights as camera-visible emissive panels; equipment hidden"
+}

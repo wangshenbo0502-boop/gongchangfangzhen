@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-11T19:08:35.9318264+08:00",
+  "processId": 38180,
+  "arguments": [
+    "-logFile",
+    "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\reports\\pump-clearance-default-window\\Player.log"
+  ],
+  "desktopWidth": 2560,
+  "desktopHeight": 1600,
+  "clientWidth": 2240,
+  "clientHeight": 1260,
+  "expectedWidth": 2240,
+  "expectedHeight": 1260,
+  "foregroundCapture": true,
+  "passed": true,
+  "leftRunningForReview": true
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-11T17:04:48.893796+08:00",
+  "blender": "5.3.0",
+  "stages": "B/C/D source review; E preliminary; F/G/H pending",
+  "mesh_count": 349,
+  "triangles_evaluated": 119696,
+  "min_xyz_m": [
+    -0.949999988079071,
+    -0.5,
+    0.0
+  ],
+  "max_xyz_m": [
+    0.949999988079071,
+    0.5,
+    1.350000023841858
+  ],
+  "width_depth_height_m": [
+    1.899999976158142,
+    1.0,
+    1.350000023841858
+  ],
+  "groups": [
+    {
+      "name": "PMP_00_Base",
+      "meshes": 30
+    },
+    {
+      "name": "PMP_01_Motor",
+      "meshes": 114
+    },
+    {
+      "name": "PMP_02_Coupling",
+      "meshes": 15
+    },
+    {
+      "name": "PMP_03_Guard",
+      "meshes": 12
+    },
+    {
+      "name": "PMP_04_Volute",
+      "meshes": 64
+    },
+    {
+      "name": "PMP_05_InletCover",
+      "meshes": 54
+    },
+    {
+      "name": "PMP_06_SealBearing",
+      "meshes": 49
+    },
+    {
+      "name": "PMP_07_Impeller",
+      "meshes": 11
+    }
+  ],
+  "geometry_issues": [],
+  "checks": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true,
+    "G9": true,
+    "G10": true,
+    "G11": true,
+    "G12": true
+  },
+  "source_pivot_axis_world": [
+    1.0,
+    -7.549790126404332e-08,
+    7.549790126404332e-08
+  ],
+  "uv": {
+    "method": "Smart UV 66deg; planar per-face islands for distorted parts; uniform packing",
+    "objects_checked": 349,
+    "planar_fallback_objects": 0,
+    "sub_1e_14_m2_triangles_excluded": 0,
+    "max_anisotropy": 1.1571409073748833,
+    "max_area_ratio_to_object_median": 1.1547007804512779,
+    "failures": [],
+    "pass": true
+  }
+}

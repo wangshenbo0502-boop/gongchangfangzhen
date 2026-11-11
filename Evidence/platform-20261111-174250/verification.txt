@@ -1,0 +1,90 @@
+Started 2026-11-11T17:42:50.2342819+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Editor Play / UGUI raycasts / actual NavMesh arrival
+RUNTIME ERROR NullReferenceException: Object reference not set to an instance of an object
+WorkshopDemo.WorkshopUI.BuildOverview () (at Assets/WorkshopDemo/Scripts/WorkshopUI.cs:297)
+WorkshopDemo.WorkshopUI.Build () (at Assets/WorkshopDemo/Scripts/WorkshopUI.cs:252)
+WorkshopDemo.WorkshopUI.Start () (at Assets/WorkshopDemo/Scripts/WorkshopUI.cs:75)
+
+PASS Resolution 1920
+PASS Enabled 模型展示
+PASS Top raycast 模型展示
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 当前运行
+PASS Text fits 未关闭告警
+PASS Text fits 验收归档
+PASS Text fits 总览
+PASS Text fits 跟随巡检
+PASS Text fits 屋顶
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 整机拆装
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits 当前设备
+PASS Text fits 停止设备
+PASS Text fits 设备档案
+PASS Text fits 故障分析
+PASS Text fits 处理当前工单
+PASS Sidebar entry AI问答
+PASS Sidebar entry 模型展示
+PASS Sidebar entry 故障分析
+PASS Sidebar entry 设备台账
+PASS Sidebar entry 维修工单
+PASS Sidebar entry 实训复盘
+PASS Sidebar entry 知识导入
+PASS Usable live viewport
+PASS Screenshot overview
+PASS Screenshot dimensions overview
+PASS Nonblank pixels overview (3701)
+PASS Enabled 设备台账
+PASS Top raycast 设备台账
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 当前运行
+PASS Text fits 未关闭告警
+PASS Text fits 验收归档
+FAIL System.InvalidOperationException: Eight ledger rows
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Check (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:100 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation+<Verify>d__29.MoveNext () [0x003c8] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:165 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Tick () [0x0017c] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:74 
+FAILED 2026-11-11T17:43:00.2052183+08:00

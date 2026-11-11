@@ -1,0 +1,143 @@
+Started 2026-11-11T17:25:53.3334743+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Editor Play / UGUI raycasts / actual NavMesh arrival
+PASS Resolution 1920
+PASS Enabled 模型展示
+PASS Top raycast 模型展示
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 总览
+PASS Text fits 跟随巡检
+PASS Text fits 屋顶
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits 
+PASS Text fits 当前设备
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 停止设备
+PASS Text fits 设备档案
+PASS Text fits 故障分析
+PASS Text fits 处理当前工单
+PASS Text fits 温度趋势 / 最近 30 秒
+PASS Sidebar entry AI问答
+PASS Sidebar entry 模型展示
+PASS Sidebar entry 故障分析
+PASS Sidebar entry 设备台账
+PASS Sidebar entry 维修工单
+PASS Sidebar entry 实训复盘
+PASS Sidebar entry 知识导入
+PASS Usable live viewport
+PASS Screenshot overview
+PASS Screenshot dimensions overview
+PASS Nonblank pixels overview (3996)
+PASS Enabled 设备台账
+PASS Top raycast 设备台账
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 设备档案
+PASS Text fits 设备编号 / 名称
+PASS Text fits 类别 / 位置
+PASS Text fits 运行状态
+PASS Text fits CV-01   装配输送线
+PASS Text fits 辊道输送机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits M-01   输送驱动电机
+PASS Text fits 三相异步电机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits P-01   循环水泵
+PASS Text fits 离心循环泵 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits P-02   备用循环泵
+PASS Text fits 离心循环泵 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits TK-01   工艺储罐
+PASS Text fits 工艺储罐 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits TK-02   稳压储罐
+PASS Text fits 工艺储罐 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits F-01   车间排风机
+PASS Text fits 轴流风机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits PLC-01   设备控制柜
+PASS Text fits PLC 控制柜 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits Text
+PASS Eight ledger rows
+PASS Ledger search filters
+PASS Enabled Device P-02
+PASS Top raycast Device P-02
+PASS Ledger selects actual device
+PASS Enabled 停止设备
+FAIL System.InvalidOperationException: Top raycast 停止设备
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Check (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:100 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Click (UnityEngine.UI.Button b) [0x0006e] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:111 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Click (System.String name) [0x00000] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:115 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation+<Verify>d__29.MoveNext () [0x0049a] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:169 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Tick () [0x0017c] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:74 
+FAILED 2026-11-11T17:26:03.1761221+08:00

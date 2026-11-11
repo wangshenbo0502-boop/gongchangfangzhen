@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-11T17:19:38.273126+08:00",
+  "blender": "5.3.0",
+  "reopened_file": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\water-pump.blend",
+  "scene_names": [
+    "01_ASSEMBLED",
+    "02_EXPLODED",
+    "03_INTERNAL"
+  ],
+  "mesh_count": 349,
+  "triangles": 119696,
+  "width_depth_height_m": [
+    1.899999976158142,
+    1.0,
+    1.350000023841858
+  ],
+  "non_manifold_objects": [],
+  "non_positive_volume_objects": [],
+  "uv_failed_objects": [],
+  "uv_max_anisotropy": 1.1571409073748833,
+  "uv_max_density_area_ratio": 1.1547007804512779,
+  "uv_sub_1e_14_m2_triangles_excluded": 0,
+  "packed_file_images": 16,
+  "total_file_images": 16,
+  "animation_offsets_at_150": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.550000011920929,
+      0.0,
+      0.0
+    ],
+    [
+      0.15000000596046448,
+      -0.25,
+      0.6499999165534973
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.8499999642372131,
+      0.0,
+      0.0
+    ],
+    [
+      0.25,
+      0.0,
+      0.0
+    ],
+    [
+      -0.5499999523162842,
+      0.0,
+      0.0
+    ]
+  ],
+  "animation_exploded_pass": true,
+  "animation_max_home_error_m": 0.0,
+  "review_operators": [
+    {
+      "state": 0,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    },
+    {
+      "state": 1,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    },
+    {
+      "state": 2,
+      "result": [
+        "FINISHED"
+      ],
+      "components": [
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ],
+        [
+          "FINISHED"
+        ]
+      ]
+    }
+  ],
+  "review_slider_home_pass": true,
+  "review_slider_exploded_pass": true,
+  "source_checks_pass": true
+}

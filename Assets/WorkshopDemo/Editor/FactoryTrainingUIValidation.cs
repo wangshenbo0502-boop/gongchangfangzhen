@@ -799,22 +799,22 @@ namespace WorkshopDemo.Editor
                 "H hides all canvases and blocks UI raycasts");
             QueueKeys();
             yield return .2;
-            QueueKeys(UnityEngine.InputSystem.Key.A);
+            QueueKeys(UnityEngine.InputSystem.Key.M);
             yield return .3;
             float mutedVolume = AudioListener.volume;
-            Require(mutedVolume == (volume > 0 ? 0 : 1), "A toggles audio while UI is hidden");
+            Require(mutedVolume == (volume > 0 ? 0 : 1), "M toggles audio while UI is hidden");
             yield return .4;
-            Require(AudioListener.volume == mutedVolume, "Holding A does not retrigger audio");
+            Require(AudioListener.volume == mutedVolume, "Holding M does not retrigger audio");
             var agents = UnityEngine.Object.FindObjectsByType<AgentMovement>(FindObjectsSortMode.None);
             Require(agents.Length > 0 && agents.All(agent => agent.useArrowKeys &&
                 !(bool)typeof(AgentMovement).GetField("manualControl",
                     BindingFlags.Instance | BindingFlags.NonPublic).GetValue(agent)),
-                "A does not steer robots");
+                "M does not steer robots");
             QueueKeys();
             yield return .2;
-            QueueKeys(UnityEngine.InputSystem.Key.A);
+            QueueKeys(UnityEngine.InputSystem.Key.M);
             yield return .3;
-            Require(AudioListener.volume == volume, "A restores audio");
+            Require(AudioListener.volume == volume, "M restores audio");
             QueueKeys();
             yield return .2;
             QueueKeys(UnityEngine.InputSystem.Key.H);

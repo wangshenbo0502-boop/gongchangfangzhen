@@ -96,21 +96,17 @@ namespace WorkshopDemo.Editor
             var deviceRoot = new GameObject("Monitored equipment").transform;
             deviceRoot.SetParent(generated.transform);
             var devices = new[] {
-                Equipment(deviceRoot, "CV-01", "装配输送线", DeviceKind.Conveyor, "conveyor-belt", new Vector3(-7,0,-3), 1.35f, font, cyan, alarm),
-                Equipment(deviceRoot, "M-01", "输送驱动电机", DeviceKind.Motor, "motor", new Vector3(-2,0,-3), 4, font, cyan, alarm),
-                Equipment(deviceRoot, "P-01", "循环水泵", DeviceKind.Pump, "water-pump", new Vector3(2,0,-3), 1.8f, font, cyan, alarm),
-                Equipment(deviceRoot, "P-02", "备用循环泵", DeviceKind.Pump, "water-pump", new Vector3(5,0,-3), 1.8f, font, cyan, alarm),
-                Equipment(deviceRoot, "TK-01", "工艺储罐", DeviceKind.Tank, "silo", new Vector3(-8,0,3), .35f, font, cyan, alarm),
-                Equipment(deviceRoot, "TK-02", "稳压储罐", DeviceKind.Tank, "pressure-tank", new Vector3(-4,0,3), 1.25f, font, cyan, alarm),
-                Equipment(deviceRoot, "F-01", "车间排风机", DeviceKind.Fan, "industrial-fan", new Vector3(0,0,3), 1.1f, font, cyan, alarm),
-                Equipment(deviceRoot, "PLC-01", "设备控制柜", DeviceKind.Cabinet, "electrical-cabinet", new Vector3(4,0,3), 1.2f, font, cyan, alarm)
+                Equipment(deviceRoot, "P-01", "循环水泵", DeviceKind.Pump, "water-pump", WorkshopTrainingLayout.Position("P-01"), 1.8f, font, cyan, alarm),
+                Equipment(deviceRoot, "TK-01", "工艺储罐", DeviceKind.Tank, "silo", WorkshopTrainingLayout.Position("TK-01"), .35f, font, cyan, alarm),
+                Equipment(deviceRoot, "F-01", "车间排风机", DeviceKind.Fan, "industrial-fan", WorkshopTrainingLayout.Position("F-01"), 1.1f, font, cyan, alarm),
+                Equipment(deviceRoot, "PLC-01", "设备控制柜", DeviceKind.Cabinet, "electrical-cabinet", WorkshopTrainingLayout.Position("PLC-01"), 1.2f, font, cyan, alarm)
             };
             simulation.devices = devices;
             foreach (var d in devices)
             {
                 d.nominalTemperature = d.kind == DeviceKind.Cabinet ? 32 : d.kind == DeviceKind.Tank ? 25 : 42;
                 d.nominalRpm = d.kind == DeviceKind.Conveyor ? 120 : d.kind == DeviceKind.Fan ? 980 : 1450;
-                d.inspectionPoint = d.transform.position + new Vector3(0, 0, d.transform.position.z > 0 ? -1.8f : 1.8f);
+                WorkshopFiveModelLayout.ConfigureEquipment(d);
             }
 
             var cameraObject = new GameObject("Workshop Camera", typeof(Camera), typeof(AudioListener));
@@ -121,9 +117,10 @@ namespace WorkshopDemo.Editor
             camera.nearClipPlane = .1f;
             camera.farClipPlane = 240;
             camera.allowHDR = true;
-            cameraObject.AddComponent<UniversalAdditionalCameraData>().renderPostProcessing = true;
+            cameraObject.AddComponent<UniversalAdditionalCameraData>().renderPostProcessing = false;
             simulation.cameraRig = cameraObject.AddComponent<WorkshopCamera>();
             simulation.cameraRig.simulation = simulation;
+            WorkshopTrainingLayout.ConfigureCamera(simulation.cameraRig);
             cameraObject.transform.position = new Vector3(6, 15, -20);
             cameraObject.transform.LookAt(new Vector3(-2, .8f, 0));
 
@@ -136,7 +133,7 @@ namespace WorkshopDemo.Editor
             surface.voxelSize = .08f;
             Collision(navigation.transform, "Floor collision", new Bounds(new Vector3(-2, -.15f, 0), new Vector3(24, .3f, 19)), false);
             foreach (var d in devices)
-                Collision(navigation.transform, d.deviceId + " clearance", BoundsOf(d.transform.GetChild(0).gameObject), true);
+                Collision(navigation.transform, d.deviceId + " clearance", d.GetComponent<BoxCollider>().bounds, true);
             // Include actual nearby stock-scene obstacles; overhead ductwork and floor decals are excluded.
             foreach (var renderer in env.GetComponentsInChildren<MeshRenderer>())
             {
@@ -320,7 +317,7 @@ namespace WorkshopDemo.Editor
             if (!agent) agent = robot.AddComponent<NavMeshAgent>();
             agent.radius = .4f; agent.height = 1.2f; agent.speed = 2.8f;
             agent.acceleration = 6; agent.angularSpeed = 220; agent.stoppingDistance = .4f;
-            if (!NavMesh.SamplePosition(new Vector3(-10, 0, -6), out var hit, 3, NavMesh.AllAreas))
+            if (!NavMesh.SamplePosition(WorkshopTrainingLayout.RobotSpawn, out var hit, .25f, NavMesh.AllAreas))
                 throw new InvalidOperationException("Inspector spawn has no walkable NavMesh");
             robot.transform.position = hit.position;
             var route = new GameObject("Inspection route").AddComponent<LineRenderer>();

@@ -1,0 +1,575 @@
+{
+  "date": "2026-11-11T18:25:34.613306+08:00",
+  "source": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\water-pump.blend",
+  "scene": "01_ASSEMBLED",
+  "frame": 1,
+  "scope": "Selected washer bearing faces and support/instrument joints only.",
+  "limits": "Touch/intersection is accepted for modeled welded/cast joints; this does not certify full interference, thread engagement, welds or sealing.",
+  "washer_tolerance_mm": 0.2,
+  "joint_separation_tolerance_mm": 1,
+  "washers": [
+    {
+      "washer": "PMP_00_Base_Anchor_Washer",
+      "support_prefix": "PMP_00_Base_AnchorPad",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.079673767027394e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_00_Base_Anchor_Washer.001",
+      "support_prefix": "PMP_00_Base_AnchorPad",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.079673767027394e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_00_Base_Anchor_Washer.002",
+      "support_prefix": "PMP_00_Base_AnchorPad",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.079673767027394e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_00_Base_Anchor_Washer.003",
+      "support_prefix": "PMP_00_Base_AnchorPad",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.079673767027394e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_FootBolt_Washer",
+      "support_prefix": "PMP_01_Motor_Foot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.588656783166393e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_FootBolt_Washer.001",
+      "support_prefix": "PMP_01_Motor_Foot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.588656783166393e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_FootBolt_Washer.002",
+      "support_prefix": "PMP_01_Motor_Foot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.588656783166393e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_FootBolt_Washer.003",
+      "support_prefix": "PMP_01_Motor_Foot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.588656783166393e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_LidScrew_Washer",
+      "support_prefix": "PMP_01_Motor_TerminalLid",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.121366560452892e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_LidScrew_Washer.001",
+      "support_prefix": "PMP_01_Motor_TerminalLid",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.144649624818279e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_LidScrew_Washer.002",
+      "support_prefix": "PMP_01_Motor_TerminalLid",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.144649624818279e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_01_Motor_LidScrew_Washer.003",
+      "support_prefix": "PMP_01_Motor_TerminalLid",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.144649624818279e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_04_Volute_HoldDown_Washer",
+      "support_prefix": "PMP_04_Volute_CastFoot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.312504410681263e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_04_Volute_HoldDown_Washer.001",
+      "support_prefix": "PMP_04_Volute_CastFoot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.312504410681263e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_04_Volute_HoldDown_Washer.002",
+      "support_prefix": "PMP_04_Volute_CastFoot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.312504410681263e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_04_Volute_HoldDown_Washer.003",
+      "support_prefix": "PMP_04_Volute_CastFoot",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 5.846843123373524e-06,
+      "gap_max_mm": 6.545335054335133e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_01_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 0.00012156367301934673,
+      "gap_max_mm": 0.00013576634228223278,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_02_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.03526490926118e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_03_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.03526490926118e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_04_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.03526490926118e-05,
+      "gap_max_mm": 8.105114102357341e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_05_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.03526490926118e-05,
+      "gap_max_mm": 8.105114102357341e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_06_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.5404617190298573e-05,
+      "gap_max_mm": 3.937445580953075e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_07_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.5171786546644703e-05,
+      "gap_max_mm": 3.960728645318462e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_08_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.011981844895794e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_09_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.011981844895794e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_10_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.011981844895794e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_11_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 8.03526490926118e-05,
+      "gap_max_mm": 8.081831037991954e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_05_InletCover_Bolt_12_Washer",
+      "support_prefix": "PMP_05_InletCover_ContouredCover",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 0.0001217965036630006,
+      "gap_max_mm": 0.00013576634228223278,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_06_SealBearing_GlandBolt_Washer",
+      "support_prefix": "PMP_06_SealBearing_SealChamber",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.121366560452892e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_06_SealBearing_GlandBolt_Washer.001",
+      "support_prefix": "PMP_06_SealBearing_SealChamber",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.821487426820263e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_06_SealBearing_GlandBolt_Washer.002",
+      "support_prefix": "PMP_06_SealBearing_SealChamber",
+      "bearing_face_probes": 16,
+      "gap_min_mm": -9.054318070474132e-06,
+      "gap_max_mm": -8.588656783166393e-06,
+      "missing_support_probes": 0,
+      "pass": true
+    },
+    {
+      "washer": "PMP_06_SealBearing_GlandBolt_Washer.003",
+      "support_prefix": "PMP_06_SealBearing_SealChamber",
+      "bearing_face_probes": 16,
+      "gap_min_mm": 2.074800431722118e-05,
+      "gap_max_mm": 2.121366560452892e-05,
+      "missing_support_probes": 0,
+      "pass": true
+    }
+  ],
+  "joints": [
+    {
+      "joint": "pump foot / crossmember",
+      "object": "PMP_04_Volute_CastFoot",
+      "support": "PMP_00_Base_Stiffener",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor foot / shim",
+      "object": "PMP_01_Motor_Foot",
+      "support": "PMP_01_Motor_AlignmentShim",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor foot / shim",
+      "object": "PMP_01_Motor_Foot.001",
+      "support": "PMP_01_Motor_AlignmentShim.002",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor shim / crossmember",
+      "object": "PMP_01_Motor_AlignmentShim",
+      "support": "PMP_00_Base_Stiffener.002",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor shim / crossmember",
+      "object": "PMP_01_Motor_AlignmentShim.001",
+      "support": "PMP_00_Base_Stiffener.003",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor shim / crossmember",
+      "object": "PMP_01_Motor_AlignmentShim.002",
+      "support": "PMP_00_Base_Stiffener.002",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor shim / crossmember",
+      "object": "PMP_01_Motor_AlignmentShim.003",
+      "support": "PMP_00_Base_Stiffener.003",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "bearing foot / shim",
+      "object": "PMP_06_SealBearing_SupportFoot",
+      "support": "PMP_06_SealBearing_BaseShim",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "bearing shim / crossmember",
+      "object": "PMP_06_SealBearing_BaseShim",
+      "support": "PMP_00_Base_Stiffener.001",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "pump ribs / foot",
+      "object": "PMP_04_Volute_FootRib",
+      "support": "PMP_04_Volute_CastFoot",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "pump ribs / foot",
+      "object": "PMP_04_Volute_FootRib.001",
+      "support": "PMP_04_Volute_CastFoot",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "pump ribs / casing",
+      "object": "PMP_04_Volute_FootRib",
+      "support": "PMP_04_Volute_GrowingSpiral12mm",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "pump ribs / casing",
+      "object": "PMP_04_Volute_FootRib.001",
+      "support": "PMP_04_Volute_GrowingSpiral12mm",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / foot",
+      "object": "PMP_01_Motor_FootWeb",
+      "support": "PMP_01_Motor_Foot",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / foot",
+      "object": "PMP_01_Motor_FootWeb.001",
+      "support": "PMP_01_Motor_Foot",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / foot",
+      "object": "PMP_01_Motor_FootWeb.002",
+      "support": "PMP_01_Motor_Foot.001",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / foot",
+      "object": "PMP_01_Motor_FootWeb.003",
+      "support": "PMP_01_Motor_Foot.001",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / housing",
+      "object": "PMP_01_Motor_FootWeb",
+      "support": "PMP_01_Motor_CastHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / housing",
+      "object": "PMP_01_Motor_FootWeb.001",
+      "support": "PMP_01_Motor_CastHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / housing",
+      "object": "PMP_01_Motor_FootWeb.002",
+      "support": "PMP_01_Motor_CastHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "motor webs / housing",
+      "object": "PMP_01_Motor_FootWeb.003",
+      "support": "PMP_01_Motor_CastHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "bearing webs / foot",
+      "object": "PMP_06_SealBearing_PedestalWeb",
+      "support": "PMP_06_SealBearing_SupportFoot",
+      "surface_separation_mm": 1.4901161193847656e-05,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "bearing webs / foot",
+      "object": "PMP_06_SealBearing_PedestalWeb.001",
+      "support": "PMP_06_SealBearing_SupportFoot",
+      "surface_separation_mm": 1.4901161193847656e-05,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "bearing webs / housing",
+      "object": "PMP_06_SealBearing_PedestalWeb",
+      "support": "PMP_06_SealBearing_BearingHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "bearing webs / housing",
+      "object": "PMP_06_SealBearing_PedestalWeb.001",
+      "support": "PMP_06_SealBearing_BearingHousing",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge tapping boss / discharge",
+      "object": "PMP_04_Volute_InstrumentBoss",
+      "support": "PMP_04_Volute_GrowingSpiral12mm",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge union / tapping boss",
+      "object": "PMP_04_Volute_InstrumentUnion",
+      "support": "PMP_04_Volute_InstrumentBoss",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge tube / union",
+      "object": "PMP_04_Volute_InstrumentTube",
+      "support": "PMP_04_Volute_InstrumentUnion",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge tube / bottom union",
+      "object": "PMP_04_Volute_InstrumentTube",
+      "support": "PMP_04_Volute_GaugeUnion",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge stem / bottom union",
+      "object": "PMP_04_Volute_GaugeStem",
+      "support": "PMP_04_Volute_GaugeUnion",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "gauge stem / case",
+      "object": "PMP_04_Volute_GaugeStem",
+      "support": "PMP_04_Volute_GaugeCase",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "grease nipple / housing",
+      "object": "PMP_06_SealBearing_GreaseNipple",
+      "support": "PMP_06_SealBearing_BearingHousing",
+      "surface_separation_mm": 1.2597533682878748e-05,
+      "method": "nearest_vertex_to_surface",
+      "pass": true
+    },
+    {
+      "joint": "motor nameplate / mounts",
+      "object": "PMP_01_Motor_Nameplate",
+      "support": "PMP_01_Motor_PlateMount",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    },
+    {
+      "joint": "pump nameplate / mounts",
+      "object": "PMP_04_Volute_DataPlate",
+      "support": "PMP_04_Volute_PlateMount",
+      "surface_separation_mm": 0.0,
+      "method": "surfaces_touch_or_intersect",
+      "pass": true
+    }
+  ],
+  "focused_contact_checks_pass": true
+}

@@ -1,0 +1,19 @@
+Started 2026-11-09T23:15:46.1406576+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Method Editor Play / D3D11 / UGUI raycasts
+PASS Fault suite resolution 1920
+PASS 24 unique fault mechanisms
+PASS ODB protocol interpolation and end clamp (synthetic fixture)
+PASS ODB device mismatch rejected
+PASS ODB duplicate time rejected
+PASS ODB undeclared conversion rejected
+PASS Button enabled: 演示故障
+PASS Top UI raycast: 演示故障
+FAIL System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.UI.Dropdown.AlphaFadeList (System.Single duration, System.Single start, System.Single end) [0x00048] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\Dropdown.cs:1075 
+  at UnityEngine.UI.Dropdown.Show () [0x0059b] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\Dropdown.cs:884 
+  at WorkshopDemo.Editor.WorkshopFaultValidation+<SelectOption>d__2.MoveNext () [0x00076] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopFaultValidation.cs:157 
+  at WorkshopDemo.Editor.WorkshopFaultValidation+<Verify>d__0.MoveNext () [0x001e6] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopFaultValidation.cs:27 
+  at WorkshopDemo.Editor.WorkshopTwinValidation+<Verify>d__23.MoveNext () [0x0009c] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:120 
+  at WorkshopDemo.Editor.WorkshopTwinValidation.Tick () [0x00172] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopTwinValidation.cs:98 
+FAILED

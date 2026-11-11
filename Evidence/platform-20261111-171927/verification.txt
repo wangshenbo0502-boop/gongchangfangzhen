@@ -1,0 +1,18 @@
+Started 2026-11-11T17:19:27.3548991+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Editor Play / UGUI raycasts / actual NavMesh arrival
+RUNTIME ERROR MissingComponentException: There is no 'Canvas' attached to the "Workshop UI" game object, but a script is trying to access it.
+You probably need to add a Canvas to the game object "Workshop UI". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <6a469c5cf96a43eab23a293167261e20>:0)
+UnityEngine.Canvas.set_renderMode (UnityEngine.RenderMode value) (at <47ed1e7ebade4cf89825dfe8531ea28e>:0)
+WorkshopDemo.WorkshopUI.Start () (at Assets/WorkshopDemo/Scripts/WorkshopUI.cs:56)
+
+PASS Resolution 1920
+FAIL System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <6faa6124236442759eb396cfbfdad508>:0 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Named (System.String name) [0x0000d] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:101 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Click (System.String name) [0x00000] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:115 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation+<Verify>d__29.MoveNext () [0x00208] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:158 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Tick () [0x0017c] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:74 
+FAILED 2026-11-11T17:19:41.2428171+08:00

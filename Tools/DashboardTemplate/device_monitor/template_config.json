@@ -1,0 +1,107 @@
+{
+  "template": "device_monitor",
+  "description": "IoT设备环境监测大屏，6面板布局，含广西geo地图",
+  "dataPoints": {
+    "title": {
+      "sel": ".t_header span",
+      "type": "text"
+    },
+    "statCards": [
+      {
+        "sel": ".t_mbox.t_rbox h2",
+        "labelSel": ".t_mbox.t_rbox span",
+        "type": "text"
+      },
+      {
+        "sel": ".t_mbox.t_gbox h2",
+        "labelSel": ".t_mbox.t_gbox span",
+        "type": "text"
+      },
+      {
+        "sel": ".t_mbox.t_ybox h2",
+        "labelSel": ".t_mbox.t_ybox span",
+        "type": "text"
+      }
+    ],
+    "navItems": [
+      {
+        "sel": ".t_nav li:nth-child(1) h1",
+        "labelSel": ".t_nav li:nth-child(1) span",
+        "type": "text"
+      },
+      {
+        "sel": ".t_nav li:nth-child(2) h1",
+        "labelSel": ".t_nav li:nth-child(2) span",
+        "type": "text"
+      },
+      {
+        "sel": ".t_nav li:nth-child(3) h1",
+        "type": "text"
+      }
+    ],
+    "switchCount": {
+      "sel": ".t_b_h h3",
+      "type": "text"
+    },
+    "environment": [
+      {
+        "sel": ".t_b_box h2",
+        "label": "溫度"
+      },
+      {
+        "sel": ".t_b_box1 h2",
+        "label": "湿度"
+      },
+      {
+        "sel": ".t_b_box2 h2",
+        "label": "信号"
+      },
+      {
+        "sel": ".t_b_box3 h2",
+        "label": "光线"
+      }
+    ],
+    "table": {
+      "sel": ".t_table tbody",
+      "headers": [
+        "维护时间",
+        "维保人",
+        "维保电话",
+        "更换水量"
+      ]
+    },
+    "charts": {
+      "pie": {
+        "id": "chart_1",
+        "title": "本月设备状态统计",
+        "type": "pie",
+        "seriesIndex": 0,
+        "dataKey": "series[0].data"
+      },
+      "barLine": {
+        "id": "chart_2",
+        "title": "检测统计",
+        "type": "bar+line",
+        "xAxisData": true,
+        "yAxisData": true,
+        "linesData": true
+      },
+      "map": {
+        "id": "chart_3",
+        "title": "设备分布",
+        "type": "map+scatter",
+        "mapName": "guangxi",
+        "scatterData": true
+      },
+      "hbar": {
+        "id": "chart_4",
+        "title": "设备使用频率",
+        "type": "horizontalBar",
+        "names": true,
+        "values": true,
+        "valdata": true
+      }
+    }
+  },
+  "entryFile": "index.html"
+}

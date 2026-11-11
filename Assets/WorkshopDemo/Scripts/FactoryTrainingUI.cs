@@ -47,7 +47,7 @@ namespace WorkshopDemo
         {
             var keyboard = Keyboard.current;
             if (keyboard == null) return;
-            if (keyboard.aKey.wasPressedThisFrame && audioMuter) audioMuter.ToggleAudio();
+            if (keyboard.mKey.wasPressedThisFrame && audioMuter) audioMuter.ToggleAudio();
             if (keyboard.hKey.wasPressedThisFrame) ToggleInterface();
         }
 

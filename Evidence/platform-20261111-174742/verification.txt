@@ -1,0 +1,463 @@
+Started 2026-11-11T17:47:42.5605755+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Editor Play / UGUI raycasts / actual NavMesh arrival
+PASS Resolution 1920
+PASS Enabled 模型展示
+PASS Top raycast 模型展示 hit=模型展示
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 总览
+PASS Text fits 跟随巡检
+PASS Text fits 屋顶
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 整机拆装
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits 
+PASS Text fits 手动接管
+PASS Text fits 当前设备
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 停止设备
+PASS Text fits 设备档案
+PASS Text fits 故障分析
+PASS Text fits 处理当前工单
+PASS Text fits 温度趋势 / 最近 30 秒
+PASS Sidebar entry AI问答
+PASS Sidebar entry 模型展示
+PASS Sidebar entry 故障分析
+PASS Sidebar entry 设备台账
+PASS Sidebar entry 维修工单
+PASS Sidebar entry 实训复盘
+PASS Sidebar entry 知识导入
+PASS Usable live viewport
+PASS Screenshot overview
+PASS Screenshot dimensions overview
+PASS Nonblank pixels overview (3924)
+PASS Enabled 设备台账
+PASS Top raycast 设备台账 hit=设备台账
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 设备档案
+PASS Text fits 设备编号 / 名称
+PASS Text fits 类别 / 位置
+PASS Text fits 运行状态
+PASS Text fits CV-01   装配输送线
+PASS Text fits 辊道输送机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits M-01   输送驱动电机
+PASS Text fits 三相异步电机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits P-01   循环水泵
+PASS Text fits 离心循环泵 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits P-02   备用循环泵
+PASS Text fits 离心循环泵 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits TK-01   工艺储罐
+PASS Text fits 工艺储罐 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits TK-02   稳压储罐
+PASS Text fits 工艺储罐 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits F-01   车间排风机
+PASS Text fits 轴流风机 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits PLC-01   设备控制柜
+PASS Text fits PLC 控制柜 / A 车间
+PASS Text fits 
+PASS Text fits 
+PASS Text fits Text
+PASS Eight ledger rows
+PASS Ledger search filters
+PASS Enabled Device P-02
+PASS Top raycast Device P-02 hit=Device P-02
+PASS Ledger selects actual device
+PASS Enabled 停止设备
+PASS Top raycast 停止设备 hit=停止设备
+PASS Operation stops business device
+PASS Enabled 停止设备
+PASS Top raycast 停止设备 hit=停止设备
+PASS Operation restarts business device
+PASS Enabled 新建故障课题
+PASS Top raycast 新建故障课题 hit=新建故障课题
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 总览
+PASS Text fits 跟随巡检
+PASS Text fits 屋顶
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 整机拆装
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits Device identity
+PASS Text fits 
+PASS Text fits 手动接管
+PASS Text fits 当前设备
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 停止设备
+PASS Text fits 设备档案
+PASS Text fits 故障分析
+PASS Text fits 处理当前工单
+PASS Text fits 温度趋势 / 最近 30 秒
+PASS Text fits 新建故障实训课题
+PASS Text fits 关闭
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits Fault description
+PASS Text fits 注入故障
+PASS Text fits 教学工况 / 注入后进入待报修
+PASS Screenshot fault-dialog
+PASS Screenshot dimensions fault-dialog
+PASS Nonblank pixels fault-dialog (955)
+PASS Enabled 注入故障
+PASS Top raycast 注入故障 hit=注入故障
+PASS Injected fault awaits report
+PASS Enabled 处理当前工单
+PASS Top raycast 处理当前工单 hit=处理当前工单
+PASS Enabled 提交报修
+PASS Top raycast 提交报修 hit=提交报修
+PASS Empty report blocked
+PASS Enabled 提交报修
+PASS Top raycast 提交报修 hit=提交报修
+PASS Report saved
+PASS Enabled 提交报修
+PASS Top raycast 提交报修 hit=提交报修
+PASS UI assignment dispatches robot
+PASS Repair before arrival rejected
+PASS Enabled 模型展示
+PASS Top raycast 模型展示 hit=模型展示
+PASS Actual robot arrival
+PASS Enabled 处理当前工单
+PASS Top raycast 处理当前工单 hit=处理当前工单
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 巡检与维修工单
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 
+PASS Text fits Text
+PASS Text fits Order details
+PASS Text fits 故障原因 *
+PASS Text fits 维修措施 *
+PASS Text fits 配件材料 *
+PASS Text fits 提交报修
+PASS Text fits 定位
+PASS Screenshot repair
+PASS Screenshot dimensions repair
+PASS Nonblank pixels repair (366)
+PASS Enabled 提交报修
+PASS Top raycast 提交报修 hit=提交报修
+PASS Repair submission awaits acceptance and releases robot
+PASS Screenshot acceptance
+PASS Screenshot dimensions acceptance
+PASS Nonblank pixels acceptance (374)
+PASS Enabled 提交报修
+PASS Top raycast 提交报修 hit=提交报修
+PASS Acceptance closes and restores
+PASS Duplicate acceptance blocked
+PASS Enabled 实训复盘
+PASS Top raycast 实训复盘 hit=实训复盘
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 实训复盘 / 本次会话
+PASS Text fits Review report
+PASS Screenshot review
+PASS Screenshot dimensions review
+PASS Nonblank pixels review (410)
+PASS Enabled AI问答
+PASS Top raycast AI问答 hit=AI问答
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits AI问答 / 设备与工单上下文
+PASS Text fits 
+PASS Text fits 
+PASS Text fits Assistant conversation
+PASS Text fits 询问当前设备
+PASS Text fits 清空
+PASS Text fits 发送
+PASS Text fits 知识参考
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits Local reference
+PASS Screenshot knowledge
+PASS Screenshot dimensions knowledge
+PASS Nonblank pixels knowledge (481)
+PASS Enabled 故障分析
+PASS Top raycast 故障分析 hit=故障分析
+PASS Text fits WORKSHOP
+PASS Text fits 数字孪生实训平台
+PASS Text fits 核心实训
+PASS Text fits AI问答
+PASS Text fits 模型展示
+PASS Text fits 故障分析
+PASS Text fits 设备台账
+PASS Text fits 维修工单
+PASS Text fits 实训复盘
+PASS Text fits 知识导入
+PASS Text fits 业务与资料
+PASS Text fits 小车装配训练
+PASS Text fits A 车间 · 8 台设备
+本地模拟 / 本次会话
+PASS Text fits 数字孪生 / 模型展示
+PASS Text fits 
+PASS Text fits 新建故障课题
+PASS Text fits 重置
+PASS Text fits 设备总数
+PASS Text fits 
+PASS Text fits 当前运行
+PASS Text fits 
+PASS Text fits 未关闭告警
+PASS Text fits 
+PASS Text fits 验收归档
+PASS Text fits 
+PASS Text fits 
+PASS Text fits 故障分析 / 工况、现象与处置
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 
+PASS Text fits ▾
+PASS Text fits 
+PASS Text fits Fault analysis
+PASS Text fits 观察三维设备
+PASS Text fits 注入选定工况
+PASS Text fits 进入维修工单
+PASS Text fits 有限元分析
+PASS Text fits 整机与演化
+PASS Text fits 向AI提问
+PASS Screenshot analysis
+PASS Screenshot dimensions analysis
+PASS Nonblank pixels analysis (461)
+PASS Reference dataset CV-BEAR 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset CV-JAM 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset CV-TRACK 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset F-BEAR 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset F-BLOCK 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset F-CRACK 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset F-IMBAL 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset M-ALIGN 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset M-BEAR 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset M-OVER 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset M-PHASE 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset P-BEAR 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset P-CAV 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset P-HOT 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset P-SEAL 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset PLC-CONTACT 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset PLC-HOT 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset TK-LEAK 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset TK-LEVEL 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset TK-PRESS 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS Reference dataset TK-SUPPORT 真实数值求解 / 参数化参考件 / 非 Abaqus
+PASS All 21 reference cases load
+PASS Enabled 有限元分析
+PASS Top raycast 有限元分析 hit=有限元分析
+PASS Analysis uses selected device and fault
+PASS FEM main render target
+PASS FEM main nonblank rendered geometry (536)
+PASS Screenshot fem
+PASS Screenshot dimensions fem
+PASS Nonblank pixels fem (1141)
+PASS Enabled 完好 / 基准
+PASS Top raycast 完好 / 基准 hit=完好 / 基准
+PASS Baseline model switch
+PASS Enabled 故障 / 缺陷
+PASS Top raycast 故障 / 缺陷 hit=故障 / 缺陷
+PASS Defect model switch
+PASS Sixteen structural quantities
+PASS Structural quantity Mises 应力 / MPa
+PASS Structural quantity 位移模长 / mm
+PASS Structural quantity Ux 位移 / mm
+PASS Structural quantity Uy 位移 / mm
+PASS Structural quantity Uz 位移 / mm
+PASS Structural quantity Sxx 正应力 / MPa
+PASS Structural quantity Syy 正应力 / MPa
+PASS Structural quantity Szz 正应力 / MPa
+PASS Structural quantity Sxy 剪应力 / MPa
+PASS Structural quantity Syz 剪应力 / MPa
+PASS Structural quantity Sxz 剪应力 / MPa
+PASS Structural quantity 最大主应力 / MPa
+PASS Structural quantity 中间主应力 / MPa
+PASS Structural quantity 最小主应力 / MPa
+PASS Structural quantity 平均正应力 / MPa
+PASS Structural quantity 等效偏应变 / με
+PASS Movable section
+PASS Element edges
+FAIL System.InvalidOperationException: Three actual surface probes and CSV
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Check (System.Boolean condition, System.String message) [0x00024] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:100 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation+<Advanced>d__2.MoveNext () [0x004bf] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.Advanced.cs:81 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation+<Verify>d__33.MoveNext () [0x00b8d] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:201 
+  at WorkshopDemo.Editor.WorkshopPlatformValidation.Tick () [0x0017c] in D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Assets\WorkshopDemo\Editor\WorkshopPlatformValidation.cs:74 
+FAILED 2026-11-11T17:48:00.6907702+08:00

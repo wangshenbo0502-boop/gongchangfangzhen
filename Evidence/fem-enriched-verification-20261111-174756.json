@@ -1,0 +1,287 @@
+{
+  "time": "2026-11-11T17:47:56.087843+08:00",
+  "status": "PASS",
+  "cases": [
+    {
+      "code": "CV-BEAR",
+      "sha256": "67c685b86bae92db382214de465d19565c6e3dfd0e5ca79f614aca486bfdd4ba",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 1063.7973981275857
+        },
+        {
+          "maxSurfaceFluxWm2": 4654.113618397299
+        }
+      ]
+    },
+    {
+      "code": "CV-JAM",
+      "sha256": "ca824ccdea5d1a57ad4fe2bf07842f395b3c021fa015b74c0e32eb930cf8ad56",
+      "checks": [
+        {
+          "misesErrorMPa": 5.729105530816181e-07,
+          "principalErrorMPa": 1.318789165094536e-07
+        },
+        {
+          "misesErrorMPa": 5.479146989451067e-07,
+          "principalErrorMPa": 1.2867598964821925e-07
+        }
+      ]
+    },
+    {
+      "code": "CV-TRACK",
+      "sha256": "67355b235736e7b422066233bd6460fce720eba8cf9f64476560b95befccd8bb",
+      "checks": [
+        {
+          "misesErrorMPa": 5.569760468809859e-07,
+          "principalErrorMPa": 1.1268014062093545e-07
+        },
+        {
+          "misesErrorMPa": 5.809404148848785e-07,
+          "principalErrorMPa": 1.239291638199802e-07
+        }
+      ]
+    },
+    {
+      "code": "F-BEAR",
+      "sha256": "f628cf166c9d75ac79032e70972f540993843ee1fee931c1cf4a7637093e21aa",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 1063.7973981275857
+        },
+        {
+          "maxSurfaceFluxWm2": 5983.86036579129
+        }
+      ]
+    },
+    {
+      "code": "F-BLOCK",
+      "sha256": "7bce7721453d4d0da9c300dea022f9af8d58394c6e139bf8c21d7bda226b2764",
+      "checks": [
+        {
+          "misesErrorMPa": 5.73810980064593e-07,
+          "principalErrorMPa": 1.2184234666340332e-07
+        },
+        {
+          "misesErrorMPa": 5.680306944810809e-07,
+          "principalErrorMPa": 1.3592866125733405e-07
+        }
+      ]
+    },
+    {
+      "code": "F-CRACK",
+      "sha256": "a9f9104cff88746b29107182c6680f8de892f9a06573922ed79399643447b58e",
+      "checks": [
+        {
+          "misesErrorMPa": 5.804406191245448e-07,
+          "principalErrorMPa": 1.3551330702021858e-07
+        },
+        {
+          "misesErrorMPa": 5.660689197384272e-07,
+          "principalErrorMPa": 1.2727892982622446e-07
+        }
+      ]
+    },
+    {
+      "code": "F-IMBAL",
+      "sha256": "9928806fb26c9fb3afb5650bfc644614ae675ca78b5a8e3a5f2a6800340436d6",
+      "checks": [
+        {
+          "misesErrorMPa": 5.73810980064593e-07,
+          "principalErrorMPa": 1.2184234666340332e-07
+        },
+        {
+          "misesErrorMPa": 5.564359708554178e-07,
+          "principalErrorMPa": 1.283746645687478e-07
+        }
+      ]
+    },
+    {
+      "code": "M-ALIGN",
+      "sha256": "592eacffdc422f1d696af7a4dc2a2d7edd41988f9a9db76946ea3f237d78f152",
+      "checks": [
+        {
+          "misesErrorMPa": 5.589875012868006e-07,
+          "principalErrorMPa": 1.2443262885353246e-07
+        },
+        {
+          "misesErrorMPa": 5.907244658986954e-07,
+          "principalErrorMPa": 1.363271360244056e-07
+        }
+      ]
+    },
+    {
+      "code": "M-BEAR",
+      "sha256": "be3874f116ed54ea0b82798340c0bc496b2c8affaacab94512f7b3671d6400ac",
+      "checks": [
+        {
+          "misesErrorMPa": 5.901544185560326e-07,
+          "principalErrorMPa": 1.2672603352803513e-07
+        },
+        {
+          "misesErrorMPa": 5.759622788703567e-07,
+          "principalErrorMPa": 1.3681195163686623e-07
+        }
+      ]
+    },
+    {
+      "code": "M-OVER",
+      "sha256": "fac3a2288cc5ea730dd7ca18c2536d62f6e18d400eafa0d44731a3b07305fa92",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 1994.620121600785
+        },
+        {
+          "maxSurfaceFluxWm2": 7978.480488377543
+        }
+      ]
+    },
+    {
+      "code": "M-PHASE",
+      "sha256": "06d81687f9f95fecf19a8b85bcafdf0c71538e4885679132bd0a4ffbffa6bbaa",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 1994.620121600785
+        },
+        {
+          "maxSurfaceFluxWm2": 9973.100609970938
+        }
+      ]
+    },
+    {
+      "code": "P-BEAR",
+      "sha256": "cbaa1b1d894c686c083d3a991843aeffe48ba531c669386e54ddb8b9b4e3b6e0",
+      "checks": [
+        {
+          "misesErrorMPa": 5.901544185560326e-07,
+          "principalErrorMPa": 1.2672603352803513e-07
+        },
+        {
+          "misesErrorMPa": 5.641584623905516e-07,
+          "principalErrorMPa": 1.4531739685186285e-07
+        }
+      ]
+    },
+    {
+      "code": "P-CAV",
+      "sha256": "118bc4ad682cdb48564c85855c17ab6fcba51ac9524d7106310ccd79eecf0257",
+      "checks": [
+        {
+          "misesErrorMPa": 5.770274793537311e-07,
+          "principalErrorMPa": 1.3157728305859817e-07
+        },
+        {
+          "misesErrorMPa": 5.654277535072083e-07,
+          "principalErrorMPa": 1.5703846917292097e-07
+        }
+      ]
+    },
+    {
+      "code": "P-HOT",
+      "sha256": "3b9fb6ce249c8aef9647726ae7379a3576484ac8e524a04c518357d7cfb059f9",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 930.6560967619608
+        },
+        {
+          "maxSurfaceFluxWm2": 1244.0258937681306
+        }
+      ]
+    },
+    {
+      "code": "P-SEAL",
+      "sha256": "c511e61bd3c08239203d2d27b754040a9cf19475edb11995906271aa4041558a",
+      "checks": [
+        {
+          "misesErrorMPa": 5.637295066307502e-07,
+          "principalErrorMPa": 1.1649409597819932e-07
+        },
+        {
+          "misesErrorMPa": 5.32222745874833e-07,
+          "principalErrorMPa": 1.2011940514217861e-07
+        }
+      ]
+    },
+    {
+      "code": "PLC-CONTACT",
+      "sha256": "c80da363aca04a7c5a53eb2fd1627b57f9cdd9eed27242e7ad0d3a1c2385b31d",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 1961.5304504905184
+        },
+        {
+          "maxSurfaceFluxWm2": 7846.121799984097
+        }
+      ]
+    },
+    {
+      "code": "PLC-HOT",
+      "sha256": "285784e54c99f535e0d948304e351208019e74ce1d9e490884f0348394efbfc0",
+      "checks": [
+        {
+          "maxSurfaceFluxWm2": 4655.299853807292
+        },
+        {
+          "maxSurfaceFluxWm2": 5283.7114478993735
+        }
+      ]
+    },
+    {
+      "code": "TK-LEAK",
+      "sha256": "8261ce5a407e1819ecd978009cc484d55225eb40ac376770d655041833be56d0",
+      "checks": [
+        {
+          "misesErrorMPa": 5.486385390440773e-07,
+          "principalErrorMPa": 1.3214623884039156e-07
+        },
+        {
+          "misesErrorMPa": 5.91695453522334e-07,
+          "principalErrorMPa": 1.3388299595178121e-07
+        }
+      ]
+    },
+    {
+      "code": "TK-LEVEL",
+      "sha256": "058022cf82fc1c13efebb72fa7f6709424ffaf447dc2ec271fb7c46fe6a00762",
+      "checks": [
+        {
+          "misesErrorMPa": 5.454540179528067e-07,
+          "principalErrorMPa": 1.1519809998972175e-07
+        },
+        {
+          "misesErrorMPa": 5.609045583554462e-07,
+          "principalErrorMPa": 1.351679128763772e-07
+        }
+      ]
+    },
+    {
+      "code": "TK-PRESS",
+      "sha256": "1272e16122194526c16ff43f0bd01053cc4ca6a5529d9f6fefa9344e42922c0c",
+      "checks": [
+        {
+          "misesErrorMPa": 5.486385390440773e-07,
+          "principalErrorMPa": 1.3214623884039156e-07
+        },
+        {
+          "misesErrorMPa": 5.317738498433755e-07,
+          "principalErrorMPa": 1.2888645928299525e-07
+        }
+      ]
+    },
+    {
+      "code": "TK-SUPPORT",
+      "sha256": "7396371bfc23928754a3eaf9dd3fccbf35ec7033d4e09c8942c2cb113e8dd627",
+      "checks": [
+        {
+          "misesErrorMPa": 5.659627832499403e-07,
+          "principalErrorMPa": 1.1417727791007692e-07
+        },
+        {
+          "misesErrorMPa": 5.6802540927825e-07,
+          "principalErrorMPa": 1.2370327369393141e-07
+        }
+      ]
+    }
+  ],
+  "scope": "Saved field consistency; not Abaqus execution or actual equipment calibration."
+}

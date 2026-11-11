@@ -1,0 +1,91 @@
+Started 2026-11-08T16:29:27.8533132+08:00
+Scene Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Method Editor Play / D3D11 / UGUI raycasts
+PASS Resolution (1280, 720)
+PASS Central 3D viewport has usable area
+CAMERA (5.38, 16.19, -18.27) (x:0.16, y:0.25, width:0.62, height:0.58)
+DEVICE CV-01 Center: (-7.00, 0.71, -3.00), Extents: (2.20, 0.73, 0.83)
+DEVICE M-01 Center: (-2.00, 0.51, -3.00), Extents: (0.47, 0.53, 0.45)
+DEVICE P-01 Center: (2.00, 0.45, -3.00), Extents: (1.13, 0.48, 0.83)
+DEVICE P-02 Center: (5.00, 0.45, -3.00), Extents: (1.13, 0.48, 0.83)
+DEVICE TK-01 Center: (-8.00, 0.83, 3.00), Extents: (0.94, 0.85, 2.18)
+DEVICE TK-02 Center: (-4.00, 0.61, 3.00), Extents: (0.96, 0.63, 1.37)
+DEVICE F-01 Center: (0.00, 0.62, 3.00), Extents: (1.32, 0.65, 1.21)
+DEVICE PLC-01 Center: (4.00, 0.37, 3.00), Extents: (0.78, 0.39, 1.28)
+PASS Text fits: 工业车间 · 数字孪生监控中心
+PASS Text fits: Text
+PASS Text fits: 
+PASS Text fits: 本地模拟数据  /  SCENE A
+PASS Text fits: 接入设备
+PASS Text fits: 
+PASS Text fits: 运行设备
+PASS Text fits: 
+PASS Text fits: 活动告警
+PASS Text fits: 
+PASS Text fits: 完成巡检
+PASS Text fits: 
+PASS Text fits: 设备台账
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 选中设备温度
+PASS Text fits: 
+PASS Text fits: 100°C
+PASS Text fits: 20°C
+PASS Text fits: 最近 30 秒
+PASS Text fits: 总览
+PASS Text fits: 自由观察
+PASS Text fits: 巡检跟随
+PASS Text fits: 屋顶
+PASS Text fits: 
+PASS Text fits: 设备详情
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 停止设备
+PASS Text fits: 场景解答助手
+PASS Text fits: 清空
+PASS Text fits: 
+PASS Text fits: 
+PASS Text fits: 分析当前设备
+PASS Text fits: 如何处理告警
+PASS Text fits: 发送
+PASS Text fits: DeepSeek  /  pgvector
+PASS Text fits: 告警
+PASS Text fits: 巡检记录
+PASS Text fits: 演示故障
+PASS Text fits: 派发巡检
+PASS Text fits: 确认处理
+PASS Text fits: 重置
+PASS Text fits: 暂无告警 · 设备运行正常
+PASS Text fits: 
+PASS Button enabled: P-02
+PASS Top UI raycast: P-02
+PASS Device ledger selects actual device
+PASS Button enabled: 停止设备
+PASS Top UI raycast: 停止设备
+PASS Stop updates business state
+PASS Button enabled: 停止设备
+PASS Top UI raycast: 停止设备
+PASS Start updates business state
+PASS Button enabled: 演示故障
+PASS Top UI raycast: 演示故障
+PASS Fault button selects pump and creates one alarm
+PASS Premature resolution disabled
+PASS Button enabled: 派发巡检
+PASS Top UI raycast: 派发巡检
+PASS Dispatch creates task and prevents repeat
+PASS Screenshot saved Evidence/twin-dashboard-1280-20261108.png
+PASS Screenshot dimensions
+PASS Rendered pixels are nonblank (766 colors)
+PASS Long conversation scrolls
+PASS Conversation text stays at top of content
+COMPLETE

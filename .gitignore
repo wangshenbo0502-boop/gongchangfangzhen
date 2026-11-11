@@ -44,3 +44,16 @@
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local assistant runtime and model cache
+.venv/
+__pycache__/
+.pytest_cache/
+/Services/WorkshopAssistant/.models/
+
+# Reproducible local viewer output and development snapshots
+/model/WaterPumpViewer/
+/model/source/*-before-*.blend
+*.blend1
+/Evidence/layout-backup-*/
+/Evidence/UIBackup*/

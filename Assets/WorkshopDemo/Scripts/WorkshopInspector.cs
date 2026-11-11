@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 namespace WorkshopDemo
 {
@@ -16,27 +17,33 @@ namespace WorkshopDemo
         public WorkshopAlarm TargetAlarm { get; private set; }
         public bool IsBusy => TargetAlarm != null;
         public bool HasArrived { get; private set; }
+        public bool ManualControl { get; private set; }
         public float RemainingDistance => Agent && Agent.isOnNavMesh && IsBusy ? Agent.remainingDistance : 0;
         Vector3 spawn;
         Quaternion spawnRotation;
         float lineTimer;
+        DistributionCenter.wheelRotation wheels;
 
         void Awake()
         {
             Agent = GetComponent<NavMeshAgent>();
             spawn = transform.position;
             spawnRotation = transform.rotation;
+            wheels = GetComponentInChildren<DistributionCenter.wheelRotation>(true);
+            if (wheels) wheels.enabled = true;
             if (route) route.positionCount = 0;
         }
 
         public bool Dispatch(WorkshopAlarm alarm)
         {
-            if (IsBusy || !Agent.isOnNavMesh) return false;
+            if (IsBusy || !Agent || !Agent.isOnNavMesh || alarm == null || !alarm.device) return false;
             if (!NavMesh.SamplePosition(alarm.device.inspectionPoint, out var hit, 1, NavMesh.AllAreas)) return false;
             var path = new NavMeshPath();
             if (!Agent.CalculatePath(hit.position, path) || path.status != NavMeshPathStatus.PathComplete)
                 return false;
             TargetAlarm = alarm;
+            ManualControl = false;
+            Agent.updateRotation = true;
             HasArrived = false;
             Agent.isStopped = false;
             Agent.SetPath(path);
@@ -47,13 +54,37 @@ namespace WorkshopDemo
         void Update()
         {
             if (!Agent || !Agent.isOnNavMesh) return;
+            float move = 0, turn = 0;
+            if (ManualControl)
+            {
+                var keyboard = Keyboard.current;
+                if (keyboard != null && !WorkshopUI.Typing)
+                {
+                    move = (keyboard.upArrowKey.isPressed ? 1 : 0) - (keyboard.downArrowKey.isPressed ? 1 : 0);
+                    turn = (keyboard.rightArrowKey.isPressed ? 1 : 0) - (keyboard.leftArrowKey.isPressed ? 1 : 0);
+                }
+                transform.Rotate(Vector3.up, turn * 90 * Time.deltaTime);
+                if (move != 0) Agent.Move(transform.forward * (move * 3.5f * Time.deltaTime));
+                if (IsBusy)
+                {
+                    bool near = Vector3.Distance(transform.position, TargetAlarm.device.inspectionPoint) <=
+                        Agent.stoppingDistance + .22f;
+                    if (HasArrived && !near) { HasArrived = false; simulation.InspectorDeparted(); }
+                    else if (!HasArrived && near) { HasArrived = true; simulation.InspectorArrived(); }
+                }
+            }
+            if (wheels)
+            {
+                wheels.moveDirection = ManualControl ? move : Agent.velocity.sqrMagnitude > .01f ? 1 : 0;
+                wheels.turnDirection = turn;
+            }
             bool walking = IsBusy && !HasArrived && Agent.velocity.sqrMagnitude > .02f;
             float swing = walking ? Mathf.Sin(Time.time * 9) * 25 : 0;
             if (leftLeg) leftLeg.localRotation = Quaternion.Euler(swing, 0, 0);
             if (rightLeg) rightLeg.localRotation = Quaternion.Euler(-swing, 0, 0);
             if (leftArm) leftArm.localRotation = Quaternion.Euler(-swing * .6f, 0, 0);
             if (rightArm) rightArm.localRotation = Quaternion.Euler(swing * .6f, 0, 0);
-            if (!IsBusy || HasArrived) return;
+            if (!IsBusy || HasArrived || ManualControl) return;
             lineTimer += Time.deltaTime;
             if (lineTimer > .15f) { lineTimer = 0; DrawRoute(); }
             if (!Agent.pathPending && Agent.pathStatus == NavMeshPathStatus.PathComplete &&
@@ -61,7 +92,8 @@ namespace WorkshopDemo
             {
                 HasArrived = true;
                 Agent.isStopped = true;
-                route.positionCount = 0;
+                if (route) route.positionCount = 0;
+                if (TargetAlarm == null || !TargetAlarm.device || !simulation) return;
                 transform.rotation = Quaternion.LookRotation(
                     Vector3.ProjectOnPlane(TargetAlarm.device.transform.position - transform.position, Vector3.up));
                 simulation.InspectorArrived();
@@ -70,6 +102,7 @@ namespace WorkshopDemo
 
         void DrawRoute()
         {
+            if (!route || !Agent) return;
             var corners = Agent.path.corners;
             route.positionCount = corners.Length + (corners.Length > 0 ? 1 : 0);
             if (corners.Length == 0) return;
@@ -80,9 +113,33 @@ namespace WorkshopDemo
 
         public void Complete()
         {
+            if (Agent && Agent.isOnNavMesh) { Agent.isStopped = true; Agent.ResetPath(); }
             TargetAlarm = null;
             HasArrived = false;
-            route.positionCount = 0;
+            if (route) route.positionCount = 0;
+            if (wheels) wheels.moveDirection = wheels.turnDirection = 0;
+        }
+
+        public void SetManualControl(bool manual)
+        {
+            if (ManualControl == manual || !Agent || !Agent.isOnNavMesh) return;
+            if (manual)
+            {
+                Agent.isStopped = true; Agent.ResetPath(); Agent.velocity = Vector3.zero;
+                Agent.updateRotation = false;
+                if (route) route.positionCount = 0;
+            }
+            else if (IsBusy && !HasArrived)
+            {
+                var path = new NavMeshPath();
+                if (!NavMesh.SamplePosition(TargetAlarm.device.inspectionPoint, out var hit, 1, NavMesh.AllAreas) ||
+                    !Agent.CalculatePath(hit.position, path) || path.status != NavMeshPathStatus.PathComplete)
+                { simulation.Notify("无法恢复路线，请驶回通道后重试"); return; }
+                Agent.updateRotation = true; Agent.isStopped = false; Agent.SetPath(path);
+            }
+            else Agent.updateRotation = true;
+            ManualControl = manual;
+            simulation.Notify(manual ? "已切换手动驾驶" : "已恢复自动巡检");
         }
 
         public void ResetInspector()
@@ -94,6 +151,8 @@ namespace WorkshopDemo
                 Agent.Warp(spawn);
             }
             transform.SetPositionAndRotation(spawn, spawnRotation);
+            ManualControl = false;
+            if (Agent) Agent.updateRotation = true;
             Complete();
         }
     }
