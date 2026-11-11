@@ -33,3 +33,15 @@
 工作区原先缺失的答辩 PPT、开发说明和项目交接文档属于本轮开始前已有变更，没有纳入本次旧构建清理或删除提交。
 
 功能验证范围沿用 `platform-layout-20261111.md`；本次清理不修改业务源码。
+
+## GitHub 发布结果
+
+2026-11-11 19:41:58（+08:00）已发布 Windows 统一版，源码和全部 414 个待上传 LFS 对象推送成功，远端 `main` 已核对为 `e970332802f9a7f1ef7e5919e35365e890e8988e`。后续说明文档提交不改变此版本程序。
+
+- Release：[workshop-platform-20261111](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111)。
+- 对应源码：`e970332802f9a7f1ef7e5919e35365e890e8988e`。
+- 附件：`WorkshopPlatform-Windows-x64-20261111.zip`，435,262,987 字节。
+- SHA256：`C8674BDFFF2D6BEA82FCFC9C4DDAAD6AB62EE3DE5B281FAFC5FAE2D14C57586E`。
+- ZIP 包含完整 `WorkshopPlatform/` 目录、EXE、Unity 运行库和数据文件；共 212 个条目（含目录）。
+
+发布前核对 GitHub 附件状态为 `uploaded`，大小和服务端 SHA256 与本地一致；发布后通过无凭据 API 查询确认 Release 公开可见、`draft=false`。发布标签指向上述源码提交。受保护副本再次全量校验：206 个文件，变更或缺失为 0。

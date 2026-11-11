@@ -32,6 +32,8 @@
 
 Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 Release 附件发布。`Build/`、本机缓存、建模过程快照和密钥不提交，下载程序后应保留解压目录内全部配套文件。
 
+已发布：[2026-11-11 Windows 统一版下载](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111)。完整解压 `WorkshopPlatform-Windows-x64-20261111.zip` 后运行 `WorkshopPlatform/WorkshopPlatform.exe`。对应源码提交为 `e970332`，附件大小和 SHA256 已与本地核对，详见 [发布记录](Evidence/version-cleanup-20261111.md)。
+
 ## 小车模型与交互
 
 ### 模型来源与用途
