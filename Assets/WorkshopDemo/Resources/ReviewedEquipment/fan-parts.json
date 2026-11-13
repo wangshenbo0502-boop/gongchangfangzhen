@@ -1,0 +1,1136 @@
+{
+  "model": "industrial-fan",
+  "units": "metres",
+  "axis": "Blender X",
+  "rotorNode": "industrial-fan_rotor",
+  "rotorLocalAxis": "Z",
+  "axisHeight": 1.04,
+  "motionVersion": 4,
+  "oneWaySeconds": 14,
+  "meshCount": 590,
+  "durationSeconds": 14,
+  "parts": [
+    {
+      "index": 0,
+      "name": "FAN_00_Base",
+      "label": "减振底座",
+      "meshCount": 116,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_00_Base_AnchorPlate",
+        "FAN_00_Base_AnchorPlate.001",
+        "FAN_00_Base_AnchorPlate.002",
+        "FAN_00_Base_AnchorPlate.003",
+        "FAN_00_Base_Anchor_HexHead",
+        "FAN_00_Base_Anchor_HexHead.001",
+        "FAN_00_Base_Anchor_HexHead.002",
+        "FAN_00_Base_Anchor_HexHead.003",
+        "FAN_00_Base_Anchor_HexHead.004",
+        "FAN_00_Base_Anchor_HexHead.005",
+        "FAN_00_Base_Anchor_HexHead.006",
+        "FAN_00_Base_Anchor_HexHead.007",
+        "FAN_00_Base_Anchor_HexNut",
+        "FAN_00_Base_Anchor_HexNut.001",
+        "FAN_00_Base_Anchor_HexNut.002",
+        "FAN_00_Base_Anchor_HexNut.003",
+        "FAN_00_Base_Anchor_HexNut.004",
+        "FAN_00_Base_Anchor_HexNut.005",
+        "FAN_00_Base_Anchor_HexNut.006",
+        "FAN_00_Base_Anchor_HexNut.007",
+        "FAN_00_Base_Anchor_Stud",
+        "FAN_00_Base_Anchor_Stud.001",
+        "FAN_00_Base_Anchor_Stud.002",
+        "FAN_00_Base_Anchor_Stud.003",
+        "FAN_00_Base_Anchor_Stud.004",
+        "FAN_00_Base_Anchor_Stud.005",
+        "FAN_00_Base_Anchor_Stud.006",
+        "FAN_00_Base_Anchor_Stud.007",
+        "FAN_00_Base_Anchor_Washer",
+        "FAN_00_Base_Anchor_Washer.001",
+        "FAN_00_Base_Anchor_Washer.002",
+        "FAN_00_Base_Anchor_Washer.003",
+        "FAN_00_Base_Anchor_Washer.004",
+        "FAN_00_Base_Anchor_Washer.005",
+        "FAN_00_Base_Anchor_Washer.006",
+        "FAN_00_Base_Anchor_Washer.007",
+        "FAN_00_Base_AssetTag",
+        "FAN_00_Base_AssetTagText",
+        "FAN_00_Base_Crossmember",
+        "FAN_00_Base_Crossmember.001",
+        "FAN_00_Base_CurvedSaddle",
+        "FAN_00_Base_CurvedSaddle.001",
+        "FAN_00_Base_EPDM_Isolator",
+        "FAN_00_Base_EPDM_Isolator.001",
+        "FAN_00_Base_EPDM_Isolator.002",
+        "FAN_00_Base_EPDM_Isolator.003",
+        "FAN_00_Base_IsolatorCap",
+        "FAN_00_Base_IsolatorCap.001",
+        "FAN_00_Base_IsolatorCap.002",
+        "FAN_00_Base_IsolatorCap.003",
+        "FAN_00_Base_IsolatorStud_HexHead",
+        "FAN_00_Base_IsolatorStud_HexHead.001",
+        "FAN_00_Base_IsolatorStud_HexHead.002",
+        "FAN_00_Base_IsolatorStud_HexHead.003",
+        "FAN_00_Base_IsolatorStud_HexNut",
+        "FAN_00_Base_IsolatorStud_HexNut.001",
+        "FAN_00_Base_IsolatorStud_HexNut.002",
+        "FAN_00_Base_IsolatorStud_HexNut.003",
+        "FAN_00_Base_IsolatorStud_Stud",
+        "FAN_00_Base_IsolatorStud_Stud.001",
+        "FAN_00_Base_IsolatorStud_Stud.002",
+        "FAN_00_Base_IsolatorStud_Stud.003",
+        "FAN_00_Base_IsolatorStud_Washer",
+        "FAN_00_Base_IsolatorStud_Washer.001",
+        "FAN_00_Base_IsolatorStud_Washer.002",
+        "FAN_00_Base_IsolatorStud_Washer.003",
+        "FAN_00_Base_RolledChannel",
+        "FAN_00_Base_RolledChannel.001",
+        "FAN_00_Base_SaddleBolt_HexHead",
+        "FAN_00_Base_SaddleBolt_HexHead.001",
+        "FAN_00_Base_SaddleBolt_HexHead.002",
+        "FAN_00_Base_SaddleBolt_HexHead.003",
+        "FAN_00_Base_SaddleBolt_HexHead.004",
+        "FAN_00_Base_SaddleBolt_HexHead.005",
+        "FAN_00_Base_SaddleBolt_HexHead.006",
+        "FAN_00_Base_SaddleBolt_HexHead.007",
+        "FAN_00_Base_SaddleBolt_HexNut",
+        "FAN_00_Base_SaddleBolt_HexNut.001",
+        "FAN_00_Base_SaddleBolt_HexNut.002",
+        "FAN_00_Base_SaddleBolt_HexNut.003",
+        "FAN_00_Base_SaddleBolt_HexNut.004",
+        "FAN_00_Base_SaddleBolt_HexNut.005",
+        "FAN_00_Base_SaddleBolt_HexNut.006",
+        "FAN_00_Base_SaddleBolt_HexNut.007",
+        "FAN_00_Base_SaddleBolt_Stud",
+        "FAN_00_Base_SaddleBolt_Stud.001",
+        "FAN_00_Base_SaddleBolt_Stud.002",
+        "FAN_00_Base_SaddleBolt_Stud.003",
+        "FAN_00_Base_SaddleBolt_Stud.004",
+        "FAN_00_Base_SaddleBolt_Stud.005",
+        "FAN_00_Base_SaddleBolt_Stud.006",
+        "FAN_00_Base_SaddleBolt_Stud.007",
+        "FAN_00_Base_SaddleBolt_Washer",
+        "FAN_00_Base_SaddleBolt_Washer.001",
+        "FAN_00_Base_SaddleBolt_Washer.002",
+        "FAN_00_Base_SaddleBolt_Washer.003",
+        "FAN_00_Base_SaddleBolt_Washer.004",
+        "FAN_00_Base_SaddleBolt_Washer.005",
+        "FAN_00_Base_SaddleBolt_Washer.006",
+        "FAN_00_Base_SaddleBolt_Washer.007",
+        "FAN_00_Base_SaddleFoot",
+        "FAN_00_Base_SaddleFoot.001",
+        "FAN_00_Base_SaddleFoot.002",
+        "FAN_00_Base_SaddleFoot.003",
+        "FAN_00_Base_SaddleWeb",
+        "FAN_00_Base_SaddleWeb.001",
+        "FAN_00_Base_SaddleWeb.002",
+        "FAN_00_Base_SaddleWeb.003",
+        "FAN_00_Base_TriangularGusset",
+        "FAN_00_Base_TriangularGusset.001",
+        "FAN_00_Base_TriangularGusset.002",
+        "FAN_00_Base_TriangularGusset.003",
+        "FAN_00_Base_TriangularGusset.004",
+        "FAN_00_Base_TriangularGusset.005",
+        "FAN_00_Base_TriangularGusset.006",
+        "FAN_00_Base_TriangularGusset.007"
+      ],
+      "anchor": "FAN_00_Base_CurvedSaddle",
+      "description": "承托风筒和驱动组件，通过橡胶减振垫及锚固板将载荷传递至基础，减小振动传递。"
+    },
+    {
+      "index": 1,
+      "name": "FAN_01_Duct",
+      "label": "风筒与法兰",
+      "meshCount": 29,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_01_Duct_12mmDrilledFlange",
+        "FAN_01_Duct_12mmDrilledFlange.001",
+        "FAN_01_Duct_AirflowLabel",
+        "FAN_01_Duct_AirflowText",
+        "FAN_01_Duct_CondensateDrain",
+        "FAN_01_Duct_EndRolledLip",
+        "FAN_01_Duct_EndRolledLip.001",
+        "FAN_01_Duct_LiftingEyePlate",
+        "FAN_01_Duct_LiftingEyePlate.001",
+        "FAN_01_Duct_LiftingFootWeld",
+        "FAN_01_Duct_LiftingFootWeld.001",
+        "FAN_01_Duct_LiftingFootWeld.002",
+        "FAN_01_Duct_LiftingFootWeld.003",
+        "FAN_01_Duct_LiftingShoe",
+        "FAN_01_Duct_LiftingShoe.001",
+        "FAN_01_Duct_Nameplate",
+        "FAN_01_Duct_NameplateMount",
+        "FAN_01_Duct_NameplateRivet",
+        "FAN_01_Duct_NameplateRivet.001",
+        "FAN_01_Duct_NameplateRivet.002",
+        "FAN_01_Duct_NameplateRivet.003",
+        "FAN_01_Duct_NameplateShoe",
+        "FAN_01_Duct_NameplateText",
+        "FAN_01_Duct_NameplateText.001",
+        "FAN_01_Duct_NameplateText.002",
+        "FAN_01_Duct_NameplateText.003",
+        "FAN_01_Duct_Rolled8mmShell",
+        "FAN_01_Duct_StiffeningBand",
+        "FAN_01_Duct_StiffeningBand.001"
+      ],
+      "anchor": "FAN_01_Duct_12mmDrilledFlange.001",
+      "description": "形成轴向气流通道；两端法兰连接护网和管路，加强环与鞍座保持筒体刚度。"
+    },
+    {
+      "index": 2,
+      "name": "FAN_02_Impeller",
+      "label": "八叶片叶轮",
+      "meshCount": 44,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.4,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.76,
+          "offset": {
+            "x": -1.3,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": -1.3,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_02_Impeller_Hub",
+        "FAN_02_Impeller_LockWasher",
+        "FAN_02_Impeller_Locknut",
+        "FAN_02_Impeller_RootClamp_HexHead",
+        "FAN_02_Impeller_RootClamp_HexHead.001",
+        "FAN_02_Impeller_RootClamp_HexHead.002",
+        "FAN_02_Impeller_RootClamp_HexHead.003",
+        "FAN_02_Impeller_RootClamp_HexHead.004",
+        "FAN_02_Impeller_RootClamp_HexHead.005",
+        "FAN_02_Impeller_RootClamp_HexHead.006",
+        "FAN_02_Impeller_RootClamp_HexHead.007",
+        "FAN_02_Impeller_RootClamp_HexNut",
+        "FAN_02_Impeller_RootClamp_HexNut.001",
+        "FAN_02_Impeller_RootClamp_HexNut.002",
+        "FAN_02_Impeller_RootClamp_HexNut.003",
+        "FAN_02_Impeller_RootClamp_HexNut.004",
+        "FAN_02_Impeller_RootClamp_HexNut.005",
+        "FAN_02_Impeller_RootClamp_HexNut.006",
+        "FAN_02_Impeller_RootClamp_HexNut.007",
+        "FAN_02_Impeller_RootClamp_Stud",
+        "FAN_02_Impeller_RootClamp_Stud.001",
+        "FAN_02_Impeller_RootClamp_Stud.002",
+        "FAN_02_Impeller_RootClamp_Stud.003",
+        "FAN_02_Impeller_RootClamp_Stud.004",
+        "FAN_02_Impeller_RootClamp_Stud.005",
+        "FAN_02_Impeller_RootClamp_Stud.006",
+        "FAN_02_Impeller_RootClamp_Stud.007",
+        "FAN_02_Impeller_RootClamp_Washer",
+        "FAN_02_Impeller_RootClamp_Washer.001",
+        "FAN_02_Impeller_RootClamp_Washer.002",
+        "FAN_02_Impeller_RootClamp_Washer.003",
+        "FAN_02_Impeller_RootClamp_Washer.004",
+        "FAN_02_Impeller_RootClamp_Washer.005",
+        "FAN_02_Impeller_RootClamp_Washer.006",
+        "FAN_02_Impeller_RootClamp_Washer.007",
+        "FAN_02_Impeller_Spinner",
+        "FAN_02_Impeller_TwistedAirfoil_01",
+        "FAN_02_Impeller_TwistedAirfoil_02",
+        "FAN_02_Impeller_TwistedAirfoil_03",
+        "FAN_02_Impeller_TwistedAirfoil_04",
+        "FAN_02_Impeller_TwistedAirfoil_05",
+        "FAN_02_Impeller_TwistedAirfoil_06",
+        "FAN_02_Impeller_TwistedAirfoil_07",
+        "FAN_02_Impeller_TwistedAirfoil_08"
+      ],
+      "anchor": "FAN_02_Impeller_Spinner",
+      "description": "由扭曲翼型叶片、轮毂和整流帽组成，将电机扭矩转化为轴向气流。"
+    },
+    {
+      "index": 3,
+      "name": "FAN_03_InletGuard",
+      "label": "入口安全护网",
+      "meshCount": 71,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.18,
+          "offset": {
+            "x": -0.5,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.34,
+          "offset": {
+            "x": -0.68,
+            "y": -1.7,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": -0.68,
+            "y": -1.7,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_03_InletGuard_CaptiveBolt_HexHead",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.001",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.002",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.003",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.004",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.005",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.006",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.007",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.008",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.009",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.010",
+        "FAN_03_InletGuard_CaptiveBolt_HexHead.011",
+        "FAN_03_InletGuard_CaptiveBolt_Stud",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.001",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.002",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.003",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.004",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.005",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.006",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.007",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.008",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.009",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.010",
+        "FAN_03_InletGuard_CaptiveBolt_Stud.011",
+        "FAN_03_InletGuard_CaptiveBolt_Washer",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.001",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.002",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.003",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.004",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.005",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.006",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.007",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.008",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.009",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.010",
+        "FAN_03_InletGuard_CaptiveBolt_Washer.011",
+        "FAN_03_InletGuard_CentreBadge",
+        "FAN_03_InletGuard_ConcentricWire",
+        "FAN_03_InletGuard_ConcentricWire.001",
+        "FAN_03_InletGuard_ConcentricWire.002",
+        "FAN_03_InletGuard_ConcentricWire.003",
+        "FAN_03_InletGuard_ConcentricWire.004",
+        "FAN_03_InletGuard_ConcentricWire.005",
+        "FAN_03_InletGuard_ConcentricWire.006",
+        "FAN_03_InletGuard_ConcentricWire.007",
+        "FAN_03_InletGuard_ConcentricWire.008",
+        "FAN_03_InletGuard_ConcentricWire.009",
+        "FAN_03_InletGuard_Gasket",
+        "FAN_03_InletGuard_MountRing",
+        "FAN_03_InletGuard_RadialStiffener",
+        "FAN_03_InletGuard_RadialStiffener.001",
+        "FAN_03_InletGuard_RadialStiffener.002",
+        "FAN_03_InletGuard_RadialStiffener.003",
+        "FAN_03_InletGuard_RadialStiffener.004",
+        "FAN_03_InletGuard_RadialStiffener.005",
+        "FAN_03_InletGuard_RadialStiffener.006",
+        "FAN_03_InletGuard_RadialStiffener.007",
+        "FAN_03_InletGuard_RadialStiffener.008",
+        "FAN_03_InletGuard_RadialStiffener.009",
+        "FAN_03_InletGuard_RadialStiffener.010",
+        "FAN_03_InletGuard_RadialStiffener.011",
+        "FAN_03_InletGuard_RadialStiffener.012",
+        "FAN_03_InletGuard_RadialStiffener.013",
+        "FAN_03_InletGuard_RadialStiffener.014",
+        "FAN_03_InletGuard_RadialStiffener.015",
+        "FAN_03_InletGuard_RetainingClip",
+        "FAN_03_InletGuard_RetainingClip.001",
+        "FAN_03_InletGuard_RetainingClip.002",
+        "FAN_03_InletGuard_RetainingClip.003",
+        "FAN_03_InletGuard_ServiceHandle",
+        "FAN_03_InletGuard_ServiceHandle.001"
+      ],
+      "anchor": "FAN_03_InletGuard_MountRing",
+      "description": "隔离入口旋转叶轮，降低误触风险；安装圈、同心环与放射筋共同支承护网。"
+    },
+    {
+      "index": 4,
+      "name": "FAN_04_Motor",
+      "label": "驱动电机",
+      "meshCount": 97,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.52,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.84,
+          "offset": {
+            "x": 1.7,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.96,
+          "offset": {
+            "x": 1.0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 1.0,
+            "y": -0.25,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_04_Motor_CoolingFin",
+        "FAN_04_Motor_CoolingFin.001",
+        "FAN_04_Motor_CoolingFin.002",
+        "FAN_04_Motor_CoolingFin.003",
+        "FAN_04_Motor_CoolingFin.004",
+        "FAN_04_Motor_CoolingFin.005",
+        "FAN_04_Motor_CoolingFin.006",
+        "FAN_04_Motor_CoolingFin.007",
+        "FAN_04_Motor_CoolingFin.008",
+        "FAN_04_Motor_CoolingFin.009",
+        "FAN_04_Motor_CoolingFin.010",
+        "FAN_04_Motor_CoolingFin.011",
+        "FAN_04_Motor_CoolingFin.012",
+        "FAN_04_Motor_CoolingFin.013",
+        "FAN_04_Motor_CoolingFin.014",
+        "FAN_04_Motor_CoolingFin.015",
+        "FAN_04_Motor_CoolingFin.016",
+        "FAN_04_Motor_CoolingFin.017",
+        "FAN_04_Motor_CoolingFin.018",
+        "FAN_04_Motor_CoolingFin.019",
+        "FAN_04_Motor_CoolingFin.020",
+        "FAN_04_Motor_CoolingFin.021",
+        "FAN_04_Motor_CoolingFin.022",
+        "FAN_04_Motor_CoolingFin.023",
+        "FAN_04_Motor_CoolingFin.024",
+        "FAN_04_Motor_CoolingFin.025",
+        "FAN_04_Motor_CoolingFin.026",
+        "FAN_04_Motor_CoolingFin.027",
+        "FAN_04_Motor_CoolingFin.028",
+        "FAN_04_Motor_CoolingFin.029",
+        "FAN_04_Motor_CoolingFin.030",
+        "FAN_04_Motor_CoolingFin.031",
+        "FAN_04_Motor_CouplingGuard",
+        "FAN_04_Motor_DataPlate",
+        "FAN_04_Motor_DataText",
+        "FAN_04_Motor_DataText.001",
+        "FAN_04_Motor_DataText.002",
+        "FAN_04_Motor_EndBell",
+        "FAN_04_Motor_EndBell.001",
+        "FAN_04_Motor_EndBellBolt_HexHead",
+        "FAN_04_Motor_EndBellBolt_HexHead.001",
+        "FAN_04_Motor_EndBellBolt_HexHead.002",
+        "FAN_04_Motor_EndBellBolt_HexHead.003",
+        "FAN_04_Motor_EndBellBolt_HexHead.004",
+        "FAN_04_Motor_EndBellBolt_HexHead.005",
+        "FAN_04_Motor_EndBellBolt_HexHead.006",
+        "FAN_04_Motor_EndBellBolt_HexHead.007",
+        "FAN_04_Motor_EndBellBolt_HexNut",
+        "FAN_04_Motor_EndBellBolt_HexNut.001",
+        "FAN_04_Motor_EndBellBolt_HexNut.002",
+        "FAN_04_Motor_EndBellBolt_HexNut.003",
+        "FAN_04_Motor_EndBellBolt_HexNut.004",
+        "FAN_04_Motor_EndBellBolt_HexNut.005",
+        "FAN_04_Motor_EndBellBolt_HexNut.006",
+        "FAN_04_Motor_EndBellBolt_HexNut.007",
+        "FAN_04_Motor_EndBellBolt_Stud",
+        "FAN_04_Motor_EndBellBolt_Stud.001",
+        "FAN_04_Motor_EndBellBolt_Stud.002",
+        "FAN_04_Motor_EndBellBolt_Stud.003",
+        "FAN_04_Motor_EndBellBolt_Stud.004",
+        "FAN_04_Motor_EndBellBolt_Stud.005",
+        "FAN_04_Motor_EndBellBolt_Stud.006",
+        "FAN_04_Motor_EndBellBolt_Stud.007",
+        "FAN_04_Motor_EndBellBolt_Washer",
+        "FAN_04_Motor_EndBellBolt_Washer.001",
+        "FAN_04_Motor_EndBellBolt_Washer.002",
+        "FAN_04_Motor_EndBellBolt_Washer.003",
+        "FAN_04_Motor_EndBellBolt_Washer.004",
+        "FAN_04_Motor_EndBellBolt_Washer.005",
+        "FAN_04_Motor_EndBellBolt_Washer.006",
+        "FAN_04_Motor_EndBellBolt_Washer.007",
+        "FAN_04_Motor_ExternalTieRod",
+        "FAN_04_Motor_ExternalTieRod.001",
+        "FAN_04_Motor_ExternalTieRod.002",
+        "FAN_04_Motor_ExternalTieRod.003",
+        "FAN_04_Motor_FinnedHousing",
+        "FAN_04_Motor_OutputShaft",
+        "FAN_04_Motor_ShaftKey",
+        "FAN_04_Motor_TerminalCase",
+        "FAN_04_Motor_TerminalLid",
+        "FAN_04_Motor_TerminalPad",
+        "FAN_04_Motor_TerminalScrew_HexHead",
+        "FAN_04_Motor_TerminalScrew_HexHead.001",
+        "FAN_04_Motor_TerminalScrew_HexHead.002",
+        "FAN_04_Motor_TerminalScrew_HexHead.003",
+        "FAN_04_Motor_TerminalScrew_HexNut",
+        "FAN_04_Motor_TerminalScrew_HexNut.001",
+        "FAN_04_Motor_TerminalScrew_HexNut.002",
+        "FAN_04_Motor_TerminalScrew_HexNut.003",
+        "FAN_04_Motor_TerminalScrew_Stud",
+        "FAN_04_Motor_TerminalScrew_Stud.001",
+        "FAN_04_Motor_TerminalScrew_Stud.002",
+        "FAN_04_Motor_TerminalScrew_Stud.003",
+        "FAN_04_Motor_TerminalScrew_Washer",
+        "FAN_04_Motor_TerminalScrew_Washer.001",
+        "FAN_04_Motor_TerminalScrew_Washer.002",
+        "FAN_04_Motor_TerminalScrew_Washer.003"
+      ],
+      "anchor": "FAN_04_Motor_FinnedHousing",
+      "description": "经输出轴和轴键带动叶轮，机壳散热筋帮助散热；拆检时先解除外部遮挡，再沿轴向退出。"
+    },
+    {
+      "index": 5,
+      "name": "FAN_05_OutletGuard",
+      "label": "出口防鸟护网",
+      "meshCount": 92,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.18,
+          "offset": {
+            "x": 0.55,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.34,
+          "offset": {
+            "x": 0.72,
+            "y": 1.7,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 0.72,
+            "y": 1.7,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_05_OutletGuard_BirdMesh",
+        "FAN_05_OutletGuard_BirdMesh.001",
+        "FAN_05_OutletGuard_BirdMesh.002",
+        "FAN_05_OutletGuard_BirdMesh.003",
+        "FAN_05_OutletGuard_BirdMesh.004",
+        "FAN_05_OutletGuard_BirdMesh.005",
+        "FAN_05_OutletGuard_BirdMesh.006",
+        "FAN_05_OutletGuard_BirdMesh.007",
+        "FAN_05_OutletGuard_BirdMesh.008",
+        "FAN_05_OutletGuard_BirdMesh.009",
+        "FAN_05_OutletGuard_BirdMesh.010",
+        "FAN_05_OutletGuard_BirdMesh.011",
+        "FAN_05_OutletGuard_BirdMesh.012",
+        "FAN_05_OutletGuard_BirdMesh.013",
+        "FAN_05_OutletGuard_BirdMesh.014",
+        "FAN_05_OutletGuard_BirdMesh.015",
+        "FAN_05_OutletGuard_BirdMesh.016",
+        "FAN_05_OutletGuard_BirdMesh.017",
+        "FAN_05_OutletGuard_BirdMesh.018",
+        "FAN_05_OutletGuard_BirdMesh.019",
+        "FAN_05_OutletGuard_BirdMesh.020",
+        "FAN_05_OutletGuard_BirdMesh.021",
+        "FAN_05_OutletGuard_BirdMesh.022",
+        "FAN_05_OutletGuard_BirdMesh.023",
+        "FAN_05_OutletGuard_BirdMesh.024",
+        "FAN_05_OutletGuard_BirdMesh.025",
+        "FAN_05_OutletGuard_BirdMesh.026",
+        "FAN_05_OutletGuard_BirdMesh.027",
+        "FAN_05_OutletGuard_BirdMesh.028",
+        "FAN_05_OutletGuard_BirdMesh.029",
+        "FAN_05_OutletGuard_BirdMesh.030",
+        "FAN_05_OutletGuard_BirdMesh.031",
+        "FAN_05_OutletGuard_BirdMesh.032",
+        "FAN_05_OutletGuard_BirdMesh.033",
+        "FAN_05_OutletGuard_BirdMesh.034",
+        "FAN_05_OutletGuard_BirdMesh.035",
+        "FAN_05_OutletGuard_BirdMesh.036",
+        "FAN_05_OutletGuard_BirdMesh.037",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.001",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.002",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.003",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.004",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.005",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.006",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.007",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.008",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.009",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.010",
+        "FAN_05_OutletGuard_CaptiveBolt_HexHead.011",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.001",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.002",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.003",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.004",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.005",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.006",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.007",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.008",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.009",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.010",
+        "FAN_05_OutletGuard_CaptiveBolt_Stud.011",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.001",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.002",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.003",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.004",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.005",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.006",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.007",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.008",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.009",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.010",
+        "FAN_05_OutletGuard_CaptiveBolt_Washer.011",
+        "FAN_05_OutletGuard_CentreBadge",
+        "FAN_05_OutletGuard_ConcentricWire",
+        "FAN_05_OutletGuard_Gasket",
+        "FAN_05_OutletGuard_MountRing",
+        "FAN_05_OutletGuard_RadialStiffener",
+        "FAN_05_OutletGuard_RadialStiffener.001",
+        "FAN_05_OutletGuard_RadialStiffener.002",
+        "FAN_05_OutletGuard_RadialStiffener.003",
+        "FAN_05_OutletGuard_RadialStiffener.004",
+        "FAN_05_OutletGuard_RadialStiffener.005",
+        "FAN_05_OutletGuard_RadialStiffener.006",
+        "FAN_05_OutletGuard_RadialStiffener.007",
+        "FAN_05_OutletGuard_RetainingClip",
+        "FAN_05_OutletGuard_RetainingClip.001",
+        "FAN_05_OutletGuard_RetainingClip.002",
+        "FAN_05_OutletGuard_RetainingClip.003",
+        "FAN_05_OutletGuard_ServiceHandle",
+        "FAN_05_OutletGuard_ServiceHandle.001"
+      ],
+      "anchor": "FAN_05_OutletGuard_MountRing",
+      "description": "隔离出口侧旋转结构并阻挡异物，由安装圈、支筋及金属网格组成。"
+    },
+    {
+      "index": 6,
+      "name": "FAN_06_Struts",
+      "label": "导流片与电机支承",
+      "meshCount": 29,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.52,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.84,
+          "offset": {
+            "x": 1.7,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 1.7,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_06_Struts_CradleFastener_HexHead",
+        "FAN_06_Struts_CradleFastener_HexHead.001",
+        "FAN_06_Struts_CradleFastener_HexHead.002",
+        "FAN_06_Struts_CradleFastener_HexHead.003",
+        "FAN_06_Struts_CradleFastener_HexHead.004",
+        "FAN_06_Struts_CradleFastener_HexHead.005",
+        "FAN_06_Struts_CradleFastener_HexNut",
+        "FAN_06_Struts_CradleFastener_HexNut.001",
+        "FAN_06_Struts_CradleFastener_HexNut.002",
+        "FAN_06_Struts_CradleFastener_HexNut.003",
+        "FAN_06_Struts_CradleFastener_HexNut.004",
+        "FAN_06_Struts_CradleFastener_HexNut.005",
+        "FAN_06_Struts_CradleFastener_Stud",
+        "FAN_06_Struts_CradleFastener_Stud.001",
+        "FAN_06_Struts_CradleFastener_Stud.002",
+        "FAN_06_Struts_CradleFastener_Stud.003",
+        "FAN_06_Struts_CradleFastener_Stud.004",
+        "FAN_06_Struts_CradleFastener_Stud.005",
+        "FAN_06_Struts_CradleFastener_Washer",
+        "FAN_06_Struts_CradleFastener_Washer.001",
+        "FAN_06_Struts_CradleFastener_Washer.002",
+        "FAN_06_Struts_CradleFastener_Washer.003",
+        "FAN_06_Struts_CradleFastener_Washer.004",
+        "FAN_06_Struts_CradleFastener_Washer.005",
+        "FAN_06_Struts_MountingFlange",
+        "FAN_06_Struts_RearCradle",
+        "FAN_06_Struts_StreamlinedGuideVane",
+        "FAN_06_Struts_StreamlinedGuideVane.001",
+        "FAN_06_Struts_StreamlinedGuideVane.002"
+      ],
+      "anchor": "FAN_06_Struts_MountingFlange",
+      "description": "定位电机并将其载荷传至风筒，导流片约束出口气流方向。"
+    },
+    {
+      "index": 7,
+      "name": "FAN_07_TerminalBox",
+      "label": "接线盒",
+      "meshCount": 28,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.28,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.46,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0.42
+          }
+        },
+        {
+          "t": 0.64,
+          "offset": {
+            "x": 0,
+            "y": -0.82,
+            "z": 0.46
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 0,
+            "y": -0.82,
+            "z": 0.46
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_07_TerminalBox_CastEnclosure",
+        "FAN_07_TerminalBox_ContouredSaddle",
+        "FAN_07_TerminalBox_ContouredSaddle.001",
+        "FAN_07_TerminalBox_CopperPost",
+        "FAN_07_TerminalBox_CopperPost.001",
+        "FAN_07_TerminalBox_CopperPost.002",
+        "FAN_07_TerminalBox_Insulator",
+        "FAN_07_TerminalBox_Insulator.001",
+        "FAN_07_TerminalBox_Insulator.002",
+        "FAN_07_TerminalBox_MountRail",
+        "FAN_07_TerminalBox_RelievedSupportWeb",
+        "FAN_07_TerminalBox_RelievedSupportWeb.001",
+        "FAN_07_TerminalBox_SaddleAnchor_HexHead",
+        "FAN_07_TerminalBox_SaddleAnchor_HexHead.001",
+        "FAN_07_TerminalBox_SaddleAnchor_HexHead.002",
+        "FAN_07_TerminalBox_SaddleAnchor_HexHead.003",
+        "FAN_07_TerminalBox_SaddleAnchor_HexNut",
+        "FAN_07_TerminalBox_SaddleAnchor_HexNut.001",
+        "FAN_07_TerminalBox_SaddleAnchor_HexNut.002",
+        "FAN_07_TerminalBox_SaddleAnchor_HexNut.003",
+        "FAN_07_TerminalBox_SaddleAnchor_Stud",
+        "FAN_07_TerminalBox_SaddleAnchor_Stud.001",
+        "FAN_07_TerminalBox_SaddleAnchor_Stud.002",
+        "FAN_07_TerminalBox_SaddleAnchor_Stud.003",
+        "FAN_07_TerminalBox_SaddleAnchor_Washer",
+        "FAN_07_TerminalBox_SaddleAnchor_Washer.001",
+        "FAN_07_TerminalBox_SaddleAnchor_Washer.002",
+        "FAN_07_TerminalBox_SaddleAnchor_Washer.003"
+      ],
+      "anchor": "FAN_07_TerminalBox_ContouredSaddle",
+      "description": "容纳和保护接线端子，盒体与独立盒盖配合；本展示模型不保留外露电线和接口。"
+    },
+    {
+      "index": 8,
+      "name": "FAN_08_AccessCover",
+      "label": "曲面检修盖",
+      "meshCount": 17,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.08,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.14,
+          "offset": {
+            "x": 0,
+            "y": -0.08,
+            "z": 0.04
+          }
+        },
+        {
+          "t": 0.22,
+          "offset": {
+            "x": -0.2,
+            "y": -0.08,
+            "z": 0.04
+          }
+        },
+        {
+          "t": 0.4,
+          "offset": {
+            "x": -0.2,
+            "y": -0.16,
+            "z": 0.94
+          }
+        },
+        {
+          "t": 0.48,
+          "offset": {
+            "x": -0.2,
+            "y": -0.16,
+            "z": 0.94
+          }
+        },
+        {
+          "t": 0.76,
+          "offset": {
+            "x": -0.48,
+            "y": -0.16,
+            "z": 0.94
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": -0.68,
+            "y": -0.16,
+            "z": 0.94
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_08_AccessCover_CurvedServiceCover",
+        "FAN_08_AccessCover_HandleStandoff",
+        "FAN_08_AccessCover_HandleStandoff.001",
+        "FAN_08_AccessCover_InspectionHandle",
+        "FAN_08_AccessCover_ServiceCoverBolt_HexHead",
+        "FAN_08_AccessCover_ServiceCoverBolt_HexHead.001",
+        "FAN_08_AccessCover_ServiceCoverBolt_HexHead.002",
+        "FAN_08_AccessCover_ServiceCoverBolt_HexHead.003",
+        "FAN_08_AccessCover_ServiceCoverBolt_Stud",
+        "FAN_08_AccessCover_ServiceCoverBolt_Stud.001",
+        "FAN_08_AccessCover_ServiceCoverBolt_Stud.002",
+        "FAN_08_AccessCover_ServiceCoverBolt_Stud.003",
+        "FAN_08_AccessCover_ServiceCoverBolt_Washer",
+        "FAN_08_AccessCover_ServiceCoverBolt_Washer.001",
+        "FAN_08_AccessCover_ServiceCoverBolt_Washer.002",
+        "FAN_08_AccessCover_ServiceCoverBolt_Washer.003",
+        "FAN_08_AccessCover_ServiceHatchGasket"
+      ],
+      "anchor": "FAN_08_AccessCover_CurvedServiceCover",
+      "description": "封闭风筒侧面的检修开口，盖板与密封垫贴合筒壁，便于日常观察和维护。"
+    },
+    {
+      "index": 9,
+      "name": "FAN_09_MotorVentCover",
+      "label": "电机后风罩",
+      "meshCount": 17,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.34,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.42,
+          "offset": {
+            "x": 0.26,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.5,
+          "offset": {
+            "x": 0.26,
+            "y": 0.25,
+            "z": 0.95
+          }
+        },
+        {
+          "t": 0.82,
+          "offset": {
+            "x": 1.8,
+            "y": 0.25,
+            "z": 0.95
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 1.8,
+            "y": 0.25,
+            "z": 0.95
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_09_MotorVentCover_RearVentHood",
+        "FAN_09_MotorVentCover_VentRing",
+        "FAN_09_MotorVentCover_VentRing.001",
+        "FAN_09_MotorVentCover_VentRing.002",
+        "FAN_09_MotorVentCover_VentRing.003",
+        "FAN_09_MotorVentCover_VentSpoke",
+        "FAN_09_MotorVentCover_VentSpoke.001",
+        "FAN_09_MotorVentCover_VentSpoke.002",
+        "FAN_09_MotorVentCover_VentSpoke.003",
+        "FAN_09_MotorVentCover_VentSpoke.004",
+        "FAN_09_MotorVentCover_VentSpoke.005",
+        "FAN_09_MotorVentCover_VentSpoke.006",
+        "FAN_09_MotorVentCover_VentSpoke.007",
+        "FAN_09_MotorVentCover_VentSpoke.008",
+        "FAN_09_MotorVentCover_VentSpoke.009",
+        "FAN_09_MotorVentCover_VentSpoke.010",
+        "FAN_09_MotorVentCover_VentSpoke.011"
+      ],
+      "anchor": "FAN_09_MotorVentCover_RearVentHood",
+      "description": "保护电机后部通风结构，通风网和支筋在防护的同时保留散热通道。"
+    },
+    {
+      "index": 10,
+      "name": "FAN_10_TerminalLid",
+      "label": "接线盒盖",
+      "meshCount": 50,
+      "path": [
+        {
+          "t": 0,
+          "offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.14,
+          "offset": {
+            "x": 0,
+            "y": -0.25,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.28,
+          "offset": {
+            "x": 0.46,
+            "y": -0.25,
+            "z": 0
+          }
+        },
+        {
+          "t": 0.44,
+          "offset": {
+            "x": 0.46,
+            "y": -0.55,
+            "z": 0.42
+          }
+        },
+        {
+          "t": 0.58,
+          "offset": {
+            "x": 0.4,
+            "y": -1.2,
+            "z": 0.42
+          }
+        },
+        {
+          "t": 1,
+          "offset": {
+            "x": 0.4,
+            "y": -1.2,
+            "z": 0.42
+          }
+        }
+      ],
+      "meshes": [
+        "FAN_10_TerminalLid_BarcodeBar",
+        "FAN_10_TerminalLid_BarcodeBar.001",
+        "FAN_10_TerminalLid_BarcodeBar.002",
+        "FAN_10_TerminalLid_BarcodeBar.003",
+        "FAN_10_TerminalLid_BarcodeBar.004",
+        "FAN_10_TerminalLid_BarcodeBar.005",
+        "FAN_10_TerminalLid_BarcodeBar.006",
+        "FAN_10_TerminalLid_BarcodeBar.007",
+        "FAN_10_TerminalLid_BarcodeBar.008",
+        "FAN_10_TerminalLid_BarcodeBar.009",
+        "FAN_10_TerminalLid_BarcodeBar.010",
+        "FAN_10_TerminalLid_BarcodeBar.011",
+        "FAN_10_TerminalLid_BarcodeBar.012",
+        "FAN_10_TerminalLid_BarcodeBar.013",
+        "FAN_10_TerminalLid_BarcodeBar.014",
+        "FAN_10_TerminalLid_BarcodeBar.015",
+        "FAN_10_TerminalLid_BarcodeBar.016",
+        "FAN_10_TerminalLid_BarcodeBar.017",
+        "FAN_10_TerminalLid_BarcodeBar.018",
+        "FAN_10_TerminalLid_BarcodeBar.019",
+        "FAN_10_TerminalLid_BarcodeBar.020",
+        "FAN_10_TerminalLid_BarcodeBar.021",
+        "FAN_10_TerminalLid_BarcodeBar.022",
+        "FAN_10_TerminalLid_BarcodeBar.023",
+        "FAN_10_TerminalLid_BarcodeBar.024",
+        "FAN_10_TerminalLid_BarcodeBar.025",
+        "FAN_10_TerminalLid_BarcodeDigits",
+        "FAN_10_TerminalLid_DataPlate",
+        "FAN_10_TerminalLid_DataPlateBacking",
+        "FAN_10_TerminalLid_DataText",
+        "FAN_10_TerminalLid_DataText.001",
+        "FAN_10_TerminalLid_DataText.002",
+        "FAN_10_TerminalLid_FrontLid",
+        "FAN_10_TerminalLid_LidGasket",
+        "FAN_10_TerminalLid_LidScrew_HexHead",
+        "FAN_10_TerminalLid_LidScrew_HexHead.001",
+        "FAN_10_TerminalLid_LidScrew_HexHead.002",
+        "FAN_10_TerminalLid_LidScrew_HexHead.003",
+        "FAN_10_TerminalLid_LidScrew_HexNut",
+        "FAN_10_TerminalLid_LidScrew_HexNut.001",
+        "FAN_10_TerminalLid_LidScrew_HexNut.002",
+        "FAN_10_TerminalLid_LidScrew_HexNut.003",
+        "FAN_10_TerminalLid_LidScrew_Stud",
+        "FAN_10_TerminalLid_LidScrew_Stud.001",
+        "FAN_10_TerminalLid_LidScrew_Stud.002",
+        "FAN_10_TerminalLid_LidScrew_Stud.003",
+        "FAN_10_TerminalLid_LidScrew_Washer",
+        "FAN_10_TerminalLid_LidScrew_Washer.001",
+        "FAN_10_TerminalLid_LidScrew_Washer.002",
+        "FAN_10_TerminalLid_LidScrew_Washer.003"
+      ],
+      "anchor": "FAN_10_TerminalLid_DataText.001",
+      "description": "封闭外置接线盒，承载设备编号、序列号、制造年月及条码标识。"
+    }
+  ]
+}

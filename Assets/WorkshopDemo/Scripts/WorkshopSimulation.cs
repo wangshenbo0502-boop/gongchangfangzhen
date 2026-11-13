@@ -39,6 +39,7 @@ namespace WorkshopDemo
 
     public sealed class WorkshopSimulation : MonoBehaviour
     {
+        public const int DefaultInspectionMinutes = 30;
         public WorkshopDevice[] devices;
         public WorkshopCamera cameraRig;
         public WorkshopInspector inspector;
@@ -160,18 +161,30 @@ namespace WorkshopDemo
 
         public void Dispatch() { Assign(ActiveAlarm, "实训维修员", 30); }
 
+        public bool StartInspection(WorkshopAlarm alarm) =>
+            DispatchOrder(alarm, null, DefaultInspectionMinutes, true);
+
         public bool Assign(WorkshopAlarm alarm, string assignee, int minutes)
         {
-            if (alarm == null || !Alarms.Contains(alarm) || alarm.stage != WorkshopOrderStage.Reported ||
-                !inspector || inspector.IsBusy)
-            { Notify("工单需处于待派工状态，且巡检机器人空闲"); return false; }
             if (string.IsNullOrWhiteSpace(assignee) || minutes < 1 || minutes > 240)
             { Notify("请填写维修人员及 1–240 分钟处理时限"); return false; }
+            return DispatchOrder(alarm, assignee.Trim(), minutes, false);
+        }
+
+        bool DispatchOrder(WorkshopAlarm alarm, string assignee, int minutes, bool allowDetected)
+        {
+            if (alarm == null || !Alarms.Contains(alarm) ||
+                (alarm.stage != WorkshopOrderStage.Reported && !(allowDetected && alarm.stage == WorkshopOrderStage.Detected)))
+            { Notify("请选择一张等待巡检的工单"); return false; }
+            if (!inspector || inspector.IsBusy)
+            { Notify("小车正在执行其他任务或不可用"); return false; }
             if (!inspector.Dispatch(alarm)) { Notify("目标不可达，未派发巡检"); return false; }
-            alarm.assignee = assignee.Trim(); alarm.dueAt = SimulationTime.AddMinutes(minutes);
+            if (alarm.reportedAt == default) alarm.reportedAt = SimulationTime;
+            if (assignee != null) alarm.assignee = assignee;
+            alarm.dueAt = SimulationTime.AddMinutes(minutes);
             SetStage(alarm, WorkshopOrderStage.Dispatched);
             Select(alarm.device, false);
-            Notify(alarm.id + " 已派给 " + alarm.assignee + "，巡检机器人前往现场");
+            Notify(alarm.device.displayName + " · 小车正在前往现场");
             return true;
         }
 
@@ -180,7 +193,7 @@ namespace WorkshopDemo
             var alarm = inspector.TargetAlarm;
             if (alarm == null || alarm.stage != WorkshopOrderStage.Dispatched) return;
             SetStage(alarm, WorkshopOrderStage.Repairing);
-            Notify(alarm.id + " 已到达现场，请记录故障原因和维修措施");
+            Notify(alarm.device.displayName + " · 小车已到达，请填写故障原因");
         }
 
         public void InspectorDeparted()
@@ -193,37 +206,36 @@ namespace WorkshopDemo
 
         public void Resolve()
         {
-            Notify("维修完工后需提交处理记录，再由报修人验收关闭");
+            Notify("填写故障原因并提交维修，再验收归档");
         }
 
-        public bool SubmitRepair(WorkshopAlarm alarm, string cause, string action, string materials)
+        public bool SubmitRepair(WorkshopAlarm alarm, string cause, string action = null, string materials = null)
         {
             if (alarm == null || !Alarms.Contains(alarm) || alarm.stage != WorkshopOrderStage.Repairing ||
                 !inspector || inspector.TargetAlarm != alarm || !inspector.HasArrived)
             { Notify("巡检机器人实际到达后才能提交维修"); return false; }
-            if (string.IsNullOrWhiteSpace(cause) || string.IsNullOrWhiteSpace(action) ||
-                string.IsNullOrWhiteSpace(materials))
-            { Notify("请填写故障原因、维修措施和配件材料（无更换填“无”）"); return false; }
-            alarm.cause = cause.Trim(); alarm.repairAction = action.Trim(); alarm.materials = materials.Trim();
+            if (string.IsNullOrWhiteSpace(cause))
+            { Notify("请填写故障原因"); return false; }
+            alarm.cause = cause.Trim();
+            alarm.repairAction = action?.Trim();
+            alarm.materials = materials?.Trim();
             alarm.submittedAt = SimulationTime;
             SetStage(alarm, WorkshopOrderStage.AwaitingAcceptance);
             inspector.Complete();
-            Notify(alarm.id + " 维修已提交，等待 " + alarm.reporter + " 验收");
+            Notify(alarm.device.displayName + " · 维修已提交，等待验收");
             return true;
         }
 
-        public bool Accept(WorkshopAlarm alarm, bool passed, string note)
+        public bool Accept(WorkshopAlarm alarm, bool passed, string note = null)
         {
             if (alarm == null || !Alarms.Contains(alarm) || alarm.stage != WorkshopOrderStage.AwaitingAcceptance)
             { Notify("仅待验收工单可执行验收"); return false; }
-            if (string.IsNullOrWhiteSpace(note))
-            { Notify("请填写验收结果或驳回原因"); return false; }
-            alarm.acceptanceNote = note.Trim();
+            alarm.acceptanceNote = note?.Trim();
             if (!passed)
             {
                 alarm.reworkCount++;
                 SetStage(alarm, WorkshopOrderStage.Reported);
-                Notify(alarm.id + " 已驳回，需主管重新派工复查");
+                Notify(alarm.device.displayName + " · 已退回，等待重新巡检");
                 return true;
             }
             alarm.resolved = true;
@@ -233,8 +245,9 @@ namespace WorkshopDemo
             alarm.device.SetFault(false);
             Records.Insert(0, new InspectionRecord {
                 alarmId = alarm.id, deviceName = alarm.device.deviceId + " " + alarm.device.displayName,
-                completedAt = SimulationTime, action = alarm.repairAction +
-                    (alarm.device.IsRunning ? "；恢复运行" : "；保持原停机状态"),
+                completedAt = SimulationTime, action =
+                    (string.IsNullOrWhiteSpace(alarm.repairAction) ? "" : alarm.repairAction + "；") +
+                    (alarm.device.IsRunning ? "恢复运行" : "保持原停机状态"),
                 faultCode = alarm.fault.Code, faultName = alarm.fault.Name, resultSource = resultSource,
                 reporter = alarm.reporter, assignee = alarm.assignee, cause = alarm.cause,
                 materials = alarm.materials, acceptanceNote = alarm.acceptanceNote,

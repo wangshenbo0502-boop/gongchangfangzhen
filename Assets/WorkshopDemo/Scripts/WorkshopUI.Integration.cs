@@ -8,7 +8,7 @@ namespace WorkshopDemo
 {
     public sealed partial class WorkshopUI
     {
-        Color Background => new Color32(19, 24, 31, 255);
+        Color Background => new Color32(17, 18, 20, 255);
         Color Surface => panel;
         Color Line => field;
         Color Ink => ink;
@@ -30,7 +30,7 @@ namespace WorkshopDemo
         Button Command(Transform parent, string text, float x, float y, float width,
             Action callback, float height) => Command(parent, text, x, y, width, callback, false, height);
 
-        void Segment(Button button, bool selected) { button.image.color = selected ? active : field; }
+        void Segment(Button button, bool selected) { StyleSelection(button, selected); }
         void Divider(Transform parent, float x, float y, float width) =>
             Box(parent, "Divider", x, y, width, 1, field, false);
 
@@ -51,6 +51,7 @@ namespace WorkshopDemo
             if (!Typing && keyboard != null && keyboard.mKey.wasPressedThisFrame)
                 AudioListener.volume = AudioListener.volume > .01f ? 0f : 1f;
             if (!interfaceVisibility.Visible) return;
+            if (!Typing && keyboard != null && keyboard.escapeKey.wasPressedThisFrame) CompactBack();
             UpdateAnalysisPlayback();
             UpdateEquipmentPlayback();
         }

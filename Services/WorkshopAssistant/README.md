@@ -17,15 +17,17 @@ Unity 大屏通过本机 HTTP 服务发送问题和当前业务快照。FastAPI 
 Invoke-RestMethod http://127.0.0.1:8018/health/ready
 ```
 
-`knowledgeReady=true` 表示数据库和索引可用，`deepseekConfigured=true` 仅表示填写了密钥，不代表密钥鉴权通过。2026-11-08 本机知识库已就绪（9 个片段、512 维）；用户提供的密钥访问官方接口返回 401，在线模型回答尚未验收通过。Unity 实际请求已验证能够显示该错误。请替换有效密钥；若密钥来自兼容服务商，需同时提供该服务的基础地址和模型名。
+`knowledgeReady=true` 表示数据库和索引可用，`deepseekConfigured=true` 仅表示填写了密钥，不代表密钥鉴权通过。2026-11-08 本机知识库已就绪（9 个片段、512 维），当时访问官方接口返回 401，Unity 实际请求能显示该错误。2026-11-12 用户更换密钥并重新创建容器后，真实在线问答通过。若密钥来自兼容服务商，需匹配该服务的基础地址和模型名。
 
-修改 `.env` 后执行：
+2026-11-12 已补充四类设备故障速查及助手/工单答疑，当前实际索引为 **6 份资料、40 个片段、512 维**。数据库、服务健康检查与三条中文检索通过；首次真实问答因旧凭据返回 HTTP 502。更新密钥后发现运行中的容器仍使用旧值，重新创建助手容器后，真实 `/api/chat` 返回 HTTP 200，正确区分现场总线中断与断电并附带知识引用。详见 [启动与入库记录](../../Evidence/assistant-startup-20261112.md) 和 [密钥更新验证](../../Evidence/assistant-key-reload-20261112.md)。后者未携带 Unity 场景快照。
+
+修改 `.env` 后执行以下命令加载新配置；仅保存文件或执行 `restart` 不会更新容器环境变量。随后在 AI 问答页重新发送问题，旧报错会在开始请求时清除：
 
 ```powershell
-docker compose -f Services/WorkshopAssistant/compose.yaml up -d --force-recreate assistant
+docker compose -f Services/WorkshopAssistant/compose.yaml up -d --no-deps --force-recreate assistant
 ```
 
-Unity 打开 `Tools/Workshop Demo/Open Digital Twin` 后点击 Play，右侧提供“分析当前设备”“如何处理告警”和自由提问。助手只能解释、提出建议，设备启停、派发、处理仍通过原业务按钮执行。
+日常运行 `Build/WorkshopPlatform/WorkshopPlatform.exe`，点击左栏“AI问答”，使用“询问当前设备”或输入问题后发送；“知识导入”可查看资料列表、导入标题正文或 UTF-8 MD/TXT。也可在 Unity 打开 `Tools/Workshop Demo/Open Digital Twin` 后点击 Play。助手只能解释、提出建议，设备启停、派发、处理仍通过原业务按钮执行。
 
 ## 配置
 
@@ -46,7 +48,7 @@ Unity 打开 `Tools/Workshop Demo/Open Digital Twin` 后点击 Play，右侧提�
 
 ## 知识与数据
 
-- 将 UTF-8 `.md` / `.txt` 放入 `knowledge/`，允许子目录。当前提供设备台账、模拟指标、P-01 超温、派发/处理/复位与场景操作说明。
+- 将 UTF-8 `.md` / `.txt` 放入 `knowledge/`，允许子目录。当前包含场景知识、循环水泵故障速查、储罐故障速查、排风机故障速查、控制柜故障速查、助手试用与工单答疑，共 6 份资料，覆盖当前 16 种故障及报修至验收流程。内容依据本工程源码和 README 整理，属于教学资料。
 - 执行 `docker compose -f Services/WorkshopAssistant/compose.yaml restart assistant`，启动时按标题切块，使用 `BAAI/bge-small-zh-v1.5` 生成 512 维向量并更新变化内容。
 - 数据表为 `workshop_knowledge_chunks`；每次问题按余弦距离检索最多 5 段，相关度不足时不附加不相关片段。
 - 场景快照来自 `WorkshopSimulation` / `WorkshopDevice`，包括设备状态与指标、选中设备、活动告警、巡检状态和记录数。不会把 UI 文案当作另一套设备状态。

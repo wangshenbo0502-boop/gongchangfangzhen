@@ -36,7 +36,12 @@ resultSource 若含 Abaqus，仅表示导入的有限元包络结果，过程指
 引用知识时使用 [1] 等编号；证据不足时明确说明。不要编造设备、指标、历史或已完成操作。
 你只能解释和建议，不能操作设备、派发任务或消除告警。把需要用户执行的操作明确写成建议。
 真实设备维护需要遵循现场规程，不把教学演示复位步骤说成真实设备维修结论。
-简洁回答，先给结论，再给步骤和依据。"""
+直接回答用户的问题，像熟悉软件的同事。简单状态问题用一两句话，操作问题给能点到的按钮和下一步。
+问“现在怎么办”时，先找明确提到的设备，否则使用当前选中设备。只说明该工单当前阶段能做的动作，
+避免重复介绍全套流程；需要等待时说明等什么。排故问题按“已观察到的证据、可区分的原因、下一项检查”回答。
+用户提到多个设备时分别对照，未提供的数值不要补猜。用户追问时延续对话主题，并用本次快照核对进度。
+不套固定段落，不复述题目或整份资料。只为实际使用的知识引用编号，不把快照里的实时读数归给文档。
+使用适合聊天窗口的纯文本和换行，可以使用数字编号，避免 Markdown 标题、粗体标记和表格。"""
 
 
 class Turn(BaseModel):
@@ -146,10 +151,11 @@ class KnowledgeStore:
                     PRIMARY KEY(source, chunk_index)
                 )
             """)
-        self.model = TextEmbedding(
-            model_name=MODEL, cache_dir=os.getenv("FASTEMBED_CACHE_PATH", "/models"),
-            threads=2,
-        )
+        model_options = {"model_name": MODEL, "cache_dir": os.getenv("FASTEMBED_CACHE_PATH", "/models"), "threads": 2}
+        try:
+            self.model = TextEmbedding(**model_options, local_files_only=True)
+        except (ValueError, OSError):
+            self.model = TextEmbedding(**model_options)
         all_docs = list(documents(ROOT))
         all_docs += [("imported/" + source, digest, index, content)
                      for source, digest, index, content in documents(IMPORT_ROOT)]
@@ -363,9 +369,9 @@ async def chat(request: ChatRequest):
     if chat_slots.locked():
         raise HTTPException(429, "助手正在回答其他问题，请稍后重试")
     async with chat_slots:
-        selected = request.snapshot.selectedDeviceId if request.snapshot else ""
+        query = retrieval_query(request)
         try:
-            sources = await run_in_threadpool(store.search, request.question + " " + selected)
+            sources = await run_in_threadpool(store.search, query)
         except Exception:
             raise HTTPException(503, "知识库检索失败，请检查数据库连接") from None
         context = "\n\n".join(
@@ -414,3 +420,31 @@ async def chat(request: ChatRequest):
             "snapshotAt": request.snapshot.capturedAt if request.snapshot else "",
             "sources": [dict(id=i, **row) for i, row in enumerate(sources, 1)],
         }
+
+
+def retrieval_query(request: ChatRequest) -> str:
+    question = request.question.strip()
+    recent_user = next((turn.content for turn in reversed(request.history) if turn.role == "user"), "")
+    is_followup = any(word in question for word in ("这个", "那个", "刚才", "它呢", "区别呢", "那怎么", "那为什么", "接下来"))
+    parts = [question]
+    if is_followup and recent_user:
+        parts.append(recent_user[:300])
+    if request.snapshot:
+        snapshot = request.snapshot
+        aliases = {
+            "P-01": ("水泵", "循环泵", "离心泵"), "TK-01": ("储罐", "罐体", "液位"),
+            "F-01": ("风机", "叶轮", "叶片"), "PLC-01": ("控制柜", "PLC", "柜内", "总线")
+        }
+        subject = question + (recent_user[:300] if is_followup else "")
+        explicit = [key for key, words in aliases.items()
+                    if key.lower() in subject.lower() or any(word.lower() in subject.lower() for word in words)]
+        device_ids = explicit or [snapshot.selectedDeviceId]
+        for device in snapshot.devices:
+            if device.deviceId in device_ids:
+                parts.append(f"{device.deviceId} {device.name} {device.kind} {device.faultCode}")
+        for alarm in snapshot.alarms:
+            if alarm.deviceId in device_ids:
+                parts.append(f"{alarm.faultCode} {alarm.faultName} {alarm.progress}")
+    if any(word in question for word in ("下一步", "该点", "怎么操作", "工单", "验收", "巡检", "派工")):
+        parts.append("平台操作 工单开始巡检 到达 提交维修 验收通过")
+    return " ".join(parts)[:1800]

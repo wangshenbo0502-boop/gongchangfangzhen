@@ -4,17 +4,22 @@
 
 **接手先看：** 本工程默认打开数字孪生监控场景；要查看小车部件和装配交互，请打开官方训练场景。现有小车是后续四类设备建模的外观与拆装交互参考。全部监控指标为本地模拟数据，故障示意不等于真实工业诊断或 Abaqus 求解。
 
-文档核对日期：**2026-11-11**。统一平台保留七个业务入口：AI问答、模型展示、故障分析、设备台账、维修工单、实训复盘、知识导入，并在同一程序内切换原小车装配训练。仓库中共五个模型：小车，以及泵、罐、风机、控制柜四台受监控设备。储罐、水泵、控制柜沿仓库右侧设备区排齐，风机位于侧边，操作面朝向巡检通道，避开白色网格区和绿色人行道。已移除小地图，保留自动巡检与方向键手动驾驶；两场景统一使用 `H` 隐藏/恢复 UI、`M` 静音/恢复声音。功能来源与边界见 [整合清单](Evidence/version-integration-20261111.md)，本次验收见 [统一平台与布局验证](Evidence/platform-layout-20261111.md)。
+文档核对日期：**2026-11-13**。统一平台采用黑灰黄主题，主导航收敛为“车间总览、设备学习、实训任务”。AI 助手和更多位于左栏，知识导入位于“更多 → 资料管理”，小车装配位于“实训任务”。设备观察、拆装、故障演示按模式显示工具；有限元分析默认收起专业工具。新建故障后直接进入对应工单，设备名称自动带入，维修只填写故障原因。系统内拆装按视口像素提高渲染分辨率。验收范围见 [本次验证](Evidence/workflow-chat-20261113.md)。仓库中共五个模型：小车，以及泵、罐、风机、控制柜四台受监控设备。储罐、水泵、控制柜沿仓库右侧设备区排齐，风机位于侧边，操作面朝向巡检通道，避开白色网格区和绿色人行道。已移除小地图，保留自动巡检与方向键手动驾驶；两场景统一使用 `H` 隐藏/恢复 UI、`M` 静音/恢复声音。功能来源与边界见 [整合清单](Evidence/version-integration-20261111.md)，布局历史验收见 [统一平台与布局验证](Evidence/platform-layout-20261111.md)，风机本次接入见 [风机平台验证](Evidence/fan-platform-20261112.md)。
 
 ## 快速启动与版本区分
 
 | 目的 | 入口 | 说明 |
 | --- | --- | --- |
 | 运行统一平台 | [WorkshopPlatform.exe](Build/WorkshopPlatform/WorkshopPlatform.exe) | 日常统一入口；包含监控平台与原小车装配训练 |
+| 打开设备独立展示器 | 设备学习 → 选择设备 → 详细展示 | 水泵、储罐、风机、控制柜各自打开配套 Unity 窗口 |
 | 运行本工程监控大屏 | [WorkshopDemo.unity](Assets/WorkshopDemo/Scenes/WorkshopDemo.unity) | 当前默认构建场景；也可用 `Tools/Workshop Demo/Open Digital Twin` 打开 |
 | 查看小车装配和使用 | [urp_scene_with_training.unity](Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity) | 官方样例保留；统一程序内通过“小车装配训练”进入并返回 |
 | 查看环境工作副本 | `Assets/WorkshopDemo/Scenes/FactoryFoundation.unity` | 环境工作副本，不是监控入口 |
 | 查看此前合并版程序 | `D:\UnityProjects\WorkshopInspectionDemo\Build\WorkshopCombined\WorkshopSystem.exe` | 属于另一个开发副本；按 `1` 进入装配，按 `2` 进入巡检，`H` 隐藏/恢复界面 |
+
+当前本机正式版已接入新储罐 TK-01。它在车间内按 60% 等比显示，保留原工位及巡检点，在设备学习页提供 12 总成拆装和独立展示入口。正式版已验证储罐拆装、漏损演示和巡检到场。[储罐接入验证](Evidence/tank-platform-20261113.md)
+
+`Build/` 中保留日常使用的 `WorkshopPlatform/` 和历史发布包 `Releases/`。本轮回收了旧构建、独立展示工程的 Unity 缓存及可重建的导入包。重新打开独立展示工程时，Unity 会重建对应缓存。[清理清单](Evidence/project-cleanup-20261113.json)
 
 本 README 描述当前目录 `D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统`。旧开发副本中的设备观察器、渐进裂口和故障参考分析已按源码迁移到统一平台；当前结果以本工程的新验证报告为准。2026-11-11 经用户确认，四个旧车间构建已移入回收站；受保护的 `WorkshopCombined` 副本保持原样，当前统一入口为 `Build/WorkshopPlatform/WorkshopPlatform.exe`。清单见 [旧构建清理记录](Evidence/version-cleanup-20261111.md)。
 
@@ -26,13 +31,15 @@
 .\Tools\Start-WorkshopAssistant.ps1
 ```
 
-知识检索已具备历史验证记录，但 DeepSeek 接口曾返回 **401**，尚无有效密钥下真实在线回答通过的证据。配置见 [知识助手说明](Services/WorkshopAssistant/README.md)，密钥仅放在被忽略的 `.env`，不要提交。
+知识检索与真实在线问答已于 2026-11-12 通过本机服务验证；历史 DeepSeek **401** 鉴权失败记录保留。配置见 [知识助手说明](Services/WorkshopAssistant/README.md)，密钥仅放在被忽略的 `.env`，不要提交。
+
+2026-11-12 已补入四类设备故障速查与工单答疑，知识库实测为 6 份资料、40 个片段；服务、数据库与中文检索通过。用户更新密钥后，重新创建助手容器以加载新配置，真实 `/api/chat` 返回 HTTP 200，回答附带知识引用。修改 `.env` 后需重新创建容器，仅保存文件不会更新运行中的环境变量。启动与验证范围见 [本次记录](Evidence/assistant-startup-20261112.md) 和 [密钥更新验证](Evidence/assistant-key-reload-20261112.md)；本次成功请求未携带 Unity 场景快照。
 
 通过 Git 获取资源时先执行 `git lfs install`、`git lfs pull` 和 `git lfs fsck`。迁移时保留 `Assets` 及全部 `.meta`、`Packages`、`ProjectSettings`；资源缺失应先检查 LFS，不要重新提取全部美术资源。
 
 Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 Release 附件发布。`Build/`、本机缓存、建模过程快照和密钥不提交，下载程序后应保留解压目录内全部配套文件。
 
-已发布：[2026-11-11 Windows 统一版下载](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111)。完整解压 `WorkshopPlatform-Windows-x64-20261111.zip` 后运行 `WorkshopPlatform/WorkshopPlatform.exe`。对应源码提交为 `e970332`，附件大小和 SHA256 已与本地核对，详见 [发布记录](Evidence/version-cleanup-20261111.md)。
+GitHub Releases 的 2026-11-11 下载包对应源码提交 `e970332`。完整解压 `WorkshopPlatform-Windows-x64-20261111.zip` 后运行 `WorkshopPlatform/WorkshopPlatform.exe`。后续模型和界面更新以仓库源码及本机正式版的验证记录为准。[历史 Windows 下载](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111) · [发布记录](Evidence/version-cleanup-20261111.md)
 
 ## 小车模型与交互
 
@@ -122,17 +129,39 @@ Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 R
 
 ### 后续四类设备的建模状态
 
+控制柜最新 Blender 评审源文件为 [electrical-cabinet-duct-entry-review.blend](model/source/electrical-cabinet-duct-entry-review.blend)，运行 `.\model\scripts\Open-CabinetReview.ps1` 打开。2026-11-12 继续修正电源、PLC 和变频器附近的敞开线槽、露出线头及并线问题，补齐四处槽盖、重排电源独立槽口和 PLC 引线，并按电源端子标识修正线色；正式近景查出的电源出线穿壳问题也已修正。保留前轮现场出线槽、器件、材质和 16 总成。重开检查为 109,824 三角面、G1–G12 全通过；183 条路径的本轮穿插检查通过，检查扩展至电源壳体，172 个槽内末端增加正面与斜向遮挡检查。四张 Blender 效果图及检查边界见 [入槽细节修订记录](Evidence/cabinet-duct-entry-20261112.md)。
+
 计划保留小车，重做离心泵、立式储罐、轴流风机和控制柜；要求结构、材质与拆装体验向现有小车看齐。原规范按八个主要组件设计；离心泵按用户后续要求改为 **12 个总成**，Blender 与 Unity 使用同一分组和拆装配置，不把每颗螺栓单列成步骤。要求见 [建模目标与验收标准](model/建模目标与验收标准.md)。
 
-**离心泵正在独立展示器中审核；其余三类尚未开始。** 双击 [WaterPumpViewer.exe](model/WaterPumpViewer/WaterPumpViewer.exe) 可查看整机、12 总成拆装、内部结构、旋转和缩放，无需安装 Unity。源文件为 [water-pump.blend](model/source/water-pump.blend)，含整机/拆开/内部三个 Scene，以及 1–320 帧拆开再组装动画。运行 `.\model\scripts\Open-PumpReview.ps1` 可在 Blender 打开观察侧栏。
+**保护要求：`Build/WorkshopPlatform/Viewers/WaterPumpViewer/` 是必须保留的独立水泵展示器交付物。后续优化、平台重建、清理构建目录或整理文件时，严禁删除、覆盖或移动该目录及其中配套文件；如需更新，先备份并确认新版本可运行，再原位替换。** 它不是可随时重建的缓存。
+
+**离心泵、轴流风机和控制柜已接入统一平台，并保留各自独立展示器。** 控制柜也可通过 [CabinetViewer.exe](model/CabinetViewer/CabinetViewer.exe) 独立运行。模型信息见 [控制柜报告](model/reports/electrical-cabinet.md) 和 [源模型检查](Evidence/cabinet-modeling-20261111.md)。平台中选择循环水泵后可打开详细展示；双击 [WaterPumpViewer.exe](model/WaterPumpViewer/WaterPumpViewer.exe) 也可单独查看整机、12 总成拆装、内部结构、旋转和缩放，无需安装 Unity。平台内受保护副本位于 `Build/WorkshopPlatform/Viewers/WaterPumpViewer/`，不得因后续优化而删除。源文件为 [water-pump.blend](model/source/water-pump.blend)，含整机/拆开/内部三个 Scene，以及 1–320 帧拆开再组装动画。运行 `.\model\scripts\Open-PumpReview.ps1` 可在 Blender 打开观察侧栏。
+
+2026-11-13 审看通过的 16 总成控制柜已接入统一平台的 PLC-01。选择 PLC-01 后进入“查看设备 → 拆装”，或在“视图”里选“查看柜内”“在独立展示器中打开”。拆解时柜门总成先直线退出 160 mm，再转向停放位置，回装时逆序归位。线束断开与接回以淡出、淡入演示。源模型为 [electrical-cabinet-viewer-fit-review.blend](model/source/electrical-cabinet-viewer-fit-review.blend)，资源可由 Unity 菜单 `Tools/Workshop Demo/Import Reviewed Cabinet` 重新导入。吊耳、门缝和材质修订见 [独立展示器验证](Evidence/cabinet-viewer-fit-20261113.md)，平台运行范围见 [控制柜接入验证](Evidence/cabinet-platform-20261113.md)。
+
+轴流风机按用户允许的上限 16 组采用 **11 个总成**，2026-11-12 修订后为 590 个网格、98,140 个三角面；源文件为 [industrial-fan.blend](model/source/industrial-fan.blend)，四张整机角度图及接线盒近景位于 [风机预览目录](model/previews/industrial-fan/)。已移除外露电线和接口，增加机器编号、序列号、制造年月及条码；接线盒采用贴合筒壁的曲面鞍垫。运行 `.\model\scripts\Open-FanReview.ps1` 可打开 Blender 观察窗口。经用户同意，精细风机已替换统一平台的 F-01，保留原设备工位、启停、告警及巡检业务；“整机拆装”使用同一 11 总成和 motionVersion 4 路径，“详细展示”打开平台配套的 `Build/WorkshopPlatform/Viewers/IndustrialFanViewer/IndustrialFanViewer.exe`。独立源交付仍保留在 [IndustrialFanViewer.exe](model/IndustrialFanViewer/IndustrialFanViewer.exe)，须保留同目录配套文件。路径读取随 FBX 导入的坐标参照：盖板先外退、避开盒体、再抬高平移，盒盖先外退再错开，组装原路返回。独立展示器历史 1201 位置表面抽样未发现新增运动相交，保留原有静态连接及初始密封垫座合接触；该检查不等于制造级干涉认证。独立展示器保留 2 倍渲染、4× MSAA 与轻度锐化，历史运动平均约 59–60 FPS，仍有少量慢帧，此性能数字不代表主平台本轮测量。独立展示器中间帧见 `model/reports/industrial-fan-axis-fixed-final-1080-20261112/`；平台本轮运行证据、截图和验证边界见 [风机平台验证](Evidence/fan-platform-20261112.md)。独立构建脚本为 `.\model\scripts\Build-FanViewerReview.ps1 -BuildWindows`；平台构建使用 `WorkshopPlatformBuild.Build()`。详见 [风机报告](model/reports/industrial-fan.md)、[Blender 验证](Evidence/fan-modeling-20261111.md) 和 [独立 EXE 验证](Evidence/fan-viewer-20261112.md)。
+
+风机独立展示器于 2026-11-12 下午完成动画流畅度修订，并同步平台“详细展示”配套 EXE：根据屏幕刷新率设置帧率上限，本机 240 Hz 屏幕使用 120 FPS；刚启动时提前点击会待高清渲染就绪后自动播放。1997×1217 / 1280×720 的首次及重复拆装实测均约 120 FPS，八段运动无超过 16.67 ms 的帧，真实鼠标立即点击也通过。保留原画质与拆装路径。测量边界、原始报告及文件保护核对见 [动画流畅度验证](Evidence/fan-frame-pacing-20261112.md)；此数据不代表主平台内“整机拆装”的帧率。
+
+2026-11-12 晚间，风机独立展示器进一步对齐受保护水泵 EXE 的呈现：统一 ACES 色调映射、曝光、对比度、灯光与环境反射配置，压实深色漆面和橙色，统一页面按钮与部件简介排版；原有贴图、粗糙度、模型及拆装路径保留。源版和平台“详细展示”配套 EXE 均已更新，1080p / 720p 交互检查通过，平台副本真实鼠标拆装约 120 FPS；完整帧时统计和本次范围见 [风机配色与金属呈现验证](Evidence/fan-pump-palette-20261112.md)。
+
+立式储罐 TK-01 的名义外形为 **约 5.86 m 总高、3.00 m 筒体直径、12 个总成**。验收源文件为 [silo-viewer-fit-review.blend](model/source/silo-viewer-fit-review.blend)。附件包括同口径阀组、人孔通孔和螺栓、顶部排气帽与吊耳支承、检修平台和梯子。压力与温度传感器通过固定线缆接入罐壁数显盒，仪表显示数据为静态演示。整机预览和修订记录见 [储罐预览目录](model/previews/silo/)、[储罐报告](model/reports/silo.md) 和 [高度与附件修订记录](Evidence/tank-height-accessories-20261112.md)。
+
+储罐同日仪表修订：按用户要求将罐壁仪表与安装件调整为原版约两倍；显示盒为 650×490×160 mm、温度计护壳 400×72 mm、压力表外径 260 mm、液位玻璃管外径 136 mm、侧尺宽 140 mm，电子压力/温度传感器放大 1.8 倍。采用 22 mm 外径保护线管、匹配格兰头及固定抱箍，曲面铭牌增至 600×280 mm。按后续拥挤反馈，温度计向左移 210 mm、向下移 200 mm，安装座、热套管与罐壁孔同步重建。温度计液柱按实际刻度网格换算仍为静态 24.8℃，液位相对侧尺零位仍为 1.24 m；示值不因外形放大而改变。最新源文件重开检查为 888 个设备网格、241,468 个三角面，保持 12 总成。最新间距修订图为预览目录中的 **13–15**，09–12 为放大初版，01–08 为更早版本；仍处于 Blender 审图阶段，面数、部分 UV 及安装净空尚未全部达标。检查范围与未完成项见 [仪表及外观复核](Evidence/tank-workmanship-20261112.md)。
 
 独立 Unity 工程为 `model/PumpViewerProject`，复现构建运行 `.\model\scripts\Build-PumpViewer.ps1`。FBX、线性材质参数、微法线/粗糙度和工作室反射图从源模型转接；渲染使用 URP HDR、4× MSAA、宽高各 2 倍超采样及轻度细节锐化，保留现有材质色调。默认启动按桌面尺寸选择较大窗口（最高 2240×1260），可调整窗口；显式传入分辨率参数时使用指定尺寸。它是实时展示器，与 Blender Cycles 不保证逐像素一致。
 
+后续将 Blender 审核模型制作成独立 Unity 展示器时，按 [Blender 到 Unity 独立展示器制作提示词](model/Blender到Unity独立展示器制作提示词.md) 执行；提示词基于水泵流程，并明确要求隔离新设备工程、保护水泵交付目录和逐项记录验证边界。
+
 拆解与组装单程约 14 秒，采用分段退出、移开、内部件分离的路径，组装沿原路返回。2026-11-11 修正叶轮腔、护罩端部、紧固件通孔及支座间隙，并拉开端盖与叶轮盖板；保留已确认的组件标注与短引导线。当前 12 总成、349 网格、119,696 三角面；源模型重新打开检查与 300 个拆解位置的表面相交检查通过。该检查不等于制造公差或完整装配干涉认证。
+
+2026-11-12 风机早期仅调整 09 号曲面检修盖源路径，后续用户截图证明 Unity 中仍穿模；现已定位并修复实际导入坐标符号问题，当前验证以上述最新 EXE 及 [风机展示器验证](Evidence/fan-viewer-20261112.md) 顶部记录为准。
 
 同日按用户截图修正护罩下方悬空支架：四根立柱上接护罩、下接落地底梁，底梁贴合设备底板；支架归安全护罩总成，拆解时先整体抬起再侧移。总成数、网格数及三角面数保持不变。
 
-实际网格、自检结果和限制见 [离心泵报告](model/reports/water-pump.md)、[重新打开验证](model/reports/water-pump-reopen-verification.json) 与 [独立展示器验证](Evidence/pump-viewer-20261111.md)。精细泵尚未替换主车间模型；当前四类设备仍使用程序化名义结构，支持部件拆装和预设损坏演化，小车保持原资源。独立查看器通过不等于主车间巡检和导航已验证。
+实际网格、自检结果和限制见 [离心泵报告](model/reports/water-pump.md)、[重新打开验证](model/reports/water-pump-reopen-verification.json)、[独立展示器验证](Evidence/pump-viewer-20261111.md) 与 [统一平台水泵接入验证](Evidence/pump-platform-20261111.md)。精细泵与风机均已替换统一平台的对应展示模型，并提供独立详细展示入口。风机运行验证和水泵入口回归见 [风机平台验证](Evidence/fan-platform-20261112.md)。
+
+验收通过的储罐已接入主平台 TK-01。车间内按 60% 等比显示以适配原工位和巡检通道，设备观察中显示原始名义尺寸。打开“设备学习 → TK-01 → 拆装”可查看原 12 个总成的拆装路径，“详细展示”启动随平台打包的 [TankViewer.exe](model/TankViewer/TankViewer.exe)。“故障演示”使用预设的储罐教学模型。Unity 菜单 `Tools/Workshop Demo/Import Reviewed Tank` 可从独立展示器工程重新导入资源。见 [储罐展示器验证](Evidence/tank-viewer-fit-20261113.md) 和 [储罐接入验证](Evidence/tank-platform-20261113.md)。
 
 ## 一、系统主题
 
@@ -199,8 +228,8 @@ Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 R
 
 1. 选择设备，通过故障工况弹窗选择并注入适用故障；指标、外观、告警和统计同步更新。
 2. 可为多台设备注入并存告警，同一设备已有未处理故障时禁止重复注入。
-3. 在维修工单填写报修人、部门和现象，再填写维修责任人与处理时限派工；检查完整路径后由小车前往巡检点，单台小车一次执行一个任务。
-4. 实际到达后填写原因、措施和配件并提交维修，释放小车；设备仍保留故障，等待使用方验收。验收驳回回到待派工，重新到场复查。
+3. 在对应工单点击“开始巡检”，系统检查完整路径后派出小车。途中可以点击“查看现场”跟随小车，再点“返回工单”。
+4. 小车实际到达后填写故障原因并提交维修，随后点“验收通过”。验收前设备仍处于故障状态，驳回后可以重新开始巡检。
 5. 验收通过才清除故障并归档；设备恢复故障前的启停状态，原先人工停机的设备保持停机。
 6. “重置演示”清空告警和记录，恢复设备、机器人及观察状态。
 
@@ -210,7 +239,7 @@ Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 R
 
 大屏展示设备总数、运行数、活动告警、完成验收、设备台账、三维车间、选中设备温度曲线、详情及工单/记录。保留设备屏幕投影标签、选中框及实际导航路径，原 XZ 小地图已移除。UI 直接读取业务状态，温度曲线使用实际模拟样本。
 
-左栏“AI问答”将问题与当次 Unity 快照发送到本机 Docker 服务，使用中文向量模型检索 pgvector 中的场景资料，再请求 DeepSeek，显示知识引用与错误状态。“知识导入”支持标题正文或 UTF-8 MD/TXT 文件。知识索引有历史入库和中文检索记录；真实模型回答受当前密钥鉴权失败阻塞。助手不直接操作设备。
+左栏“AI 助手”显示当前设备和工单阶段，支持在对话区追问并展开回答引用。服务将当次快照与问题一同用于检索，根据设备、工况和阶段提供操作建议。资料导入在“更多 → 资料管理”。本次服务与真实回答的验证范围见 [本次验证](Evidence/workflow-chat-20261113.md)。
 
 ## 四、技术路线
 
@@ -361,7 +390,7 @@ git lfs fsck
 - 告警和巡检记录仅保存在运行期内存中，重置会清空，退出运行后不保留；新增数据库与后端只保存、检索知识资料。
 - 小车保留原装配训练；四类设备的名义模型已有拆装观察，不能等同于精细建模目标全部完成。
 - 故障表现以教学示意为主；没有真实材料极限求解、真实 Abaqus 断裂结果或整车动力学求解。
-- 当前场景使用现有模型与材质搭建，资源来源及许可分别记录；离心泵精细 Blender 源模型已生成，尚未接入场景，其余三类待制作。
+- 当前场景使用现有模型与材质搭建，资源来源及许可分别记录；离心泵与轴流风机精细模型已接入统一平台，储罐与控制柜的 Blender 修订版仍待审图和接入。
 - 本工程 Windows 已通过启动、画面、H 隐藏界面及手动前进/恢复自动模式检查；完整独立程序业务流程、M 的系统声音采集与真实模型在线回答仍待验收。当前双分辨率七栏平台、自动任务实际到达与 H/M 状态检查见 2026-11-11 专项记录，2026-11-10 HUD 为历史记录。
 
 ## 八、建议课堂演示顺序

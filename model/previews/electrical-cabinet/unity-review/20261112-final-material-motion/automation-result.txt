@@ -1,0 +1,2 @@
+passed
+buttons=bound onClick; mid-disassembly reverse; full disassembly; collider raycast; outline; introduction; homeError=0.000009; midMotionDisplacement=0.7604; full reverse and repeated full cycle; performance excludes screenshot/telemetry work

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-12T16:26:50.3589147+08:00",
+  "executable": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\CabinetViewer\\CabinetViewer.exe",
+  "resolution": "1920 x 1080",
+  "method": "OS foreground mouse down/up against ordinary Player UI; physical Unity input and EventSystem enabled.",
+  "passed": true,
+  "tested": [
+    "startup",
+    "full disassembly",
+    "double-click assembly selection",
+    "outline and introduction",
+    "full reassembly",
+    "mid-motion reversal",
+    "home pose"
+  ],
+  "reversalRequestedAfterSeconds": 4,
+  "configuredOneWaySeconds": 14,
+  "pickableAssemblies": 16,
+  "selectedPart": 0,
+  "homeError": 9.709055120765697E-06,
+  "renderReadySeconds": 0.0,
+  "targetFrameRate": 120,
+  "displayRefreshHz": 240.0,
+  "graphicsDevice": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "motionPerformance": [
+    {
+      "phase": "input-disassembly",
+      "frames": 1673,
+      "over16ms": 1,
+      "over25ms": 1,
+      "over33ms": 1,
+      "over50ms": 0,
+      "gen0Collections": 0,
+      "averageFps": 119.6214599609375,
+      "p50Ms": 8.333602905273438,
+      "p95Ms": 8.352699279785156,
+      "p99Ms": 8.488896369934082,
+      "maxMs": 45.964599609375,
+      "mainThreadAllocatedBytes": 0,
+      "slowFrames": [
+        {
+          "milliseconds": 45.964599609375,
+          "progress": 0.44824180006980896,
+          "mainThreadMs": 1.9525,
+          "renderThreadMs": 1.823,
+          "gpuMs": 4.132864,
+          "presentWaitMs": 6.3721
+        }
+      ]
+    },
+    {
+      "phase": "input-assembly",
+      "frames": 1673,
+      "over16ms": 2,
+      "over25ms": 1,
+      "over33ms": 1,
+      "over50ms": 0,
+      "gen0Collections": 0,
+      "averageFps": 119.58308410644531,
+      "p50Ms": 8.333602905273438,
+      "p95Ms": 8.37130069732666,
+      "p99Ms": 8.512301445007324,
+      "maxMs": 35.39830017089844,
+      "mainThreadAllocatedBytes": 0,
+      "slowFrames": [
+        {
+          "milliseconds": 22.90260124206543,
+          "progress": 0.15786407887935638,
+          "mainThreadMs": 1.6916,
+          "renderThreadMs": 2.4596,
+          "gpuMs": 0.0,
+          "presentWaitMs": 6.638
+        },
+        {
+          "milliseconds": 35.39830017089844,
+          "progress": 0.1547403782606125,
+          "mainThreadMs": 1.9208,
+          "renderThreadMs": 2.1561,
+          "gpuMs": 4.130816,
+          "presentWaitMs": 6.6529
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": 0
+}

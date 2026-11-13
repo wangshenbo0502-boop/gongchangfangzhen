@@ -112,7 +112,7 @@ namespace WorkshopDemo
             analysisCut = AnalysisSlider(sliders, "Section position", 164, -.95f, .95f, 0);
 
             var right = Panel(overlay, "Field viewport", Vector2.zero, Vector2.one,
-                new Vector2(364, 138), new Vector2(-20, -242), new Color(.045f, .055f, .07f));
+                new Vector2(364, 138), new Vector2(-20, -242), new Color(.035f, .038f, .042f));
             var renderArea = Rect(right, "Interactive field", Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
             renderArea.gameObject.AddComponent<RawImage>();
             analysisView = renderArea.gameObject.AddComponent<WorkshopAnalysisView>();
@@ -146,6 +146,7 @@ namespace WorkshopDemo
             analysisProbe.rectTransform.offsetMax = new Vector2(0, -43);
             BuildFractureControls(overlay, right);
             analysisScaleSlider.SetValueWithoutNotify(Mathf.Log10(analysisView.Magnification));
+            CompactAnalysisLayout(overlay);
             preparingAnalysis = false;
             UpdateAnalysis();
         }
@@ -296,6 +297,7 @@ namespace WorkshopDemo
             analysisView.ShowAnnotations = analysisAnnotations.isOn;
             analysisView.Configure(analysisModel, analysisField, load, scale, analysisDeform.isOn, analysisWire.isOn);
             analysisQuantity.SetValueWithoutNotify(analysisQuantityIds.IndexOf(analysisField));
+            RefreshCompactAnalysis();
             Segment(normalModel, analysisModel == 0); Segment(faultModel, analysisModel == 1);
             Segment(stressField, analysisField == 0); Segment(displacementField, analysisField == 1);
             Segment(temperatureField, analysisField == 2);

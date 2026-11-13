@@ -1,0 +1,876 @@
+{
+    "width": 1920,
+    "height": 1080,
+    "selectedPart": -1,
+    "visibleLabels": 0,
+    "overlappingLabels": 0,
+    "labelsOutsideViewport": 0,
+    "progress": 0.0,
+    "maxHomeError": 0.0000010295226502421429,
+    "longestLeader": 0.0,
+    "averageFps": 114.93368530273438,
+    "coverBoxGap": 0.0,
+    "coverVerticalGap": 0.0,
+    "lidBoxGap": 0.0,
+    "coverOutwardTravel": 0.0,
+    "lidOutwardTravel": 0.0,
+    "animating": false,
+    "descriptionVisible": false,
+    "outlineVisible": false,
+    "automationStatus": "passed",
+    "automationError": "",
+    "allocatedMemoryBytes": 152695943,
+    "graphicsDevice": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "clarityRenderWidth": 3840,
+    "clarityRenderHeight": 1748,
+    "msaaSamples": 4,
+    "vSyncCount": 0,
+    "targetFrameRate": 120,
+    "renderScale": 2.0,
+    "displayRefreshHz": 240.0,
+    "clarityShaderSupported": true,
+    "focused": true,
+    "renderReady": true,
+    "motionPending": false,
+    "renderReadySeconds": 0.6064403057098389,
+    "parts": [
+        {
+            "name": "CAB_00_Enclosure",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_01_Backplate",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_02_Terminals",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_03_Door",
+            "position": {
+                "x": -0.5740006566047669,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_04_Breakers",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_05_PLC",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_06_Cooling",
+            "position": {
+                "x": -0.5740006566047669,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_07_Wiring",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_08_ControlPanel",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_09_PowerSupply",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_10_PlinthGlands",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_11_Contactors",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_12_VariableSpeedDrives",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_13_IndustrialNetwork",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_14_SafetyRelays",
+            "position": {
+                "x": 0.0,
+                "y": 1.1368683772161603e-13,
+                "z": -0.0000010295226502421429
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_15_OperatorHMI",
+            "position": {
+                "x": -0.5740006566047669,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        }
+    ],
+    "motionPerformance": [
+        {
+            "phase": "first-disassembly",
+            "frames": 1658,
+            "over16ms": 9,
+            "over25ms": 3,
+            "over33ms": 1,
+            "over50ms": 0,
+            "gen0Collections": 0,
+            "averageFps": 118.47987365722656,
+            "p50Ms": 8.33380126953125,
+            "p95Ms": 8.455803871154786,
+            "p99Ms": 8.941396713256836,
+            "maxMs": 36.15180206298828,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 26.222299575805665,
+                    "progress": 0.28635892271995547,
+                    "mainThreadMs": 2.6765,
+                    "renderThreadMs": 3.7744,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.6009
+                },
+                {
+                    "milliseconds": 23.99289894104004,
+                    "progress": 0.2928069233894348,
+                    "mainThreadMs": 3.0676,
+                    "renderThreadMs": 3.3797,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.2537
+                },
+                {
+                    "milliseconds": 18.292495727539064,
+                    "progress": 0.3443092405796051,
+                    "mainThreadMs": 2.5223,
+                    "renderThreadMs": 3.7597,
+                    "gpuMs": 4.094976,
+                    "presentWaitMs": 5.8009
+                },
+                {
+                    "milliseconds": 24.46150016784668,
+                    "progress": 0.37341707944869997,
+                    "mainThreadMs": 2.9658,
+                    "renderThreadMs": 4.4634,
+                    "gpuMs": 4.39296,
+                    "presentWaitMs": 5.5606
+                },
+                {
+                    "milliseconds": 27.213605880737306,
+                    "progress": 0.7881960272789002,
+                    "mainThreadMs": 3.0345,
+                    "renderThreadMs": 4.9816,
+                    "gpuMs": 5.348352,
+                    "presentWaitMs": 5.3887
+                },
+                {
+                    "milliseconds": 19.51340103149414,
+                    "progress": 0.9027741551399231,
+                    "mainThreadMs": 3.0876,
+                    "renderThreadMs": 4.1305,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.4818
+                },
+                {
+                    "milliseconds": 20.374801635742189,
+                    "progress": 0.909983217716217,
+                    "mainThreadMs": 2.7611,
+                    "renderThreadMs": 3.9249,
+                    "gpuMs": 5.387264,
+                    "presentWaitMs": 5.4938
+                },
+                {
+                    "milliseconds": 36.15180206298828,
+                    "progress": 0.9684001803398132,
+                    "mainThreadMs": 2.603,
+                    "renderThreadMs": 4.664,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.7492
+                },
+                {
+                    "milliseconds": 22.57369613647461,
+                    "progress": 0.9747748970985413,
+                    "mainThreadMs": 2.1476,
+                    "renderThreadMs": 3.1626,
+                    "gpuMs": 5.830656,
+                    "presentWaitMs": 6.1805
+                }
+            ]
+        },
+        {
+            "phase": "first-assembly",
+            "frames": 1568,
+            "over16ms": 41,
+            "over25ms": 31,
+            "over33ms": 5,
+            "over50ms": 2,
+            "gen0Collections": 0,
+            "averageFps": 112.01022338867188,
+            "p50Ms": 8.333900451660157,
+            "p95Ms": 8.53110122680664,
+            "p99Ms": 28.130399703979493,
+            "maxMs": 116.54969024658203,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 31.35099983215332,
+                    "progress": 0.9125442504882813,
+                    "mainThreadMs": 3.5405,
+                    "renderThreadMs": 4.5412,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 4.7748
+                },
+                {
+                    "milliseconds": 18.55729866027832,
+                    "progress": 0.8319523930549622,
+                    "mainThreadMs": 2.2993,
+                    "renderThreadMs": 3.638,
+                    "gpuMs": 5.772288,
+                    "presentWaitMs": 6.0385
+                },
+                {
+                    "milliseconds": 31.171804428100587,
+                    "progress": 0.825398862361908,
+                    "mainThreadMs": 5.388,
+                    "renderThreadMs": 5.2528,
+                    "gpuMs": 6.13888,
+                    "presentWaitMs": 3.1557
+                },
+                {
+                    "milliseconds": 35.769500732421878,
+                    "progress": 0.6675682663917542,
+                    "mainThreadMs": 3.1197,
+                    "renderThreadMs": 4.031,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.1938
+                },
+                {
+                    "milliseconds": 19.161699295043947,
+                    "progress": 0.6643960475921631,
+                    "mainThreadMs": 3.5088,
+                    "renderThreadMs": 3.6644,
+                    "gpuMs": 6.827008,
+                    "presentWaitMs": 4.9489
+                },
+                {
+                    "milliseconds": 18.109996795654298,
+                    "progress": 0.5889706015586853,
+                    "mainThreadMs": 2.7128,
+                    "renderThreadMs": 3.3721,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.6139
+                },
+                {
+                    "milliseconds": 22.275297164916993,
+                    "progress": 0.5742174983024597,
+                    "mainThreadMs": 2.6914,
+                    "renderThreadMs": 2.6841,
+                    "gpuMs": 5.576704,
+                    "presentWaitMs": 5.6321
+                },
+                {
+                    "milliseconds": 68.97899627685547,
+                    "progress": 0.470024973154068,
+                    "mainThreadMs": 3.4348,
+                    "renderThreadMs": 3.8304,
+                    "gpuMs": 4.977664,
+                    "presentWaitMs": 4.9868
+                },
+                {
+                    "milliseconds": 116.54969024658203,
+                    "progress": 0.4605668783187866,
+                    "mainThreadMs": 2.8674,
+                    "renderThreadMs": 9.3358,
+                    "gpuMs": 6.761472,
+                    "presentWaitMs": 5.3814
+                },
+                {
+                    "milliseconds": 26.775800704956056,
+                    "progress": 0.4586543142795563,
+                    "mainThreadMs": 64.9637,
+                    "renderThreadMs": 23.0117,
+                    "gpuMs": 4.058112,
+                    "presentWaitMs": 5.0505
+                },
+                {
+                    "milliseconds": 28.351699829101564,
+                    "progress": 0.4566291868686676,
+                    "mainThreadMs": 14.7973,
+                    "renderThreadMs": 16.9192,
+                    "gpuMs": 106.287104,
+                    "presentWaitMs": 0.0209
+                },
+                {
+                    "milliseconds": 24.022397994995118,
+                    "progress": 0.45491328835487368,
+                    "mainThreadMs": 15.6589,
+                    "renderThreadMs": 19.3372,
+                    "gpuMs": 14.318592,
+                    "presentWaitMs": 101.2013
+                },
+                {
+                    "milliseconds": 26.39080238342285,
+                    "progress": 0.45302823185920718,
+                    "mainThreadMs": 15.9989,
+                    "renderThreadMs": 17.3194,
+                    "gpuMs": 15.332352,
+                    "presentWaitMs": 10.8985
+                },
+                {
+                    "milliseconds": 33.403602600097659,
+                    "progress": 0.45064225792884829,
+                    "mainThreadMs": 17.0198,
+                    "renderThreadMs": 18.6246,
+                    "gpuMs": 12.935168000000001,
+                    "presentWaitMs": 11.3665
+                },
+                {
+                    "milliseconds": 28.288400650024415,
+                    "progress": 0.4486216604709625,
+                    "mainThreadMs": 13.0915,
+                    "renderThreadMs": 24.7201,
+                    "gpuMs": 13.964288,
+                    "presentWaitMs": 10.837
+                },
+                {
+                    "milliseconds": 29.17140007019043,
+                    "progress": 0.4465380012989044,
+                    "mainThreadMs": 14.6961,
+                    "renderThreadMs": 19.8768,
+                    "gpuMs": 18.853888,
+                    "presentWaitMs": 11.9429
+                },
+                {
+                    "milliseconds": 25.489200592041017,
+                    "progress": 0.4447173476219177,
+                    "mainThreadMs": 14.7551,
+                    "renderThreadMs": 19.4841,
+                    "gpuMs": 14.186496,
+                    "presentWaitMs": 18.2734
+                },
+                {
+                    "milliseconds": 27.265398025512697,
+                    "progress": 0.4427698254585266,
+                    "mainThreadMs": 15.4917,
+                    "renderThreadMs": 18.6515,
+                    "gpuMs": 15.707136,
+                    "presentWaitMs": 12.594
+                },
+                {
+                    "milliseconds": 25.760196685791017,
+                    "progress": 0.4409298002719879,
+                    "mainThreadMs": 16.6877,
+                    "renderThreadMs": 20.26,
+                    "gpuMs": 14.140416,
+                    "presentWaitMs": 12.5212
+                },
+                {
+                    "milliseconds": 24.26170539855957,
+                    "progress": 0.4391968250274658,
+                    "mainThreadMs": 13.1626,
+                    "renderThreadMs": 19.2812,
+                    "gpuMs": 15.335424,
+                    "presentWaitMs": 12.3503
+                },
+                {
+                    "milliseconds": 25.22099494934082,
+                    "progress": 0.4373953342437744,
+                    "mainThreadMs": 13.1967,
+                    "renderThreadMs": 16.406,
+                    "gpuMs": 13.85984,
+                    "presentWaitMs": 13.8489
+                },
+                {
+                    "milliseconds": 26.136798858642579,
+                    "progress": 0.435528427362442,
+                    "mainThreadMs": 14.1741,
+                    "renderThreadMs": 17.7067,
+                    "gpuMs": 13.71136,
+                    "presentWaitMs": 11.3986
+                },
+                {
+                    "milliseconds": 26.827104568481447,
+                    "progress": 0.433612197637558,
+                    "mainThreadMs": 14.9695,
+                    "renderThreadMs": 19.6177,
+                    "gpuMs": 13.755392,
+                    "presentWaitMs": 10.2021
+                },
+                {
+                    "milliseconds": 25.22919464111328,
+                    "progress": 0.4318101108074188,
+                    "mainThreadMs": 13.0101,
+                    "renderThreadMs": 18.7533,
+                    "gpuMs": 14.639104,
+                    "presentWaitMs": 11.4521
+                },
+                {
+                    "milliseconds": 27.82180404663086,
+                    "progress": 0.4298228323459625,
+                    "mainThreadMs": 13.6595,
+                    "renderThreadMs": 17.6924,
+                    "gpuMs": 14.04416,
+                    "presentWaitMs": 12.7732
+                },
+                {
+                    "milliseconds": 24.174299240112306,
+                    "progress": 0.42809608578681948,
+                    "mainThreadMs": 13.7675,
+                    "renderThreadMs": 18.3145,
+                    "gpuMs": 13.703168,
+                    "presentWaitMs": 12.6809
+                },
+                {
+                    "milliseconds": 28.130399703979493,
+                    "progress": 0.42608678340911868,
+                    "mainThreadMs": 17.4034,
+                    "renderThreadMs": 17.7085,
+                    "gpuMs": 13.625344,
+                    "presentWaitMs": 7.8999
+                },
+                {
+                    "milliseconds": 22.2947998046875,
+                    "progress": 0.42449429631233218,
+                    "mainThreadMs": 16.8587,
+                    "renderThreadMs": 17.8575,
+                    "gpuMs": 13.58336,
+                    "presentWaitMs": 10.9922
+                },
+                {
+                    "milliseconds": 27.52159881591797,
+                    "progress": 0.422528475522995,
+                    "mainThreadMs": 13.64,
+                    "renderThreadMs": 17.8251,
+                    "gpuMs": 13.55776,
+                    "presentWaitMs": 10.1158
+                },
+                {
+                    "milliseconds": 25.27020263671875,
+                    "progress": 0.42072346806526186,
+                    "mainThreadMs": 19.6328,
+                    "renderThreadMs": 18.3547,
+                    "gpuMs": 15.670272,
+                    "presentWaitMs": 8.7344
+                },
+                {
+                    "milliseconds": 27.115703582763673,
+                    "progress": 0.4187866449356079,
+                    "mainThreadMs": 13.2014,
+                    "renderThreadMs": 18.0185,
+                    "gpuMs": 13.14304,
+                    "presentWaitMs": 9.2008
+                },
+                {
+                    "milliseconds": 29.72429847717285,
+                    "progress": 0.4166634678840637,
+                    "mainThreadMs": 16.7924,
+                    "renderThreadMs": 19.2151,
+                    "gpuMs": 13.89056,
+                    "presentWaitMs": 10.7505
+                },
+                {
+                    "milliseconds": 38.4463996887207,
+                    "progress": 0.41391730308532717,
+                    "mainThreadMs": 14.0189,
+                    "renderThreadMs": 19.6231,
+                    "gpuMs": 14.823424,
+                    "presentWaitMs": 10.7948
+                },
+                {
+                    "milliseconds": 29.302396774291993,
+                    "progress": 0.4118242859840393,
+                    "mainThreadMs": 13.9075,
+                    "renderThreadMs": 30.3122,
+                    "gpuMs": 16.861184,
+                    "presentWaitMs": 13.3575
+                },
+                {
+                    "milliseconds": 27.115604400634767,
+                    "progress": 0.4098874628543854,
+                    "mainThreadMs": 15.7814,
+                    "renderThreadMs": 19.2869,
+                    "gpuMs": 27.109376,
+                    "presentWaitMs": 13.7467
+                },
+                {
+                    "milliseconds": 25.44350242614746,
+                    "progress": 0.40807005763053896,
+                    "mainThreadMs": 15.7091,
+                    "renderThreadMs": 18.8117,
+                    "gpuMs": 14.026752,
+                    "presentWaitMs": 23.1195
+                },
+                {
+                    "milliseconds": 29.576295852661134,
+                    "progress": 0.4059574604034424,
+                    "mainThreadMs": 18.0821,
+                    "renderThreadMs": 18.0293,
+                    "gpuMs": 15.002624,
+                    "presentWaitMs": 10.7737
+                },
+                {
+                    "milliseconds": 29.724199295043947,
+                    "progress": 0.4038343131542206,
+                    "mainThreadMs": 16.962,
+                    "renderThreadMs": 18.4927,
+                    "gpuMs": 14.748672,
+                    "presentWaitMs": 10.4963
+                },
+                {
+                    "milliseconds": 28.360897064208986,
+                    "progress": 0.4018085300922394,
+                    "mainThreadMs": 13.6565,
+                    "renderThreadMs": 19.5238,
+                    "gpuMs": 14.388224,
+                    "presentWaitMs": 11.6705
+                },
+                {
+                    "milliseconds": 21.69099998474121,
+                    "progress": 0.32015758752822878,
+                    "mainThreadMs": 2.7398,
+                    "renderThreadMs": 3.9748,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.3149
+                },
+                {
+                    "milliseconds": 23.440603256225587,
+                    "progress": 0.007060445845127106,
+                    "mainThreadMs": 2.4705,
+                    "renderThreadMs": 3.4532,
+                    "gpuMs": 4.406272,
+                    "presentWaitMs": 5.8584
+                }
+            ]
+        },
+        {
+            "phase": "full-disassembly",
+            "frames": 1645,
+            "over16ms": 11,
+            "over25ms": 5,
+            "over33ms": 4,
+            "over50ms": 1,
+            "gen0Collections": 0,
+            "averageFps": 117.55651092529297,
+            "p50Ms": 8.333900451660157,
+            "p95Ms": 8.488499641418457,
+            "p99Ms": 13.163896560668946,
+            "maxMs": 51.69329833984375,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 21.68470001220703,
+                    "progress": 0.04458610340952873,
+                    "mainThreadMs": 3.1405,
+                    "renderThreadMs": 4.0386,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.3267
+                },
+                {
+                    "milliseconds": 20.383298873901368,
+                    "progress": 0.05973585322499275,
+                    "mainThreadMs": 2.8006,
+                    "renderThreadMs": 3.6634,
+                    "gpuMs": 5.31968,
+                    "presentWaitMs": 5.5263
+                },
+                {
+                    "milliseconds": 34.855499267578128,
+                    "progress": 0.10230522602796555,
+                    "mainThreadMs": 2.3505,
+                    "renderThreadMs": 3.9087,
+                    "gpuMs": 6.181888,
+                    "presentWaitMs": 5.9864
+                },
+                {
+                    "milliseconds": 39.25420379638672,
+                    "progress": 0.10958845168352127,
+                    "mainThreadMs": 2.5892,
+                    "renderThreadMs": 1.9241,
+                    "gpuMs": 7.00928,
+                    "presentWaitMs": 5.7822
+                },
+                {
+                    "milliseconds": 30.733999252319337,
+                    "progress": 0.11806023865938187,
+                    "mainThreadMs": 2.9753,
+                    "renderThreadMs": 2.2195,
+                    "gpuMs": 5.13536,
+                    "presentWaitMs": 5.371
+                },
+                {
+                    "milliseconds": 18.841793060302736,
+                    "progress": 0.11980093270540238,
+                    "mainThreadMs": 3.264,
+                    "renderThreadMs": 3.7865,
+                    "gpuMs": 5.111808,
+                    "presentWaitMs": 5.1035
+                },
+                {
+                    "milliseconds": 20.793004989624025,
+                    "progress": 0.17511096596717835,
+                    "mainThreadMs": 2.8141,
+                    "renderThreadMs": 3.9749,
+                    "gpuMs": 4.973568,
+                    "presentWaitMs": 5.5155
+                },
+                {
+                    "milliseconds": 16.67030143737793,
+                    "progress": 0.3030286729335785,
+                    "mainThreadMs": 2.589,
+                    "renderThreadMs": 3.6052,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.6303
+                },
+                {
+                    "milliseconds": 51.69329833984375,
+                    "progress": 0.3067210614681244,
+                    "mainThreadMs": 2.6732,
+                    "renderThreadMs": 3.4863,
+                    "gpuMs": 4.907008,
+                    "presentWaitMs": 5.6121
+                },
+                {
+                    "milliseconds": 19.415199279785158,
+                    "progress": 0.3322162628173828,
+                    "mainThreadMs": 2.3885,
+                    "renderThreadMs": 4.1419,
+                    "gpuMs": 5.665792,
+                    "presentWaitMs": 5.9392
+                },
+                {
+                    "milliseconds": 36.87860107421875,
+                    "progress": 0.8704236745834351,
+                    "mainThreadMs": 2.4771,
+                    "renderThreadMs": 3.6052,
+                    "gpuMs": 5.269504,
+                    "presentWaitMs": 5.8514
+                }
+            ]
+        },
+        {
+            "phase": "full-assembly",
+            "frames": 1624,
+            "over16ms": 9,
+            "over25ms": 6,
+            "over33ms": 5,
+            "over50ms": 4,
+            "gen0Collections": 0,
+            "averageFps": 116.0138931274414,
+            "p50Ms": 8.33380126953125,
+            "p95Ms": 8.454598426818848,
+            "p99Ms": 8.716496467590332,
+            "maxMs": 149.19898986816407,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 22.514596939086915,
+                    "progress": 0.8910239934921265,
+                    "mainThreadMs": 2.7654,
+                    "renderThreadMs": 3.72,
+                    "gpuMs": 4.344832,
+                    "presentWaitMs": 5.5583
+                },
+                {
+                    "milliseconds": 121.8833999633789,
+                    "progress": 0.6868594884872437,
+                    "mainThreadMs": 2.7604,
+                    "renderThreadMs": 4.0635,
+                    "gpuMs": 5.961728,
+                    "presentWaitMs": 5.5683
+                },
+                {
+                    "milliseconds": 68.1646957397461,
+                    "progress": 0.5630888938903809,
+                    "mainThreadMs": 2.7028,
+                    "renderThreadMs": 4.6898,
+                    "gpuMs": 5.566464,
+                    "presentWaitMs": 5.5721
+                },
+                {
+                    "milliseconds": 33.32619857788086,
+                    "progress": 0.3842999041080475,
+                    "mainThreadMs": 3.1687,
+                    "renderThreadMs": 4.1996,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.1483
+                },
+                {
+                    "milliseconds": 53.268699645996097,
+                    "progress": 0.3758215308189392,
+                    "mainThreadMs": 2.8417,
+                    "renderThreadMs": 3.7316,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.4825
+                },
+                {
+                    "milliseconds": 22.685396194458009,
+                    "progress": 0.256011039018631,
+                    "mainThreadMs": 2.5382,
+                    "renderThreadMs": 4.2274,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.7831
+                },
+                {
+                    "milliseconds": 44.94279861450195,
+                    "progress": 0.24744178354740144,
+                    "mainThreadMs": 2.4949,
+                    "renderThreadMs": 3.162,
+                    "gpuMs": 7.506944,
+                    "presentWaitMs": 5.823
+                },
+                {
+                    "milliseconds": 17.958099365234376,
+                    "progress": 0.06410660594701767,
+                    "mainThreadMs": 2.7323,
+                    "renderThreadMs": 3.8962,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 5.59
+                },
+                {
+                    "milliseconds": 149.19898986816407,
+                    "progress": 0.017648443579673768,
+                    "mainThreadMs": 3.0122,
+                    "renderThreadMs": 4.4607,
+                    "gpuMs": 4.743168,
+                    "presentWaitMs": 5.298
+                }
+            ]
+        }
+    ]
+}

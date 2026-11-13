@@ -1,0 +1,247 @@
+{
+    "width": 2560,
+    "height": 1566,
+    "selectedPart": -1,
+    "visibleLabels": 0,
+    "overlappingLabels": 0,
+    "labelsOutsideViewport": 0,
+    "progress": 0.0,
+    "maxHomeError": 0.0,
+    "longestLeader": 0.0,
+    "averageFps": 103.39764404296875,
+    "coverBoxGap": 0.0,
+    "coverVerticalGap": 0.0,
+    "lidBoxGap": 0.0,
+    "coverOutwardTravel": 0.0,
+    "lidOutwardTravel": 0.0,
+    "animating": false,
+    "descriptionVisible": false,
+    "outlineVisible": false,
+    "automationStatus": "running",
+    "automationError": "",
+    "allocatedMemoryBytes": 152349214,
+    "graphicsDevice": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "clarityRenderWidth": 5120,
+    "clarityRenderHeight": 2558,
+    "msaaSamples": 4,
+    "vSyncCount": 0,
+    "targetFrameRate": 120,
+    "renderScale": 2.0,
+    "displayRefreshHz": 240.0,
+    "clarityShaderSupported": true,
+    "focused": true,
+    "renderReady": true,
+    "motionPending": false,
+    "renderReadySeconds": 0.4401443898677826,
+    "parts": [
+        {
+            "name": "CAB_00_Enclosure",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_01_Backplate",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_02_Terminals",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_03_Door",
+            "position": {
+                "x": -0.5740000009536743,
+                "y": 0.1599999964237213,
+                "z": -0.2789999842643738
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_04_Breakers",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_05_PLC",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_06_Cooling",
+            "position": {
+                "x": -0.5740000009536743,
+                "y": 0.1599999964237213,
+                "z": -0.2789999842643738
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_07_Wiring",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_08_ControlPanel",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_09_PowerSupply",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_10_PlinthGlands",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_11_Contactors",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_12_VariableSpeedDrives",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_13_IndustrialNetwork",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_14_SafetyRelays",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_15_OperatorHMI",
+            "position": {
+                "x": -0.5740000009536743,
+                "y": 0.1599999964237213,
+                "z": -0.2789999842643738
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        }
+    ],
+    "motionPerformance": []
+}

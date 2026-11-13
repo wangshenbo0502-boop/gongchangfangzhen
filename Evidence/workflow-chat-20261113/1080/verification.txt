@@ -1,0 +1,219 @@
+Started 2026-11-13T14:29:18.6230432+08:00
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+PASS Monitoring scene initialized at 1920x1080
+PASS Enabled AI 助手
+PASS Top raycast AI 助手 (AI 助手)
+PASS Sidebar opens the chat composer
+PASS Enabled 更多
+PASS Top raycast 更多 (更多)
+PASS Enabled 关闭
+PASS Top raycast 关闭 (关闭)
+PASS Enabled 车间总览
+PASS Top raycast 车间总览 (车间总览)
+PASS Button in screen 车间总览
+PASS Button text fits 车间总览
+PASS Button in screen 设备学习
+PASS Button text fits 设备学习
+PASS Button in screen 实训任务
+PASS Button text fits 实训任务
+PASS Button in screen AI 助手
+PASS Button text fits AI 助手
+PASS Button in screen 更多
+PASS Button text fits 更多
+PASS Button in screen 总览
+PASS Button text fits 总览
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen Track P-01
+PASS Button text fits Track P-01
+PASS Button in screen Track TK-01
+PASS Button text fits Track TK-01
+PASS Button in screen Track F-01
+PASS Button text fits Track F-01
+PASS Button in screen Track PLC-01
+PASS Button text fits Track PLC-01
+PASS Button in screen 巡检控制
+PASS Button text fits 巡检控制
+PASS Button in screen 查看设备
+PASS Button text fits 查看设备
+PASS Button in screen 设备操作
+PASS Button text fits 设备操作
+PASS Home toolbar has two actions plus device selector
+PASS Enabled 视图
+PASS Top raycast 视图 (视图)
+PASS Enabled 跟随巡检
+PASS Top raycast 跟随巡检 (跟随巡检)
+PASS Follow available in view menu
+PASS Enabled 总览
+PASS Top raycast 总览 (总览)
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Observation hides fault transport and closeup
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Pump 12-assembly target preserved
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Assembly reverse target preserved
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Enabled 播放演化
+PASS Top raycast 播放演化 (播放演化)
+PASS Fault animation can play
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Enabled 设备学习
+PASS Top raycast 设备学习 (设备学习)
+PASS Enabled 故障学习
+PASS Top raycast 故障学习 (故障学习)
+PASS Enabled Analysis mode
+PASS Top raycast Analysis mode (Analysis mode)
+PASS KPI hidden outside workshop
+PASS Fault page has three actions
+PASS Enabled 深入分析
+PASS Top raycast 深入分析 (深入分析)
+PASS Analysis tools collapsed by default
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 工具
+PASS Button text fits 工具
+PASS Enabled Analysis quantity
+PASS Top raycast Analysis quantity (Analysis quantity)
+PASS Single result selector changes thermal result
+PASS Enabled Analysis quantity
+PASS Top raycast Analysis quantity (Analysis quantity)
+PASS Enabled Analysis comparison
+PASS Top raycast Analysis comparison (Analysis comparison)
+PASS Baseline comparison remains functional
+PASS Enabled 工具
+PASS Top raycast 工具 (工具)
+PASS Enabled 单元边线
+PASS Top raycast 单元边线 (单元边线)
+PASS Enabled Tool category
+PASS Top raycast Tool category (Tool category)
+PASS Enabled 半剖显示
+PASS Top raycast 半剖显示 (半剖显示)
+PASS Section slider follows enabled state
+PASS Thermal mode hides deformation slider
+PASS Enabled Tool category
+PASS Top raycast Tool category (Tool category)
+PASS Enabled 正视
+PASS Top raycast 正视 (正视)
+PASS Enabled 两点测量
+PASS Top raycast 两点测量 (两点测量)
+PASS Enabled Tool category
+PASS Top raycast Tool category (Tool category)
+PASS Enabled 收起
+PASS Top raycast 收起 (收起)
+PASS Enabled 返回工况
+PASS Top raycast 返回工况 (返回工况)
+PASS Enabled Analysis mode
+PASS Top raycast Analysis mode (Analysis mode)
+PASS Enabled 深入分析
+PASS Top raycast 深入分析 (深入分析)
+PASS Enabled 渐进开裂
+PASS Top raycast 渐进开裂 (渐进开裂)
+PASS Fracture playback survives compact tool layout
+PASS Enabled 渐进开裂
+PASS Top raycast 渐进开裂 (渐进开裂)
+PASS Return to static fields
+PASS Enabled 返回工况
+PASS Top raycast 返回工况 (返回工况)
+PASS Enabled Analysis mode
+PASS Top raycast Analysis mode (Analysis mode)
+PASS Enabled 开始故障实训
+PASS Top raycast 开始故障实训 (开始故障实训)
+PASS Start lesson creates selected fault and opens its order directly
+PASS Start inspection needs no form
+PASS Enabled 开始巡检
+PASS Top raycast 开始巡检 (开始巡检)
+PASS Dispatch starts actual navigation
+PASS Enabled 开始巡检
+PASS Top raycast 开始巡检 (开始巡检)
+PASS View site follows robot
+PASS Enabled 返回工单
+PASS Top raycast 返回工单 (返回工单)
+PASS Return restores the same order
+PASS Robot actually arrived
+PASS Repair has device name and only one input
+PASS Enabled 开始巡检
+PASS Top raycast 开始巡检 (开始巡检)
+PASS Empty cause rejected
+PASS Enabled 开始巡检
+PASS Top raycast 开始巡检 (开始巡检)
+PASS Repair waits for acceptance
+PASS Enabled 开始巡检
+PASS Top raycast 开始巡检 (开始巡检)
+PASS One-click acceptance archives the device and fault cause
+PASS Enabled 实训复盘
+PASS Top raycast 实训复盘 (实训复盘)
+PASS Enabled 车间总览
+PASS Top raycast 车间总览 (车间总览)
+PASS Enabled 巡检控制
+PASS Top raycast 巡检控制 (巡检控制)
+PASS Enabled 手动接管（方向键驾驶）
+PASS Top raycast 手动接管（方向键驾驶） (手动接管（方向键驾驶）)
+PASS Manual takeover reachable from robot control
+PASS Enabled 巡检控制
+PASS Top raycast 巡检控制 (巡检控制)
+PASS Enabled 恢复自动巡检
+PASS Top raycast 恢复自动巡检 (恢复自动巡检)
+PASS Automatic control restored
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Equipment opens P-01
+PASS P-01 model target 2808x1344 exceeds viewport pixels
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Equipment opens TK-01
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Equipment opens F-01
+PASS F-01 model target 2808x1344 exceeds viewport pixels
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Equipment opens PLC-01
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Enabled 实训任务
+PASS Top raycast 实训任务 (实训任务)
+PASS Enabled 小车装配
+PASS Top raycast 小车装配 (小车装配)
+PASS Assembly scene opened from training tab
+PASS Return restores the monitoring overview
+PASS Opaque frame covers areas outside the monitoring camera
+PASS No runtime exceptions during checks
+
+Result: PASS

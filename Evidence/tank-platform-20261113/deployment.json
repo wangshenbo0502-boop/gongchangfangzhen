@@ -1,0 +1,13 @@
+{
+  "Updated": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopPlatform",
+  "Backup": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopPlatformBeforeTank-20261113-211542",
+  "VerifiedPlatformFiles": 205,
+  "VerifiedViewerFiles": {
+    "TankViewer": 167,
+    "WaterPumpViewer": 170,
+    "IndustrialFanViewer": 167,
+    "CabinetViewer": 167
+  },
+  "PlatformAssemblySHA256": "E597FC6D9B4E27C4DF37A7F58FA456770F7F482C9854B1F99B281CA82ABC1870",
+  "PackagedTankAssetsSHA256": "57092E5A50AFD987C7B10AAEE422C07CC5FD5AD47BD8CD91C678CDEDCC468789"
+}

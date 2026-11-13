@@ -17,7 +17,7 @@ namespace WorkshopDemo
         readonly List<Image> fills = new List<Image>();
         readonly List<Renderer> worldLabels = new List<Renderer>();
         readonly List<bool> worldLabelStates = new List<bool>();
-        readonly Color cyan = new Color32(66, 232, 222, 255);
+        readonly Color cyan = new Color32(190, 193, 193, 255);
 
         public void Build()
         {
@@ -38,7 +38,7 @@ namespace WorkshopDemo
                 rect.pivot = Vector2.zero;
                 rect.sizeDelta = new Vector2(88, 28);
                 var image = root.GetComponent<Image>();
-                image.color = new Color(.025f, .09f, .10f, .90f);
+                image.color = new Color(.10f, .11f, .12f, .94f);
                 fills.Add(image);
                 var button = root.GetComponent<Button>();
                 button.targetGraphic = image;
@@ -111,8 +111,8 @@ namespace WorkshopDemo
                 labels[i].color = device.Fault != null ?
                     device.Fault.Severity == FaultSeverity.Critical ? new Color32(255, 109, 133, 255) :
                     new Color32(255, 191, 92, 255) :
-                    selected ? Color.white : cyan;
-                fills[i].color = selected ? new Color(.025f, .17f, .18f, .96f) : new Color(.025f, .07f, .08f, .88f);
+                    selected ? new Color32(232, 182, 62, 255) : cyan;
+                fills[i].color = selected ? new Color(.15f, .15f, .14f, .96f) : new Color(.09f, .10f, .11f, .92f);
             }
             SetVerticesDirty();
         }

@@ -9,7 +9,12 @@ namespace WorkshopDemo
 {
     public sealed class WorkshopAssistantClient : MonoBehaviour
     {
-        [Serializable] public sealed class Turn { public string role; public string content; }
+        [Serializable] public sealed class Turn
+        {
+            public string role;
+            public string content;
+            [NonSerialized] public Source[] sources;
+        }
         [Serializable] public sealed class Source
         {
             public int id;
@@ -51,8 +56,7 @@ namespace WorkshopDemo
         }
         [Serializable] sealed class AlarmSnapshot
         {
-            public string id, deviceId, progress, faultCode, faultName, severity, action;
-            public string reporter, department, description, assignee, cause, repairAction, acceptanceNote, dueAt;
+            public string id, deviceId, progress, faultCode, faultName, severity, action, cause;
             public bool trips;
         }
         [Serializable] sealed class Snapshot
@@ -76,6 +80,7 @@ namespace WorkshopDemo
         public bool Busy { get; private set; }
         public string ConnectionStatus { get; private set; } = "正在连接知识库";
         public string Error { get; private set; } = "";
+        public string FailedQuestion { get; private set; } = "";
         public Answer LastAnswer { get; private set; }
         public bool KnowledgeReady { get; private set; }
         public bool ImportBusy { get; private set; }
@@ -161,12 +166,12 @@ namespace WorkshopDemo
             foreach (var alarm in simulation.Alarms)
                 if (!alarm.resolved && alarm.device)
                     alarms.Add(new AlarmSnapshot {
-                        id = alarm.id, deviceId = alarm.device.deviceId, progress = alarm.progress,
+                        id = alarm.id, deviceId = alarm.device.deviceId,
+                        progress = alarm.stage == WorkshopOrderStage.Detected || alarm.stage == WorkshopOrderStage.Reported ?
+                            "待巡检" : alarm.progress,
                         faultCode = alarm.fault.Code, faultName = alarm.fault.Name,
-                        severity = alarm.fault.SeverityText, action = alarm.fault.Action, trips = alarm.fault.Trips
-                        , reporter = alarm.reporter, department = alarm.department, description = alarm.description,
-                        assignee = alarm.assignee, cause = alarm.cause, repairAction = alarm.repairAction,
-                        acceptanceNote = alarm.acceptanceNote, dueAt = alarm.dueAt == default ? "" : alarm.dueAt.ToString("o")
+                        severity = alarm.fault.SeverityText, action = alarm.fault.Action, trips = alarm.fault.Trips,
+                        cause = alarm.cause
                     });
             return new Snapshot {
                 capturedAt = DateTimeOffset.Now.ToString("o"), devices = devices.ToArray(),
@@ -183,9 +188,14 @@ namespace WorkshopDemo
         {
             Busy = true;
             Error = "";
+            FailedQuestion = "";
             LastAnswer = null;
+            var history = Conversation.GetRange(Mathf.Max(0, Conversation.Count - 8), Mathf.Min(8, Conversation.Count));
+            var recent = history.ConvertAll(turn => new Turn {
+                role = turn.role, content = turn.content.Length <= 5000 ? turn.content : turn.content.Substring(0, 5000)
+            });
             var payload = new Request {
-                question = question, snapshot = Capture(), history = Conversation.ToArray()
+                question = question, snapshot = Capture(), history = recent.ToArray()
             };
             Conversation.Add(new Turn { role = "user", content = question });
             Updated?.Invoke();
@@ -205,7 +215,7 @@ namespace WorkshopDemo
                     try { LastAnswer = JsonUtility.FromJson<Answer>(request.downloadHandler.text); }
                     catch (ArgumentException) { }
                     if (LastAnswer != null && !string.IsNullOrWhiteSpace(LastAnswer.answer))
-                        Conversation.Add(new Turn { role = "assistant", content = LastAnswer.answer });
+                        Conversation.Add(new Turn { role = "assistant", content = LastAnswer.answer, sources = LastAnswer.sources });
                     else Error = "助手未返回有效回答";
                 }
                 else
@@ -223,8 +233,10 @@ namespace WorkshopDemo
             }
             // Only successful pairs become model history.
             if (!string.IsNullOrEmpty(Error) && Conversation.Count > 0)
+            {
+                FailedQuestion = question;
                 Conversation.RemoveAt(Conversation.Count - 1);
-            while (Conversation.Count > 8) Conversation.RemoveRange(0, 2);
+            }
             Busy = false;
             Updated?.Invoke();
         }
@@ -235,6 +247,7 @@ namespace WorkshopDemo
             Conversation.Clear();
             LastAnswer = null;
             Error = "";
+            FailedQuestion = "";
             Updated?.Invoke();
         }
 

@@ -8,6 +8,8 @@ namespace WorkshopDemo
     public sealed class WorkshopEquipmentView : MonoBehaviour, IDragHandler, IScrollHandler
     {
         public WorkshopEquipmentModel Model { get; private set; }
+        public WorkshopEquipmentModel DisplayModel => tankFaultModel && tankFaultModel.gameObject.activeSelf
+            ? tankFaultModel : Model;
         public WorkshopFault Fault { get; private set; }
         public bool Playing, AutoOrbit, ShowLabels = true;
         public bool OpenDoor = true, RemoveGuard = true;
@@ -17,9 +19,11 @@ namespace WorkshopDemo
         public RenderTexture DetailTexture => detail;
         public bool Focused { get; private set; }
         GameObject scene;
+        WorkshopEquipmentModel tankFaultModel;
         Camera viewCamera, detailCamera;
         RenderTexture target, detail;
         RectTransform rect;
+        RawImage image, detailImage;
         Canvas canvas;
         float yaw = -25, pitch = 12, zoom = 1;
         float nextMesh;
@@ -29,28 +33,46 @@ namespace WorkshopDemo
         {
             Fault = fault;
             rect = (RectTransform)transform;
+            image = GetComponent<RawImage>();
+            detailImage = inset;
             canvas = GetComponentInParent<Canvas>();
             scene = new GameObject("Inspectable equipment studio");
             scene.transform.position = new Vector3(260,100,100);
-            var assembly = new GameObject("Authored equipment");
-            assembly.transform.SetParent(scene.transform,false);
-            Model = assembly.AddComponent<WorkshopEquipmentModel>();
-            Model.Initialize(device.kind,device.deviceId,device);
-            float scale = 2.8f/Model.NativeBounds.size.magnitude;
-            assembly.transform.localScale = Vector3.one*scale;
-            assembly.transform.localPosition = -Model.NativeBounds.center*scale;
-            foreach (var t in Model.GetComponentsInChildren<Transform>(true)) t.gameObject.layer = 28;
+            Model = CreateStudioModel(device, true);
             viewCamera = Camera("Equipment orbit camera",28);
             detailCamera = Camera("Same component closeup camera",27);
-            target = Texture(1600,1100);
             detail = Texture(720,560);
-            viewCamera.targetTexture = target;
             detailCamera.targetTexture = detail;
-            GetComponent<RawImage>().texture = target;
             inset.texture = detail;
+            UpdateRenderTarget();
             Light(new Vector3(-3,4,-4),new Color(1,.96f,.89f),32);
             Light(new Vector3(3,1,-2),new Color(.78f,.87f,1),18);
             Light(new Vector3(0,3,3),Color.white,30);
+            SetProgress(0);
+        }
+
+        WorkshopEquipmentModel CreateStudioModel(WorkshopDevice device, bool useReviewedTank)
+        {
+            var assembly = new GameObject(useReviewedTank ? "Authored equipment" : "Tank fault demonstration");
+            assembly.transform.SetParent(scene.transform, false);
+            var model = assembly.AddComponent<WorkshopEquipmentModel>();
+            model.Initialize(device.kind, device.deviceId, device, useReviewedTank);
+            float scale = 2.8f / model.NativeBounds.size.magnitude;
+            assembly.transform.localScale = Vector3.one * scale;
+            assembly.transform.localPosition = -model.NativeBounds.center * scale;
+            if (model.ReviewedFanModel || model.ReviewedCabinetModel || model.ReviewedTankModel)
+                model.GetComponentInChildren<ReflectionProbe>().size = Vector3.one * 20;
+            foreach (var t in model.GetComponentsInChildren<Transform>(true)) t.gameObject.layer = 28;
+            return model;
+        }
+
+        public void ShowTankFaultModel(WorkshopDevice device, bool show)
+        {
+            if (!Model.ReviewedTankModel || (DisplayModel != Model) == show) return;
+            if (show && !tankFaultModel) tankFaultModel = CreateStudioModel(device, false);
+            tankFaultModel.gameObject.SetActive(show);
+            Model.gameObject.SetActive(!show);
+            ResetView();
             SetProgress(0);
         }
 
@@ -72,6 +94,22 @@ namespace WorkshopDemo
             t.Create(); return t;
         }
 
+        void UpdateRenderTarget()
+        {
+            float pixelWidth = Mathf.Max(1, rect.rect.width * canvas.scaleFactor);
+            float pixelHeight = Mathf.Max(1, rect.rect.height * canvas.scaleFactor);
+            // Resolve to more samples than the viewport uses, without an unbounded allocation at 4K.
+            float scale = Mathf.Min(1.5f, 3840f / pixelWidth, 2160f / pixelHeight);
+            int width = Mathf.Max(8, Mathf.CeilToInt(pixelWidth * scale / 8f) * 8);
+            int height = Mathf.Max(8, Mathf.CeilToInt(pixelHeight * scale / 8f) * 8);
+            if (target && target.width == width && target.height == height) return;
+            var previous = target;
+            target = Texture(width, height);
+            viewCamera.targetTexture = target;
+            image.texture = target;
+            if (previous) { previous.Release(); Destroy(previous); }
+        }
+
         void Light(Vector3 position, Color color, float intensity)
         {
             var go = new GameObject("Studio light");
@@ -86,9 +124,11 @@ namespace WorkshopDemo
         public void SetProgress(float value)
         {
             Progress = Mathf.Clamp01(value);
-            Model.SetDamage(Fault,Progress);
-            foreach (var filter in Model.GetComponentsInChildren<MeshFilter>(true)) filter.gameObject.layer = 28;
-            Model.DamageSurface.gameObject.layer = 27;
+            var model = DisplayModel;
+            model.SetDamage(Fault,Progress);
+            if (!model.ReviewedCabinetModel && !model.ReviewedTankModel)
+                foreach (var filter in model.GetComponentsInChildren<MeshFilter>(true)) filter.gameObject.layer = 28;
+            if (model.DamageSurface) model.DamageSurface.gameObject.layer = 27;
             if (Progress >= 1) Playing = false;
         }
 
@@ -118,7 +158,8 @@ namespace WorkshopDemo
         {
             if (!Model) return;
             bool visible = canvas.enabled;
-            viewCamera.enabled = detailCamera.enabled = visible;
+            viewCamera.enabled = visible;
+            detailCamera.enabled = visible && detailImage.gameObject.activeInHierarchy;
             if (!visible) { nextMesh = Time.unscaledTime+.05f; return; }
             if (Playing && Time.unscaledTime >= nextMesh)
             {
@@ -128,26 +169,33 @@ namespace WorkshopDemo
             }
             else if (!Playing) nextMesh = Time.unscaledTime+.05f;
             if (AutoOrbit) yaw += Time.unscaledDeltaTime*12;
-            Disassembly = Mathf.MoveTowards(Disassembly,TargetDisassembly,Time.unscaledDeltaTime*2.5f);
+            float assemblySpeed = Model.AssemblySeconds > 0 ? Model.AssemblyCount / Model.AssemblySeconds : 2.5f;
+            Disassembly = Mathf.MoveTowards(Disassembly,TargetDisassembly,Time.unscaledDeltaTime*assemblySpeed);
             Model.SetDisassembly(Disassembly,OpenDoor,RemoveGuard);
         }
 
         void LateUpdate()
         {
             if (!Model || !canvas.enabled) return;
+            UpdateRenderTarget();
             viewCamera.aspect = rect.rect.width/Mathf.Max(1,rect.rect.height);
-            Bounds b = Model.DamageSurface.GetComponent<Renderer>().bounds;
-            if (Focused && focusAssembly >= 0)
+            var model = DisplayModel;
+            Bounds b = model.DamageSurface.GetComponent<Renderer>().bounds;
+            if (model.ReviewedTankModel && (!Focused || focusAssembly >= 0))
+                b = model.ReviewedTankBounds(Focused ? focusAssembly : -1);
+            else if (model.ReviewedCabinetModel && (!Focused || focusAssembly >= 0))
+                b = model.ReviewedCabinetBounds(Focused ? focusAssembly : -1);
+            else if (Focused && focusAssembly >= 0)
             {
-                var renderers = Model.AssemblyTransform(focusAssembly).GetComponentsInChildren<MeshRenderer>();
+                var renderers = model.AssemblyTransform(focusAssembly).GetComponentsInChildren<MeshRenderer>();
                 if (renderers.Length > 0)
                 {
                     b = renderers[0].bounds;
                     foreach (var r in renderers) if (r.enabled) b.Encapsulate(r.bounds);
                 }
             }
-            if (!Focused)
-                foreach (var r in Model.GetComponentsInChildren<MeshRenderer>())
+            if (!Focused && !model.ReviewedCabinetModel && !model.ReviewedTankModel)
+                foreach (var r in model.GetComponentsInChildren<MeshRenderer>())
                     if (r.enabled) b.Encapsulate(r.bounds);
             Vector3 direction = Quaternion.Euler(pitch,yaw,0)*Vector3.back;
             var rotation = Quaternion.LookRotation(-direction,Vector3.up);
@@ -163,7 +211,7 @@ namespace WorkshopDemo
             float distance = fitted*1.12f*zoom;
             viewCamera.transform.position = b.center+direction*distance;
             viewCamera.transform.LookAt(b.center);
-            var closeBounds = Model.DamageSurface.GetComponent<Renderer>().bounds;
+            var closeBounds = model.DamageSurface.GetComponent<Renderer>().bounds;
             detailCamera.aspect = (float)detail.width/detail.height;
             float closeDistance = Mathf.Max(closeBounds.extents.y,closeBounds.extents.x/detailCamera.aspect)/
                 Mathf.Tan(detailCamera.fieldOfView*Mathf.Deg2Rad*.5f)+closeBounds.extents.z;

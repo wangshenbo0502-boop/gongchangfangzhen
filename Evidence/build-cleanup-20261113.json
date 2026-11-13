@@ -1,0 +1,44 @@
+{
+  "Date": "2026-11-13T21:07:58.6423079+08:00",
+  "Recycled": [
+    {
+      "Name": "WorkshopPlatformBeforeCabinet-20261113-142730",
+      "Files": 205,
+      "Bytes": 1442343079.0
+    },
+    {
+      "Name": "WorkshopPlatformCabinetReview",
+      "Files": 372,
+      "Bytes": 2158911317.0
+    },
+    {
+      "Name": "WorkshopPlatformDetailedBackup-20261113-204547",
+      "Files": 205,
+      "Bytes": 1708181543.0
+    },
+    {
+      "Name": "WorkshopPlatformUIBackup-20261113",
+      "Files": 205,
+      "Bytes": 1442316611.0
+    },
+    {
+      "Name": "WorkshopPlatformUIReview",
+      "Files": 876,
+      "Bytes": 2722338070.0
+    },
+    {
+      "Name": "WorkshopPlatformWorkflowBackup-20261113-143126",
+      "Files": 205,
+      "Bytes": 1708181031.0
+    }
+  ],
+  "ClosedOldProcessIds": [
+    19356
+  ],
+  "Skipped": [],
+  "RetainedFilesVerified": 877,
+  "Remaining": [
+    "Releases",
+    "WorkshopPlatform"
+  ]
+}

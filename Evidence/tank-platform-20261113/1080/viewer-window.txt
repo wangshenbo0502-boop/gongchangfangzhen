@@ -1,0 +1,6 @@
+
+Id               : 48340
+Path             : D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformTankReview\Viewers\TankViewer\TankViewer.exe
+MainWindowTitle  : Vertical Tank Viewer
+MainWindowHandle : 9308612
+

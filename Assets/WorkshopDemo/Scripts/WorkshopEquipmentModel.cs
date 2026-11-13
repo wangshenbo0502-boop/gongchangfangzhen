@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace WorkshopDemo
 {
@@ -56,14 +57,14 @@ namespace WorkshopDemo
             return model;
         }
 
-        public void Initialize(DeviceKind kind, string id, WorkshopDevice original = null)
+        public void Initialize(DeviceKind kind, string id, WorkshopDevice original = null, bool useReviewedTank = true)
         {
             Kind = kind;
             Palette(id);
-            if (kind == DeviceKind.Pump) Pump();
-            else if (kind == DeviceKind.Tank) Tank(id);
-            else if (kind == DeviceKind.Fan) Fan();
-            else if (kind == DeviceKind.Cabinet) Cabinet();
+            if (kind == DeviceKind.Pump) { if (!ReviewedPump()) Pump(); }
+            else if (kind == DeviceKind.Tank) { if (!useReviewedTank || !ReviewedTank()) Tank(id); }
+            else if (kind == DeviceKind.Fan) { if (!ReviewedFan()) Fan(); }
+            else if (kind == DeviceKind.Cabinet) { if (!ReviewedCabinet()) Cabinet(); }
             else Legacy(original);
             foreach (var t in assemblies) assemblyOrigins.Add(t.localPosition);
             var renders = GetComponentsInChildren<MeshRenderer>();
@@ -75,6 +76,11 @@ namespace WorkshopDemo
                     NativeBounds = Encapsulate(NativeBounds,transform.InverseTransformPoint(b.center+
                         Vector3.Scale(b.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1))));
             }
+            if (tankProbe)
+            {
+                tankProbe.transform.localPosition = NativeBounds.center;
+                tankProbe.size = NativeBounds.size;
+            }
             SetDamage(null,0);
         }
 
@@ -85,9 +91,18 @@ namespace WorkshopDemo
                     foreach (Transform child in original.transform)
                         if (child.name.StartsWith("Source model") || child == original.rotor)
                             foreach (var r in child.GetComponentsInChildren<Renderer>()) r.enabled = false;
-                    transform.localScale = Vector3.one;
-                    transform.localPosition = GroundOffset(NativeBounds);
-                    ConfigureEnvelope(original, NativeBounds);
+                    transform.localScale = Vector3.one * WorkshopScale;
+                    transform.localPosition = GroundOffset(WorkshopBounds);
+                    ConfigureEnvelope(original, WorkshopBounds);
+                    if (ReviewedTankModel)
+                    {
+                        tankProbe.size = WorkshopBounds.size;
+                        var obstacle = original.gameObject.AddComponent<NavMeshObstacle>();
+                        obstacle.shape = NavMeshObstacleShape.Box;
+                        obstacle.center = box.center;
+                        obstacle.size = box.size;
+                        obstacle.carving = true;
+                    }
                     foreach (var collider in original.GetComponentsInChildren<Collider>(true))
                         if (collider != box) collider.enabled = false;
                     if (Rotor)

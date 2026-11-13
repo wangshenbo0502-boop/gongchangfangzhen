@@ -116,7 +116,7 @@ namespace WorkshopDemo.Editor
             {
                 var model = preview.AddComponent<WorkshopEquipmentModel>();
                 model.Initialize(device.kind, device.deviceId);
-                WorkshopEquipmentModel.ConfigureEnvelope(device, model.NativeBounds);
+                WorkshopEquipmentModel.ConfigureEnvelope(device, model.WorkshopBounds);
             }
             finally { UnityEngine.Object.DestroyImmediate(preview); }
         }

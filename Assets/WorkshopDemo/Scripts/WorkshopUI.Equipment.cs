@@ -35,7 +35,7 @@ namespace WorkshopDemo
             equipmentDialog = overlay.gameObject;
             Label(overlay,device.deviceId+"  "+device.displayName+"  /  整机与部件",20,Ink,20,10,1000,30);
             equipmentSource = Label(overlay,"名义设计外形 · 预设损坏过程 · 非实测 CAD / 非断裂求解",12,Yellow,20,43,1080,24);
-            var close = Command(overlay,"返回工况",0,12,90,() => equipmentDialog.SetActive(false));
+            var close = Command(overlay,page == 0 ? "返回车间" : page == 1 ? "返回目录" : "返回工况",0,12,90,() => equipmentDialog.SetActive(false));
             var cr = close.GetComponent<RectTransform>();
             cr.anchorMin = cr.anchorMax = Vector2.one; cr.anchoredPosition = new Vector2(-65,-28);
 
@@ -43,19 +43,21 @@ namespace WorkshopDemo
                 new Vector2(20,158),new Vector2(324,-106));
             Scroll(leftFrame, "Assembly parts scroll", Vector2.zero, Vector2.one,
                 Vector2.zero, Vector2.zero, out var left);
-            left.sizeDelta = new Vector2(0, 650);
+            left.sizeDelta = new Vector2(0, 850);
             equipmentStage = Label(left,"",17,Yellow,0,0,304,48);
             equipmentStage.name = "Equipment stage";
             equipmentMetrics = Label(left,"",13,Ink,0,52,304,300,TextAnchor.UpperLeft);
             equipmentMetrics.name = "Equipment dimensions";
             Divider(left,0,356,304);
             equipmentAssemblyStep = Label(left,"",13,Ink,0,365,304,28);
-            for (int i = 0; i < (device.kind == DeviceKind.Pump ? 7 : device.kind == DeviceKind.Tank ? 6 :
-                device.kind == DeviceKind.Fan ? 5 : device.kind == DeviceKind.Cabinet ? 4 : 2); i++)
+            int partCount = device.GetComponentInChildren<WorkshopEquipmentModel>()?.AssemblyCount ??
+                (device.kind == DeviceKind.Pump ? 7 : device.kind == DeviceKind.Tank ? 6 :
+                device.kind == DeviceKind.Fan ? 5 : device.kind == DeviceKind.Cabinet ? 4 : 2);
+            for (int i = 0; i < partCount; i++)
             {
                 int index = i;
                 Command(left,(i+1).ToString("D2"),0,402+i*32,304,
-                    () => equipmentView.FocusAssembly(index),28);
+                    () => { if (equipmentView.DisplayModel == equipmentView.Model) equipmentView.FocusAssembly(index); },28);
             }
             Command(overlay,"逐步拆解",348,76,96,() =>
                 equipmentView.SetDisassemblyTarget(equipmentView.TargetDisassembly+1),30);
@@ -99,9 +101,9 @@ namespace WorkshopDemo
                 button.text = equipmentView.Model.AssemblyLabel(i);
                 button.alignment = TextAnchor.MiddleLeft;
             }
-            if (device.kind == DeviceKind.Cabinet)
+            if (device.kind == DeviceKind.Cabinet && !equipmentView.Model.ReviewedCabinetModel)
                 AnalysisToggle(overlay,"柜门开启",20,76,true,v => equipmentView.OpenDoor = v);
-            if (device.kind == DeviceKind.Fan)
+            if (device.kind == DeviceKind.Fan && !equipmentView.Model.ReviewedFanModel)
                 AnalysisToggle(overlay,"移开护网",20,76,true,v => equipmentView.RemoveGuard = v);
             equipmentTransport = Label(overlay,"",13,Ink,348,0,1000,30);
             var tr = equipmentTransport.rectTransform;
@@ -138,6 +140,7 @@ namespace WorkshopDemo
             equipmentProgress.onValueChanged.AddListener(v => {
                 if (!preparingEquipment) EquipmentScrub(v);
             });
+            CompactEquipmentLayout(overlay);
             preparingEquipment = false;
             UpdateEquipmentText();
         }
@@ -160,7 +163,7 @@ namespace WorkshopDemo
             var r = equipmentViewport.rect;
             for (int i = 0; i < equipmentLabels.Count; i++)
             {
-                bool shown = equipmentView.ShowLabels;
+                bool shown = equipmentView.ShowLabels && equipmentView.DisplayModel == equipmentView.Model;
                 equipmentLabels[i].gameObject.SetActive(shown);
                 equipmentLeaders[i].gameObject.SetActive(shown);
                 if (!shown) continue;
@@ -178,21 +181,24 @@ namespace WorkshopDemo
 
         void UpdateEquipmentText()
         {
-            var m = equipmentView.Model;
+            var m = equipmentView.DisplayModel;
+            bool tankFault = m != equipmentView.Model;
             float p = equipmentView.Progress;
-            equipmentStage.text = p == 0 ? "完好状态" : m.HasOpening ? p < WorkshopEquipmentModel.CrackStart ?
+            equipmentStage.text = m.ReviewedFanModel && p >= 1 && m.HasOpening ? "裂口张开 / 后缘保持连接" :
+                p == 0 ? "完好状态" : m.HasOpening ? p < WorkshopEquipmentModel.CrackStart ?
                 "逐渐变形 / 裂缝闭合" : p < 1 ? "裂纹扩展 / 开口增大" : "贯通开口 / 末态保持" : m.Stage;
             var size = m.NativeBounds.size*1000;
             equipmentMetrics.text = "名义外形 / 非实测尺寸\n"+size.x.ToString("F0")+" × "+
                 size.y.ToString("F0")+" × "+size.z.ToString("F0")+" mm\n"+
-                inspectedParts+" 个外观零件 / "+m.AssemblyCount+" 个拆解组件\n"+
-                inspectedTriangles.ToString("N0")+" 个表面三角形\n\n"+
+                (tankFault ? "储罐故障教学模型\n\n" : inspectedParts+" 个外观零件 / "+m.AssemblyCount+" 个拆解组件\n"+
+                inspectedTriangles.ToString("N0")+" 个表面三角形\n\n")+
                 "部位："+m.ComponentName+"\n"+
                 "当前开口  "+m.OpeningMm.ToString("F3")+" mm\n"+
                 "弯曲幅值  "+m.DeflectionMm.ToString("F3")+" mm\n"+
+                (m.ReviewedFanModel ? "原叶片预制裂口 / 保留后缘连接\n非断裂求解，不提供裂长与厚度测量\n\n" :
                 "裂缝延伸  "+m.CrackLengthMm.ToString("F3")+" mm\n"+
                 "未裂长度  "+m.RemainingMm.ToString("F3")+" mm\n"+
-                "部件厚度  "+m.ThicknessMm.ToString("F3")+" mm\n\n"+
+                "部件厚度  "+m.ThicknessMm.ToString("F3")+" mm\n\n")+
                 "工况设定温度  "+equipmentView.Fault.Temperature.ToString("F1")+" °C\n"+
                 "设备当前温度  "+inspectedDevice.Temperature.ToString("F1")+" °C\n"+
                 (m.HasOpening ? "预设起裂进度  55%（非强度极限）" : "此工况不预设结构断裂");
@@ -215,7 +221,7 @@ namespace WorkshopDemo
         {
             string directory = Path.Combine(Application.persistentDataPath,"EquipmentExports");
             Directory.CreateDirectory(directory);
-            var m = equipmentView.Model;
+            var m = equipmentView.DisplayModel;
             string path = Path.Combine(directory,inspectedDevice.deviceId+"-"+equipmentView.Fault.Code+"-"+
                 DateTime.Now.ToString("yyyyMMdd-HHmmss")+".csv");
             var c = System.Globalization.CultureInfo.InvariantCulture;

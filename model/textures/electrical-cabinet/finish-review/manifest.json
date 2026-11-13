@@ -1,0 +1,200 @@
+{
+  "powder": {
+    "size": 2048,
+    "tile_m": 0.12,
+    "height_range_m": 8e-05,
+    "metallic": 0,
+    "statistics": {
+      "BaseColor": {
+        "min": 239,
+        "max": 250,
+        "standard_deviation": 1.3069845181031876
+      },
+      "Normal": {
+        "min": 97,
+        "max": 255,
+        "standard_deviation": 60.22205035485193
+      },
+      "Roughness": {
+        "min": 60,
+        "max": 162,
+        "standard_deviation": 10.242571896905341
+      },
+      "Metallic": {
+        "min": 0,
+        "max": 0,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 0,
+        "max": 255,
+        "standard_deviation": 30.066371249213347
+      }
+    }
+  },
+  "zinc": {
+    "size": 1024,
+    "tile_m": 0.1,
+    "height_range_m": 1e-05,
+    "metallic": 1,
+    "statistics": {
+      "BaseColor": {
+        "min": 242,
+        "max": 248,
+        "standard_deviation": 1.1572709372062533
+      },
+      "Normal": {
+        "min": 127,
+        "max": 255,
+        "standard_deviation": 60.10848995023847
+      },
+      "Roughness": {
+        "min": 84,
+        "max": 111,
+        "standard_deviation": 4.033819498481261
+      },
+      "Metallic": {
+        "min": 255,
+        "max": 255,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 114,
+        "max": 141,
+        "standard_deviation": 2.792885098344708
+      }
+    }
+  },
+  "brushed": {
+    "size": 2048,
+    "tile_m": 0.12,
+    "height_range_m": 1.2e-05,
+    "metallic": 1,
+    "statistics": {
+      "BaseColor": {
+        "min": 235,
+        "max": 252,
+        "standard_deviation": 2.4407884175881334
+      },
+      "Normal": {
+        "min": 123,
+        "max": 255,
+        "standard_deviation": 60.10630343874686
+      },
+      "Roughness": {
+        "min": 26,
+        "max": 102,
+        "standard_deviation": 10.772614209037203
+      },
+      "Metallic": {
+        "min": 255,
+        "max": 255,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 55,
+        "max": 185,
+        "standard_deviation": 17.967585811525517
+      }
+    }
+  },
+  "polymer": {
+    "size": 1024,
+    "tile_m": 0.07,
+    "height_range_m": 3.5e-05,
+    "metallic": 0,
+    "statistics": {
+      "BaseColor": {
+        "min": 244,
+        "max": 250,
+        "standard_deviation": 1.0872977811605082
+      },
+      "Normal": {
+        "min": 119,
+        "max": 255,
+        "standard_deviation": 60.120332923888334
+      },
+      "Roughness": {
+        "min": 70,
+        "max": 181,
+        "standard_deviation": 11.63295762411308
+      },
+      "Metallic": {
+        "min": 0,
+        "max": 0,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 23,
+        "max": 219,
+        "standard_deviation": 20.164692228758373
+      }
+    }
+  },
+  "rubber": {
+    "size": 512,
+    "tile_m": 0.04,
+    "height_range_m": 6e-05,
+    "metallic": 0,
+    "statistics": {
+      "BaseColor": {
+        "min": 236,
+        "max": 248,
+        "standard_deviation": 2.0613808754273877
+      },
+      "Normal": {
+        "min": 111,
+        "max": 255,
+        "standard_deviation": 60.17477600091328
+      },
+      "Roughness": {
+        "min": 162,
+        "max": 255,
+        "standard_deviation": 13.156361888905357
+      },
+      "Metallic": {
+        "min": 0,
+        "max": 0,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 20,
+        "max": 255,
+        "standard_deviation": 27.426176087586406
+      }
+    }
+  },
+  "pvc": {
+    "size": 512,
+    "tile_m": 0.05,
+    "height_range_m": 2e-05,
+    "metallic": 0,
+    "statistics": {
+      "BaseColor": {
+        "min": 245,
+        "max": 249,
+        "standard_deviation": 0.7930172041229231
+      },
+      "Normal": {
+        "min": 126,
+        "max": 255,
+        "standard_deviation": 60.105664554551694
+      },
+      "Roughness": {
+        "min": 62,
+        "max": 124,
+        "standard_deviation": 7.926262008370462
+      },
+      "Metallic": {
+        "min": 0,
+        "max": 0,
+        "standard_deviation": 0.0
+      },
+      "Height": {
+        "min": 90,
+        "max": 170,
+        "standard_deviation": 9.414971851417208
+      }
+    }
+  }
+}

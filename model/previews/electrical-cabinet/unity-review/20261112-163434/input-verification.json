@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-12T16:35:13.0827362+08:00",
+  "executable": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\CabinetViewer\\CabinetViewer.exe",
+  "resolution": "1280 x 720",
+  "focusedAtCompletion": true,
+  "method": "OS foreground mouse down/up against ordinary Player UI; physical Unity input and EventSystem enabled.",
+  "passed": true,
+  "tested": [
+    "startup",
+    "full disassembly",
+    "double-click assembly selection",
+    "outline and introduction",
+    "full reassembly",
+    "mid-motion reversal",
+    "home pose"
+  ],
+  "reversalRequestedAfterSeconds": 4,
+  "configuredOneWaySeconds": 14,
+  "pickableAssemblies": 16,
+  "selectedPart": 0,
+  "homeError": 9.974311069527175E-06,
+  "renderReadySeconds": 0.42845311760902405,
+  "targetFrameRate": 120,
+  "displayRefreshHz": 240.0,
+  "graphicsDevice": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "motionPerformance": [
+    {
+      "phase": "input-disassembly",
+      "frames": 1677,
+      "over16ms": 0,
+      "over25ms": 0,
+      "over33ms": 0,
+      "over50ms": 0,
+      "gen0Collections": 0,
+      "averageFps": 119.89089965820312,
+      "p50Ms": 8.333595275878906,
+      "p95Ms": 8.372300148010254,
+      "p99Ms": 8.534396171569824,
+      "maxMs": 8.964200973510742,
+      "mainThreadAllocatedBytes": 0,
+      "slowFrames": []
+    },
+    {
+      "phase": "input-assembly",
+      "frames": 1677,
+      "over16ms": 0,
+      "over25ms": 0,
+      "over33ms": 0,
+      "over50ms": 0,
+      "gen0Collections": 0,
+      "averageFps": 119.8883056640625,
+      "p50Ms": 8.333595275878906,
+      "p95Ms": 8.381902694702148,
+      "p99Ms": 8.525304794311523,
+      "maxMs": 8.788704872131348,
+      "mainThreadAllocatedBytes": 0,
+      "slowFrames": []
+    }
+  ],
+  "runtimeErrors": 0
+}

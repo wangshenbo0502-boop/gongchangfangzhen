@@ -1,0 +1,6 @@
+1280x720, Windows mouse input through the device directory
+PASS WaterPumpViewer PID 11040 D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformUIReview\Viewers\WaterPumpViewer\WaterPumpViewer.exe
+PASS TankViewer PID 22660 D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformUIReview\Viewers\TankViewer\TankViewer.exe
+PASS IndustrialFanViewer PID 10520 D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformUIReview\Viewers\IndustrialFanViewer\IndustrialFanViewer.exe
+PASS CabinetViewer PID 24420 D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformUIReview\Viewers\CabinetViewer\CabinetViewer.exe
+Result: PASS

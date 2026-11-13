@@ -100,7 +100,7 @@ namespace WorkshopDemo
             fractureFooter.SetActive(active);
             fractureGauge.SetActive(active);
             fractureParameters.SetActive(active);
-            analysisDialog.transform.Find("Analysis data/Analysis parameters").gameObject.SetActive(!active);
+            if (analysisParameterPanel) analysisParameterPanel.gameObject.SetActive(false);
             var gauge = analysisView.transform.parent.Find("Mesh thickness comparison");
             if (gauge) gauge.gameObject.SetActive(!active);
             fractureMode.GetComponentInChildren<Text>().text = active ? "返回静态场" : "渐进开裂";
@@ -108,13 +108,13 @@ namespace WorkshopDemo
             fractureModeHint.text = active ? "几何过程示意 · 预设起裂点" : "过程示意 · 非裂纹扩展求解";
             if (fractureDetailTitle)
                 fractureDetailTitle.text = active ? "裂口局部 / 几何过程示意" : "裂口局部 / 同一求解网格";
-            foreach (var control in new Selectable[] { analysisQuantity,analysisWire,analysisDeform,analysisSection,
+            foreach (var control in new Selectable[] { analysisQuantity,analysisComparison,analysisWire,analysisDeform,analysisSection,
                 analysisSmooth,analysisContours,analysisAnnotations,analysisMeasure,analysisPlayback,analysisLoadSlider,
                 analysisScaleSlider,analysisCut,stressField,displacementField })
                 control.interactable = !active;
             analysisCut.interactable = !active && analysisSection.isOn;
-            analysisDialog.transform.Find("导出测点").GetComponent<Button>().interactable = !active;
-            analysisDialog.transform.Find("极值定位").GetComponentInChildren<Text>().text = active ? "裂口定位" : "极值定位";
+            analysisExportButton.interactable = !active;
+            analysisPeakButton.GetComponentInChildren<Text>().text = active ? "裂口定位" : "极值定位";
         }
 
         void ScrubFracture(float progress)

@@ -37,9 +37,9 @@ public sealed partial class PumpViewer : MonoBehaviour
     Vector3[] home;
     Vector3 axis, side;
     float progress, destination, yaw, baseYaw, pitch = 19, zoom = 1;
-    bool playing, loop, rotating, dragging, detail, jointReview;
-    Slider scrubber;
-    Text stateText, progressText, pauseText;
+    bool playing, dragging, detail, jointReview;
+    const float FooterHeight = 82;
+    Text stateText;
     Canvas canvas;
     Renderer[] pumpRenderers;
     Renderer[] internalRenderers;
@@ -78,6 +78,7 @@ public sealed partial class PumpViewer : MonoBehaviour
         baseYaw = yaw = Mathf.Atan2(-approach.x,-approach.z)*Mathf.Rad2Deg;
         assemblyBounds = BoundsOfPump();
         BuildUI();
+        BuildPartInspection();
         SetProgress(0);
         UpdateCamera(true);
         string[] args = Environment.GetCommandLineArgs();
@@ -90,7 +91,11 @@ public sealed partial class PumpViewer : MonoBehaviour
         }
     }
 
-    void OnDestroy() { Application.logMessageReceived -= OnLog; }
+    void OnDestroy()
+    {
+        Application.logMessageReceived -= OnLog;
+        DisposePartInspection();
+    }
     void OnLog(string condition, string trace, LogType type)
     {
         if (type == LogType.Error || type == LogType.Exception || type == LogType.Assert)
@@ -110,30 +115,33 @@ public sealed partial class PumpViewer : MonoBehaviour
         if (verifyDirectory == null)
         {
             bool overUI = EventSystem.current && EventSystem.current.IsPointerOverGameObject();
+            if (Input.GetMouseButtonDown(0)) BeginPartClick(overUI);
             if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) dragging = !overUI;
             if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1)) dragging = false;
             if (dragging)
             {
-                yaw += Input.GetAxis("Mouse X") * 3.3f;
-                pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * 2.5f, -8, 78);
+                if (!Input.GetMouseButton(0) || PartClickMoved())
+                {
+                    yaw += Input.GetAxis("Mouse X") * 3.3f;
+                    pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * 2.5f, -8, 78);
+                }
             }
+            if (Input.GetMouseButtonUp(0)) EndPartClick(overUI);
             if (!overUI) zoom = Mathf.Clamp(zoom * Mathf.Exp(-Input.mouseScrollDelta.y*.10f), .42f, 2.1f);
             if (Input.GetKeyDown(KeyCode.Space)) TogglePause();
             if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
         }
-        if (rotating && !dragging) yaw += Time.unscaledDeltaTime*12;
         if (playing)
         {
             SetProgress(Mathf.MoveTowards(progress, destination, Time.unscaledDeltaTime / manifest.durationSeconds));
             if (Mathf.Abs(progress-destination) < .00001f)
             {
-                if (loop) destination = 1-destination;
-                else playing = false;
+                playing = false;
             }
         }
         UpdateCamera(false);
         UpdateLabels();
-        pauseText.text = playing ? "\u6682\u505c" : "\u7ee7\u7eed";
+        UpdatePartInspection();
     }
 
     public void SetProgress(float value)
@@ -143,8 +151,7 @@ public sealed partial class PumpViewer : MonoBehaviour
         {
             parts[i].position = home[i] + WorldOffset(MotionOffset(i, progress));
         }
-        if (scrubber) scrubber.SetValueWithoutNotify(progress);
-        if (progressText) progressText.text = Mathf.RoundToInt(progress*100) + "%";
+        if (progress < .9999f) SelectPart(-1);
         if (stateText)
             stateText.text = progress < .001f ? "\u6574\u673a\u88c5\u914d" :
                 progress > .999f ? "\u5b8c\u5168\u62c6\u89e3" : "\u62c6\u88c5\u8fdb\u7a0b";
@@ -164,7 +171,7 @@ public sealed partial class PumpViewer : MonoBehaviour
         return path[path.Length-1].offset;
     }
 
-    void AnimateTo(float value) { destination = value; playing = true; loop = false; }
+    void AnimateTo(float value) { pendingPart = -1; SelectPart(-1); destination = value; playing = true; }
     void TogglePause()
     {
         if (!playing && Mathf.Abs(progress-destination) < .001f) destination = progress > .5f ? 0 : 1;
@@ -197,7 +204,7 @@ public sealed partial class PumpViewer : MonoBehaviour
         Bounds bounds = detail ? InternalBounds() : BoundsOfPump();
         Vector3 center = jointReview ? home[4]-axis*.008f-side*.23f+Vector3.up*.16f :
             detail ? bounds.center : Vector3.Lerp(assemblyBounds.center, bounds.center, .85f);
-        float bottom = 128*canvas.scaleFactor/Screen.height;
+        float bottom = FooterHeight*canvas.scaleFactor/Screen.height;
         float top = 94*canvas.scaleFactor/Screen.height;
         viewCamera.rect = new Rect(0,bottom,1,1-bottom-top);
         float aspect = Mathf.Max(.5f,viewCamera.aspect);
@@ -283,44 +290,13 @@ public sealed partial class PumpViewer : MonoBehaviour
         TextAt("1.90 \u00d7 1.00 \u00d7 1.35 m   /   "+parts.Length+" \u90e8\u4ef6", header, Vector2.zero, Vector2.one,
             new Vector2(350,12), new Vector2(-30,-20), 16, new Color(.36f,.4f,.41f), TextAnchor.MiddleRight);
         RectTransform footer = Rect("Assembly controls", c.transform, Vector2.zero, new Vector2(1,0),
-            Vector2.zero, new Vector2(0,128));
+            Vector2.zero, new Vector2(0,FooterHeight));
         Panel(footer, new Color(.97f,.975f,.975f,.98f));
         ButtonAt("\u62c6\u89e3", footer, 30, 104, () => AnimateTo(1), true);
         ButtonAt("\u7ec4\u88c5", footer, 144, 104, () => AnimateTo(0));
-        Button pause = ButtonAt("\u7ee7\u7eed", footer, 258, 90, TogglePause);
-        pauseText = pause.GetComponentInChildren<Text>();
-        Button loopButton = ButtonAt("\u5faa\u73af", footer, 358, 90, () => { loop = !loop; playing = true; destination = progress > .999f ? 0 : 1; });
-        Button rotateButton = ButtonAt("\u81ea\u8f6c", footer, 458, 90, () => rotating = !rotating);
-        ButtonAt("\u590d\u4f4d\u89c6\u89d2", footer, 558, 130, ResetView);
-        ButtonAt("\u5185\u90e8\u8fd1\u770b", footer, 698, 130, () =>
-        {
-            detail = !detail; zoom = 1;
-            if (detail) { yaw = baseYaw; pitch = 24; AnimateTo(1); }
-        });
-        TextAt("\u88c5\u914d\u8fdb\u5ea6", footer, Vector2.zero, new Vector2(0,0),
-            new Vector2(30,85), new Vector2(136,118), 15, ink);
-        progressText = TextAt("0%", footer, new Vector2(1,0), new Vector2(1,0),
-            new Vector2(-84,84), new Vector2(-28,118), 15, accent, TextAnchor.MiddleRight);
+        introductionButton = ButtonAt("\u90e8\u4ef6\u7b80\u4ecb", footer, 258, 130, ToggleIntroduction);
         stateText = TextAt("", footer, new Vector2(1,0), new Vector2(1,0),
             new Vector2(-280,25), new Vector2(-30,60), 16, ink, TextAnchor.MiddleRight);
-        RectTransform slider = Rect("Progress", footer, Vector2.zero, new Vector2(1,0),
-            new Vector2(150,87), new Vector2(-104,117));
-        Panel(slider, new Color(0,0,0,0));
-        scrubber = slider.gameObject.AddComponent<Slider>();
-        RectTransform track = Rect("Track", slider, new Vector2(0,.5f), new Vector2(1,.5f),
-            new Vector2(0,-2), new Vector2(0,2));
-        Panel(track, new Color(.78f,.82f,.82f));
-        RectTransform fillArea = Rect("Fill area", slider, new Vector2(0,.5f), new Vector2(1,.5f),
-            new Vector2(0,-2), new Vector2(0,2));
-        RectTransform fill = Rect("Fill", fillArea, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
-        Panel(fill, accent);
-        RectTransform handleArea = Rect("Handle area", slider, new Vector2(0,.5f), new Vector2(1,.5f),
-            new Vector2(0,-9), new Vector2(0,9));
-        RectTransform handle = Rect("Handle", handleArea, Vector2.zero, new Vector2(0,1),
-            new Vector2(-7,0), new Vector2(7,0));
-        scrubber.targetGraphic = Panel(handle, accent);
-        scrubber.fillRect = fill; scrubber.handleRect = handle;
-        scrubber.onValueChanged.AddListener(v => { playing = false; loop = false; SetProgress(v); });
         BuildLabels();
     }
 
@@ -341,6 +317,7 @@ public sealed partial class PumpViewer : MonoBehaviour
         public float maxLeaderPixels, intermediateReverseErrorM, motionReturnPathErrorM;
         public bool allLabelsInFrame, textureCompressionDisabled, dynamicResolutionDisabled;
         public bool hdr, orthographic, fullTextureResolution;
+        public bool doubleClickShowsDescription;
         public string[] partNames;
         public bool allShadersSupported, noPinkPixels, imageHasContrast, cameraMoved, allPartsInFrame, passed;
         public string[] errors;
@@ -384,6 +361,14 @@ public sealed partial class PumpViewer : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(.8f);
         yield return Capture("exploded");
+        RegisterPartClick(1);
+        RegisterPartClick(1);
+        yield return new WaitForEndOfFrame();
+        bool doubleClickShowsDescription = selectedPart == 1 &&
+            introductionPanel.gameObject.activeSelf && introductionTitle.text.Contains(manifest.parts[1].label) &&
+            outlineImage.enabled && maskCamera.enabled;
+        yield return Capture("selected-motor");
+        SelectPart(-1);
         float maxLeader = 0;
         int overlaps = 0, crossings = 0;
         bool labelsInFrame = true;
@@ -502,6 +487,7 @@ public sealed partial class PumpViewer : MonoBehaviour
             hdr = viewCamera.allowHDR && pipeline.supportsHDR,
             orthographic = viewCamera.orthographic,
             fullTextureResolution = QualitySettings.globalTextureMipmapLimit == 0,
+            doubleClickShowsDescription = doubleClickShowsDescription,
             motionVersion = manifest.motionVersion,
             maxLeaderPixels = maxLeader, labelOverlapPairs = overlaps,
             leaderCrossingPairs = crossings, allLabelsInFrame = labelsInFrame,
@@ -529,7 +515,7 @@ public sealed partial class PumpViewer : MonoBehaviour
             shroudTravel > .4f && housingTravel > .5f && error < .00001f &&
             Mathf.Abs(moved-manifest.parts[1].offset.magnitude) < .001f && cameraMoved && report.allShadersSupported &&
             report.noPinkPixels && report.imageHasContrast && report.viewportLitFraction > .5f &&
-            inFrame && errors.Count == 0 &&
+            doubleClickShowsDescription && inFrame && errors.Count == 0 &&
             Mathf.Abs(explodedProgress-1) < .00001f && progress < .00001f;
         File.WriteAllText(Path.Combine(verifyDirectory,"verification.json"),JsonUtility.ToJson(report,true));
         Debug.Log("PUMP_VIEWER_VERIFICATION "+JsonUtility.ToJson(report));

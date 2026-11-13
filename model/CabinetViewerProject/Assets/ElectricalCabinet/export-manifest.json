@@ -1,0 +1,10 @@
+{
+  "model": "electrical-cabinet",
+  "source": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\electrical-cabinet-viewer-fit-review.blend",
+  "sourceSha256": "666CF67BD9DEB2338D610CDA7EB3CD1C2B22E103D5FFF54F24B4EEB79B0FDB7C",
+  "blenderVersion": "5.3.0",
+  "fbx": "electrical-cabinet.fbx",
+  "meshCount": 3247,
+  "assemblyCount": 16,
+  "textureFiles": 104
+}

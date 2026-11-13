@@ -1,0 +1,73 @@
+{
+  "Date": "2026-11-13T21:25:41.2176723+08:00",
+  "Recycled": [
+    {
+      "Path": "Build/WorkshopPlatformBeforeTank-20261113-211542",
+      "Files": 876,
+      "Bytes": 2722338070.0
+    },
+    {
+      "Path": "Build/WorkshopPlatformTankReview",
+      "Files": 372,
+      "Bytes": 1979870945.0
+    },
+    {
+      "Path": "Downloads/FactoryTraining-assets-only.unitypackage",
+      "Files": 1,
+      "Bytes": 3026752044
+    },
+    {
+      "Path": "model/CabinetViewer-backup-20261112-material-motion",
+      "Files": 167,
+      "Bytes": 502838330.0
+    },
+    {
+      "Path": "model/CabinetViewer-backup-20261112-pre-motion-material-rebuild",
+      "Files": 167,
+      "Bytes": 480466410.0
+    },
+    {
+      "Path": "model/CabinetViewer-backup-20261112-pre-satin-refine",
+      "Files": 167,
+      "Bytes": 480466954.0
+    },
+    {
+      "Path": "model/CabinetViewerProject/Library",
+      "Files": 20846,
+      "Bytes": 3026977830.0
+    },
+    {
+      "Path": "model/FanViewerProject/Library",
+      "Files": 20697,
+      "Bytes": 2037843324.0
+    },
+    {
+      "Path": "model/PumpViewerProject/Library",
+      "Files": 21049,
+      "Bytes": 2037454701.0
+    },
+    {
+      "Path": "model/TankViewerProject/Library",
+      "Files": 20700,
+      "Bytes": 1943721957.0
+    },
+    {
+      "Path": "Services/WorkshopAssistant/.pytest_cache",
+      "Files": 6,
+      "Bytes": 914.0
+    }
+  ],
+  "Failed": [],
+  "GiB": 16.99,
+  "BuildRemaining": [
+    "Releases",
+    "WorkshopPlatform"
+  ],
+  "PlatformAssemblySHA256": "E597FC6D9B4E27C4DF37A7F58FA456770F7F482C9854B1F99B281CA82ABC1870",
+  "ViewerFiles": {
+    "CabinetViewer": 167,
+    "TankViewer": 167,
+    "WaterPumpViewer": 170,
+    "IndustrialFanViewer": 167
+  }
+}

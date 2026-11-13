@@ -1,0 +1,395 @@
+{
+  "materials": [
+    {
+      "name": "TK BondingCopper",
+      "color": [
+        0.46000000834465027,
+        0.1899999976158142,
+        0.07000000029802322,
+        1.0
+      ],
+      "metallic": 0.8199999928474426,
+      "roughness": 0.3199999928474426,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Display Characters",
+      "color": [
+        0.6299999952316284,
+        0.8500000238418579,
+        0.7799999713897705,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.3799999952316284,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        0.6299999952316284,
+        0.8500000238418579,
+        0.7799999713897705,
+        1.0
+      ],
+      "emissionStrength": 0.6499999761581421
+    },
+    {
+      "name": "TK Display Screen",
+      "color": [
+        0.00800000037997961,
+        0.017999999225139618,
+        0.02199999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.11999999731779099,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Gasket",
+      "color": [
+        0.04500000178813934,
+        0.052000001072883606,
+        0.052000001072883606,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8600000143051147,
+      "relief": 1e-05,
+      "baseMap": "Assets/Tank/FinishTextures/rubber_BaseColor.png",
+      "normalMap": "Assets/Tank/FinishTextures/rubber_Normal.png",
+      "roughMap": "Assets/Tank/FinishTextures/rubber_Roughness.png",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Gauge Borosilicate Glass",
+      "color": [
+        0.7200000286102295,
+        0.8799999952316284,
+        0.9200000166893005,
+        0.2199999988079071
+      ],
+      "metallic": 0.0,
+      "roughness": 0.04500000178813934,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.9200000166893005,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Gauge Red Process Liquid",
+      "color": [
+        0.3799999952316284,
+        0.004000000189989805,
+        0.0010000000474974513,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.2199999988079071,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.03500000014901161,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK GaugeFace",
+      "color": [
+        0.7200000286102295,
+        0.7599999904632568,
+        0.7300000190734863,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.3199999928474426,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Machined",
+      "color": [
+        0.46000000834465027,
+        0.49000000953674316,
+        0.5099999904632568,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.25999999046325684,
+      "relief": 4e-06,
+      "baseMap": "Assets/Tank/FinishTextures/machined_BaseColor.png",
+      "normalMap": "Assets/Tank/FinishTextures/machined_Normal.png",
+      "roughMap": "Assets/Tank/FinishTextures/machined_Roughness.png",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Marking",
+      "color": [
+        0.04500000178813934,
+        0.054999999701976776,
+        0.05999999865889549,
+        1.0
+      ],
+      "metallic": 0.11999999731779099,
+      "roughness": 0.47999998927116394,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Needle",
+      "color": [
+        0.6800000071525574,
+        0.054999999701976776,
+        0.02500000037252903,
+        1.0
+      ],
+      "metallic": 0.11999999731779099,
+      "roughness": 0.3400000035762787,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK SafetyYellow",
+      "color": [
+        0.47999998927116394,
+        0.28999999165534973,
+        0.054999999701976776,
+        1.0
+      ],
+      "metallic": 0.05999999865889549,
+      "roughness": 0.5400000214576721,
+      "relief": 1.2e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Shell",
+      "color": [
+        0.04500000178813934,
+        0.07400000095367432,
+        0.08699999749660492,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5299999713897705,
+      "relief": 1.8e-05,
+      "baseMap": "Assets/Tank/FinishTextures/cast_BaseColor.png",
+      "normalMap": "Assets/Tank/FinishTextures/cast_Normal.png",
+      "roughMap": "Assets/Tank/FinishTextures/cast_Roughness.png",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Sight Glass Process Water",
+      "color": [
+        0.9399999976158142,
+        0.9850000143051147,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.02500000037252903,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Stainless",
+      "color": [
+        0.28999999165534973,
+        0.33000001311302185,
+        0.3499999940395355,
+        1.0
+      ],
+      "metallic": 0.8799999952316284,
+      "roughness": 0.3400000035762787,
+      "relief": 9e-06,
+      "baseMap": "Assets/Tank/FinishTextures/machined_BaseColor.png",
+      "normalMap": "Assets/Tank/FinishTextures/machined_Normal.png",
+      "roughMap": "Assets/Tank/FinishTextures/machined_Roughness.png",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Thermometer Clear Glass",
+      "color": [
+        0.9800000190734863,
+        0.9900000095367432,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.017999999225139618,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Thermometer Satin Scale",
+      "color": [
+        0.6200000047683716,
+        0.6399999856948853,
+        0.6299999952316284,
+        1.0
+      ],
+      "metallic": 0.3499999940395355,
+      "roughness": 0.4300000071525574,
+      "relief": 1e-05,
+      "baseMap": "",
+      "normalMap": "",
+      "roughMap": "",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    },
+    {
+      "name": "TK Weld",
+      "color": [
+        0.15000000596046448,
+        0.1899999976158142,
+        0.20000000298023224,
+        1.0
+      ],
+      "metallic": 0.07999999821186066,
+      "roughness": 0.5799999833106995,
+      "relief": 3.5e-05,
+      "baseMap": "Assets/Tank/FinishTextures/cast_BaseColor.png",
+      "normalMap": "Assets/Tank/FinishTextures/cast_Normal.png",
+      "roughMap": "Assets/Tank/FinishTextures/cast_Roughness.png",
+      "transmission": 0.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissionStrength": 0.0
+    }
+  ]
+}

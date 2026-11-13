@@ -20,13 +20,18 @@ namespace WorkshopDemo
         public const float CrackStart = .55f;
         public float CrackLengthMm { get; private set; }
         public float ThicknessMm { get; private set; }
-        public bool Detached => HasOpening && Progress >= .9999f;
+        public bool Detached => reviewedFanParts == null && HasOpening && Progress >= .9999f;
         public int AssemblyCount => assemblies.Count;
         public string AssemblyName(int i) => assemblies[i].name;
-        public Vector3 AssemblyAnchor(int i) => assemblies[i].position;
+        public Vector3 AssemblyAnchor(int i) => ReviewedCabinetModel ? assemblies[i].TransformPoint(cabinetAnchors[i]) :
+            ReviewedTankModel ? assemblies[i].TransformPoint(tankAnchors[i]) : assemblies[i].position;
         public Transform AssemblyTransform(int i) => assemblies[i];
         public string AssemblyLabel(int i)
         {
+            if (reviewedParts != null) return (i + 1).ToString("D2") + "  " + reviewedParts.parts[i].label;
+            if (reviewedFanParts != null) return (i + 1).ToString("D2") + "  " + reviewedFanParts.parts[i].label;
+            if (ReviewedCabinetModel) return (i + 1).ToString("D2") + "  " + cabinetManifest.parts[i].label;
+            if (ReviewedTankModel) return (i + 1).ToString("D2") + "  " + tankManifest.parts[i].label;
             string[] labels = Kind == DeviceKind.Pump ? new[] {"灌浆底座 / 地脚","散热电机 / 接线盒","轴 / 弹性联轴器",
                 "可拆安全护罩","剖分泵壳 / 紧固圈","吸排管口 / 压力表","机械密封副"} :
                 Kind == DeviceKind.Tank ? new[] {"支腿 / 锚固底板","卷制筒体 / 环焊缝","成形上下封头",
@@ -114,7 +119,18 @@ namespace WorkshopDemo
         public void SetDamage(WorkshopFault fault, float progress)
         {
             Progress = fault == null ? 0 : Mathf.Clamp01(progress);
+            if (ReviewedTankModel)
+            {
+                Recipe = "验收版储罐外形";
+                return;
+            }
             string code = fault?.Code ?? "";
+            if (reviewedDamage)
+            {
+                bool inspectSeal = code == "P-SEAL" && Progress > 0;
+                reviewedDamage.SetActive(inspectSeal);
+                foreach (var renderer in reviewedSealRenderers) renderer.enabled = !inspectSeal;
+            }
             HasOpening = code == "F-CRACK" || code == "P-SEAL" || code == "TK-LEAK" ||
                 code == "TK-SUPPORT" || code == "TK-PRESS" || code == "CV-JAM";
             Recipe = HasOpening ? "预设加载：弯曲 → 起裂 → 扩展 → 张开分离" :
@@ -122,6 +138,7 @@ namespace WorkshopDemo
                 fault?.Visual == FaultVisual.Vibration ? "轴端偏移 / 周期摆振示意" :
                 fault?.Visual == FaultVisual.Electrical ? "控制指示状态变化，不产生结构裂口" : "工艺异常示意";
             OpeningMm = DeflectionMm = CrackLengthMm = RemainingMm = ThicknessMm = 0;
+            if (reviewedFanParts != null) ReviewedFanDamage(code);
             for (int k = 0; k < patches.Count; k++)
             {
                 var patch = patches[k];
@@ -183,12 +200,20 @@ namespace WorkshopDemo
 
         public void CrackLips(out Vector3 left, out Vector3 right)
         {
+            if (reviewedFanParts != null)
+            {
+                left = fanCurrent[fanLeftLip]; right = fanCurrent[fanRightLip]; return;
+            }
             var p = patches.Find(t => t.Filter == DamageSurface);
             left = p.Current[p.LeftLip]; right = p.Current[p.RightLip];
         }
 
         public void SetDisassembly(float step, bool openDoor, bool removeGuard)
         {
+            if (reviewedParts != null) { ReviewedDisassembly(step); return; }
+            if (reviewedFanParts != null) { ReviewedFanDisassembly(step); return; }
+            if (ReviewedCabinetModel) { ReviewedCabinetDisassembly(step); return; }
+            if (ReviewedTankModel) { ReviewedTankDisassembly(step); return; }
             for (int i = 0; i < assemblies.Count; i++)
             {
                 float amount = Mathf.SmoothStep(0,1,Mathf.Clamp01(step-i));

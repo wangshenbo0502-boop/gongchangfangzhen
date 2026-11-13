@@ -1,0 +1,306 @@
+{
+    "width": 1920,
+    "height": 1080,
+    "selectedPart": -1,
+    "visibleLabels": 0,
+    "overlappingLabels": 0,
+    "labelsOutsideViewport": 0,
+    "progress": 0.0,
+    "maxHomeError": 0.000009709055120765697,
+    "longestLeader": 0.0,
+    "averageFps": 117.11808013916016,
+    "coverBoxGap": 0.0,
+    "coverVerticalGap": 0.0,
+    "lidBoxGap": 0.0,
+    "coverOutwardTravel": 0.0,
+    "lidOutwardTravel": 0.0,
+    "animating": false,
+    "descriptionVisible": false,
+    "outlineVisible": false,
+    "automationStatus": "running",
+    "automationError": "",
+    "allocatedMemoryBytes": 152547879,
+    "graphicsDevice": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "clarityRenderWidth": 3840,
+    "clarityRenderHeight": 1748,
+    "msaaSamples": 4,
+    "vSyncCount": 0,
+    "targetFrameRate": 120,
+    "renderScale": 2.0,
+    "displayRefreshHz": 240.0,
+    "clarityShaderSupported": true,
+    "focused": true,
+    "renderReady": true,
+    "motionPending": false,
+    "renderReadySeconds": 0.4657447934150696,
+    "parts": [
+        {
+            "name": "CAB_00_Enclosure",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_01_Backplate",
+            "position": {
+                "x": 0.0,
+                "y": -9.094947017729282e-13,
+                "z": 0.000009709055120765697
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_02_Terminals",
+            "position": {
+                "x": 0.0,
+                "y": -3.8110192690510305e-7,
+                "z": -0.0000023818884073989467
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_03_Door",
+            "position": {
+                "x": -0.574000358581543,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_04_Breakers",
+            "position": {
+                "x": 1.200611166041199e-7,
+                "y": 2.2091242612987118e-8,
+                "z": -3.553807204070836e-8
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_05_PLC",
+            "position": {
+                "x": 1.200611166041199e-7,
+                "y": -2.6893681948081395e-8,
+                "z": -3.457759589764464e-8
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_06_Cooling",
+            "position": {
+                "x": -0.574000358581543,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_07_Wiring",
+            "position": {
+                "x": 0.0,
+                "y": 2.1152436602278613e-7,
+                "z": -0.0000042304750422772489
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_08_ControlPanel",
+            "position": {
+                "x": 0.000006192911769176135,
+                "y": -2.842170943040401e-14,
+                "z": 1.9055107713938924e-7
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_09_PowerSupply",
+            "position": {
+                "x": 0.000004382675797387492,
+                "y": 0.0000012068235264450778,
+                "z": -0.0000012068232990714023
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_10_PlinthGlands",
+            "position": {
+                "x": 0.0,
+                "y": -0.0000011115478173451266,
+                "z": -1.1368683772161603e-13
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_11_Contactors",
+            "position": {
+                "x": -0.000004128607542952523,
+                "y": 9.527557267574593e-7,
+                "z": -0.0000011115478173451266
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_12_VariableSpeedDrives",
+            "position": {
+                "x": -0.000004128607542952523,
+                "y": -0.0000010162721082451754,
+                "z": -0.0000014291331353888382
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_13_IndustrialNetwork",
+            "position": {
+                "x": 0.000004446192633622559,
+                "y": -8.257212016360427e-7,
+                "z": -0.00000127034059005382
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_14_SafetyRelays",
+            "position": {
+                "x": 0.000004446192633622559,
+                "y": -0.0000024771634343778716,
+                "z": -0.0000012068237538187532
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        },
+        {
+            "name": "CAB_15_OperatorHMI",
+            "position": {
+                "x": -0.574000358581543,
+                "y": 0.15999996662139893,
+                "z": -0.278999924659729
+            },
+            "pickPoint": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "pickable": false
+        }
+    ],
+    "motionPerformance": [
+        {
+            "phase": "input-disassembly",
+            "frames": 1673,
+            "over16ms": 1,
+            "over25ms": 1,
+            "over33ms": 1,
+            "over50ms": 0,
+            "gen0Collections": 0,
+            "averageFps": 119.6214599609375,
+            "p50Ms": 8.333602905273438,
+            "p95Ms": 8.352699279785157,
+            "p99Ms": 8.488896369934082,
+            "maxMs": 45.964599609375,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 45.964599609375,
+                    "progress": 0.44824180006980898,
+                    "mainThreadMs": 1.9525,
+                    "renderThreadMs": 1.823,
+                    "gpuMs": 4.132864,
+                    "presentWaitMs": 6.3721
+                }
+            ]
+        },
+        {
+            "phase": "input-assembly",
+            "frames": 1673,
+            "over16ms": 2,
+            "over25ms": 1,
+            "over33ms": 1,
+            "over50ms": 0,
+            "gen0Collections": 0,
+            "averageFps": 119.58308410644531,
+            "p50Ms": 8.333602905273438,
+            "p95Ms": 8.37130069732666,
+            "p99Ms": 8.512301445007325,
+            "maxMs": 35.39830017089844,
+            "mainThreadAllocatedBytes": 0,
+            "slowFrames": [
+                {
+                    "milliseconds": 22.90260124206543,
+                    "progress": 0.15786407887935639,
+                    "mainThreadMs": 1.6916,
+                    "renderThreadMs": 2.4596,
+                    "gpuMs": 0.0,
+                    "presentWaitMs": 6.638
+                },
+                {
+                    "milliseconds": 35.39830017089844,
+                    "progress": 0.1547403782606125,
+                    "mainThreadMs": 1.9208,
+                    "renderThreadMs": 2.1561,
+                    "gpuMs": 4.130816,
+                    "presentWaitMs": 6.6529
+                }
+            ]
+        }
+    ]
+}

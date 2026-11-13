@@ -1,0 +1,50 @@
+Started 2026-11-13T21:14:14.5889056+08:00
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+PASS Four stations loaded at 1920x1080
+PASS TK-01 uses the approved geometry
+PASS Original station and inspection point, grounded scaled model and full-size nominal height
+PASS Tank envelope clears other equipment
+PASS Robot can reach the original approach point
+PASS Reviewed finishes and reflection are loaded
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Inspection shows the approved 12 assemblies and 14-second path
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Manway cover clears axially before lateral travel
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Mid-release reversal restores all home poses
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS All 12 assemblies reach their separated positions
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Full reverse path restores all home poses
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Enabled 时间点
+PASS Top raycast 时间点 (时间点)
+PASS Enabled 最终状态
+PASS Top raycast 最终状态 (最终状态)
+PASS Tank leakage teaching and close-up still operate
+PASS Enabled 观察
+PASS Top raycast 观察 (观察)
+PASS Observation restores the approved tank
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS TK-LEAK still raises the physical marker and alarm
+PASS Tank order dispatches the actual inspection robot
+PASS Robot clears tank and reaches repair stage
+PASS Enabled 设备学习
+PASS Top raycast 设备学习 (设备学习)
+PASS Enabled Device TK-01
+PASS Top raycast Device TK-01 (Device TK-01)
+PASS Enabled 详细展示
+PASS Top raycast 详细展示 (详细展示)
+PASS Equipment catalogue launches the packaged TankViewer
+PASS No runtime exceptions during tank checks
+
+Result: PASS

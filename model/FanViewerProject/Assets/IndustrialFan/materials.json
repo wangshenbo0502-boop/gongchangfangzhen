@@ -1,0 +1,266 @@
+{
+  "materials": [
+    {
+      "name": "Fan / EPDM vibration pads",
+      "color": [
+        0.008999999612569809,
+        0.009999999776482582,
+        0.012000000104308128,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9100000262260437,
+      "family": "rubber",
+      "relief": 8e-06,
+      "textures": [
+        "rubber_basecolor.png",
+        "rubber_normal.png",
+        "rubber_roughness.png",
+        "rubber_metallic.png",
+        "rubber_height.png"
+      ]
+    },
+    {
+      "name": "Fan / blue grey enamel",
+      "color": [
+        0.03200000151991844,
+        0.061000000685453415,
+        0.07699999958276749,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.47999998927116394,
+      "family": "cast",
+      "relief": 5.5e-05,
+      "textures": [
+        "cast_basecolor.png",
+        "cast_normal.png",
+        "cast_roughness.png",
+        "cast_metallic.png",
+        "cast_height.png"
+      ]
+    },
+    {
+      "name": "Fan / dark duct interior",
+      "color": [
+        0.023000000044703484,
+        0.032999999821186066,
+        0.03700000047683716,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6399999856948853,
+      "family": "cast",
+      "relief": 8e-06,
+      "textures": [
+        "cast_basecolor.png",
+        "cast_normal.png",
+        "cast_roughness.png",
+        "cast_metallic.png",
+        "cast_height.png"
+      ]
+    },
+    {
+      "name": "Fan / dull galvanized wire",
+      "color": [
+        0.2199999988079071,
+        0.24500000476837158,
+        0.2549999952316284,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.49000000953674316,
+      "family": "machined",
+      "relief": 8e-06,
+      "textures": [
+        "machined_basecolor.png",
+        "machined_normal.png",
+        "machined_roughness.png",
+        "machined_metallic.png",
+        "machined_height.png"
+      ]
+    },
+    {
+      "name": "Fan / exposed fracture interior",
+      "color": [
+        0.04500000178813934,
+        0.04800000041723251,
+        0.052000001072883606,
+        1.0
+      ],
+      "metallic": 0.8500000238418579,
+      "roughness": 0.7300000190734863,
+      "family": "",
+      "relief": 8e-06,
+      "textures": []
+    },
+    {
+      "name": "Fan / graphite powder coat",
+      "color": [
+        0.026000000536441803,
+        0.029999999329447746,
+        0.03400000184774399,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5600000023841858,
+      "family": "cast",
+      "relief": 5.5e-05,
+      "textures": [
+        "cast_basecolor.png",
+        "cast_normal.png",
+        "cast_roughness.png",
+        "cast_metallic.png",
+        "cast_height.png"
+      ]
+    },
+    {
+      "name": "Fan / industrial grey",
+      "color": [
+        0.10499999672174454,
+        0.11900000274181366,
+        0.12399999797344208,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5099999904632568,
+      "family": "cast",
+      "relief": 5.5e-05,
+      "textures": [
+        "cast_basecolor.png",
+        "cast_normal.png",
+        "cast_roughness.png",
+        "cast_metallic.png",
+        "cast_height.png"
+      ]
+    },
+    {
+      "name": "Fan / label black",
+      "color": [
+        0.00800000037997961,
+        0.009999999776482582,
+        0.012000000104308128,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "family": "",
+      "relief": 8e-06,
+      "textures": []
+    },
+    {
+      "name": "Fan / label white",
+      "color": [
+        0.7799999713897705,
+        0.800000011920929,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5799999833106995,
+      "family": "",
+      "relief": 8e-06,
+      "textures": []
+    },
+    {
+      "name": "Fan / machined steel",
+      "color": [
+        0.41999998688697815,
+        0.44999998807907104,
+        0.47999998927116394,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3199999928474426,
+      "family": "machined",
+      "relief": 8e-06,
+      "textures": [
+        "machined_basecolor.png",
+        "machined_normal.png",
+        "machined_roughness.png",
+        "machined_metallic.png",
+        "machined_height.png"
+      ]
+    },
+    {
+      "name": "Fan / safety yellow",
+      "color": [
+        0.6800000071525574,
+        0.3269999921321869,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.4300000071525574,
+      "family": "cast",
+      "relief": 8e-06,
+      "textures": [
+        "cast_basecolor.png",
+        "cast_normal.png",
+        "cast_roughness.png",
+        "cast_metallic.png",
+        "cast_height.png"
+      ]
+    },
+    {
+      "name": "Fan / satin cast aluminium",
+      "color": [
+        0.4300000071525574,
+        0.46000000834465027,
+        0.47999998927116394,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.4399999976158142,
+      "family": "machined",
+      "relief": 3.5e-05,
+      "textures": [
+        "machined_basecolor.png",
+        "machined_normal.png",
+        "machined_roughness.png",
+        "machined_metallic.png",
+        "machined_height.png"
+      ]
+    },
+    {
+      "name": "Fan / tinned earth terminal",
+      "color": [
+        0.46000000834465027,
+        0.25999999046325684,
+        0.09000000357627869,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.3799999952316284,
+      "family": "machined",
+      "relief": 8e-06,
+      "textures": [
+        "machined_basecolor.png",
+        "machined_normal.png",
+        "machined_roughness.png",
+        "machined_metallic.png",
+        "machined_height.png"
+      ]
+    },
+    {
+      "name": "Fan / zinc plated fasteners",
+      "color": [
+        0.44999998807907104,
+        0.47999998927116394,
+        0.5099999904632568,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.38999998569488525,
+      "family": "machined",
+      "relief": 8e-06,
+      "textures": [
+        "machined_basecolor.png",
+        "machined_normal.png",
+        "machined_roughness.png",
+        "machined_metallic.png",
+        "machined_height.png"
+      ]
+    }
+  ]
+}

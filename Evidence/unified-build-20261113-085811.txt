@@ -1,0 +1,7 @@
+Result: Succeeded
+Output: D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatformUIReview\WorkshopPlatform.exe
+Scenes:
+Assets/WorkshopDemo/Scenes/WorkshopDemo.unity
+Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity
+Errors: 0
+Bytes: 1442145554

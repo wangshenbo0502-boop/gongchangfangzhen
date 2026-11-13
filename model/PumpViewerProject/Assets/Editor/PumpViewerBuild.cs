@@ -211,6 +211,12 @@ public static class PumpViewerBuild
         viewer.pump = pump.transform; viewer.viewCamera = camera;
         viewer.componentData = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Pump/parts.json");
         viewer.uiFont = AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/SourceHanSansSC-Regular.otf");
+        viewer.selectionMaskShader = AssetDatabase.LoadAssetAtPath<Shader>("Assets/Shaders/PumpSelectionMask.shader");
+        viewer.selectionOutlineShader = AssetDatabase.LoadAssetAtPath<Shader>("Assets/Shaders/PumpSelectionOutline.shader");
+        if (!viewer.selectionMaskShader || !viewer.selectionOutlineShader ||
+            ShaderUtil.ShaderHasError(viewer.selectionMaskShader) ||
+            ShaderUtil.ShaderHasError(viewer.selectionOutlineShader))
+            throw new InvalidOperationException("Selection shader failed compilation");
         EditorSceneManager.SaveScene(scene,"Assets/Generated/PumpViewer.unity");
         PlayerSettings.companyName = "Workshop";
         PlayerSettings.productName = "Water Pump Viewer";
