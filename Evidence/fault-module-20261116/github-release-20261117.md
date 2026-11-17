@@ -4,8 +4,8 @@
 
 完整解压 `WorkshopPlatform-Windows-x64-20261117.zip`，运行 `WorkshopPlatform/WorkshopPlatform.exe`。保留配套目录，包括四个独立展示器。发布内容来自本机正式目录 `Build/WorkshopPlatform/`，原验证候选身份为 `194622083`。
 
-- 包大小：1,117,365,424 bytes；876 个文件。归整前后所有文件哈希一致。
-- ZIP SHA256：`63C7DDC164A62A2874A0EF19818FB788EF331A93F5074838B10D566A3B44AD1C`。
+- 包大小：843,107,105 bytes；876 个文件。归整前后所有文件哈希一致；发布包使用更高压缩率，程序内容不变。
+- ZIP SHA256：`1C985C0F27F3948CF580AD47BD870B8379D05D2AABE2538262BEEA95F4551986`。
 - 核心程序集 SHA256：`5F2C53CEE725EC2ADB46F267FDEADF5EB797F1FA156CEACB2D9EB5CFA9A450BC`。
 - 已有验证：1080p 综合业务回归 757 PASS；可见窗口风机 1080p 专项 25 PASS、汽蚀 720p 专项 27 PASS；四个独立展示器 671 个文件保护核对通过。打包发布没有重新构建或重复业务回归。
 
