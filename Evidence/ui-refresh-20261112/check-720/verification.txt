@@ -1,0 +1,64 @@
+Started 2026-11-12T20:52:43.0151213+08:00
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+PASS Monitoring scene initialized at 1280x720
+PASS Button in screen 车间总览
+PASS Button text fits 车间总览
+PASS Button in screen 设备学习
+PASS Button text fits 设备学习
+PASS Button in screen 实训任务
+PASS Button text fits 实训任务
+PASS Button in screen AI 助手
+PASS Button text fits AI 助手
+PASS Button in screen 更多
+PASS Button text fits 更多
+PASS Button in screen 总览
+PASS Button text fits 总览
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen Track P-01
+PASS Button text fits Track P-01
+PASS Button in screen Track TK-01
+PASS Button text fits Track TK-01
+PASS Button in screen Track F-01
+PASS Button text fits Track F-01
+PASS Button in screen Track PLC-01
+PASS Button text fits Track PLC-01
+PASS Button in screen 巡检控制
+PASS Button text fits 巡检控制
+PASS Button in screen 查看设备
+PASS Button text fits 查看设备
+PASS Button in screen 更多
+PASS Button text fits 更多
+PASS Home toolbar has two actions plus device selector
+PASS Enabled 视图
+PASS Top raycast 视图 (视图)
+PASS Enabled 跟随巡检
+PASS Top raycast 跟随巡检 (跟随巡检)
+PASS Follow available in view menu
+PASS Enabled 总览
+PASS Top raycast 总览 (总览)
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Observation hides fault transport and closeup
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+FAIL System.InvalidOperationException: Top raycast 全部拆开 (Equipment inspection)
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <357591cce8a4413fb1de862260506cad>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Hit (UnityEngine.UI.Selectable control) [0x00102] in <357591cce8a4413fb1de862260506cad>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Click (System.String name, UnityEngine.Transform scope) [0x00009] in <357591cce8a4413fb1de862260506cad>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Verify>d__17.MoveNext () [0x002bb] in <357591cce8a4413fb1de862260506cad>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__6.MoveNext () [0x00095] in <357591cce8a4413fb1de862260506cad>:0 
+Result: FAIL

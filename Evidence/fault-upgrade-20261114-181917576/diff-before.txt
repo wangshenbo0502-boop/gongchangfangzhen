@@ -1,0 +1,13 @@
+ README.md                                          |   6 +-
+ Services/WorkshopAssistant/README.md               |   8 +-
+ .../WorkshopAssistant/knowledge/储罐故障速查.md    |   3 +
+ .../knowledge/助手试用与工单答疑.md                |   6 +
+ .../knowledge/循环水泵故障速查.md                  |   3 +
+ .../WorkshopAssistant/knowledge/排风机故障速查.md  |   3 +
+ .../WorkshopAssistant/knowledge/控制柜故障速查.md  |   3 +
+ .../WorkshopAssistant/knowledge/车间场景知识.md    |   4 +-
+ Tools/Abaqus/README.md                             |  22 +-
+ ...车间三维监控与交互巡检_答辩视觉增强版_15页.pptx |   3 -
+ 开发说明.txt                                       |  66 ----
+ 项目交接文档.md                                    | 437 ---------------------
+ 12 files changed, 38 insertions(+), 526 deletions(-)

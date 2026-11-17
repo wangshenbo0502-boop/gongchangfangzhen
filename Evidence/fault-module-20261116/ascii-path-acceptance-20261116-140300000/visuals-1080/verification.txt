@@ -1,0 +1,181 @@
+Started 2026-11-16T14:05:53.6834824+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: six priority cases, four fixed views, stages and milestone neighbors; images require separate visual review
+PASS Review uses current WorkshopDemo scene
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS TK-LEAK full visual matrix captured
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS P-SEAL full visual matrix captured
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS P-CAV full visual matrix captured
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS F-CRACK full visual matrix captured
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS F-IMBAL full visual matrix captured
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS PLC-CONTACT full visual matrix captured
+PASS P-HOT mechanism snapshot captured
+PASS P-CAV mechanism snapshot captured
+PASS P-SEAL mechanism snapshot captured
+PASS P-BEAR mechanism snapshot captured
+PASS TK-PRESS mechanism snapshot captured
+PASS TK-LEAK mechanism snapshot captured
+PASS TK-LEVEL mechanism snapshot captured
+PASS TK-SUPPORT mechanism snapshot captured
+PASS F-IMBAL mechanism snapshot captured
+PASS F-BLOCK mechanism snapshot captured
+PASS F-BEAR mechanism snapshot captured
+PASS F-CRACK mechanism snapshot captured
+PASS PLC-HOT mechanism snapshot captured
+PASS PLC-LOW mechanism snapshot captured
+PASS PLC-COMM mechanism snapshot captured
+PASS PLC-CONTACT mechanism snapshot captured
+PASS P-ALIGN mechanism snapshot captured
+PASS P-INLET mechanism snapshot captured
+PASS TK-CORROSION mechanism snapshot captured
+PASS TK-FLANGE mechanism snapshot captured
+PASS F-LOOSE mechanism snapshot captured
+PASS F-RUB mechanism snapshot captured
+PASS PLC-OVERLOAD mechanism snapshot captured
+PASS PLC-SENSOR mechanism snapshot captured
+PASS P-IMPELLER mechanism snapshot captured
+PASS P-DRY mechanism snapshot captured
+PASS TK-SENSOR mechanism snapshot captured
+PASS TK-VENT mechanism snapshot captured
+PASS F-BLADE mechanism snapshot captured
+PASS F-REVERSE mechanism snapshot captured
+PASS PLC-IO mechanism snapshot captured
+PASS PLC-DRIVE mechanism snapshot captured
+
+Result: PASS

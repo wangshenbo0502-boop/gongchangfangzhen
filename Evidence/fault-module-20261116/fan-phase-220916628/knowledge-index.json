@@ -1,0 +1,28 @@
+{
+  "scope": "Source/index identity only; no new model or Unity GUI request",
+  "documents": 11,
+  "chunks": 85,
+  "checks": [
+    {
+      "source": "循环水泵故障速查.md",
+      "chunks": 7,
+      "pass": true
+    },
+    {
+      "source": "排风机故障速查.md",
+      "chunks": 7,
+      "pass": true
+    },
+    {
+      "source": "储罐故障速查.md",
+      "chunks": 7,
+      "pass": true
+    },
+    {
+      "source": "控制柜故障速查.md",
+      "chunks": 7,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

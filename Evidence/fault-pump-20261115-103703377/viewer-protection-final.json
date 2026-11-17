@@ -1,0 +1,17 @@
+{
+  "baseline_files": 671,
+  "protected_water_pump": 170,
+  "equal": true,
+  "formal": {
+    "count": 671,
+    "missing": [],
+    "extra": [],
+    "changed": []
+  },
+  "candidate": {
+    "count": 671,
+    "missing": [],
+    "extra": [],
+    "changed": []
+  }
+}

@@ -1,0 +1,16 @@
+Started 2026-11-15T23:35:28.1781435+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification
+PASS Current four-device monitoring scene
+PASS 32 applicable definitions plus 8 preserved historical definitions
+PASS BIND-01 P-01 pump.seal.faces resolved independently
+PASS BIND-01 P-01 pump.impeller.inlet resolved independently
+FAIL System.InvalidOperationException: 储罐派生穿孔网格缺失或坐标不匹配
+  at WorkshopDemo.WorkshopFaultPresenter..ctor (WorkshopDemo.WorkshopEquipmentModel model, WorkshopDemo.WorkshopFaultBinding leak, WorkshopDemo.WorkshopFaultBinding gauge) [0x00123] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+  at WorkshopDemo.WorkshopEquipmentModel.InitializeFaultBindings (System.String deviceId) [0x001f7] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+  at WorkshopDemo.WorkshopEquipmentModel.Initialize (WorkshopDemo.DeviceKind kind, System.String id, WorkshopDemo.WorkshopDevice original, System.Boolean useReviewedTank) [0x001c9] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.VerifyFaultBindings () [0x000f3] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyUpgrade>d__32.MoveNext () [0x0012c] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x001c5] in <20575f027b9d44229ee7ea7d0b830f1f>:0 
+Result: FAIL

@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-15T23:57:22.5631644+08:00",
+  "candidate": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261115-234044731",
+  "files": [
+    {
+      "path": "WorkshopPlatform.exe",
+      "length": 667648,
+      "sha256": "3D2B0639CCC2E3BF326257F74AFCF6832808836A9BDB66B01473FE4D4D093889"
+    },
+    {
+      "path": "WorkshopPlatform_Data/Managed/Assembly-CSharp.dll",
+      "length": 502272,
+      "sha256": "8A44B59B78A347C574877AC944595A0E2E40E992ACA2277416ADB871931551F1"
+    }
+  ]
+}

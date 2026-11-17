@@ -1,0 +1,15 @@
+Date: 2026-11-12T12:59:20.2554277+08:00
+Player: 0.1.0 / Unity 6000.3.8f1
+Resolution: 1920x1080
+Method: delivered Windows player, UGUI raycasts/events, physics, actual NavMesh arrival
+PASS Four workshop devices and existing UI
+PASS Approved fan replaces procedural model: 11/590/98140
+PASS Reviewed pump retains 12 assemblies
+PASS All fan materials use supported reviewed shader
+PASS Approved 2048/1024/512 base textures with normal and roughness maps
+PASS Existing fan station preserved
+FAIL System.InvalidOperationException: Grounded nominal metre scale within equipment area: Center: (7.15, 0.80, -1.10), Extents: (0.94, 0.83, 0.84)
+  at WorkshopDemo.WorkshopReviewedFanVerification.Check (System.Boolean condition, System.String message) [0x00003] in <409069e9a0324fca82998bda7e29a974>:0 
+  at WorkshopDemo.WorkshopReviewedFanVerification+<Verify>d__21.MoveNext () [0x003d3] in <409069e9a0324fca82998bda7e29a974>:0 
+  at WorkshopDemo.WorkshopReviewedFanVerification+<Start>d__11.MoveNext () [0x00048] in <409069e9a0324fca82998bda7e29a974>:0 
+Result: FAIL

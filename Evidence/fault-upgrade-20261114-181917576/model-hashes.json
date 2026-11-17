@@ -1,0 +1,22 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6898BE66C4A130E96DF630954482626320091E4B7DA584E0F1D41003A66449BC",
+    "Path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Assets\\WorkshopDemo\\Resources\\ReviewedEquipment\\cabinet-parts.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "58629D609D88F6526EC451D5D42D52F676226811B09DD5D0CF6028B46AA55C6C",
+    "Path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Assets\\WorkshopDemo\\Resources\\ReviewedEquipment\\fan-parts.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E997819F92A74D348E9924D986028D8F4104BEBECC990848F66EF159BA0FF240",
+    "Path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Assets\\WorkshopDemo\\Resources\\ReviewedEquipment\\pump-parts.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "AB8843F1ECAF47D3EC949484F087648694C06FA73CD9781FAE6367B0CF084193",
+    "Path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Assets\\WorkshopDemo\\Resources\\ReviewedEquipment\\tank-parts.json"
+  }
+]

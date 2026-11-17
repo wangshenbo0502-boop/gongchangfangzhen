@@ -1,0 +1,2 @@
+PASS WaterPumpViewer button launched PID 38228, desktop 2560 1600
+FAIL Platform window lost focus

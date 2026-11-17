@@ -157,7 +157,7 @@ namespace WorkshopDemo
                     status = device.StatusText, temperature = device.Temperature,
                     vibration = device.Vibration, rpm = device.Rpm,
                     hasRpm = device.HasRpm, hasVibration = device.HasVibration,
-                    faultCode = device.Fault?.Code ?? "", resultSource = device.ResultSource,
+                    faultCode = device.ExamActive ? "" : device.Fault?.Code ?? "", resultSource = device.ExamActive ? "考核现场教学采样" : device.ResultSource,
                     pressure = device.Pressure, flow = device.Flow, level = device.Level,
                     voltage = device.Voltage, communication = device.Communication, loadPercent = device.LoadPercent
                 });
@@ -169,9 +169,12 @@ namespace WorkshopDemo
                         id = alarm.id, deviceId = alarm.device.deviceId,
                         progress = alarm.stage == WorkshopOrderStage.Detected || alarm.stage == WorkshopOrderStage.Reported ?
                             "待巡检" : alarm.progress,
-                        faultCode = alarm.fault.Code, faultName = alarm.fault.Name,
-                        severity = alarm.fault.SeverityText, action = alarm.fault.Action, trips = alarm.fault.Trips,
-                        cause = alarm.cause
+                        faultCode = alarm.device.ExamActive ? "" : alarm.fault.Code,
+                        faultName = alarm.device.ExamActive ? "待诊断" : alarm.fault.Name,
+                        severity = alarm.fault.SeverityText,
+                        action = alarm.device.ExamActive ? "依据现场证据排查，不直接给出根因答案" : alarm.fault.Action,
+                        trips = alarm.device.FaultInstance?.ProtectionTriggered ?? false,
+                        cause = alarm.device.ExamActive ? "" : alarm.cause
                     });
             return new Snapshot {
                 capturedAt = DateTimeOffset.Now.ToString("o"), devices = devices.ToArray(),
@@ -194,6 +197,7 @@ namespace WorkshopDemo
             var recent = history.ConvertAll(turn => new Turn {
                 role = turn.role, content = turn.content.Length <= 5000 ? turn.content : turn.content.Substring(0, 5000)
             });
+            if (Array.Exists(simulation.devices, d => d && d.ExamActive)) recent.Clear();
             var payload = new Request {
                 question = question, snapshot = Capture(), history = recent.ToArray()
             };

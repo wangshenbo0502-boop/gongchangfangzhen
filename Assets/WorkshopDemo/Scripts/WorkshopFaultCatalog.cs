@@ -18,10 +18,10 @@ namespace WorkshopDemo
 
         public WorkshopFault(string code, DeviceKind kind, string name, FaultVisual visual,
             bool trips, float temperature, float vibration, float speedRatio, float processRatio,
-            string mechanism, string symptom, string action)
+            string mechanism, string symptom, string action, FaultSeverity? severity = null)
         {
             Code = code; Kind = kind; Name = name; Visual = visual; Trips = trips;
-            Severity = trips ? FaultSeverity.Critical : FaultSeverity.Warning;
+            Severity = severity ?? (trips ? FaultSeverity.Critical : FaultSeverity.Warning);
             Temperature = temperature; Vibration = vibration; SpeedRatio = speedRatio;
             ProcessRatio = processRatio; Mechanism = mechanism; Symptom = symptom; Action = action;
         }
@@ -71,7 +71,7 @@ namespace WorkshopDemo
                 "调压失效或出口堵塞导致容器压力升高", "压力升高，轮廓脉动表示承压异常",
                 "演示：隔离进料、按流程泄压，检查调压与联锁后复位"),
             new WorkshopFault("TK-LEAK", DeviceKind.Tank, "罐体泄漏", FaultVisual.Leak, true, 38, 0, 0, .3f,
-                "局部密封或壁面缺陷导致介质流失", "罐底可见漏液，液位下降",
+                "巡检侧筒体下段局部壁面缺陷导致介质流失", "筒壁湿润与滴漏，模拟液位下降",
                 "演示：隔离介质、控制泄漏，检查密封与壁面后复位"),
             new WorkshopFault("TK-LEVEL", DeviceKind.Tank, "高液位预警", FaultVisual.Jam, false, 40, 0, 0, 1.1f,
                 "进出料失衡使液位接近演示上限", "液位升高，联锁指示闪烁",
@@ -102,11 +102,64 @@ namespace WorkshopDemo
                 "演示：检查通信供电、线缆和网络，恢复通信后复位"),
             new WorkshopFault("PLC-CONTACT", DeviceKind.Cabinet, "接点过热", FaultVisual.Heat, true, 96, 0, 0, 1.2f,
                 "接点松动或接触电阻增大产生局部发热", "端子区热点，控制回路联锁",
-                "演示：隔离验电后检查接点，维护并复核后复位")
+                "演示：隔离验电后检查接点，维护并复核后复位"),
+            new WorkshopFault("P-ALIGN", DeviceKind.Pump, "泵轴不对中", FaultVisual.Vibration, false, 65, 5.6f, .9f, .85f,
+                "联轴器轴线偏差产生周期附加载荷", "联轴器振动升高，轴承温升，出力降低",
+                "隔离动力，检查软脚与联轴器，对中后同转速复测"),
+            new WorkshopFault("P-INLET", DeviceKind.Pump, "入口滤网堵塞", FaultVisual.Jam, false, 60, 3.8f, .95f, .35f,
+                "入口过滤阻力升高限制供液；不同于已形成汽泡的汽蚀", "入口供液不足，出口流量下降",
+                "停泵隔离，清洗入口过滤器，核对阀位并复测流量"),
+            new WorkshopFault("TK-CORROSION", DeviceKind.Tank, "罐壁局部减薄", FaultVisual.Deformation, true, 38, 0, 0, 1,
+                "巡检侧局部腐蚀减薄降低承载裕量；不默认穿孔", "局部壁面异常，需要定点测厚确认",
+                "隔离介质，定点测厚并评估剩余壁厚，专业确认后复验"),
+            new WorkshopFault("TK-FLANGE", DeviceKind.Tank, "出口法兰渗漏", FaultVisual.Leak, true, 38, 0, 0, .6f,
+                "出口法兰垫片或紧固状态异常导致密封面渗漏", "出口法兰湿润，与筒壁漏点位置不同",
+                "隔离泄压，检查垫片和紧固状态，按规程装配并试漏"),
+            new WorkshopFault("F-LOOSE", DeviceKind.Fan, "支撑紧固松动", FaultVisual.Vibration, false, 57, 5.5f, .9f, .85f,
+                "支撑紧固不足导致局部连接相对运动", "支撑连接振动，紧固状态异常",
+                "断电锁定，检查支架和紧固件，紧固后同转速复测"),
+            new WorkshopFault("F-RUB", DeviceKind.Fan, "叶轮擦碰", FaultVisual.Vibration, true, 81, 8.2f, 0, 0,
+                "叶尖与风筒间隙不足产生局部擦碰", "叶尖擦痕与间隙异常，保护停机",
+                "断电锁定，检查叶尖和风筒间隙，排除偏移并手盘复验"),
+            new WorkshopFault("PLC-OVERLOAD", DeviceKind.Cabinet, "支路过载", FaultVisual.Electrical, true, 68, 0, 0, 1.6f,
+                "受控支路负载过大触发支路保护", "断路器动作，支路输出停止；控制电源保持",
+                "隔离验电，核对支路负载与保护定值，排除过载后复测"),
+            new WorkshopFault("PLC-SENSOR", DeviceKind.Cabinet, "模拟量信号漂移", FaultVisual.Electrical, false, 37, 0, 1, 1,
+                "模拟量输入偏置使显示偏离参考值", "输入通道与独立参考值不一致，通信正常",
+                "核对传感器供电、接线和量程，校准后与参考点比对"),
+            new WorkshopFault("P-IMPELLER", DeviceKind.Pump, "叶轮冲蚀", FaultVisual.Deformation, false, 63, 4.7f, .95f, .65f,
+                "长期冲蚀改变叶轮表面和水力性能；回放表示既有缺陷", "叶轮局部损伤，流量下降",
+                "停泵隔离，检查叶轮表面与平衡，修复后复测出力"),
+            new WorkshopFault("P-DRY", DeviceKind.Pump, "缺液干运转", FaultVisual.Heat, true, 104, 4.2f, 0, 0,
+                "缺液造成密封冷却不足与摩擦升温", "入口缺液、密封温升，保护停机",
+                "停泵隔离，检查供液及密封，恢复灌泵条件后试运行"),
+            new WorkshopFault("TK-SENSOR", DeviceKind.Tank, "液位信号失真", FaultVisual.Electrical, false, 39, 0, 1, 1,
+                "液位变送信号偏置，与独立液位观察不一致", "仪表高示值与实际教学液位不一致",
+                "核对独立液位、供电与量程，校验变送器并复测"),
+            new WorkshopFault("TK-VENT", DeviceKind.Tank, "呼吸通路受阻", FaultVisual.Jam, true, 41, 0, 0, 1.35f,
+                "呼吸通路阻力升高使进出料压差异常", "呼吸阀区域异常，罐压升高并联锁",
+                "隔离进出料并按规程泄压，检查呼吸阀与通路后复验"),
+            new WorkshopFault("F-BLADE", DeviceKind.Fan, "叶片磨蚀", FaultVisual.Deformation, false, 59, 4.3f, .95f, .6f,
+                "既有叶缘磨蚀改变局部外形与质量分布；非磨蚀增长求解", "第一叶片外缘缺损示意，风量降低",
+                "断电锁定，检查叶缘并专业修复及校平衡，复测风量"),
+            new WorkshopFault("F-REVERSE", DeviceKind.Fan, "风机反转", FaultVisual.Electrical, false, 52, 2.4f, 1, .25f,
+                "驱动方向配置错误导致转向与要求相反", "反向转动，风量显著降低",
+                "断电核对接线及驱动方向，点动确认后复测风量"),
+            new WorkshopFault("PLC-IO", DeviceKind.Cabinet, "数字量输出异常", FaultVisual.Electrical, false, 38, 0, 1, 1,
+                "数字输出命令与输出反馈不一致", "命令有效但输出反馈无效，控制电源正常",
+                "隔离受控设备，检查输出模块及回路，逐点验证命令反馈"),
+            new WorkshopFault("PLC-DRIVE", DeviceKind.Cabinet, "变频驱动保护", FaultVisual.Electrical, true, 72, 0, 0, 1,
+                "驱动器检测异常并禁止受控输出", "驱动保护反馈，输出频率归零",
+                "隔离验电，核对驱动故障记录与负载，排除原因后受控复位")
         };
 
         public static WorkshopFault[] For(DeviceKind kind) => Array.FindAll(All, f => f.Kind == kind);
         public static WorkshopFault Find(string code) => Array.Find(All, f => f.Code == code);
+        public static WorkshopFault At(DeviceKind kind, int index)
+        {
+            var cases = For(kind);
+            return cases.Length == 0 ? null : cases[Mathf.Clamp(index, 0, cases.Length - 1)];
+        }
         public static Color ColorFor(FaultVisual visual) =>
             visual == FaultVisual.Leak ? new Color(.12f, .7f, 1) :
             visual == FaultVisual.Vibration ? new Color(1, .68f, .12f) :

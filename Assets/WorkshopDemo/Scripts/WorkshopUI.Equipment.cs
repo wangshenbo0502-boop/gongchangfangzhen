@@ -11,9 +11,9 @@ namespace WorkshopDemo
         GameObject equipmentDialog;
         WorkshopEquipmentView equipmentView;
         WorkshopDevice inspectedDevice;
-        Text equipmentStage, equipmentMetrics, equipmentTransport, equipmentAssemblyStep, equipmentSource;
+        Text equipmentStage, equipmentMetrics, equipmentTransport, equipmentAssemblyStep, equipmentSource, equipmentCase;
         Slider equipmentProgress;
-        Button equipmentPlay;
+        Button equipmentPlay, equipmentPumpSection;
         readonly List<Text> equipmentLabels = new List<Text>();
         readonly List<RectTransform> equipmentLeaders = new List<RectTransform>();
         RectTransform equipmentViewport;
@@ -21,11 +21,13 @@ namespace WorkshopDemo
         float nextEquipmentText;
         int inspectedParts, inspectedTriangles;
 
-        void OpenEquipment()
+        void OpenEquipment(WorkshopFault selectedFault = null)
         {
             var device = simulation.Selected;
             if (!device) return;
-            var mode = WorkshopFaultCatalog.For(device.kind)[analysisMode.value];
+            if (simulation.IsExam(device)) { simulation.Notify("独立考核期间请从现场与诊断记录采集证据"); return; }
+            var mode = selectedFault ?? device.Fault ?? (device.kind == DeviceKind.Tank ?
+                WorkshopFaultCatalog.Find("TK-LEAK") : SelectedLearningFault());
             if (equipmentDialog) { equipmentDialog.SetActive(false); Destroy(equipmentDialog); }
             preparingEquipment = true;
             inspectedDevice = device;
@@ -80,7 +82,7 @@ namespace WorkshopDemo
             raw.gameObject.AddComponent<RawImage>();
             var inset = Panel(equipmentViewport,"Same mesh closeup",Vector2.one,Vector2.one,
                 new Vector2(-278,-246),new Vector2(-12,-12),Surface,false);
-            Label(inset,"同一部件 / 损坏近景",12,Ink,8,2,252,25);
+            Label(inset,"故障部位近景",12,Ink,8,2,252,25);
             var image = Rect(inset,"Damage closeup",Vector2.zero,Vector2.one,
                 new Vector2(4,4),new Vector2(-4,-29)).gameObject.AddComponent<RawImage>();
             image.raycastTarget = false;
@@ -124,7 +126,7 @@ namespace WorkshopDemo
             Command(transport,"最终状态",436,10,98,() => EquipmentScrub(1),30);
             Command(transport,"保存画面",542,10,98,SaveEquipmentSnapshot,30);
             Command(transport,"导出尺寸",648,10,98,ExportEquipmentDimensions,30);
-            Label(transport,mode.Code+"  "+mode.Name,13,Yellow,770,10,580,30);
+            equipmentCase = Label(transport,mode.Code+"  "+mode.Name,13,Yellow,720,10,585,30);
             var track = Panel(transport,"Equipment progress",Vector2.zero,Vector2.right,
                 new Vector2(18,14),new Vector2(-18,37),Background);
             equipmentProgress = track.gameObject.AddComponent<Slider>();
@@ -184,15 +186,56 @@ namespace WorkshopDemo
             var m = equipmentView.DisplayModel;
             bool tankFault = m != equipmentView.Model;
             float p = equipmentView.Progress;
-            equipmentStage.text = m.ReviewedFanModel && p >= 1 && m.HasOpening ? "裂口张开 / 后缘保持连接" :
+            var profile = equipmentView.Profile;
+            var frame = m.FaultFrame;
+            equipmentCloseup.SetActive(equipmentView.FaultMode && !equipmentView.WaitingForAssembly &&
+                m.TryGetFaultFocus(out _, out _) &&
+                ((profile != WorkshopFaultProfile.PumpCavitation && equipmentView.Fault.Code != "P-IMPELLER") ||
+                    equipmentView.PumpSectionOpen));
+            if (equipmentPumpSection)
+            {
+                equipmentPumpSection.gameObject.SetActive(equipmentView.FaultMode &&
+                    (profile == WorkshopFaultProfile.PumpSeal || profile == WorkshopFaultProfile.PumpCavitation ||
+                        equipmentView.Fault.Code == "P-IMPELLER" || equipmentView.Fault.Code == "P-BEAR"));
+                equipmentPumpSection.interactable = equipmentView.CanShowPumpSection;
+                equipmentPumpSection.GetComponentInChildren<Text>().text = equipmentView.PumpSectionOpen ? "关闭剖视" :
+                    profile == WorkshopFaultProfile.PumpSeal ? "看密封" :
+                    equipmentView.Fault.Code == "P-IMPELLER" ? "看叶轮" :
+                    equipmentView.Fault.Code == "P-BEAR" ? "看轴承" : "看流道";
+            }
+            equipmentStage.text = equipmentView.WaitingForAssembly ? "正在沿拆装路径回装" :
+                frame.HasValue ? (m.FaultPresentationAvailable ? frame.Value.StageLabel : "故障部件绑定缺失") :
+                m.ReviewedFanModel && p >= 1 && m.HasOpening ? "裂口张开 / 后缘保持连接" :
                 p == 0 ? "完好状态" : m.HasOpening ? p < WorkshopEquipmentModel.CrackStart ?
                 "逐渐变形 / 裂缝闭合" : p < 1 ? "裂纹扩展 / 开口增大" : "贯通开口 / 末态保持" : m.Stage;
             var size = m.NativeBounds.size*1000;
             equipmentMetrics.text = "名义外形 / 非实测尺寸\n"+size.x.ToString("F0")+" × "+
                 size.y.ToString("F0")+" × "+size.z.ToString("F0")+" mm\n"+
-                (tankFault ? "储罐故障教学模型\n\n" : inspectedParts+" 个外观零件 / "+m.AssemblyCount+" 个拆解组件\n"+
-                inspectedTriangles.ToString("N0")+" 个表面三角形\n\n")+
-                "部位："+m.ComponentName+"\n"+
+                (tankFault ? "旧版储罐教学模型\n\n" : inspectedParts+" 个外观零件 / "+m.AssemblyCount+" 个拆解组件\n"+
+                inspectedTriangles.ToString("N0")+" 个表面三角形\n\n");
+            if (equipmentView.FaultMode && profile != null)
+            {
+                equipmentMetrics.text += "部位：" + profile.Component + "\n";
+                if (m.LocalFaultPresenter?.ActiveMechanismLines > 0)
+                    equipmentMetrics.text += "辅助示意：青色为参考，橙色为异常\n";
+                if (equipmentView.Fault.Code == "F-BLADE")
+                    equipmentMetrics.text += "外缘预设退缩 ≤6 mm（非磨蚀速率）\n";
+                if (equipmentView.MotionScale != 1) equipmentMetrics.text += "振动显示放大 " + equipmentView.MotionScale + "×（读数不变）\n";
+                if (frame.HasValue)
+                {
+                    foreach (var entry in frame.Value.Readouts())
+                        equipmentMetrics.text += entry.Value.HasValue ?
+                            (entry.Key == "tank_level" ? "预览" : "") + entry.Label + "  " +
+                            entry.Value.Value.ToString(entry.Unit == "MPa" ? "F3" : "F1") + " " + entry.Unit +
+                            "（" + entry.Source + "）\n" : entry.Label + entry.Source + "\n";
+                    if (profile == WorkshopFaultProfile.PumpSeal)
+                        equipmentMetrics.text += "剖视可查看静环、动环与局部磨痕";
+                    else if (profile == WorkshopFaultProfile.PumpCavitation)
+                        equipmentMetrics.text += "汽泡、声响和波动为教学示意";
+                }
+            }
+            else if (equipmentView.FaultMode && !equipmentView.WaitingForAssembly)
+                equipmentMetrics.text += "部位："+m.ComponentName+"\n"+
                 "当前开口  "+m.OpeningMm.ToString("F3")+" mm\n"+
                 "弯曲幅值  "+m.DeflectionMm.ToString("F3")+" mm\n"+
                 (m.ReviewedFanModel ? "原叶片预制裂口 / 保留后缘连接\n非断裂求解，不提供裂长与厚度测量\n\n" :
@@ -203,9 +246,13 @@ namespace WorkshopDemo
                 "设备当前温度  "+inspectedDevice.Temperature.ToString("F1")+" °C\n"+
                 (m.HasOpening ? "预设起裂进度  55%（非强度极限）" : "此工况不预设结构断裂");
             equipmentAssemblyStep.text = "部件层级   "+equipmentView.Disassembly.ToString("F1")+" / "+m.AssemblyCount;
-            equipmentTransport.text = (p*18).ToString("F1")+" / 18.0 s    "+(p*100).ToString("F1")+"%    "+m.Recipe;
+            float duration = equipmentView.Duration;
+            equipmentTransport.text = equipmentView.WaitingForAssembly ? "正在回装，完成后应用所选进度或开始播放" :
+                (p*duration).ToString("F1")+" / "+duration.ToString("F1")+" s    "+(p*100).ToString("F1")+"%    "+m.Recipe;
             equipmentProgress.SetValueWithoutNotify(p);
-            equipmentPlay.GetComponentInChildren<Text>().text = equipmentView.Playing ? "暂停演化" : "播放演化";
+            equipmentCase.text = equipmentView.Fault.Code + "  " + equipmentView.Fault.Name;
+            equipmentPlay.GetComponentInChildren<Text>().text = equipmentView.Playing ?
+                (equipmentView.WaitingForAssembly ? "取消待播" : "暂停演化") : "播放演化";
         }
 
         void SaveEquipmentSnapshot()
@@ -225,6 +272,21 @@ namespace WorkshopDemo
             string path = Path.Combine(directory,inspectedDevice.deviceId+"-"+equipmentView.Fault.Code+"-"+
                 DateTime.Now.ToString("yyyyMMdd-HHmmss")+".csv");
             var c = System.Globalization.CultureInfo.InvariantCulture;
+            if (equipmentView.Profile != null)
+            {
+                var frame = m.FaultFrame ?? equipmentView.Profile.Evaluate(0, 0, null);
+                var csv = new System.Text.StringBuilder("schemaVersion,deviceId,faultCode,stageId,previewSeconds,metricKey,value,unit,source,available,visualScale\n");
+                foreach (var readout in frame.Readouts())
+                    csv.Append("1,").Append(inspectedDevice.deviceId).Append(',').Append(frame.Code).Append(',')
+                        .Append(frame.StageId).Append(',').Append(frame.Seconds.ToString(c)).Append(',').Append(readout.Key)
+                        .Append(',').Append(readout.Value?.ToString(c)).Append(',').Append(readout.Unit).Append(',')
+                        .Append('"').Append(readout.Source.Replace("\"", "\"\"")).Append('"').Append(',')
+                        .Append(readout.Value.HasValue ? "true" : "false").Append(',')
+                        .Append(equipmentView.MotionScale.ToString(c)).Append('\n');
+                File.WriteAllText(path, csv.ToString(), new System.Text.UTF8Encoding(true));
+                equipmentSource.text = "案例读数已导出至 EquipmentExports / " + Path.GetFileName(path);
+                return;
+            }
             File.WriteAllText(path,"# Authored nominal geometry; prescribed kinematics; not a fracture solution\n"+
                 "device,fault,progress,opening_mm,bend_amplitude_mm,crack_length_mm,uncracked_length_mm,thickness_mm\n"+
                 inspectedDevice.deviceId+","+equipmentView.Fault.Code+","+equipmentView.Progress.ToString(c)+","+

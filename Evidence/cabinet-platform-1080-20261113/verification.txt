@@ -1,0 +1,30 @@
+Started 2026-11-13T14:25:46.2265635+08:00
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+PASS Four workshop stations loaded
+PASS PLC-01 uses the approved geometry
+PASS Cabinet retains its station, floor contact and inspection point
+PASS Status lamp and cabinet reflection are connected
+PASS Approved powder finish and maps are loaded
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Equipment workspace loads the 16-part cabinet
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Door-attached assembly retreats straight outward
+PASS Door-attached assembly retreats straight outward
+PASS Door-attached assembly retreats straight outward
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Reversing during straight release restores the home pose
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Door fully rotates after release
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Complete reverse path restores the home pose
+PASS Enabled 视图
+PASS Top raycast 视图 (视图)
+PASS Enabled 在独立展示器中打开
+PASS Top raycast 在独立展示器中打开 (在独立展示器中打开)

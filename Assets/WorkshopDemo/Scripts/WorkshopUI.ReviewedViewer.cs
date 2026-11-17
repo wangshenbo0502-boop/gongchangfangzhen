@@ -36,8 +36,15 @@ namespace WorkshopDemo
             }
             try
             {
-                using var process = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(path)
-                    { UseShellExecute = true, WorkingDirectory = Path.GetDirectoryName(path) });
+                var display = Screen.currentResolution;
+                var startInfo = new System.Diagnostics.ProcessStartInfo(path)
+                {
+                    UseShellExecute = true,
+                    WorkingDirectory = Path.GetDirectoryName(path),
+                    Arguments = FormattableString.Invariant(
+                        $"-screen-fullscreen 1 -window-mode borderless -screen-width {display.width} -screen-height {display.height}")
+                };
+                using var process = System.Diagnostics.Process.Start(startInfo);
                 feedback.text = "已打开" + device.displayName + "详细展示。";
             }
             catch (Exception e) { OpenQuickMenu("打开详细展示失败\n" + e.Message); }

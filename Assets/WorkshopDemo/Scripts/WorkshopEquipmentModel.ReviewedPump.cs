@@ -11,8 +11,7 @@ namespace WorkshopDemo
         [Serializable] class PumpParts { public PumpPart[] parts; }
         PumpParts reviewedParts;
         Transform reviewedPump;
-        Renderer[] reviewedSealRenderers;
-        GameObject reviewedDamage;
+        Transform pumpImpeller;
 
         bool ReviewedPump()
         {
@@ -21,18 +20,12 @@ namespace WorkshopDemo
             if (!prefab || !contract) return false;
             reviewedParts = JsonUtility.FromJson<PumpParts>(contract.text);
             reviewedPump = Instantiate(prefab, transform, false).transform;
+            var nodes = reviewedPump.GetComponentsInChildren<Transform>();
             foreach (var part in reviewedParts.parts)
-                assemblies.Add(reviewedPump.GetComponentsInChildren<Transform>().Single(t => t.name == part.name));
-            group = assemblies[6];
-            reviewedSealRenderers = group.GetComponentsInChildren<Renderer>();
-            Vector3 at = group.InverseTransformPoint(reviewedPump.TransformPoint(new Vector3(-.17f, .66f, 0)));
-            DamageBlock("Seal inspection fracture insert", at + new Vector3(-.03f, -.06f, -.085f),
-                new Vector3(.06f, .12f, .008f), steel);
-            reviewedDamage = DamageSurface.gameObject;
-            reviewedDamage.SetActive(false);
-            // Rotate only the authored shaft, never the entire coupling group or its support.
-            Rotor = reviewedPump.GetComponentsInChildren<Transform>()
-                .FirstOrDefault(t => t.name == "PMP_02_Coupling_PumpShaft");
+                assemblies.Add(nodes.Single(t => t.name == part.name));
+            Rotor = nodes.Single(t => t.name == "PMP_02_Coupling_PumpShaft");
+            pumpImpeller = nodes.Single(t => t.name == "water-pump_rotor");
+            DamageSurface = nodes.Single(t => t.name == "PMP_06_SealBearing_BearingHousing").GetComponent<MeshFilter>();
             return true;
         }
 

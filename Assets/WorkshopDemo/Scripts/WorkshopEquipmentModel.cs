@@ -9,6 +9,7 @@ namespace WorkshopDemo
     {
         public DeviceKind Kind { get; private set; }
         public Transform Rotor { get; private set; }
+        internal float NominalRpm { get; private set; }
         public Transform Door { get; private set; }
         public MeshFilter DamageSurface { get; private set; }
         public bool Refined => Kind != DeviceKind.Conveyor && Kind != DeviceKind.Motor;
@@ -25,14 +26,18 @@ namespace WorkshopDemo
         public string Recipe { get; private set; }
         public bool HasOpening { get; private set; }
         public Bounds NativeBounds { get; private set; }
-        public int PartCount => GetComponentsInChildren<MeshRenderer>(true).Length;
+        public int PartCount => nominalRenderers?.Length ?? 0;
         public int TriangleCount
         {
             get
             {
                 int n = 0;
-                foreach (var f in GetComponentsInChildren<MeshFilter>(true))
+                if (nominalMeshes == null) return n;
+                foreach (var f in nominalMeshes)
+                {
+                    if (!f.sharedMesh) continue;
                     for (int i = 0; i < f.sharedMesh.subMeshCount; i++) n += (int)f.sharedMesh.GetIndexCount(i)/3;
+                }
                 return n;
             }
         }
@@ -41,6 +46,8 @@ namespace WorkshopDemo
         Quaternion doorClosed;
         WorkshopDevice owner;
         float nextFrame;
+        MeshRenderer[] nominalRenderers;
+        MeshFilter[] nominalMeshes;
 
         public static WorkshopEquipmentModel Attach(WorkshopDevice device)
         {
@@ -60,6 +67,7 @@ namespace WorkshopDemo
         public void Initialize(DeviceKind kind, string id, WorkshopDevice original = null, bool useReviewedTank = true)
         {
             Kind = kind;
+            NominalRpm = original ? original.nominalRpm : kind == DeviceKind.Fan ? 980 : 1450;
             Palette(id);
             if (kind == DeviceKind.Pump) { if (!ReviewedPump()) Pump(); }
             else if (kind == DeviceKind.Tank) { if (!useReviewedTank || !ReviewedTank()) Tank(id); }
@@ -81,6 +89,9 @@ namespace WorkshopDemo
                 tankProbe.transform.localPosition = NativeBounds.center;
                 tankProbe.size = NativeBounds.size;
             }
+            nominalRenderers = GetComponentsInChildren<MeshRenderer>(true);
+            nominalMeshes = GetComponentsInChildren<MeshFilter>(true);
+            InitializeFaultBindings(id);
             SetDamage(null,0);
         }
 
@@ -418,7 +429,18 @@ namespace WorkshopDemo
 
         void Update()
         {
-            if (!owner || Time.unscaledTime < nextFrame) return;
+            if (!owner) return;
+            var fault = owner.Fault;
+            var profile = ProfileFor(fault);
+            if (profile != null)
+            {
+                var snapshot = owner.Snapshot;
+                float elapsed = snapshot.Age + Mathf.Max(0, Time.time - owner.SampledAtTime);
+                SetDamage(fault, snapshot.Progress, elapsed, owner);
+                lastFault = fault;
+                return;
+            }
+            if (Time.unscaledTime < nextFrame) return;
             nextFrame = Time.unscaledTime+.05f;
             float progress = owner.Fault == null ? 0 : Mathf.Clamp01(owner.FaultAge/18);
             if (owner.Fault != lastFault || Mathf.Abs(progress-Progress) > .00001f)
@@ -426,6 +448,20 @@ namespace WorkshopDemo
                 SetDamage(owner.Fault,progress);
                 lastFault = owner.Fault;
             }
+        }
+
+        internal Bounds VisibleBounds(Transform subtree = null)
+        {
+            var bounds = new Bounds(transform.TransformPoint(NativeBounds.center), Vector3.zero);
+            bool found = false;
+            foreach (var renderer in nominalRenderers)
+            {
+                if (!renderer.enabled || !renderer.gameObject.activeInHierarchy ||
+                    (subtree && !renderer.transform.IsChildOf(subtree))) continue;
+                if (found) bounds.Encapsulate(renderer.bounds);
+                else { bounds = renderer.bounds; found = true; }
+            }
+            return bounds;
         }
     }
 }

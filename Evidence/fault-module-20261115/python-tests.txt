@@ -1,0 +1,16 @@
+test_duplicate_time_is_rejected (test_export_fault_odb.ExportTests.test_duplicate_time_is_rejected) ... ok
+test_missing_channels_are_not_filled_with_fake_zero (test_export_fault_odb.ExportTests.test_missing_channels_are_not_filled_with_fake_zero) ... ok
+test_missing_mises_invariant_is_rejected (test_export_fault_odb.ExportTests.test_missing_mises_invariant_is_rejected) ... ok
+test_nonfinite_field_and_empty_instance_are_rejected (test_export_fault_odb.ExportTests.test_nonfinite_field_and_empty_instance_are_rejected) ... ok
+test_temperature_only (test_export_fault_odb.ExportTests.test_temperature_only) ... ok
+test_units_instance_selection_and_independent_envelopes (test_export_fault_odb.ExportTests.test_units_instance_selection_and_independent_envelopes) ... ok
+test_degenerate_duplicate_and_nonfinite (test_export_field_odb.FieldExportTests.test_degenerate_duplicate_and_nonfinite) ... ok
+test_missing_or_wrong_position_field (test_export_field_odb.FieldExportTests.test_missing_or_wrong_position_field) ... ok
+test_noncontiguous_labels_and_boundary (test_export_field_odb.FieldExportTests.test_noncontiguous_labels_and_boundary) ... ok
+test_temperature_maps_by_label_not_order (test_export_field_odb.FieldExportTests.test_temperature_maps_by_label_not_order) ... ok
+test_unsupported_quadratic_element_is_rejected (test_export_field_odb.FieldExportTests.test_unsupported_quadratic_element_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

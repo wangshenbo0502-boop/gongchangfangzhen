@@ -1,0 +1,1 @@
+Windows SendInput at 1280x720; PID 40492; state verified by screenshots.

@@ -1,0 +1,3 @@
+﻿schemaVersion,deviceId,faultCode,stageId,previewSeconds,metricKey,value,unit,source,available,visualScale
+1,TK-01,TK-LEAK,pooling,18,tank_level,38,%,教学液位曲线,true,
+1,TK-01,TK-LEAK,pooling,18,leak_rate,,L/min,未求解,false,

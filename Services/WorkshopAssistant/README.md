@@ -19,7 +19,7 @@ Invoke-RestMethod http://127.0.0.1:8018/health/ready
 
 `knowledgeReady=true` 表示数据库和索引可用，`deepseekConfigured=true` 仅表示填写了密钥，不代表密钥鉴权通过。2026-11-08 本机知识库已就绪（9 个片段、512 维），当时访问官方接口返回 401，Unity 实际请求能显示该错误。2026-11-12 用户更换密钥并重新创建容器后，真实在线问答通过。若密钥来自兼容服务商，需匹配该服务的基础地址和模型名。
 
-2026-11-12 已补充四类设备故障速查及助手/工单答疑，当前实际索引为 **6 份资料、40 个片段、512 维**。数据库、服务健康检查与三条中文检索通过；首次真实问答因旧凭据返回 HTTP 502。更新密钥后发现运行中的容器仍使用旧值，重新创建助手容器后，真实 `/api/chat` 返回 HTTP 200，正确区分现场总线中断与断电并附带知识引用。详见 [启动与入库记录](../../Evidence/assistant-startup-20261112.md) 和 [密钥更新验证](../../Evidence/assistant-key-reload-20261112.md)。后者未携带 Unity 场景快照。
+2026-11-12 的真实 `/api/chat` 在重新加载有效密钥后返回 HTTP 200，回答区分了现场总线中断与断电并附知识引用。2026-11-13 的正式 EXE 已用 Unity 当前设备快照获取在线回答。见 [密钥更新验证](../../Evidence/assistant-key-reload-20261112.md) 和 [工单与助手验证](../../Evidence/workflow-chat-20261113.md)。
 
 修改 `.env` 后执行以下命令加载新配置；仅保存文件或执行 `restart` 不会更新容器环境变量。随后在 AI 问答页重新发送问题，旧报错会在开始请求时清除：
 
@@ -27,7 +27,7 @@ Invoke-RestMethod http://127.0.0.1:8018/health/ready
 docker compose -f Services/WorkshopAssistant/compose.yaml up -d --no-deps --force-recreate assistant
 ```
 
-日常运行 `Build/WorkshopPlatform/WorkshopPlatform.exe`，点击左栏“AI问答”，使用“询问当前设备”或输入问题后发送；“知识导入”可查看资料列表、导入标题正文或 UTF-8 MD/TXT。也可在 Unity 打开 `Tools/Workshop Demo/Open Digital Twin` 后点击 Play。助手只能解释、提出建议，设备启停、派发、处理仍通过原业务按钮执行。
+日常运行 `Build/WorkshopPlatform/WorkshopPlatform.exe`，点击左栏“AI 助手”并输入问题，或使用快捷提问。通过“更多 → 资料管理”查看资料列表并导入正文或 UTF-8 MD/TXT。也可在 Unity 打开 `Tools/Workshop Demo/Open Digital Twin` 后点击 Play。设备启停、派发和维修验收通过对应业务按钮执行。
 
 ## 配置
 
@@ -48,9 +48,9 @@ docker compose -f Services/WorkshopAssistant/compose.yaml up -d --no-deps --forc
 
 ## 知识与数据
 
-- 将 UTF-8 `.md` / `.txt` 放入 `knowledge/`，允许子目录。当前包含场景知识、循环水泵故障速查、储罐故障速查、排风机故障速查、控制柜故障速查、助手试用与工单答疑，共 6 份资料，覆盖当前 16 种故障及报修至验收流程。内容依据本工程源码和 README 整理，属于教学资料。
+- 将 UTF-8 `.md` / `.txt` 放入 `knowledge/`，允许子目录。2026-11-16 本机实际索引为 **11 份资料、85 个片段**，覆盖四类设备的 32 种故障、结构与拆装、工单处置、复盘及故障云图。2026-11-13 的 81 个片段为历史记录。可从 [Abaqus 与故障分析入门](knowledge/Abaqus故障分析入门.md) 阅读带截图的水泵超温案例和风机裂纹案例。[此前在线问答验证](../../Evidence/fault-module-20261116/assistant-upgrade-retrieval.json)。最新泵滤网/滚道、风机同相慢放及四设备正文已完成 [源文件与索引一致性核对](../../Evidence/fault-module-20261116/fan-phase-220916628/knowledge-index.json)，该次未请求模型，不计为新增在线回答验收。
 - 执行 `docker compose -f Services/WorkshopAssistant/compose.yaml restart assistant`，启动时按标题切块，使用 `BAAI/bge-small-zh-v1.5` 生成 512 维向量并更新变化内容。
-- 数据表为 `workshop_knowledge_chunks`；每次问题按余弦距离检索最多 5 段，相关度不足时不附加不相关片段。
+- 数据表为 `workshop_knowledge_chunks`；优先查找问题中明确写出的故障编码，再补充余弦距离检索结果，去重后最多 5 段。设备编号不作为故障编码，相关度不足时不附加语义片段。
 - 场景快照来自 `WorkshopSimulation` / `WorkshopDevice`，包括设备状态与指标、选中设备、活动告警、巡检状态和记录数。不会把 UI 文案当作另一套设备状态。
 - **所有指标仍为模拟数据。** 数据库保存知识和向量；告警、巡检记录仍保存在 Unity 内存，重置/退出会清空，尚未做业务历史持久化。
 - 无效密钥、余额不足、服务未就绪、网络超时会显示明确错误，不用预置文案伪装模型回答。
@@ -72,4 +72,6 @@ $testsPath = (Resolve-Path Services/WorkshopAssistant/tests).Path
 docker run --rm --network none --mount "type=bind,source=$testsPath,target=/app/tests,readonly" workshop-twin-assistant python -m pytest -q
 ```
 
-2026-11-08 实际通过 5 项测试，包括中文分块、场景知识、令牌鉴权、索引不可用、快照/引用及上游错误映射。成功回答结构使用模拟上游响应测试；不代表有效 DeepSeek 账号的真实在线回答已经通过。
+2026-11-08 实际通过 5 项服务测试，包括中文分块、场景知识、令牌鉴权、索引不可用、快照/引用及上游错误映射。该组测试的成功回答使用模拟上游响应。
+
+2026-11-16 通过 6 项离线服务测试，新增明确故障编码优先、重复编码去重及设备编号排除检查，见 [测试输出](../../Evidence/fault-module-20261116/assistant-tests.txt)。另一次真实在线 `/api/chat` 返回 HTTP 200，能引用 P-SEAL、P-CAV 及新增 P-ALIGN/P-DRY 资料，并说明教学特效不能证明 Abaqus 已求解；这次 API 检查使用显式构造的模拟业务快照，不代替 Unity 界面在线问答验收。

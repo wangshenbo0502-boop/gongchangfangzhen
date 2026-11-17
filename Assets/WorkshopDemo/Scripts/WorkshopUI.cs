@@ -55,7 +55,19 @@ namespace WorkshopDemo
         float lastSample = -1;
         bool built, updating;
         string rowSignature = "";
-        WorkshopDevice FaultDevice => simulation.devices[deviceMenu.value];
+        WorkshopDevice FaultDevice => simulation.devices[Mathf.Clamp(deviceMenu.value, 0, simulation.devices.Length - 1)];
+        readonly Dictionary<DeviceKind, string> learningCodes = new Dictionary<DeviceKind, string>();
+        WorkshopFault SelectedLearningFault()
+        {
+            var d = simulation.Selected;
+            if (!d) return null;
+            if (learningCodes.TryGetValue(d.kind, out string code))
+            {
+                var saved = WorkshopFaultCatalog.Find(code);
+                if (saved != null && saved.Kind == d.kind) return saved;
+            }
+            return WorkshopFaultCatalog.At(d.kind, analysisMode ? analysisMode.value : 0);
+        }
 
         void Start()
         {
@@ -274,6 +286,7 @@ namespace WorkshopDemo
             reject = Command(commands, "驳回重修", 192, 0, 120, () => {
                 if (!simulation.Accept(editingOrder, false)) orderError.text = simulation.Feedback;
             }, false, 38);
+            Command(commands, "诊断记录", 324, 0, 106, OpenTrainingRecord, false, 38);
         }
         void BuildReview()
         {
@@ -430,7 +443,11 @@ namespace WorkshopDemo
             analysisDevice = Menu(root, "Analysis device", 20, 64, 330, devices.ToArray());
             analysisDevice.onValueChanged.AddListener(index => simulation.Select(simulation.devices[index], false));
             analysisMode = Menu(root, "Analysis mode", 370, 64, 590);
-            analysisMode.onValueChanged.AddListener(_ => RefreshAnalysisText());
+            analysisMode.onValueChanged.AddListener(index => {
+                var selected = WorkshopFaultCatalog.At(simulation.Selected.kind, index);
+                if (selected != null) learningCodes[simulation.Selected.kind] = selected.Code;
+                RefreshAnalysisText();
+            });
             analysisLive = Label(root, "", 14, amber, 24, 120, 1200, 64, TextAnchor.UpperLeft);
             Scroll(root, "Analysis evidence", Vector2.zero, Vector2.one,
                 new Vector2(8, 76), new Vector2(-8, -196), out analysisContent);
@@ -438,7 +455,10 @@ namespace WorkshopDemo
             var commands = Rect(root, "Analysis commands", Vector2.zero, Vector2.right,
                 new Vector2(20, 18), new Vector2(-20, 56));
             faultAction = Command(commands, "开始故障实训", 0, 0, 190, FaultPrimaryAction, true, 42);
-            Command(commands, "查看演示", 206, 0, 150, () => { OpenEquipment(); SetEquipmentMode(2); }, false, 42);
+            Command(commands, "查看演示", 206, 0, 150, () => {
+                OpenEquipment(SelectedLearningFault());
+                SetEquipmentMode(2);
+            }, false, 42);
             Command(commands, "深入分析", 372, 0, 150, OpenAnalysis, false, 42);
         }
 
@@ -448,12 +468,12 @@ namespace WorkshopDemo
             if (!d) return;
             analysisDevice.SetValueWithoutNotify(Array.IndexOf(simulation.devices, d));
             var modes = WorkshopFaultCatalog.For(d.kind);
-            string previous = analysisMode.options.Count > 0 ? analysisMode.options[analysisMode.value].text : "";
+            string previous = SelectedLearningFault()?.Code;
             var options = new List<string>(); int chosen = 0;
             for (int i = 0; i < modes.Length; i++)
             {
                 options.Add(modes[i].Code + " / " + modes[i].Name + " / " + modes[i].SeverityText);
-                if (d.Fault != null ? d.Fault == modes[i] : previous.StartsWith(modes[i].Code + " /")) chosen = i;
+                if (previous == modes[i].Code) chosen = i;
             }
             analysisMode.ClearOptions(); analysisMode.AddOptions(options);
             analysisMode.SetValueWithoutNotify(chosen); RefreshAnalysisText();
@@ -462,8 +482,15 @@ namespace WorkshopDemo
         {
             var d = simulation.Selected;
             if (!d || analysisMode.options.Count == 0) return;
-            var f = WorkshopFaultCatalog.For(d.kind)[analysisMode.value];
+            var f = SelectedLearningFault();
             var a = simulation.ActiveAlarm;
+            if (a?.training?.Mode == WorkshopTrainingMode.Exam)
+            {
+                FitText(analysisText, analysisContent, "独立考核进行中\n\n现场现象\n" + a.fault.Symptom +
+                    "\n\n请在工单中记录观察证据、诊断、维修检查与复验。");
+                analysisLive.text = d.deviceId + " / 独立考核 / 指标：本地教学采样";
+                return;
+            }
             if (faultAction) faultAction.GetComponentInChildren<Text>().text = a == null ? "开始故障实训" : "继续处理工单";
             analysisLive.text = d.deviceId + " / " + d.StatusText + "    温度 " + d.Temperature.ToString("F1") +
                 " °C    " + ProcessMetrics(d) + "\n当前工单：" + (a == null ? "无活动工单" : a.id + " / " + a.StageText);
@@ -540,15 +567,18 @@ namespace WorkshopDemo
             foreach (var d in simulation.devices) devices.Add(d.deviceId + "  " + d.displayName);
             deviceMenu = Menu(root, "Fault device", 24, 76, 772, devices.ToArray());
             modeMenu = Menu(root, "Fault mode", 24, 128, 772);
+            trainingModeMenu = Menu(root, "Training mode", 24, 180, 370, "普通模式", "引导实训", "独立考核");
+            injectionMenu = Menu(root, "Injection mode", 410, 180, 386, "直接注入", "渐进注入");
             deviceMenu.onValueChanged.AddListener(_ => PopulateFaultModes());
             modeMenu.onValueChanged.AddListener(_ => RefreshFaultDescription());
             Scroll(root, "Fault details", Vector2.zero, Vector2.one,
-                new Vector2(12, 96), new Vector2(-12, -184), out dialogContent);
+                new Vector2(12, 96), new Vector2(-12, -232), out dialogContent);
             dialogDescription = FlowText(dialogContent, "Fault description", 16);
             dialogError = Label(root, "", 13, amber, 24, 550, 772, 26);
             inject = Command(root, "注入故障", 24, 586, 170, () => {
-                var modes = WorkshopFaultCatalog.For(FaultDevice.kind);
-                if (simulation.TriggerFault(FaultDevice, modes[modeMenu.value].Code))
+                var selected = WorkshopFaultCatalog.At(FaultDevice.kind, modeMenu.value);
+                if (simulation.TriggerTrainingFault(FaultDevice, selected.Code,
+                    (WorkshopTrainingMode)trainingModeMenu.value, injectionMenu.value == 1))
                 { faultDialog.SetActive(false); OpenOrder(simulation.ActiveAlarm); }
                 else dialogError.text = simulation.Feedback;
             }, true, 38);
@@ -571,7 +601,7 @@ namespace WorkshopDemo
         void RefreshFaultDescription()
         {
             if (updating || !faultDialog.activeSelf) return;
-            var m = WorkshopFaultCatalog.For(FaultDevice.kind)[modeMenu.value];
+            var m = WorkshopFaultCatalog.At(FaultDevice.kind, modeMenu.value);
             FitText(dialogDescription, dialogContent, m.Name + " / " + m.SeverityText +
                 (m.Trips ? " / 联锁停机" : " / 异常运行") + "\n\n故障机理\n" + m.Mechanism +
                 "\n\n现场现象\n" + m.Symptom + "\n\n参考处置\n" + m.Action +
@@ -685,7 +715,7 @@ namespace WorkshopDemo
                 if (orderFilter.value > 0 && filterIndex != orderFilter.value) continue;
                 var alarm = a;
                 var b = Command(orderRows, alarm.device.deviceId + "  " + alarm.device.displayName +
-                    "\n" + OrderStageLabel(alarm.stage) + " · " + alarm.fault.Name,
+                    "\n" + OrderStageLabel(alarm.stage) + " · " + TrainingFaultTitle(alarm),
                     0, row * 76, 520, () => { editingOrder = alarm; simulation.Select(alarm.device, false); }, false, 68);
                 b.name = "Order " + alarm.id; b.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
                 var r = (RectTransform)b.transform; r.anchorMax = Vector2.one;
@@ -726,7 +756,8 @@ namespace WorkshopDemo
                 _ => "点击开始巡检，小车将前往这台设备。"
             };
             FitText(orderDetail, orderDetailContent, a.device.deviceId + "  " + a.device.displayName +
-                "\n" + a.id + " · " + OrderStageLabel(a.stage) + " · " + a.fault.Name +
+                "\n" + a.id + " · " + OrderStageLabel(a.stage) + " · " + TrainingFaultTitle(a) +
+                (a.training == null ? "" : "\n" + a.training.Summary) +
                 "\n\n" + next + (!repairing && a.cause != null ? "\n\n故障原因：" + a.cause : ""));
             form.SetActive(repairing);
             if (loadedOrder != a) cause.SetTextWithoutNotify(a.cause ?? "");
@@ -783,6 +814,7 @@ namespace WorkshopDemo
                 text.Append("\n").Append(r.alarmId).Append(" / ").Append(r.deviceName).Append(" / ").Append(r.faultName)
                     .Append("\n验收时间 ").Append(r.completedAt.ToString("HH:mm:ss"))
                     .Append("\n故障原因：").Append(r.cause)
+                    .Append("\n").Append(r.trainingSummary)
                     .Append("\n闭环 ").Append(r.elapsedMinutes.ToString("F2")).Append(" 分钟 / 驳回 ").Append(r.reworkCount).Append(" 次\n");
             text.Append("\n统计口径：闭环时长 = 验收关闭时间 − 报修时间；仅统计已关闭工单。\n本次会话记录保存在内存，重置或退出运行后清空。");
             FitText(reviewText, reviewContent, text.ToString());

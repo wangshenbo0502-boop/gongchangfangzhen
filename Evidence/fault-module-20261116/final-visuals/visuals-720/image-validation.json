@@ -1,0 +1,1169 @@
+{
+  "expected": 166,
+  "actual": 166,
+  "pass": true,
+  "images": [
+    {
+      "file": "F-BEAR-mechanism.png",
+      "stddev": 39.264,
+      "lit_fraction": 0.9885,
+      "foreground_fraction": 0.8153,
+      "pass": true
+    },
+    {
+      "file": "F-BLADE-intact.png",
+      "stddev": 56.403,
+      "lit_fraction": 0.9712,
+      "foreground_fraction": 0.5201,
+      "pass": true
+    },
+    {
+      "file": "F-BLADE-mechanism.png",
+      "stddev": 55.801,
+      "lit_fraction": 0.9715,
+      "foreground_fraction": 0.5224,
+      "pass": true
+    },
+    {
+      "file": "F-BLADE-worn.png",
+      "stddev": 55.853,
+      "lit_fraction": 0.9712,
+      "foreground_fraction": 0.5221,
+      "pass": true
+    },
+    {
+      "file": "F-BLOCK-mechanism.png",
+      "stddev": 20.559,
+      "lit_fraction": 0.9999,
+      "foreground_fraction": 0.0866,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-detail.png",
+      "stddev": 90.658,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.9513,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-focus-0.000.png",
+      "stddev": 75.064,
+      "lit_fraction": 0.9885,
+      "foreground_fraction": 0.8942,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-focus-0.100.png",
+      "stddev": 75.057,
+      "lit_fraction": 0.9889,
+      "foreground_fraction": 0.8942,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-focus-0.500.png",
+      "stddev": 75.053,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8941,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-focus-1.000.png",
+      "stddev": 75.045,
+      "lit_fraction": 0.9889,
+      "foreground_fraction": 0.8941,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-front-0.000.png",
+      "stddev": 20.37,
+      "lit_fraction": 0.9914,
+      "foreground_fraction": 0.1214,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-front-0.100.png",
+      "stddev": 20.373,
+      "lit_fraction": 0.9914,
+      "foreground_fraction": 0.1214,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-front-0.500.png",
+      "stddev": 20.373,
+      "lit_fraction": 0.9911,
+      "foreground_fraction": 0.1213,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-front-1.000.png",
+      "stddev": 20.373,
+      "lit_fraction": 0.9914,
+      "foreground_fraction": 0.1214,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-mechanism.png",
+      "stddev": 75.045,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8944,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-milestone-0.195.png",
+      "stddev": 75.057,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8941,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-milestone-0.205.png",
+      "stddev": 75.055,
+      "lit_fraction": 0.9887,
+      "foreground_fraction": 0.894,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-milestone-0.345.png",
+      "stddev": 75.058,
+      "lit_fraction": 0.9889,
+      "foreground_fraction": 0.8944,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-milestone-0.355.png",
+      "stddev": 75.053,
+      "lit_fraction": 0.9889,
+      "foreground_fraction": 0.8945,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-oblique-0.000.png",
+      "stddev": 17.464,
+      "lit_fraction": 0.9993,
+      "foreground_fraction": 0.0895,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-oblique-0.100.png",
+      "stddev": 17.459,
+      "lit_fraction": 0.9993,
+      "foreground_fraction": 0.0895,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-oblique-0.500.png",
+      "stddev": 17.462,
+      "lit_fraction": 0.9993,
+      "foreground_fraction": 0.0895,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-oblique-1.000.png",
+      "stddev": 17.464,
+      "lit_fraction": 0.9993,
+      "foreground_fraction": 0.0896,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-side-0.000.png",
+      "stddev": 13.287,
+      "lit_fraction": 0.9945,
+      "foreground_fraction": 0.1417,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-side-0.100.png",
+      "stddev": 13.289,
+      "lit_fraction": 0.9946,
+      "foreground_fraction": 0.1417,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-side-0.500.png",
+      "stddev": 13.289,
+      "lit_fraction": 0.9947,
+      "foreground_fraction": 0.1417,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-side-1.000.png",
+      "stddev": 13.287,
+      "lit_fraction": 0.9945,
+      "foreground_fraction": 0.1418,
+      "pass": true
+    },
+    {
+      "file": "F-CRACK-ui.png",
+      "stddev": 33.462,
+      "lit_fraction": 0.8035,
+      "foreground_fraction": 0.7852,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-detail.png",
+      "stddev": 5.764,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.043,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-focus-0.000.png",
+      "stddev": 52.377,
+      "lit_fraction": 0.9468,
+      "foreground_fraction": 0.9983,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-focus-0.100.png",
+      "stddev": 50.136,
+      "lit_fraction": 0.9927,
+      "foreground_fraction": 0.5573,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-focus-0.500.png",
+      "stddev": 52.361,
+      "lit_fraction": 0.9473,
+      "foreground_fraction": 0.9983,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-focus-1.000.png",
+      "stddev": 52.379,
+      "lit_fraction": 0.9469,
+      "foreground_fraction": 0.9983,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-front-0.000.png",
+      "stddev": 24.658,
+      "lit_fraction": 0.9959,
+      "foreground_fraction": 0.1371,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-front-0.100.png",
+      "stddev": 24.79,
+      "lit_fraction": 0.9958,
+      "foreground_fraction": 0.1335,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-front-0.500.png",
+      "stddev": 24.662,
+      "lit_fraction": 0.9959,
+      "foreground_fraction": 0.1373,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-front-1.000.png",
+      "stddev": 24.654,
+      "lit_fraction": 0.9959,
+      "foreground_fraction": 0.137,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-mechanism.png",
+      "stddev": 50.176,
+      "lit_fraction": 0.9929,
+      "foreground_fraction": 0.5569,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-milestone-0.245.png",
+      "stddev": 56.826,
+      "lit_fraction": 0.9834,
+      "foreground_fraction": 0.6641,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-milestone-0.255.png",
+      "stddev": 56.41,
+      "lit_fraction": 0.9826,
+      "foreground_fraction": 0.6598,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-milestone-0.695.png",
+      "stddev": 54.642,
+      "lit_fraction": 0.9521,
+      "foreground_fraction": 0.998,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-milestone-0.705.png",
+      "stddev": 51.974,
+      "lit_fraction": 0.9923,
+      "foreground_fraction": 0.5642,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-oblique-0.000.png",
+      "stddev": 21.095,
+      "lit_fraction": 0.9996,
+      "foreground_fraction": 0.1033,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-oblique-0.100.png",
+      "stddev": 21.189,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.1038,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-oblique-0.500.png",
+      "stddev": 21.078,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.1035,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-oblique-1.000.png",
+      "stddev": 21.094,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.1035,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-side-0.000.png",
+      "stddev": 13.991,
+      "lit_fraction": 0.9946,
+      "foreground_fraction": 0.1469,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-side-0.100.png",
+      "stddev": 13.982,
+      "lit_fraction": 0.9947,
+      "foreground_fraction": 0.147,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-side-0.500.png",
+      "stddev": 13.999,
+      "lit_fraction": 0.9947,
+      "foreground_fraction": 0.147,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-side-1.000.png",
+      "stddev": 13.993,
+      "lit_fraction": 0.9947,
+      "foreground_fraction": 0.147,
+      "pass": true
+    },
+    {
+      "file": "F-IMBAL-ui.png",
+      "stddev": 25.941,
+      "lit_fraction": 0.8028,
+      "foreground_fraction": 0.7841,
+      "pass": true
+    },
+    {
+      "file": "F-LOOSE-mechanism.png",
+      "stddev": 21.858,
+      "lit_fraction": 0.994,
+      "foreground_fraction": 0.9919,
+      "pass": true
+    },
+    {
+      "file": "F-REVERSE-mechanism.png",
+      "stddev": 51.688,
+      "lit_fraction": 0.9929,
+      "foreground_fraction": 0.5593,
+      "pass": true
+    },
+    {
+      "file": "F-RUB-mechanism.png",
+      "stddev": 55.684,
+      "lit_fraction": 0.971,
+      "foreground_fraction": 0.5205,
+      "pass": true
+    },
+    {
+      "file": "P-ALIGN-mechanism.png",
+      "stddev": 14.313,
+      "lit_fraction": 0.0661,
+      "foreground_fraction": 0.6272,
+      "pass": true
+    },
+    {
+      "file": "P-BEAR-mechanism.png",
+      "stddev": 25.438,
+      "lit_fraction": 0.817,
+      "foreground_fraction": 0.7671,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-detail.png",
+      "stddev": 17.097,
+      "lit_fraction": 0.9915,
+      "foreground_fraction": 0.2073,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-focus-0.000.png",
+      "stddev": 14.573,
+      "lit_fraction": 0.9472,
+      "foreground_fraction": 0.3927,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-focus-0.100.png",
+      "stddev": 14.552,
+      "lit_fraction": 0.9468,
+      "foreground_fraction": 0.3934,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-focus-0.500.png",
+      "stddev": 14.582,
+      "lit_fraction": 0.9471,
+      "foreground_fraction": 0.3933,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-focus-1.000.png",
+      "stddev": 14.609,
+      "lit_fraction": 0.9473,
+      "foreground_fraction": 0.3935,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-front-0.000.png",
+      "stddev": 10.646,
+      "lit_fraction": 0.9526,
+      "foreground_fraction": 0.168,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-front-0.100.png",
+      "stddev": 10.646,
+      "lit_fraction": 0.9528,
+      "foreground_fraction": 0.1681,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-front-0.500.png",
+      "stddev": 10.635,
+      "lit_fraction": 0.9528,
+      "foreground_fraction": 0.1684,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-front-1.000.png",
+      "stddev": 10.628,
+      "lit_fraction": 0.9532,
+      "foreground_fraction": 0.1681,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-mechanism.png",
+      "stddev": 13.965,
+      "lit_fraction": 0.939,
+      "foreground_fraction": 0.4274,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-milestone-0.195.png",
+      "stddev": 14.593,
+      "lit_fraction": 0.9475,
+      "foreground_fraction": 0.3933,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-milestone-0.205.png",
+      "stddev": 14.591,
+      "lit_fraction": 0.9476,
+      "foreground_fraction": 0.393,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-milestone-0.595.png",
+      "stddev": 14.57,
+      "lit_fraction": 0.9477,
+      "foreground_fraction": 0.3923,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-milestone-0.605.png",
+      "stddev": 14.583,
+      "lit_fraction": 0.9476,
+      "foreground_fraction": 0.3927,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-oblique-0.000.png",
+      "stddev": 8.055,
+      "lit_fraction": 0.977,
+      "foreground_fraction": 0.1135,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-oblique-0.100.png",
+      "stddev": 8.054,
+      "lit_fraction": 0.9771,
+      "foreground_fraction": 0.1136,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-oblique-0.500.png",
+      "stddev": 8.05,
+      "lit_fraction": 0.9764,
+      "foreground_fraction": 0.1134,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-oblique-1.000.png",
+      "stddev": 8.051,
+      "lit_fraction": 0.9771,
+      "foreground_fraction": 0.1134,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-side-0.000.png",
+      "stddev": 8.259,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0716,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-side-0.100.png",
+      "stddev": 8.271,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0719,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-side-0.500.png",
+      "stddev": 8.248,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0719,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-side-1.000.png",
+      "stddev": 8.245,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0719,
+      "pass": true
+    },
+    {
+      "file": "P-CAV-ui.png",
+      "stddev": 18.939,
+      "lit_fraction": 0.7857,
+      "foreground_fraction": 0.7742,
+      "pass": true
+    },
+    {
+      "file": "P-DRY-mechanism.png",
+      "stddev": 23.18,
+      "lit_fraction": 0.8407,
+      "foreground_fraction": 0.7952,
+      "pass": true
+    },
+    {
+      "file": "P-HOT-mechanism.png",
+      "stddev": 34.736,
+      "lit_fraction": 0.8292,
+      "foreground_fraction": 0.7703,
+      "pass": true
+    },
+    {
+      "file": "P-IMPELLER-mechanism.png",
+      "stddev": 15.397,
+      "lit_fraction": 0.8867,
+      "foreground_fraction": 0.3893,
+      "pass": true
+    },
+    {
+      "file": "P-INLET-mechanism.png",
+      "stddev": 13.97,
+      "lit_fraction": 0.9395,
+      "foreground_fraction": 0.4283,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-detail.png",
+      "stddev": 4.174,
+      "lit_fraction": 0.9966,
+      "foreground_fraction": 0.0272,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-focus-0.000.png",
+      "stddev": 23.015,
+      "lit_fraction": 0.8953,
+      "foreground_fraction": 0.6581,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-focus-0.100.png",
+      "stddev": 23.016,
+      "lit_fraction": 0.8939,
+      "foreground_fraction": 0.6587,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-focus-0.500.png",
+      "stddev": 23.028,
+      "lit_fraction": 0.8941,
+      "foreground_fraction": 0.6581,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-focus-1.000.png",
+      "stddev": 23.026,
+      "lit_fraction": 0.894,
+      "foreground_fraction": 0.6593,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-front-0.000.png",
+      "stddev": 10.612,
+      "lit_fraction": 0.9509,
+      "foreground_fraction": 0.179,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-front-0.100.png",
+      "stddev": 10.622,
+      "lit_fraction": 0.9507,
+      "foreground_fraction": 0.1792,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-front-0.500.png",
+      "stddev": 10.61,
+      "lit_fraction": 0.9513,
+      "foreground_fraction": 0.1791,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-front-1.000.png",
+      "stddev": 10.61,
+      "lit_fraction": 0.9517,
+      "foreground_fraction": 0.1786,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-mechanism.png",
+      "stddev": 23.915,
+      "lit_fraction": 0.8361,
+      "foreground_fraction": 0.696,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-milestone-0.295.png",
+      "stddev": 23.01,
+      "lit_fraction": 0.8948,
+      "foreground_fraction": 0.6588,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-milestone-0.305.png",
+      "stddev": 23.018,
+      "lit_fraction": 0.8959,
+      "foreground_fraction": 0.6576,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-milestone-0.595.png",
+      "stddev": 23.036,
+      "lit_fraction": 0.8946,
+      "foreground_fraction": 0.6584,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-milestone-0.605.png",
+      "stddev": 23.039,
+      "lit_fraction": 0.8945,
+      "foreground_fraction": 0.6592,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-oblique-0.000.png",
+      "stddev": 8.195,
+      "lit_fraction": 0.9772,
+      "foreground_fraction": 0.1227,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-oblique-0.100.png",
+      "stddev": 8.198,
+      "lit_fraction": 0.9773,
+      "foreground_fraction": 0.1229,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-oblique-0.500.png",
+      "stddev": 8.19,
+      "lit_fraction": 0.9777,
+      "foreground_fraction": 0.1234,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-oblique-1.000.png",
+      "stddev": 8.194,
+      "lit_fraction": 0.9773,
+      "foreground_fraction": 0.1231,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-side-0.000.png",
+      "stddev": 7.888,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0948,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-side-0.100.png",
+      "stddev": 7.885,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0949,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-side-0.500.png",
+      "stddev": 7.891,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.095,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-side-1.000.png",
+      "stddev": 7.893,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.095,
+      "pass": true
+    },
+    {
+      "file": "P-SEAL-ui.png",
+      "stddev": 19.136,
+      "lit_fraction": 0.7869,
+      "foreground_fraction": 0.7754,
+      "pass": true
+    },
+    {
+      "file": "PLC-COMM-mechanism.png",
+      "stddev": 37.354,
+      "lit_fraction": 0.9899,
+      "foreground_fraction": 0.8014,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-detail.png",
+      "stddev": 40.688,
+      "lit_fraction": 0.9966,
+      "foreground_fraction": 0.9802,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-focus-0.000.png",
+      "stddev": 44.649,
+      "lit_fraction": 0.989,
+      "foreground_fraction": 0.8218,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-focus-0.100.png",
+      "stddev": 44.64,
+      "lit_fraction": 0.9885,
+      "foreground_fraction": 0.8218,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-focus-0.500.png",
+      "stddev": 44.488,
+      "lit_fraction": 0.9893,
+      "foreground_fraction": 0.8267,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-focus-1.000.png",
+      "stddev": 44.594,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8229,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-front-0.000.png",
+      "stddev": 19.322,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1542,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-front-0.100.png",
+      "stddev": 19.325,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1546,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-front-0.500.png",
+      "stddev": 19.318,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1542,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-front-1.000.png",
+      "stddev": 19.319,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1545,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-mechanism.png",
+      "stddev": 44.677,
+      "lit_fraction": 0.9889,
+      "foreground_fraction": 0.8224,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-milestone-0.245.png",
+      "stddev": 44.634,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8224,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-milestone-0.255.png",
+      "stddev": 44.641,
+      "lit_fraction": 0.9888,
+      "foreground_fraction": 0.8278,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-milestone-0.695.png",
+      "stddev": 44.776,
+      "lit_fraction": 0.9894,
+      "foreground_fraction": 0.8229,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-milestone-0.705.png",
+      "stddev": 44.76,
+      "lit_fraction": 0.9895,
+      "foreground_fraction": 0.8224,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-oblique-0.000.png",
+      "stddev": 16.119,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1119,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-oblique-0.100.png",
+      "stddev": 16.129,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1116,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-oblique-0.500.png",
+      "stddev": 16.128,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1115,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-oblique-1.000.png",
+      "stddev": 16.135,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1116,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-side-0.000.png",
+      "stddev": 3.252,
+      "lit_fraction": 0.995,
+      "foreground_fraction": 0.0516,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-side-0.100.png",
+      "stddev": 3.252,
+      "lit_fraction": 0.995,
+      "foreground_fraction": 0.0516,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-side-0.500.png",
+      "stddev": 3.252,
+      "lit_fraction": 0.995,
+      "foreground_fraction": 0.0516,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-side-1.000.png",
+      "stddev": 3.252,
+      "lit_fraction": 0.995,
+      "foreground_fraction": 0.0516,
+      "pass": true
+    },
+    {
+      "file": "PLC-CONTACT-ui.png",
+      "stddev": 25.713,
+      "lit_fraction": 0.8031,
+      "foreground_fraction": 0.7847,
+      "pass": true
+    },
+    {
+      "file": "PLC-DRIVE-mechanism.png",
+      "stddev": 23.778,
+      "lit_fraction": 0.8762,
+      "foreground_fraction": 0.7476,
+      "pass": true
+    },
+    {
+      "file": "PLC-HOT-mechanism.png",
+      "stddev": 51.731,
+      "lit_fraction": 0.986,
+      "foreground_fraction": 0.8197,
+      "pass": true
+    },
+    {
+      "file": "PLC-IO-mechanism.png",
+      "stddev": 48.306,
+      "lit_fraction": 0.9973,
+      "foreground_fraction": 0.9503,
+      "pass": true
+    },
+    {
+      "file": "PLC-LOW-mechanism.png",
+      "stddev": 49.064,
+      "lit_fraction": 0.998,
+      "foreground_fraction": 0.9246,
+      "pass": true
+    },
+    {
+      "file": "PLC-OVERLOAD-mechanism.png",
+      "stddev": 51.728,
+      "lit_fraction": 0.9993,
+      "foreground_fraction": 0.9654,
+      "pass": true
+    },
+    {
+      "file": "PLC-SENSOR-mechanism.png",
+      "stddev": 48.269,
+      "lit_fraction": 0.9973,
+      "foreground_fraction": 0.9486,
+      "pass": true
+    },
+    {
+      "file": "TK-CORROSION-mechanism.png",
+      "stddev": 25.987,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.4534,
+      "pass": true
+    },
+    {
+      "file": "TK-FLANGE-mechanism.png",
+      "stddev": 28.647,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.3869,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-detail.png",
+      "stddev": 13.972,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.3527,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-focus-0.000.png",
+      "stddev": 25.952,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.4437,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-focus-0.100.png",
+      "stddev": 25.954,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.4433,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-focus-0.500.png",
+      "stddev": 25.999,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.451,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-focus-1.000.png",
+      "stddev": 26.01,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.4478,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-front-0.000.png",
+      "stddev": 13.767,
+      "lit_fraction": 0.9995,
+      "foreground_fraction": 0.074,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-front-0.100.png",
+      "stddev": 13.769,
+      "lit_fraction": 0.9995,
+      "foreground_fraction": 0.0741,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-front-0.500.png",
+      "stddev": 13.762,
+      "lit_fraction": 0.9995,
+      "foreground_fraction": 0.0743,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-front-1.000.png",
+      "stddev": 13.804,
+      "lit_fraction": 0.9995,
+      "foreground_fraction": 0.0751,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-mechanism.png",
+      "stddev": 26.003,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.4516,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-milestone-0.245.png",
+      "stddev": 25.958,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.4476,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-milestone-0.255.png",
+      "stddev": 25.965,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.4466,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-milestone-0.645.png",
+      "stddev": 26.009,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.4506,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-milestone-0.655.png",
+      "stddev": 26.008,
+      "lit_fraction": 0.9997,
+      "foreground_fraction": 0.4512,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-oblique-0.000.png",
+      "stddev": 11.646,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.0616,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-oblique-0.100.png",
+      "stddev": 11.645,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.0616,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-oblique-0.500.png",
+      "stddev": 11.636,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.0617,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-oblique-1.000.png",
+      "stddev": 11.66,
+      "lit_fraction": 0.9998,
+      "foreground_fraction": 0.0622,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-side-0.000.png",
+      "stddev": 9.234,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0841,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-side-0.100.png",
+      "stddev": 9.23,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0842,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-side-0.500.png",
+      "stddev": 9.228,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0845,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-side-1.000.png",
+      "stddev": 9.579,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.0852,
+      "pass": true
+    },
+    {
+      "file": "TK-LEAK-ui.png",
+      "stddev": 20.693,
+      "lit_fraction": 0.8028,
+      "foreground_fraction": 0.7847,
+      "pass": true
+    },
+    {
+      "file": "TK-LEVEL-mechanism.png",
+      "stddev": 19.146,
+      "lit_fraction": 0.9962,
+      "foreground_fraction": 0.1458,
+      "pass": true
+    },
+    {
+      "file": "TK-PRESS-mechanism.png",
+      "stddev": 37.743,
+      "lit_fraction": 0.9983,
+      "foreground_fraction": 0.4114,
+      "pass": true
+    },
+    {
+      "file": "TK-SENSOR-mechanism.png",
+      "stddev": 24.737,
+      "lit_fraction": 0.9922,
+      "foreground_fraction": 0.2479,
+      "pass": true
+    },
+    {
+      "file": "TK-SUPPORT-mechanism.png",
+      "stddev": 19.124,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.1356,
+      "pass": true
+    },
+    {
+      "file": "TK-VENT-mechanism.png",
+      "stddev": 10.876,
+      "lit_fraction": 1.0,
+      "foreground_fraction": 0.7208,
+      "pass": true
+    }
+  ]
+}

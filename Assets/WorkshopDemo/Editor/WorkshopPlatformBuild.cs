@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace WorkshopDemo.Editor
@@ -27,6 +28,24 @@ namespace WorkshopDemo.Editor
             DeployViewer("CabinetViewer", false, directory);
         }
 
+        public static void BuildFaultReview()
+        {
+            RequireSceneScripts();
+            WorkshopFaultSurfaceBake.Bake();
+            string stamp = DateTime.Now.ToString("yyyyMMdd-HHmmssfff");
+            string directory = "Build/WorkshopFaultReview-" + stamp;
+            BuildAt(directory + "/WorkshopPlatform.exe", false);
+            const string deliveredViewers = "Build/WorkshopPlatform/Viewers";
+            foreach (string name in new[] { "WaterPumpViewer", "TankViewer", "IndustrialFanViewer", "CabinetViewer" })
+            {
+                string source = Path.Combine(deliveredViewers, name);
+                if (!Directory.Exists(source)) source = Path.Combine("model", name);
+                if (!Directory.Exists(source)) continue;
+                RequireViewer(source, name);
+                CopyViewer(source, Path.Combine(directory, "Viewers", name));
+            }
+        }
+
         public static void BuildTankReview()
         {
             const string directory = "Build/WorkshopPlatformTankReview";
@@ -36,6 +55,8 @@ namespace WorkshopDemo.Editor
 
         static void BuildAt(string output, bool deployViewers)
         {
+            RequireSceneScripts();
+            WorkshopFaultDerivedImport.EnsureImported();
             var scenes = new[] {
                 WorkshopSceneSwitcher.InspectionScene, WorkshopSceneSwitcher.AssemblyScene
             };
@@ -58,6 +79,27 @@ namespace WorkshopDemo.Editor
                     DeployViewer("TankViewer", false);
             }
             Debug.Log("Unified platform built: " + Path.GetFullPath(output));
+        }
+
+        static void RequireSceneScripts()
+        {
+            foreach (string path in new[] {
+                WorkshopSceneSwitcher.InspectionScene, WorkshopSceneSwitcher.AssemblyScene })
+            {
+                var scene = EditorSceneManager.OpenPreviewScene(path);
+                try
+                {
+                    foreach (var root in scene.GetRootGameObjects())
+                        foreach (var transform in root.GetComponentsInChildren<Transform>(true))
+                            if (GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(transform.gameObject) > 0)
+                                throw new InvalidOperationException(
+                                    "Build blocked by missing scene scripts: " + path + " / " + transform.name);
+                }
+                finally
+                {
+                    EditorSceneManager.ClosePreviewScene(scene);
+                }
+            }
         }
 
         static void DeployViewer(string name, bool preserveExisting, string platformDirectory = "Build/WorkshopPlatform")

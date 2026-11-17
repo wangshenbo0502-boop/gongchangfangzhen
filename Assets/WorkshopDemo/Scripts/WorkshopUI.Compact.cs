@@ -55,6 +55,7 @@ namespace WorkshopDemo
             workspaceButtons.Add(Command(rail, "AI 助手", 14, 388, 152, () => Navigate(4), false, 48));
             Command(rail, "更多", 14, 452, 152, () => OpenQuickMenu("平台工具",
                 ("资料管理", () => Navigate(6)),
+                (Screen.fullScreen ? "切换窗口（F11）" : "进入全屏（F11）", WorkshopSceneSwitcher.ToggleFullscreen),
                 (AudioListener.volume > .01f ? "静音（M）" : "恢复声音（M）", () => AudioListener.volume = AudioListener.volume > .01f ? 0 : 1),
                 ("操作帮助", ShowControlsHelp)), false, 48);
             var note = Label(rail, "本地模拟\n4 台设备 · 1 台小车", 13, muted, 22, 0, 144, 58);
@@ -227,7 +228,7 @@ namespace WorkshopDemo
                 ("查看结构", () => { RefreshAnalysis(); OpenEquipment(); }), ("学习故障", () => Navigate(5)));
         }
 
-        void ShowControlsHelp() => OpenQuickMenu("操作帮助\n点选设备 · 拖动旋转 · 滚轮缩放\nH 隐藏界面 · M 静音 · Esc 返回\n手动接管后使用方向键驾驶");
+        void ShowControlsHelp() => OpenQuickMenu("操作帮助\n点选设备 · 拖动旋转 · 滚轮缩放\nF11 全屏 / 窗口 · H 隐藏界面 · M 静音 · Esc 返回\n手动接管后使用方向键驾驶");
 
         void CloseQuickMenu()
         {
@@ -241,24 +242,30 @@ namespace WorkshopDemo
             quickMenu = root.gameObject;
             root.gameObject.AddComponent<Button>().onClick.AddListener(CloseQuickMenu);
             int lines = caption.Split('\n').Length;
-            float head = 42 + lines * 26, height = head + items.Length * 52 + 66;
+            float head = 42 + lines * 26, height = Mathf.Min(820, head + items.Length * 52 + 66);
             var card = Box(root, "Menu card", new Vector2(.5f, .5f), new Vector2(.5f, .5f),
                 new Vector2(-248, -height / 2), new Vector2(248, height / 2), panel);
             // Consume clicks in the card instead of letting them dismiss the backdrop.
             card.gameObject.AddComponent<Button>();
             Box(card, "Accent", 24, 22, 4, 28, amber, false);
             Label(card, caption, 17, ink, 40, 20, 430, head - 28);
+            Scroll(card, "Menu entries", Vector2.zero, Vector2.one,
+                new Vector2(24, 64), new Vector2(-24, -head), out var entries);
+            entries.sizeDelta = new Vector2(0, items.Length * 52);
             for (int i = 0; i < items.Length; i++)
             {
                 var entry = items[i];
-                Command(card, entry.label, 24, head + i * 52, 448, () => { CloseQuickMenu(); entry.action(); }, false, 42);
+                Command(entries, entry.label, 0, i * 52, 448, () => { CloseQuickMenu(); entry.action(); }, false, 42);
             }
-            Command(card, "关闭", 24, head + items.Length * 52 + 6, 448, CloseQuickMenu, false, 40);
+            Command(card, "关闭", 24, height - 54, 448, CloseQuickMenu, false, 40);
         }
 
         void CompactBack()
         {
             if (quickMenu) { CloseQuickMenu(); return; }
+            if (trainingDialog && trainingDialog.activeSelf) { trainingDialog.SetActive(false); return; }
+            if (abaqusFieldDialog && abaqusFieldDialog.activeSelf) { abaqusFieldDialog.SetActive(false); return; }
+            if (abaqusDialog && abaqusDialog.activeSelf) { abaqusDialog.SetActive(false); return; }
             if (analysisToolDrawer && analysisToolDrawer.activeSelf) { analysisToolDrawer.SetActive(false); return; }
             if (analysisDialog && analysisDialog.activeSelf) { analysisDialog.SetActive(false); return; }
             if (equipmentDialog && equipmentDialog.activeSelf) { equipmentDialog.SetActive(false); return; }
@@ -271,7 +278,7 @@ namespace WorkshopDemo
             {
                 var d = simulation.Selected;
                 if (!d) return;
-                var mode = WorkshopFaultCatalog.For(d.kind)[analysisMode.value];
+                var mode = SelectedLearningFault();
                 if (!simulation.TriggerFault(d, mode.Code)) return;
             }
             OpenOrder(simulation.ActiveAlarm);
@@ -392,7 +399,11 @@ namespace WorkshopDemo
                 if (item) item.SetParent(hidden, false);
             }
             hidden.gameObject.SetActive(false);
-            Command(overlay, "复位", 380, 80, 84, () => equipmentView.ResetView(), false, 38);
+            Command(overlay, "复位", 380, 80, 84, () => {
+                if (equipmentView.PumpSectionOpen) equipmentView.TogglePumpSection();
+                equipmentView.ResetView();
+                if (equipmentView.FaultMode) EquipmentScrub(0);
+            }, false, 38);
             Command(overlay, "视图", 476, 80, 84, () => OpenEquipmentTools(hidden), false, 38);
             Command(overlay, "故障学习", 572, 80, 118, () => {
                 equipmentDialog.SetActive(false);
@@ -414,19 +425,57 @@ namespace WorkshopDemo
             string[] secondary = { "从头重播", "完好状态", "预设起裂", "最终状态", "保存画面", "导出尺寸" };
             foreach (string name in secondary)
                 equipmentFaultTools.transform.Find(name).SetParent(hidden, false);
-            Command(equipmentFaultTools.transform, "时间点", 126, 10, 100, () => OpenQuickMenu("故障演示时间点",
-                ("从头重播", () => { equipmentView.SetProgress(0); equipmentView.Playing = true; }),
-                ("完好状态", () => EquipmentScrub(0)),
-                ("预设起裂", () => EquipmentScrub(WorkshopEquipmentModel.CrackStart)),
-                ("最终状态", () => EquipmentScrub(1))), false, 30);
+            Command(equipmentFaultTools.transform, "时间点", 126, 10, 100, OpenFaultTimePoints, false, 30);
+            equipmentPumpSection = null;
+            Command(equipmentFaultTools.transform, device.kind == DeviceKind.Pump ? "水泵工况" : "故障工况",
+                244, 10, 106, OpenPumpCases, false, 30);
+            if (device.kind == DeviceKind.Pump)
+            {
+                equipmentPumpSection = Command(equipmentFaultTools.transform, "看流道", 366, 10, 106, () => {
+                    equipmentView.TogglePumpSection();
+                    UpdateEquipmentText();
+                }, false, 30);
+                // Keep a stable object name as the button caption changes between cases.
+                equipmentPumpSection.name = "Pump section";
+            }
             equipmentCloseup = equipmentViewport.Find("Same mesh closeup").gameObject;
             equipmentTransport.rectTransform.offsetMin = new Vector2(20, 116);
             SetEquipmentMode(0);
         }
 
+        void OpenFaultTimePoints()
+        {
+            var entries = new List<(string, Action)> {
+                ("从头重播", () => { equipmentView.SetProgress(0); equipmentView.Playing = true; }),
+                ("完好状态", () => EquipmentScrub(0))
+            };
+            var profile = equipmentView.Profile;
+            if (profile != null)
+            {
+                entries.Add((profile.FirstMilestone, () => EquipmentScrub(profile.FirstProgress)));
+                entries.Add((profile.SecondMilestone, () => EquipmentScrub(profile.SecondProgress)));
+            }
+            else if (equipmentView.DisplayModel.HasOpening)
+                entries.Add(("预设起裂", () => EquipmentScrub(WorkshopEquipmentModel.CrackStart)));
+            entries.Add(("最终状态", () => EquipmentScrub(1)));
+            OpenQuickMenu("故障演示时间点", entries.ToArray());
+        }
+
+        void OpenPumpCases()
+        {
+            var entries = new List<(string, Action)>();
+            foreach (var fault in WorkshopFaultCatalog.For(inspectedDevice.kind))
+                entries.Add((fault.Code + "  " + fault.Name, () => {
+                    equipmentView.SelectFault(fault);
+                    SetEquipmentMode(2);
+                }));
+            OpenQuickMenu(inspectedDevice.KindText + " · 故障工况", entries.ToArray());
+        }
+
         void OpenEquipmentTools(Transform hidden)
         {
             var entries = new List<(string, Action)> {
+                (Screen.fullScreen ? "切换窗口（F11）" : "进入全屏（F11）", WorkshopSceneSwitcher.ToggleFullscreen),
                 (equipmentPartsPanel.activeSelf ? "收起部件与参数" : "部件与参数", () => {
                     equipmentPartsPanel.SetActive(!equipmentPartsPanel.activeSelf); LayoutEquipmentViewport();
                 }),
@@ -435,16 +484,26 @@ namespace WorkshopDemo
                 (equipmentView.AutoOrbit ? "停止环绕" : "自动环绕", () => equipmentView.AutoOrbit = !equipmentView.AutoOrbit),
                 (equipmentView.ShowLabels ? "隐藏部件标注" : "显示部件标注", () => equipmentView.ShowLabels = !equipmentView.ShowLabels)
             };
-            if (equipmentModeIndex == 2) entries.Add(("故障近景", () => equipmentView.FocusDamage()));
+            if (equipmentModeIndex == 2 && equipmentView.DisplayModel.TryGetFaultFocus(out _, out _))
+                entries.Add(("故障近景", () => equipmentView.FocusDamage()));
+            if (equipmentModeIndex == 2)
+                entries.Add(("教学辅助显示", () => OpenQuickMenu("教学辅助显示",
+                    (equipmentView.TeachingVisible ? "关闭机理辅助" : "开启机理辅助", () => equipmentView.TeachingVisible = !equipmentView.TeachingVisible),
+                    (equipmentView.ThermalVisible ? "关闭热辅助层" : "开启热辅助层", () => equipmentView.ThermalVisible = !equipmentView.ThermalVisible),
+                    ("振动显示 1×", () => equipmentView.MotionScale = 1),
+                    ("振动显示 5×", () => equipmentView.MotionScale = 5))));
             var door = hidden.Find("柜门开启");
             if (door) entries.Add(("切换柜门开合", () => { var t = door.GetComponent<Toggle>(); t.isOn = !t.isOn; }));
             if (equipmentView.Model.ReviewedCabinetModel)
-                entries.Add(("查看柜内", () => equipmentView.SetDisassemblyTarget(
-                    equipmentView.Model.CabinetDoorOpenStep)));
+                entries.Add(("查看柜内", () => {
+                    SetEquipmentMode(1);
+                    equipmentView.SetDisassemblyTarget(equipmentView.Model.CabinetDoorOpenStep);
+                }));
             var guard = hidden.Find("移开护网");
             if (guard) entries.Add(("切换护网显示", () => { var t = guard.GetComponent<Toggle>(); t.isOn = !t.isOn; }));
             entries.Add(("保存画面 / 导出", () => OpenQuickMenu("导出",
-                ("保存画面", SaveEquipmentSnapshot), ("导出尺寸", ExportEquipmentDimensions))));
+                ("保存画面", SaveEquipmentSnapshot),
+                (equipmentView.Profile != null ? "导出案例读数" : "导出尺寸", ExportEquipmentDimensions))));
             OpenQuickMenu("设备视图", entries.ToArray());
         }
 
@@ -454,20 +513,23 @@ namespace WorkshopDemo
             for (int i = 0; i < equipmentModeButtons.Count; i++) StyleSelection(equipmentModeButtons[i], i == mode);
             equipmentAssemblyTools.SetActive(mode == 1);
             equipmentFaultTools.SetActive(mode == 2);
-            equipmentCloseup.SetActive(mode == 2);
             equipmentTransport.gameObject.SetActive(mode == 2);
-            equipmentView.ShowTankFaultModel(inspectedDevice, mode == 2);
+            equipmentView.SetFaultMode(mode == 2);
             if (equipmentView.Model.ReviewedTankModel)
             {
-                equipmentSource.text = mode == 2 ? "储罐故障教学模型 · 预设损坏过程" : "验收版储罐 · 12 个拆解总成";
-                equipmentAssemblyStep.gameObject.SetActive(mode != 2);
-                var parts = equipmentAssemblyStep.transform.parent;
-                for (int i = 0; i < equipmentView.Model.AssemblyCount; i++)
-                    parts.Find((i + 1).ToString("D2")).gameObject.SetActive(mode != 2);
+                equipmentSource.text = mode != 2 ? "验收版储罐 · 12 个拆解总成" :
+                    equipmentView.Profile?.GeometrySource ?? "故障部件绑定缺失";
             }
-            if (mode != 2) { equipmentView.Playing = false; equipmentView.SetProgress(0); }
+            else if (equipmentView.Model.Kind == DeviceKind.Pump)
+                equipmentSource.text = mode == 2 && equipmentView.Profile != null ? equipmentView.Profile.GeometrySource :
+                    "精细循环水泵 · " + equipmentView.Model.AssemblyCount + " 个拆解总成";
+            else equipmentSource.text = mode == 2 ? equipmentView.Profile?.GeometrySource ?? "故障部件绑定缺失" :
+                "验收版" + deviceKindName() + " · " + equipmentView.Model.AssemblyCount + " 个拆解总成";
             LayoutEquipmentViewport();
+            UpdateEquipmentText();
         }
+
+        string deviceKindName() => inspectedDevice.KindText;
 
         void LayoutEquipmentViewport()
         {

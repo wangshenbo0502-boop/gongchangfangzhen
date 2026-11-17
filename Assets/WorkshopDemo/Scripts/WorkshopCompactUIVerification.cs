@@ -13,35 +13,60 @@ using UnityEngine.UI;
 namespace WorkshopDemo
 {
     // Only installed with the explicit review flag. No work occurs during normal startup.
-    public sealed class WorkshopCompactUIVerification : MonoBehaviour
+    public sealed partial class WorkshopCompactUIVerification : MonoBehaviour
     {
         string folder;
         WorkshopUI ui;
         WorkshopSimulation sim;
         readonly List<string> errors = new List<string>();
         string report;
+        bool faultUpgrade;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Install()
         {
             var args = Environment.GetCommandLineArgs();
-            int index = Array.IndexOf(args, "-workshop-ui-verify");
+            int upgrade = Array.IndexOf(args, "-workshop-fault-upgrade-verify");
+            int index = upgrade >= 0 ? upgrade : Array.IndexOf(args, "-workshop-ui-verify");
             if (index < 0 || index + 1 >= args.Length) return;
             Application.runInBackground = true;
             var host = new GameObject("Compact UI verification");
             DontDestroyOnLoad(host);
-            host.AddComponent<WorkshopCompactUIVerification>().folder = Path.GetFullPath(args[index + 1]);
+            var verification = host.AddComponent<WorkshopCompactUIVerification>();
+            verification.folder = Path.GetFullPath(args[index + 1]);
+            verification.faultUpgrade = upgrade >= 0;
         }
 
         IEnumerator Start()
         {
             Directory.CreateDirectory(folder);
             report = Path.Combine(folder, "verification.txt");
-            File.WriteAllText(report, "Started " + DateTimeOffset.Now.ToString("o") +
-                "\nMethod: Windows Player, visible UGUI raycasts and control events, actual navigation\n");
-            Application.logMessageReceived += Log;
             var args = Environment.GetCommandLineArgs();
-            var routine = args.Contains("-workshop-check-tank") ? VerifyTank() :
+            bool visuals = faultUpgrade && args.Contains("-workshop-check-visuals");
+            bool performance = faultUpgrade && args.Contains("-workshop-check-performance");
+            int caseIndex = Array.IndexOf(args, "-workshop-review-case");
+            if (caseIndex >= 0)
+            {
+                if (!visuals && !performance || caseIndex + 1 >= args.Length ||
+                    WorkshopFaultCase.Find(args[caseIndex + 1]) == null)
+                    throw new ArgumentException("-workshop-review-case requires visuals/performance and an applicable fault code");
+                reviewCase = args[caseIndex + 1];
+            }
+            bool pump = faultUpgrade && args.Contains("-workshop-check-pump");
+            bool allFaults = faultUpgrade && !pump && !args.Contains("-workshop-check-tank");
+            File.WriteAllText(report, "Started " + DateTimeOffset.Now.ToString("o") +
+                "\nUnity " + Application.unityVersion + " / " + Screen.width + "x" + Screen.height +
+                "\nMethod: Windows Player, visible UGUI raycasts and control events, actual navigation\n" +
+                (visuals ? "Scope: " + (reviewCase ?? "six priority cases and 32 mechanisms") + ", fixed views, stages and milestone neighbors; images require separate visual review\n" :
+                performance ? "Scope: current candidate, " + (reviewCase ?? "six cases") + " effects off/on, frame times, memory peaks, load and lifecycle; no historical baseline\n" :
+                allFaults ? "Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification\n" :
+                pump ? "Scope: P-SEAL and P-CAV; excludes solver data, real mouse and performance\n" :
+                    faultUpgrade ? "Scope: four-device bindings and TK-LEAK; excludes other fault effects, solver data, real mouse and performance\n" : ""));
+            Application.logMessageReceived += Log;
+            var input = FindFirstObjectByType<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+            bool inputEnabled = input && input.enabled;
+            var routine = visuals ? VerifyVisualMatrix() : performance ? VerifyPerformance() :
+                allFaults ? VerifyUpgrade() : pump ? VerifyPumpFaults() : faultUpgrade || args.Contains("-workshop-check-tank") ? VerifyTank() :
                 args.Contains("-workshop-check-cabinet") ? VerifyCabinet() : Verify();
             while (true)
             {
@@ -53,12 +78,13 @@ namespace WorkshopDemo
             if (errors.Count > 0) { ScreenCapture.CaptureScreenshot(Path.Combine(folder, "failure.png")); yield return new WaitForSecondsRealtime(.8f); }
             File.AppendAllText(report, string.Join("\n", errors.Select(e => "FAIL " + e)) + "\nResult: " + (errors.Count == 0 ? "PASS" : "FAIL") + "\n");
             Application.logMessageReceived -= Log;
+            if (input) input.enabled = inputEnabled;
             Application.Quit(errors.Count == 0 ? 0 : 1);
         }
 
         void Log(string message, string stack, LogType type)
         {
-            if (type == LogType.Exception) errors.Add(message + "\n" + stack);
+            if (type == LogType.Exception || type == LogType.Error) errors.Add(message + "\n" + stack);
         }
         T Member<T>(string name) => (T)typeof(WorkshopUI).GetField(name, BindingFlags.NonPublic | BindingFlags.Instance).GetValue(ui);
         void Check(bool condition, string message)
@@ -349,6 +375,8 @@ namespace WorkshopDemo
             ui = FindFirstObjectByType<WorkshopUI>();
             sim = FindFirstObjectByType<WorkshopSimulation>();
             Check(ui && sim && sim.devices.Length == 4, "Four stations loaded at " + Screen.width + "x" + Screen.height);
+            Check(SceneManager.GetActiveScene().path == WorkshopSceneSwitcher.InspectionScene, "WorkshopDemo active");
+            if (faultUpgrade) VerifyFaultBindings();
             var tank = sim.devices.Single(device => device.deviceId == "TK-01");
             var model = tank.GetComponentInChildren<WorkshopEquipmentModel>();
             Check(model && model.ReviewedTankModel && model.AssemblyCount == 12 &&
@@ -401,23 +429,16 @@ namespace WorkshopDemo
             while (view.Disassembly < 12) yield return null;
             Check(parts.Where((t, i) => t.localPosition != home[i]).Count() == 12, "All 12 assemblies reach their separated positions");
             Capture("04-exploded"); yield return new WaitForEndOfFrame();
-            Click("重新组装", dialog);
-            while (view.Disassembly > 0) yield return null;
-            Check(parts.Select((t, i) => t.localPosition == home[i]).All(equal => equal), "Full reverse path restores all home poses");
-            Click("故障演示", dialog);
-            yield return new WaitForSecondsRealtime(.25f);
-            Click("时间点", dialog);
-            yield return new WaitForSecondsRealtime(.25f);
-            Click("最终状态");
-            yield return new WaitForSecondsRealtime(.25f);
-            Check(view.DisplayModel != view.Model && !view.Model.gameObject.activeSelf &&
-                view.DisplayModel.HasOpening && view.DisplayModel.OpeningMm > 0 &&
-                Member<Text>("equipmentSource").text.Contains("教学模型"), "Tank leakage teaching and close-up still operate");
-            Capture("05-fault-teaching"); yield return new WaitForEndOfFrame();
-            Click("观察", dialog);
-            Check(view.DisplayModel == view.Model && view.Model.gameObject.activeSelf, "Observation restores the approved tank");
+            using (var preview = VerifyTankLeakPreview(view, dialog, parts, home, model))
+                while (preview.MoveNext()) yield return preview.Current;
             Click("返回车间", dialog);
             yield return new WaitForSecondsRealtime(.3f);
+            if (faultUpgrade)
+            {
+                using (var orders = VerifyTankOrders(tank))
+                    while (orders.MoveNext()) yield return orders.Current;
+                yield break;
+            }
             Check(sim.TriggerFault(tank, "TK-LEAK") && tank.faultMarker.activeSelf, "TK-LEAK still raises the physical marker and alarm");
             var alarm = sim.Alarms[0];
             Check(alarm.device == tank && sim.Report(alarm, "验证员", "设备部", "储罐泄漏巡检") &&

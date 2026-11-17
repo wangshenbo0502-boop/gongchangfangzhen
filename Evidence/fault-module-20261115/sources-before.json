@@ -1,0 +1,282 @@
+[
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\FactoryToolbarIcon.cs",
+    "sha256": "FFB06C9A22DAFEA5630CD52389FAF7A98CF4919CE92CBBC7BBCF785E022EC4DB"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\FactoryTrainingUI.cs",
+    "sha256": "D25B3B487EA63AD32DA510133186A808C2DDD3EA4363C8E67360EDFE4BD51E28"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAbaqusResult.cs",
+    "sha256": "4D94914039917BBB865ABF1638D635E7DE2C83382AC01D5C89299FB83181D6CA"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAnalysisResult.cs",
+    "sha256": "F5587CE1C3449D20C7A0AC2BAC3BF4D3D5CD7B8316F16021E6A1C507568103AE"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAnalysisView.Annotations.cs",
+    "sha256": "7270FD2BB4CA2A1CE1388DF6D17BDE70E5F7A99168BDA27FDE40184CBF48CF60"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAnalysisView.cs",
+    "sha256": "3B110A7871626896C0541082757E1BBD830C8E258781A1789EBC3F9173831F6C"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAnalysisView.Detail.cs",
+    "sha256": "729C468EB8EE4901F4B256CF957663583768EA9870CADEFF8D37306B4E066719"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAnalysisView.Fracture.cs",
+    "sha256": "07127DEF5715166410B4F49B74CA9D07294BBC5B814C3307783DF8EA85EB4410"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopAssistantClient.cs",
+    "sha256": "0E27050AF62CF95B321A5395E1C6D18F71BAB836ABA64968C098116539B0BFA0"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopCamera.cs",
+    "sha256": "6232A039C5E69F8AA5C90C70B24BA804C509F97B759A463300A21D06EE0CDA9C"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopCompactUIVerification.cs",
+    "sha256": "AFF6D766113808F7374944866C8BEACF1EA50983547B3C2C3B2F73A3A414B843"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopCompactUIVerification.Faults.cs",
+    "sha256": "B632C87BD4FAE334A6100F8C681B220728038BCA3AF72928C27600522F4EE1DA"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopCompactUIVerification.Pump.cs",
+    "sha256": "41E851AD3EC6A159E8F5424FC03E17D64FF22487CF6F1A16AC4037B9A8972F5E"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopControlHint.cs",
+    "sha256": "C6AD0F0C059423E4DCE995727F508BF0E22C9A209301885BCF55F61A0472B560"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopDashboardGraphic.cs",
+    "sha256": "296A9F565A030C50C01F787CA487D3AF0638C87CBB1A5B074DC34034BFF14581"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopDevice.cs",
+    "sha256": "81739F91DCE84C8E76DA69AD03FBAEA3DE6B63BD4C41F7BF2341469B5595049E"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentContextView.cs",
+    "sha256": "9E37F206C595DEC5306367EE8C3BB1D69991BB7519B2F28EA3CB1C4D775C30C1"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.cs",
+    "sha256": "2BE42D4804982CB6C6220D1CF88620D304C1BB019F21C13B6EC0683A6844D08B"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.Damage.cs",
+    "sha256": "3D35141CB0E2B8D34F0FA8573AF76A5F2FFE541C49658E87861EA78B979B6D6B"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.Faults.cs",
+    "sha256": "1E05B790D65FE861BB04302890F52EDB32F9021C4BC86C066E742921BD7C94DD"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.Geometry.cs",
+    "sha256": "8459A102453A49930D08F6653FE0CBD21FD3612678C4B5283DF4DCA6D3384954"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.ReviewedCabinet.cs",
+    "sha256": "2F0C5131283276CCE24A3C8FDF15BED44A4ABBC762E4FF8CCD2DE087FE9C24AE"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.ReviewedFan.cs",
+    "sha256": "FACE334D739DCF9938764C318B27E0783AA15E841B77B88448CD638F2CD7C8FB"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.ReviewedPump.cs",
+    "sha256": "11FBBB13CB7A9091E28B1912ADD64123B5F37C9314AE6E95C338DD115C2F158B"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentModel.ReviewedTank.cs",
+    "sha256": "7FE2A5C20E4A71320E4128D83540E4964C7AA09A80D839BEF2638DB4E5D54D8F"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopEquipmentView.cs",
+    "sha256": "01CF0E5E7D344AF097FBBDAE74B9CC7F789D355DF8FE4924CF18EDCF28F35EAE"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopFaultBinding.cs",
+    "sha256": "284C20172C63D5A99CC7C3C77DF6D0EA32CDF8B7E01242D62783A475817D380A"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopFaultCatalog.cs",
+    "sha256": "98435C93FAE6C0DC6902626298E28904F7CE19956AAC1BEA98AD5970D2B6C7AF"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopFaultPresenter.cs",
+    "sha256": "F06708FB25EA3C2D660EE581064BBFA297E0442F5759DBCB03E88824D9B8E8EF"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopFaultProfile.cs",
+    "sha256": "6BEBE42F712FD861772031C1D37F43C1254DEFF0058B4317235AEB4A2DFF3D3B"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopFaultVisual.cs",
+    "sha256": "86E2D94530FEDFE208A1F69DC367F0EB59B9CBBD6D135559457685CD1A749083"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopHudGraphic.cs",
+    "sha256": "BE888611B4E1934D73B9627D54414C5E522B17227ECC0662A9DD35F6B7B4A8E1"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopInspector.cs",
+    "sha256": "E232247F2E2120354AE5A6CD7287873DE26F68809CA5AFCC1A584955154862B8"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopInterfaceVisibility.cs",
+    "sha256": "FBE3BFA5DF0C4845720728ABD44EE7D51C396963E3300332361FFAA2D479E204"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopPumpFaultPresenter.cs",
+    "sha256": "EB0A8B18172D70B955F58B26A423C959C7EF715A5F2B596234D4BC364F49A910"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopReviewedFanVerification.cs",
+    "sha256": "13D3F7E636D81445495251A52A7392E5218732FCCB3684BDD7F0FE6D37527888"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopSceneOverlay.cs",
+    "sha256": "FE074A9674AF3EDB2030D00BBB5D7659C7341AD963F34DEF70CC64ABD3503962"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopSceneSwitcher.cs",
+    "sha256": "8C3EFC23EED530C38E1491586319B8073CFFA63FEAE5063D75E3A17082495584"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopSimulation.cs",
+    "sha256": "3CEE7DACBE6A54A2EC2EDBA7503C96850E6E4D8601CFC5DAE9F734EA19C83477"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopTrainingLayout.cs",
+    "sha256": "662348C729CFDC8A7D2D3A386AAA7ADBDFD08CF2F0FAA32A5B1CCDE01CA631DE"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopTrendGraphic.cs",
+    "sha256": "4A3E82D87D7D70E7F8007493EA8D444521F3EBC009D40B842EF170482028B4EF"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.Analysis.cs",
+    "sha256": "E06C7FC2C4552C5EDF7DF7F48411C58FA47751DE25D2EE833D8B01A3BB0A3041"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.Compact.cs",
+    "sha256": "56158672FB72477B10FEDB3BC541E6F8067215322E2E8791B356E51EC60CE6FD"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.cs",
+    "sha256": "BA81C0C08D1751065DF6878DB90BA52AFA72F65AEA8406E50AD93389942498A9"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.Equipment.cs",
+    "sha256": "2E16372BB5799407EFFDFC9A6C920C52633053AA2FC3451DA86C647319C9558C"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.Fracture.cs",
+    "sha256": "15349F87166A83A3EB2DD1394C8BECAA2EFB2DFDFF40A269BA48360FA20C8299"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.Integration.cs",
+    "sha256": "E50F205582511C5C16ABAA6A047C67C4438022D7327F4BBCC39F1F0BFCB0E2DC"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Scripts\\WorkshopUI.ReviewedViewer.cs",
+    "sha256": "95DB559678F8F66F1061A5315B43D70A930D5BCF5139D9F8606331E355C93E68"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\FactoryTrainingImport.cs",
+    "sha256": "2980F28706B4C8CA9F26E3B94A80A2BD09B4040440FFD87DA5AC7F472C9C6E27"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\FactoryTrainingLayerValidation.cs",
+    "sha256": "69FB59B80B113F9861AD1658F909211EFF8B55BA39E59DA2EA5FBA26CAD5BB08"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\FactoryTrainingUIEditor.cs",
+    "sha256": "945D68023778D06D095E6DE904DBD1F7294BDED07089A8FDFB3BF2BA0635467E"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\FactoryTrainingUIValidation.cs",
+    "sha256": "069817EFDA5747E44543DC84B95FBC24B555BA235FB53B2B77B4586205EDCE88"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopAbaqusImport.cs",
+    "sha256": "D5576FB56CF8CC568ADFAB862E0215F00D62247D24D1B63DEFADD00A566DC89E"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopAssetProbe.cs",
+    "sha256": "763CDDF76DB12D1C2E6D98CD1B89D6C68995862AD0D17E2BE2C86C282C769B64"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopEditorBridge.cs",
+    "sha256": "F38927E7344098EFD1FB279A8C11F07C2263844E22E2ADCD61D775D651392F36"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopEquipmentArt.cs",
+    "sha256": "75BC1F0B2227CD8EB214E1FED769464D22C41725AD9858A41C0FCAA6AD9B2EF9"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopFaultBaseline.cs",
+    "sha256": "CA95D90DCA033ABF5B7547F0F45015CA18C517F5B911E7AECC22F5DCACBF0773"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopFaultValidation.cs",
+    "sha256": "3B4DA0787A606CA1DCEECB601867D0FBCC2B235EDCFDD1CA33BBD6041168CAB8"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopFiveModelLayout.cs",
+    "sha256": "E5E7B2687FF4024197B3BF5A9FA048172ADE3D27E5088D20FE0D2DA097138A22"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopFoundationBuilder.cs",
+    "sha256": "DFB0D65C268EBE65A673E2D3FADDB5912DAD8F0213D5388B9E20C350024B3AFA"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopPlatformBuild.cs",
+    "sha256": "AF1EFA00DA8DE084B9A964DBF40D9FCAF7FC7FAFAD3D01CDEF99BDC7BBD47399"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopPlatformValidation.Advanced.cs",
+    "sha256": "FC9B103F36DF79C3C2DD805E333BFC4253D87CED3573988B5445056BE28BAC07"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopPlatformValidation.cs",
+    "sha256": "A2AABE54F1B5635D7FDC5D1EF7CD85E0D1F4855096B3B135B06DF058E1E85D42"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopReviewedCabinetImport.cs",
+    "sha256": "6D2669C32C064875B98157E4995DB4418D64706C614A78CC0E8B8007A5366CC7"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopReviewedFanImport.cs",
+    "sha256": "76D1C5B9EF17A7E53E3603F491CD9141AAB6DF6EC5E7C52567EF4BCF7FCA13A6"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopReviewedPumpImport.cs",
+    "sha256": "EC62FC136E9D67728D9AE80F7C4AEDF777B050EF7DB4633D9E8B7B17053C2515"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopReviewedTankImport.cs",
+    "sha256": "2AA3497DB70AE8224728E3973C978672D8F4D9276956C043165C166194E9CF40"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopTwinSetup.cs",
+    "sha256": "41595F1F31C11B25E6F24F60C29EF832DEF8B146647452836B3CB0D56FD1AB1D"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopTwinValidation.cs",
+    "sha256": "394BC38288D436E6CF4523FEF36C4076DF9FB417387EB9E061D09681D73B13D7"
+  },
+  {
+    "path": "Assets\\WorkshopDemo\\Editor\\WorkshopVerification.cs",
+    "sha256": "6E601160177852A1EA52040124D538A6E2138408C0FBAE220DB82AFFCA841A1A"
+  }
+]

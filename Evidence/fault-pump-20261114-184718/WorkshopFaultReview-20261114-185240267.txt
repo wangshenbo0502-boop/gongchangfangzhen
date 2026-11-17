@@ -1,0 +1,2 @@
+Windows SendInput / 1280x720 / PID 33080. Review captures for observed state.
+FAIL Platform window lost focus

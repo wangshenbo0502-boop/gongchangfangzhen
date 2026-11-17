@@ -1,0 +1,142 @@
+Started 2026-11-15T23:23:55.1622687+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification
+PASS Current four-device monitoring scene
+PASS 32 applicable definitions plus 8 preserved historical definitions
+PASS BIND-01 P-01 pump.seal.faces resolved independently
+PASS BIND-01 P-01 pump.impeller.inlet resolved independently
+PASS BIND-01 TK-01 tank.shell.frontLeak resolved independently
+PASS BIND-01 TK-01 tank.instruments.level resolved independently
+PASS BIND-01 F-01 fan.impeller.crack resolved independently
+PASS BIND-01 F-01 fan.impeller.hub resolved independently
+PASS BIND-01 PLC-01 cabinet.fieldTerminal.candidate resolved independently
+PASS Envelope irregular-axis interpolation and clamping
+PASS Protocol rejection: wrong device
+PASS Protocol rejection: missing active channel
+PASS Protocol rejection: bad ODB hash
+PASS Protocol rejection: duplicate time
+PASS Envelope single temperature frame
+PASS V2 original labels, raw nodal values, discrete load axis and bounded frame cache
+PASS Protocol rejection: V2 wrong binding
+PASS Protocol rejection: V2 traversal
+PASS Protocol rejection: V2 static parameter cannot masquerade as seconds
+PASS Protocol rejection: V2 corrupted frame hash
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Button in screen 重新加载
+PASS Button text fits 重新加载
+PASS Synthetic temperature-only envelope rendered independently of a reference FEM
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Synthetic original nodal field rendered in an independent viewport
+PASS P-HOT case definition and unique local binding
+PASS P-HOT deterministic reverse scrub and local focus
+PASS P-HOT no unrelated structural fracture
+PASS P-HOT exact geometry/transform/enabled/layer restoration after two resets
+PASS P-CAV case definition and unique local binding
+PASS P-CAV deterministic reverse scrub and local focus
+PASS P-CAV no unrelated structural fracture
+PASS P-CAV exact geometry/transform/enabled/layer restoration after two resets
+PASS P-SEAL case definition and unique local binding
+PASS P-SEAL deterministic reverse scrub and local focus
+PASS P-SEAL no unrelated structural fracture
+PASS P-SEAL exact geometry/transform/enabled/layer restoration after two resets
+PASS P-BEAR case definition and unique local binding
+PASS P-BEAR deterministic reverse scrub and local focus
+PASS P-BEAR no unrelated structural fracture
+PASS P-BEAR exact geometry/transform/enabled/layer restoration after two resets
+PASS P-ALIGN case definition and unique local binding
+PASS P-ALIGN deterministic reverse scrub and local focus
+PASS P-ALIGN no unrelated structural fracture
+PASS P-ALIGN exact geometry/transform/enabled/layer restoration after two resets
+PASS P-INLET case definition and unique local binding
+PASS P-INLET deterministic reverse scrub and local focus
+PASS P-INLET no unrelated structural fracture
+PASS P-INLET exact geometry/transform/enabled/layer restoration after two resets
+PASS P-IMPELLER case definition and unique local binding
+PASS P-IMPELLER deterministic reverse scrub and local focus
+PASS P-IMPELLER no unrelated structural fracture
+PASS P-IMPELLER exact geometry/transform/enabled/layer restoration after two resets
+PASS P-DRY case definition and unique local binding
+PASS P-DRY deterministic reverse scrub and local focus
+PASS P-DRY no unrelated structural fracture
+PASS P-DRY exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS TK-PRESS case definition and unique local binding
+PASS TK-PRESS deterministic reverse scrub and local focus
+PASS TK-PRESS no unrelated structural fracture
+PASS TK-PRESS exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-LEAK case definition and unique local binding
+PASS TK-LEAK deterministic reverse scrub and local focus
+PASS TK-LEAK no unrelated structural fracture
+PASS TK-LEAK exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-LEVEL case definition and unique local binding
+PASS TK-LEVEL deterministic reverse scrub and local focus
+PASS TK-LEVEL no unrelated structural fracture
+PASS TK-LEVEL exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-SUPPORT case definition and unique local binding
+PASS TK-SUPPORT deterministic reverse scrub and local focus
+PASS TK-SUPPORT no unrelated structural fracture
+PASS TK-SUPPORT exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-CORROSION case definition and unique local binding
+PASS TK-CORROSION deterministic reverse scrub and local focus
+PASS TK-CORROSION no unrelated structural fracture
+PASS TK-CORROSION exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-FLANGE case definition and unique local binding
+PASS TK-FLANGE deterministic reverse scrub and local focus
+PASS TK-FLANGE no unrelated structural fracture
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL Not allowed to access vertices on mesh 'TNK_01_Shell_8mmWall' (isReadable is false; Read/Write must be enabled in import settings)
+
+FAIL System.InvalidOperationException: TK-FLANGE exact geometry/transform/enabled/layer restoration after two resets
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <1ffcfef1768443f8a9ba79411684ec0f>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyUpgrade>d__32.MoveNext () [0x0081d] in <1ffcfef1768443f8a9ba79411684ec0f>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x001c5] in <1ffcfef1768443f8a9ba79411684ec0f>:0 
+Result: FAIL

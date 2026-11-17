@@ -19,6 +19,7 @@ namespace WorkshopDemo
         public string reporter, department, description, assignee, cause, repairAction, materials, acceptanceNote;
         public DateTime reportedAt, dueAt, submittedAt, closedAt;
         public int reworkCount;
+        public WorkshopTrainingState training;
         public string StageText => new[] { "待报修", "待派工", "巡检途中", "待维修", "待验收", "已关闭" }[(int)stage];
     }
 
@@ -35,9 +36,10 @@ namespace WorkshopDemo
         public string reporter, assignee, cause, materials, acceptanceNote;
         public double elapsedMinutes;
         public int reworkCount;
+        public string trainingSummary;
     }
 
-    public sealed class WorkshopSimulation : MonoBehaviour
+    public sealed partial class WorkshopSimulation : MonoBehaviour
     {
         public const int DefaultInspectionMinutes = 30;
         public WorkshopDevice[] devices;
@@ -100,8 +102,15 @@ namespace WorkshopDemo
             sampleTimer += Time.deltaTime;
             if (sampleTimer < .25f) return;
             sampleTimer = 0;
-            foreach (var d in devices) d.Sample(elapsed);
+            bool protectionChanged = false;
+            foreach (var d in devices)
+            {
+                bool before = d.FaultInstance?.ProtectionTriggered ?? false;
+                d.Sample(elapsed);
+                protectionChanged |= before != (d.FaultInstance?.ProtectionTriggered ?? false);
+            }
             Sampled?.Invoke();
+            if (protectionChanged) Changed?.Invoke();
         }
 
         public void Select(WorkshopDevice device, bool focus = true)
@@ -122,20 +131,29 @@ namespace WorkshopDemo
         }
 
         public bool TriggerFault(WorkshopDevice d, string code)
+            => InjectFault(d, code, WorkshopFaultInjection.Immediate);
+
+        public bool TriggerProgressiveFault(WorkshopDevice d, string code)
+            => InjectFault(d, code, WorkshopFaultInjection.Progressive);
+
+        bool InjectFault(WorkshopDevice d, string code, WorkshopFaultInjection injection, WorkshopTrainingMode trainingMode = WorkshopTrainingMode.Normal)
         {
             var fault = WorkshopFaultCatalog.Find(code);
             if (!d || devices == null || Array.IndexOf(devices, d) < 0 || fault == null || fault.Kind != d.kind)
             { Notify("故障与设备类型不匹配"); return false; }
             if (d.Fault != null || Alarms.Exists(a => !a.resolved && a.device == d))
             { Notify(d.deviceId + " 已有活动故障，请先完成处理"); return false; }
-            if (!d.ApplyFault(fault)) return false;
+            d.ExamActive = trainingMode == WorkshopTrainingMode.Exam;
+            if (!d.ApplyFault(fault, elapsed, injection)) { d.ExamActive = false; return false; }
             Alarms.Insert(0, new WorkshopAlarm {
                 id = "ALM-" + (++alarmSequence).ToString("000"),
-                device = d, occurredAt = SimulationTime, fault = fault
+                device = d, occurredAt = SimulationTime, fault = fault,
+                training = trainingMode == WorkshopTrainingMode.Normal ? null : new WorkshopTrainingState { Mode = trainingMode }
             });
             Select(d);
-            Notify(d.deviceId + " " + fault.Name + " · " + fault.SeverityText +
-                (fault.Trips ? " · 联锁停机" : " · 异常运行") + "（教学注入）");
+            Notify(d.deviceId + " " + (d.ExamActive ? "独立考核 · 待诊断" : fault.Name) + " · " + fault.SeverityText +
+                (d.FaultInstance.ProtectionTriggered ? " · 联锁停机" : d.IsRunning ? " · 异常运行" : " · 保持停机") +
+                (injection == WorkshopFaultInjection.Progressive ? "（渐进教学注入）" : "（直接教学注入）"));
             return true;
         }
 
@@ -216,6 +234,7 @@ namespace WorkshopDemo
             { Notify("巡检机器人实际到达后才能提交维修"); return false; }
             if (string.IsNullOrWhiteSpace(cause))
             { Notify("请填写故障原因"); return false; }
+            if (!ValidateTrainingRepair(alarm)) return false;
             alarm.cause = cause.Trim();
             alarm.repairAction = action?.Trim();
             alarm.materials = materials?.Trim();
@@ -233,11 +252,13 @@ namespace WorkshopDemo
             alarm.acceptanceNote = note?.Trim();
             if (!passed)
             {
+                alarm.training?.Rework();
                 alarm.reworkCount++;
                 SetStage(alarm, WorkshopOrderStage.Reported);
                 Notify(alarm.device.displayName + " · 已退回，等待重新巡检");
                 return true;
             }
+            if (!ValidateTrainingRetest(alarm)) return false;
             alarm.resolved = true;
             alarm.closedAt = SimulationTime;
             SetStage(alarm, WorkshopOrderStage.Closed);
@@ -252,6 +273,7 @@ namespace WorkshopDemo
                 reporter = alarm.reporter, assignee = alarm.assignee, cause = alarm.cause,
                 materials = alarm.materials, acceptanceNote = alarm.acceptanceNote,
                 elapsedMinutes = (alarm.closedAt - alarm.reportedAt).TotalMinutes, reworkCount = alarm.reworkCount
+                , trainingSummary = alarm.training?.Summary
             });
             Notify(alarm.id + " 使用方验收通过，设备恢复并归档");
             return true;

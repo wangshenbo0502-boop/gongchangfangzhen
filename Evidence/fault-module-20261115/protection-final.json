@@ -1,0 +1,3367 @@
+{
+  "checkedAt": "2026-11-15T23:54:54.1901279+08:00",
+  "originalRoot": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopPlatform\\Viewers",
+  "candidateRoot": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261115-234044731\\Viewers",
+  "expectedFiles": 671,
+  "originalFiles": 671,
+  "candidateFiles": 671,
+  "allOriginalsUnchanged": true,
+  "allCandidateCopiesIdentical": true,
+  "files": [
+    {
+      "path": "CabinetViewer\\CabinetViewer.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\UnityCrashHandler64.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\UnityPlayer.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\app.info",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\boot.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\globalgamemanagers",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\globalgamemanagers.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\globalgamemanagers.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\level0",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\resources.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\resources.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\RuntimeInitializeOnLoads.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\ScriptingAssemblies.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\sharedassets0.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\sharedassets0.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Assembly-CSharp.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Mono.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\mscorlib.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\netstandard.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.ComponentModel.Composition.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Configuration.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Data.DataSetExtensions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Data.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Drawing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.EnterpriseServices.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.IO.Compression.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.IO.Hashing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Memory.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Net.Http.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Numerics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Runtime.CompilerServices.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Runtime.Serialization.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Transactions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Xml.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\System.Xml.Linq.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.Burst.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.Burst.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.Collections.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.Collections.LowLevel.ILSupport.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.InternalAPIEngineBridge.004.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.Mathematics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.Shared.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Core.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.GPUDriven.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Universal.2D.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Config.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Shaders.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.TextMeshPro.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\Unity.UnifiedRayTracing.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AdaptivePerformanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AMDModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AnimationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ARModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.AudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ClothModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.CoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.DirectorModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.GIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.GridModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.HierarchyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.InputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.InsightsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.PhysicsBackendPhysXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.RenderAs2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ShaderRuntimeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.StreamingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TerrainModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TilemapModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.TLSModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UI.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UmbraModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VectorGraphicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VFXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VideoModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.VRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.WindModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Managed\\UnityEngine.XRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Plugins\\x86_64\\lib_burst_generated.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Resources\\unity default resources",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\CabinetViewer_Data\\Resources\\unity_builtin_extra",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\D3D12\\D3D12Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\Electrical Cabinet Viewer_BurstDebugInformation_DoNotShip\\Data\\Plugins\\x86_64\\lib_burst_generated.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\browscap.ini",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "CabinetViewer\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\UnityCrashHandler64.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\UnityPlayer.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\D3D12\\D3D12Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\Industrial Fan Viewer_BurstDebugInformation_DoNotShip\\Data\\Plugins\\x86_64\\lib_burst_generated.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\app.info",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\boot.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\globalgamemanagers",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\globalgamemanagers.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\globalgamemanagers.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\level0",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\resources.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\resources.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\RuntimeInitializeOnLoads.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\ScriptingAssemblies.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\sharedassets0.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\sharedassets0.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Assembly-CSharp.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Mono.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\mscorlib.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\netstandard.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.ComponentModel.Composition.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Configuration.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Data.DataSetExtensions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Data.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Drawing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.EnterpriseServices.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.IO.Compression.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.IO.Hashing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Memory.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Net.Http.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Numerics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Runtime.CompilerServices.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Runtime.Serialization.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Transactions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Xml.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\System.Xml.Linq.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.Burst.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.Burst.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.Collections.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.Collections.LowLevel.ILSupport.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.InternalAPIEngineBridge.004.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.Mathematics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.Shared.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Core.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.GPUDriven.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Universal.2D.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Config.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Shaders.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.TextMeshPro.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\Unity.UnifiedRayTracing.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AdaptivePerformanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AMDModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AnimationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ARModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.AudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ClothModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.CoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.DirectorModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.GIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.GridModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.HierarchyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.InputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.InsightsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.PhysicsBackendPhysXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.RenderAs2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ShaderRuntimeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.StreamingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TerrainModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TilemapModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.TLSModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UI.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UmbraModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VectorGraphicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VFXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VideoModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.VRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.WindModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Managed\\UnityEngine.XRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Plugins\\x86_64\\lib_burst_generated.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Resources\\unity default resources",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\IndustrialFanViewer_Data\\Resources\\unity_builtin_extra",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\browscap.ini",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "IndustrialFanViewer\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\UnityCrashHandler64.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\UnityPlayer.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\D3D12\\D3D12Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\browscap.ini",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\app.info",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\boot.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\globalgamemanagers",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\globalgamemanagers.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\globalgamemanagers.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\level0",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\resources.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\resources.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\RuntimeInitializeOnLoads.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\ScriptingAssemblies.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\sharedassets0.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\sharedassets0.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Assembly-CSharp.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Mono.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\mscorlib.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\netstandard.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.ComponentModel.Composition.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Configuration.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Data.DataSetExtensions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Data.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Drawing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.EnterpriseServices.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.IO.Compression.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.IO.Hashing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Memory.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Net.Http.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Numerics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Runtime.CompilerServices.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Runtime.Serialization.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Transactions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Xml.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\System.Xml.Linq.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.Burst.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.Burst.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.Collections.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.Collections.LowLevel.ILSupport.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.InternalAPIEngineBridge.004.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.Mathematics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.Shared.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Core.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.GPUDriven.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Universal.2D.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Config.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Shaders.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.TextMeshPro.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\Unity.UnifiedRayTracing.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AdaptivePerformanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AMDModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AnimationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ARModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.AudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ClothModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.CoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.DirectorModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.GIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.GridModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.HierarchyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.InputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.InsightsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.PhysicsBackendPhysXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.RenderAs2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ShaderRuntimeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.StreamingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TerrainModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TilemapModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.TLSModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UI.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UmbraModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VectorGraphicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VFXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VideoModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.VRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.WindModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Managed\\UnityEngine.XRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Plugins\\x86_64\\lib_burst_generated.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Resources\\unity default resources",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\TankViewer_Data\\Resources\\unity_builtin_extra",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "TankViewer\\Vertical Tank Viewer_BurstDebugInformation_DoNotShip\\Data\\Plugins\\x86_64\\lib_burst_generated.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\使用说明.md",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\UnityCrashHandler64.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\UnityPlayer.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer.exe",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\D3D12\\D3D12Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\browscap.ini",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\ThirdParty\\Font-LICENSE.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\ThirdParty\\HDRI-License.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\Water Pump Viewer_BurstDebugInformation_DoNotShip\\Data\\Plugins\\x86_64\\lib_burst_generated.txt",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\app.info",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\boot.config",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\globalgamemanagers",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\globalgamemanagers.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\globalgamemanagers.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\level0",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\resources.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\resources.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\RuntimeInitializeOnLoads.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\ScriptingAssemblies.json",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\sharedassets0.assets",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\sharedassets0.assets.resS",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Assembly-CSharp.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Mono.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\mscorlib.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\netstandard.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.ComponentModel.Composition.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Configuration.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Core.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Data.DataSetExtensions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Data.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Drawing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.EnterpriseServices.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.IO.Compression.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.IO.Hashing.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Memory.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Net.Http.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Numerics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Runtime.CompilerServices.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Runtime.Serialization.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Security.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Transactions.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Xml.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\System.Xml.Linq.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.Burst.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.Burst.Unsafe.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.Collections.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.Collections.LowLevel.ILSupport.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.InternalAPIEngineBridge.004.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.Mathematics.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Core.Runtime.Shared.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Core.ShaderLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.GPUDriven.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Universal.2D.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Config.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.RenderPipelines.Universal.Shaders.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.TextMeshPro.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\Unity.UnifiedRayTracing.Runtime.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AdaptivePerformanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AMDModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AnimationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ARModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.AudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ClothModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.CoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.DirectorModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.GIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.GridModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.HierarchyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.InputModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.InsightsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.PhysicsBackendPhysXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.RenderAs2DModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ShaderRuntimeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.StreamingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TerrainModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TilemapModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.TLSModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UI.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UIModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UmbraModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VectorGraphicsModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VFXModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VideoModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.VRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.WindModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Managed\\UnityEngine.XRModule.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Plugins\\x86_64\\lib_burst_generated.dll",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Resources\\unity default resources",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    },
+    {
+      "path": "WaterPumpViewer\\WaterPumpViewer_Data\\Resources\\unity_builtin_extra",
+      "originalUnchanged": true,
+      "candidateIdentical": true
+    }
+  ]
+}

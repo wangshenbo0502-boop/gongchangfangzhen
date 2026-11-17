@@ -1,0 +1,1 @@
+IndustrialFanViewer pid=27444 exited=False window=328644 responding=False path=D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatform\Viewers\IndustrialFanViewer\IndustrialFanViewer.exe

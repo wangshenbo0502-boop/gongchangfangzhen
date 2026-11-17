@@ -207,6 +207,9 @@ namespace WorkshopDemo
 
         void OnDestroy()
         {
+            faultPresenter?.DisposeOwnedResources();
+            pumpFaultPresenter?.DisposeOwnedResources();
+            localFaultPresenter?.DisposeOwnedResources();
             foreach (var mesh in ownedMeshes) if (mesh) Destroy(mesh);
             foreach (var mat in ownedMaterials) if (mat) Destroy(mat);
         }

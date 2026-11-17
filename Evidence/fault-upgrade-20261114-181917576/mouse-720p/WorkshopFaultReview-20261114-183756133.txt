@@ -1,0 +1,1 @@
+Windows SendInput / 1280x720 / PID 12724. Review captures for observed state.

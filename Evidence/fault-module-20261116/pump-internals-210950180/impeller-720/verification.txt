@@ -1,0 +1,15 @@
+Started 2026-11-16T21:10:58.2335902+08:00
+Unity 6000.3.8f1 / 1280x720
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: P-IMPELLER, fixed views, stages and milestone neighbors; images require separate visual review
+PASS Review uses current WorkshopDemo scene
+PASS P-IMPELLER preview offers a closed section
+PASS Enabled Pump section
+FAIL System.InvalidOperationException: Top raycast Pump section (Robot status)
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <058a1f4f9536435692faebcd18a63a9c>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Hit (UnityEngine.UI.Selectable control) [0x00102] in <058a1f4f9536435692faebcd18a63a9c>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Click (System.String name, UnityEngine.Transform scope) [0x00009] in <058a1f4f9536435692faebcd18a63a9c>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.VerifyLocalPumpSection (WorkshopDemo.WorkshopEquipmentView view, System.String code) [0x000aa] in <058a1f4f9536435692faebcd18a63a9c>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyVisualMatrix>d__47.MoveNext () [0x0010a] in <058a1f4f9536435692faebcd18a63a9c>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x0029c] in <058a1f4f9536435692faebcd18a63a9c>:0 
+Result: FAIL

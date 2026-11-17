@@ -1,0 +1,49 @@
+{
+  "source": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\model\\source\\silo-viewer-fit-review.blend",
+  "sourceSha256": "e02d18a42c58192bbe9e9c57d826f266cfcec2905a2b917b9dd1cb1f1a717f96",
+  "derivedAsset": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\Assets\\WorkshopDemo\\Resources\\WorkshopFaults\\tank-shell-perforated.fbx",
+  "derivedSha256": "3fd52dbf2df1a973fe7b5ee7b92e282a1f542d9f20dc9725a7a5098e72cfa0f3",
+  "mechanism": "Preset cylindrical wall perforation; not corrosion or leakage solving",
+  "diameterM": 0.012,
+  "nominalWallM": 0.008,
+  "unityLocalAnchorM": [
+    0.4354,
+    -1.1354,
+    -3.0
+  ],
+  "originalVertices": 724,
+  "derivedVertices": 824,
+  "unchangedNonlocalVertices": 724,
+  "originalNonmanifoldEdges": 0,
+  "derivedNonmanifoldEdges": 0,
+  "rimVertices": 100,
+  "rimDepthM": 0.008296159698147676,
+  "originalBounds": [
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -1.2000000476837158,
+      1.7999999523162842
+    ],
+    [
+      1.5500000715255737,
+      5.099999904632568
+    ]
+  ],
+  "derivedBounds": [
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -1.2000000476837158,
+      1.7999999523162842
+    ],
+    [
+      1.5500000715255737,
+      5.099999904632568
+    ]
+  ]
+}

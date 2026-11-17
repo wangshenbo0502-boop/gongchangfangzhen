@@ -1,0 +1,5 @@
+PASS WaterPumpViewer button launched PID 25656, desktop 2560 1600
+PASS TankViewer button launched PID 41492, desktop 2560 1600
+PASS IndustrialFanViewer button launched PID 41036, desktop 2560 1600
+PASS CabinetViewer button launched PID 18000, desktop 2560 1600
+Result: PASS

@@ -1,0 +1,20 @@
+Started 2026-11-15T10:39:19.8899834+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: P-SEAL and P-CAV; excludes solver data, real mouse and performance
+PASS WorkshopDemo and its UI initialized
+PASS P-01 uses the 12 assemblies and unchanged nominal pump meshes
+PASS Enabled 设备学习
+PASS Top raycast 设备学习 (设备学习)
+PASS Enabled Device P-01
+PASS Top raycast Device P-01 (Device P-01)
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Enabled 水泵工况
+FAIL System.InvalidOperationException: Top raycast 水泵工况 (Equipment inspection)
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <e586fea0175742658f565f0781b178b3>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Hit (UnityEngine.UI.Selectable control) [0x00102] in <e586fea0175742658f565f0781b178b3>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Click (System.String name, UnityEngine.Transform scope) [0x00009] in <e586fea0175742658f565f0781b178b3>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyPumpFaults>d__27.MoveNext () [0x00232] in <e586fea0175742658f565f0781b178b3>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x00190] in <e586fea0175742658f565f0781b178b3>:0 
+Result: FAIL

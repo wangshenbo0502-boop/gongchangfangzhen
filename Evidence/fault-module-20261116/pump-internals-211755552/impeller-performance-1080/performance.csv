@@ -1,0 +1,3 @@
+case,effects,frames,seconds,mean_ms,p95_ms,max_ms,peak_allocated_bytes,peak_working_set_bytes,open_seconds
+P-IMPELLER,False,2401,8.004721,3.333203,3.414154,6.699562,433691833,0,0.02384949
+P-IMPELLER,True,2400,8.00243,3.334165,3.414154,7.6828,433683817,0,0.02384949

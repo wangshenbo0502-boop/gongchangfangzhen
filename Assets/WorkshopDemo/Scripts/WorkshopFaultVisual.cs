@@ -7,6 +7,7 @@ namespace WorkshopDemo
     public sealed class WorkshopFaultVisual : MonoBehaviour
     {
         WorkshopDevice device;
+        WorkshopEquipmentModel model;
         GameObject effects;
         readonly LineRenderer[] lines = new LineRenderer[5];
         Material material;
@@ -19,6 +20,7 @@ namespace WorkshopDemo
         void Start()
         {
             device = GetComponent<WorkshopDevice>();
+            model = GetComponentInChildren<WorkshopEquipmentModel>();
             sourceModel = transform.Find("Source model - " + ModelName(device.kind));
             if (sourceModel) sourcePosition = sourceModel.localPosition;
             var box = GetComponent<BoxCollider>();
@@ -49,8 +51,9 @@ namespace WorkshopDemo
         void LateUpdate()
         {
             if (!effects) return;
+            if (!model) model = GetComponentInChildren<WorkshopEquipmentModel>();
             var fault = device.Fault;
-            bool active = fault != null && Visible;
+            bool active = fault != null && Visible && (!model || model.ProfileFor(fault) == null);
             effects.SetActive(active);
             if (sourceModel) sourceModel.localPosition = sourcePosition;
             if (!active) { code = null; return; }

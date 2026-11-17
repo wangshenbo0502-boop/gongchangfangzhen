@@ -1,0 +1,763 @@
+Started 2026-11-16T21:52:36.7106338+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification
+PASS Current four-device monitoring scene
+PASS 32 applicable definitions plus 8 preserved historical definitions
+PASS BIND-01 P-01 pump.seal.faces resolved independently
+PASS BIND-01 P-01 pump.impeller.inlet resolved independently
+PASS BIND-01 TK-01 tank.shell.frontLeak resolved independently
+PASS BIND-01 TK-01 tank.instruments.level resolved independently
+PASS BIND-01 F-01 fan.impeller.crack resolved independently
+PASS BIND-01 F-01 fan.impeller.hub resolved independently
+PASS BIND-01 PLC-01 cabinet.fieldTerminal.candidate resolved independently
+PASS Envelope irregular-axis interpolation and clamping
+PASS Protocol rejection: wrong device
+PASS Protocol rejection: missing active channel
+PASS Protocol rejection: bad ODB hash
+PASS Protocol rejection: duplicate time
+PASS Envelope single temperature frame
+PASS V2 original labels, raw nodal values, discrete load axis and bounded frame cache
+PASS Protocol rejection: V2 wrong binding
+PASS Protocol rejection: V2 traversal
+PASS Protocol rejection: V2 static parameter cannot masquerade as seconds
+PASS Protocol rejection: V2 corrupted frame hash
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Button in screen 重新加载
+PASS Button text fits 重新加载
+PASS Synthetic temperature-only envelope rendered independently of a reference FEM
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Synthetic original nodal field rendered in an independent viewport
+PASS P-HOT case definition and unique local binding
+PASS P-HOT deterministic reverse scrub and local focus
+PASS P-HOT no unrelated structural fracture
+PASS P-HOT pooled mechanism overlay present
+PASS P-HOT teaching overlay toggle hides all vectors
+PASS P-HOT exact geometry/transform/enabled/layer restoration after two resets
+PASS P-CAV case definition and unique local binding
+PASS P-CAV deterministic reverse scrub and local focus
+PASS P-CAV no unrelated structural fracture
+PASS P-CAV exact geometry/transform/enabled/layer restoration after two resets
+PASS P-SEAL case definition and unique local binding
+PASS P-SEAL deterministic reverse scrub and local focus
+PASS P-SEAL no unrelated structural fracture
+PASS P-SEAL exact geometry/transform/enabled/layer restoration after two resets
+PASS P-BEAR case definition and unique local binding
+PASS P-BEAR deterministic reverse scrub and local focus
+PASS P-BEAR no unrelated structural fracture
+PASS P-BEAR pooled mechanism overlay present
+PASS P-BEAR teaching overlay toggle hides all vectors
+PASS P-BEAR exact geometry/transform/enabled/layer restoration after two resets
+PASS P-ALIGN case definition and unique local binding
+PASS P-ALIGN deterministic reverse scrub and local focus
+PASS P-ALIGN no unrelated structural fracture
+PASS P-ALIGN pooled mechanism overlay present
+PASS P-ALIGN teaching overlay toggle hides all vectors
+PASS P-ALIGN exact geometry/transform/enabled/layer restoration after two resets
+PASS P-INLET case definition and unique local binding
+PASS P-INLET deterministic reverse scrub and local focus
+PASS P-INLET no unrelated structural fracture
+PASS P-INLET pooled mechanism overlay present
+PASS P-INLET teaching overlay toggle hides all vectors
+PASS P-INLET exact geometry/transform/enabled/layer restoration after two resets
+PASS P-IMPELLER case definition and unique local binding
+PASS P-IMPELLER deterministic reverse scrub and local focus
+PASS P-IMPELLER no unrelated structural fracture
+PASS P-IMPELLER pooled mechanism overlay present
+PASS P-IMPELLER teaching overlay toggle hides all vectors
+PASS P-IMPELLER exact geometry/transform/enabled/layer restoration after two resets
+PASS P-DRY case definition and unique local binding
+PASS P-DRY deterministic reverse scrub and local focus
+PASS P-DRY no unrelated structural fracture
+PASS P-DRY pooled mechanism overlay present
+PASS P-DRY teaching overlay toggle hides all vectors
+PASS P-DRY exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS TK-PRESS case definition and unique local binding
+PASS TK-PRESS deterministic reverse scrub and local focus
+PASS TK-PRESS no unrelated structural fracture
+PASS TK-PRESS pooled mechanism overlay present
+PASS TK-PRESS teaching overlay toggle hides all vectors
+PASS TK-PRESS exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-LEAK case definition and unique local binding
+PASS Tank perforation binding
+PASS Derived perforation mesh is readable for geometry validation
+PASS Imported tank hole is through-wall at calibrated anchor; adjacent inner/outer walls remain (0/2)
+PASS Tank intact mesh before perforation milestone
+PASS Tank preset 12 mm perforation at milestone
+PASS Tank wetting forms a perforation-clear annulus with bounded radial extent
+PASS Tank reverse scrub restores original shared mesh
+PASS TK-LEAK deterministic reverse scrub and local focus
+PASS TK-LEAK no unrelated structural fracture
+PASS TK-LEAK exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-LEVEL case definition and unique local binding
+PASS TK-LEVEL deterministic reverse scrub and local focus
+PASS TK-LEVEL no unrelated structural fracture
+PASS TK-LEVEL exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-SUPPORT case definition and unique local binding
+PASS TK-SUPPORT deterministic reverse scrub and local focus
+PASS TK-SUPPORT no unrelated structural fracture
+PASS TK-SUPPORT pooled mechanism overlay present
+PASS TK-SUPPORT teaching overlay toggle hides all vectors
+PASS TK-SUPPORT exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-CORROSION case definition and unique local binding
+PASS Tank corrosion uses a separately derived closed local thinning mesh
+PASS Imported corrosion retains inner/outer walls at three probes; center nominal 4 mm (0.004000004/0.004967846/0.004970584)
+PASS Corrosion before preset milestone retains intact wall
+PASS Corrosion to leakage switch preserves the new case mesh in the same frame
+PASS Leakage to corrosion switch restores closed thinned geometry
+PASS Corrosion reset restores original shared mesh
+PASS TK-CORROSION deterministic reverse scrub and local focus
+PASS TK-CORROSION no unrelated structural fracture
+PASS TK-CORROSION pooled mechanism overlay present
+PASS TK-CORROSION teaching overlay toggle hides all vectors
+PASS TK-CORROSION exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-FLANGE case definition and unique local binding
+PASS TK-FLANGE deterministic reverse scrub and local focus
+PASS TK-FLANGE no unrelated structural fracture
+PASS TK-FLANGE pooled mechanism overlay present
+PASS TK-FLANGE teaching overlay toggle hides all vectors
+PASS TK-FLANGE exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-SENSOR case definition and unique local binding
+PASS TK-SENSOR deterministic reverse scrub and local focus
+PASS TK-SENSOR no unrelated structural fracture
+PASS TK-SENSOR pooled mechanism overlay present
+PASS TK-SENSOR teaching overlay toggle hides all vectors
+PASS TK-SENSOR exact geometry/transform/enabled/layer restoration after two resets
+PASS TK-VENT case definition and unique local binding
+PASS TK-VENT deterministic reverse scrub and local focus
+PASS TK-VENT no unrelated structural fracture
+PASS TK-VENT pooled mechanism overlay present
+PASS TK-VENT teaching overlay toggle hides all vectors
+PASS TK-VENT exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS F-IMBAL case definition and unique local binding
+PASS F-IMBAL deterministic reverse scrub and local focus
+PASS F-IMBAL no unrelated structural fracture
+PASS F-IMBAL pooled mechanism overlay present
+PASS F-IMBAL teaching overlay toggle hides all vectors
+PASS F-IMBAL exact geometry/transform/enabled/layer restoration after two resets
+PASS F-BLOCK case definition and unique local binding
+PASS F-BLOCK deterministic reverse scrub and local focus
+PASS F-BLOCK no unrelated structural fracture
+PASS F-BLOCK pooled mechanism overlay present
+PASS F-BLOCK teaching overlay toggle hides all vectors
+PASS F-BLOCK exact geometry/transform/enabled/layer restoration after two resets
+PASS F-BEAR case definition and unique local binding
+PASS F-BEAR deterministic reverse scrub and local focus
+PASS F-BEAR no unrelated structural fracture
+PASS F-BEAR pooled mechanism overlay present
+PASS F-BEAR teaching overlay toggle hides all vectors
+PASS F-BEAR exact geometry/transform/enabled/layer restoration after two resets
+PASS F-CRACK case definition and unique local binding
+PASS F-CRACK deterministic reverse scrub and local focus
+PASS F-CRACK intact before 20%
+PASS F-CRACK local deformation preserves unaffected vertices and rear connection
+PASS F-CRACK bounded preset curved seam preserves paired lips and unaffected region
+PASS F-CRACK exact geometry/transform/enabled/layer restoration after two resets
+PASS F-LOOSE case definition and unique local binding
+PASS F-LOOSE deterministic reverse scrub and local focus
+PASS F-LOOSE no unrelated structural fracture
+PASS F-LOOSE pooled mechanism overlay present
+PASS F-LOOSE teaching overlay toggle hides all vectors
+PASS F-LOOSE exact geometry/transform/enabled/layer restoration after two resets
+PASS F-RUB case definition and unique local binding
+PASS F-RUB deterministic reverse scrub and local focus
+PASS F-RUB no unrelated structural fracture
+PASS F-RUB pooled mechanism overlay present
+PASS F-RUB teaching overlay toggle hides all vectors
+PASS F-RUB exact geometry/transform/enabled/layer restoration after two resets
+PASS F-BLADE case definition and unique local binding
+PASS F-BLADE deterministic reverse scrub and local focus
+PASS F-BLADE no unrelated structural fracture
+PASS F-BLADE localized preset edge loss preserves inner blade and has no crack
+PASS Fan same-progress case switch replaces wear with crack geometry
+PASS Fan same-progress case switch restores deterministic wear geometry
+PASS F-BLADE pooled mechanism overlay present
+PASS F-BLADE teaching overlay toggle hides all vectors
+PASS F-BLADE exact geometry/transform/enabled/layer restoration after two resets
+PASS F-REVERSE case definition and unique local binding
+PASS F-REVERSE deterministic reverse scrub and local focus
+PASS F-REVERSE no unrelated structural fracture
+PASS F-REVERSE pooled mechanism overlay present
+PASS F-REVERSE teaching overlay toggle hides all vectors
+PASS F-REVERSE exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS PLC-HOT case definition and unique local binding
+PASS PLC-HOT deterministic reverse scrub and local focus
+PASS PLC-HOT no unrelated structural fracture
+PASS PLC-HOT pooled mechanism overlay present
+PASS PLC-HOT teaching overlay toggle hides all vectors
+PASS PLC-HOT exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-LOW case definition and unique local binding
+PASS PLC-LOW deterministic reverse scrub and local focus
+PASS PLC-LOW no unrelated structural fracture
+PASS PLC-LOW pooled mechanism overlay present
+PASS PLC-LOW teaching overlay toggle hides all vectors
+PASS PLC-LOW exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-COMM case definition and unique local binding
+PASS PLC-COMM deterministic reverse scrub and local focus
+PASS PLC-COMM no unrelated structural fracture
+PASS PLC-COMM pooled mechanism overlay present
+PASS PLC-COMM teaching overlay toggle hides all vectors
+PASS PLC-COMM exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-CONTACT case definition and unique local binding
+PASS PLC-CONTACT deterministic reverse scrub and local focus
+PASS PLC-CONTACT no unrelated structural fracture
+PASS PLC-CONTACT pooled mechanism overlay present
+PASS PLC-CONTACT teaching overlay toggle hides all vectors
+PASS PLC-CONTACT exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-OVERLOAD case definition and unique local binding
+PASS PLC-OVERLOAD deterministic reverse scrub and local focus
+PASS PLC-OVERLOAD no unrelated structural fracture
+PASS PLC-OVERLOAD pooled mechanism overlay present
+PASS PLC-OVERLOAD teaching overlay toggle hides all vectors
+PASS PLC-OVERLOAD exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-SENSOR case definition and unique local binding
+PASS PLC-SENSOR deterministic reverse scrub and local focus
+PASS PLC-SENSOR no unrelated structural fracture
+PASS PLC-SENSOR pooled mechanism overlay present
+PASS PLC-SENSOR teaching overlay toggle hides all vectors
+PASS PLC-SENSOR exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-IO case definition and unique local binding
+PASS PLC-IO deterministic reverse scrub and local focus
+PASS PLC-IO no unrelated structural fracture
+PASS PLC-IO pooled mechanism overlay present
+PASS PLC-IO teaching overlay toggle hides all vectors
+PASS PLC-IO exact geometry/transform/enabled/layer restoration after two resets
+PASS PLC-DRIVE case definition and unique local binding
+PASS PLC-DRIVE deterministic reverse scrub and local focus
+PASS PLC-DRIVE no unrelated structural fracture
+PASS PLC-DRIVE pooled mechanism overlay present
+PASS PLC-DRIVE teaching overlay toggle hides all vectors
+PASS PLC-DRIVE exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS P-HOT direct injection and original operation=True
+PASS P-HOT idempotent sampling, duplicate and early submission rejected
+PASS P-HOT real robot dispatch
+PASS P-HOT actual NavMesh arrival
+PASS P-HOT live presentation follows business snapshot
+PASS P-HOT repair/accept/restore and duplicate prevention
+PASS P-HOT direct injection and original operation=False
+PASS P-HOT idempotent sampling, duplicate and early submission rejected
+PASS P-HOT real robot dispatch
+PASS P-HOT actual NavMesh arrival
+PASS P-HOT live presentation follows business snapshot
+PASS P-HOT repair/accept/restore and duplicate prevention
+PASS P-CAV direct injection and original operation=True
+PASS P-CAV idempotent sampling, duplicate and early submission rejected
+PASS P-CAV real robot dispatch
+PASS P-CAV actual NavMesh arrival
+PASS P-CAV live presentation follows business snapshot
+PASS P-CAV repair/accept/restore and duplicate prevention
+PASS P-CAV direct injection and original operation=False
+PASS P-CAV idempotent sampling, duplicate and early submission rejected
+PASS P-CAV real robot dispatch
+PASS P-CAV actual NavMesh arrival
+PASS P-CAV live presentation follows business snapshot
+PASS P-CAV repair/accept/restore and duplicate prevention
+PASS P-SEAL direct injection and original operation=True
+PASS P-SEAL idempotent sampling, duplicate and early submission rejected
+PASS P-SEAL real robot dispatch
+PASS P-SEAL actual NavMesh arrival
+PASS P-SEAL live presentation follows business snapshot
+PASS P-SEAL repair/accept/restore and duplicate prevention
+PASS P-SEAL direct injection and original operation=False
+PASS P-SEAL idempotent sampling, duplicate and early submission rejected
+PASS P-SEAL real robot dispatch
+PASS P-SEAL actual NavMesh arrival
+PASS P-SEAL live presentation follows business snapshot
+PASS P-SEAL repair/accept/restore and duplicate prevention
+PASS P-BEAR direct injection and original operation=True
+PASS P-BEAR idempotent sampling, duplicate and early submission rejected
+PASS P-BEAR real robot dispatch
+PASS P-BEAR actual NavMesh arrival
+PASS P-BEAR live presentation follows business snapshot
+PASS P-BEAR repair/accept/restore and duplicate prevention
+PASS P-BEAR direct injection and original operation=False
+PASS P-BEAR idempotent sampling, duplicate and early submission rejected
+PASS P-BEAR real robot dispatch
+PASS P-BEAR actual NavMesh arrival
+PASS P-BEAR live presentation follows business snapshot
+PASS P-BEAR repair/accept/restore and duplicate prevention
+PASS P-ALIGN direct injection and original operation=True
+PASS P-ALIGN idempotent sampling, duplicate and early submission rejected
+PASS P-ALIGN real robot dispatch
+PASS P-ALIGN actual NavMesh arrival
+PASS P-ALIGN live presentation follows business snapshot
+PASS P-ALIGN repair/accept/restore and duplicate prevention
+PASS P-ALIGN direct injection and original operation=False
+PASS P-ALIGN idempotent sampling, duplicate and early submission rejected
+PASS P-ALIGN real robot dispatch
+PASS P-ALIGN actual NavMesh arrival
+PASS P-ALIGN live presentation follows business snapshot
+PASS P-ALIGN repair/accept/restore and duplicate prevention
+PASS P-INLET direct injection and original operation=True
+PASS P-INLET idempotent sampling, duplicate and early submission rejected
+PASS P-INLET real robot dispatch
+PASS P-INLET actual NavMesh arrival
+PASS P-INLET live presentation follows business snapshot
+PASS P-INLET repair/accept/restore and duplicate prevention
+PASS P-INLET direct injection and original operation=False
+PASS P-INLET idempotent sampling, duplicate and early submission rejected
+PASS P-INLET real robot dispatch
+PASS P-INLET actual NavMesh arrival
+PASS P-INLET live presentation follows business snapshot
+PASS P-INLET repair/accept/restore and duplicate prevention
+PASS P-IMPELLER direct injection and original operation=True
+PASS P-IMPELLER idempotent sampling, duplicate and early submission rejected
+PASS P-IMPELLER real robot dispatch
+PASS P-IMPELLER actual NavMesh arrival
+PASS P-IMPELLER live presentation follows business snapshot
+PASS P-IMPELLER repair/accept/restore and duplicate prevention
+PASS P-IMPELLER direct injection and original operation=False
+PASS P-IMPELLER idempotent sampling, duplicate and early submission rejected
+PASS P-IMPELLER real robot dispatch
+PASS P-IMPELLER actual NavMesh arrival
+PASS P-IMPELLER live presentation follows business snapshot
+PASS P-IMPELLER repair/accept/restore and duplicate prevention
+PASS P-DRY direct injection and original operation=True
+PASS P-DRY idempotent sampling, duplicate and early submission rejected
+PASS P-DRY real robot dispatch
+PASS P-DRY actual NavMesh arrival
+PASS P-DRY live presentation follows business snapshot
+PASS P-DRY repair/accept/restore and duplicate prevention
+PASS P-DRY direct injection and original operation=False
+PASS P-DRY idempotent sampling, duplicate and early submission rejected
+PASS P-DRY real robot dispatch
+PASS P-DRY actual NavMesh arrival
+PASS P-DRY live presentation follows business snapshot
+PASS P-DRY repair/accept/restore and duplicate prevention
+PASS TK-PRESS direct injection and original operation=True
+PASS TK-PRESS idempotent sampling, duplicate and early submission rejected
+PASS TK-PRESS real robot dispatch
+PASS TK-PRESS actual NavMesh arrival
+PASS TK-PRESS live presentation follows business snapshot
+PASS TK-PRESS repair/accept/restore and duplicate prevention
+PASS TK-PRESS direct injection and original operation=False
+PASS TK-PRESS idempotent sampling, duplicate and early submission rejected
+PASS TK-PRESS real robot dispatch
+PASS TK-PRESS actual NavMesh arrival
+PASS TK-PRESS live presentation follows business snapshot
+PASS TK-PRESS repair/accept/restore and duplicate prevention
+PASS TK-LEAK direct injection and original operation=True
+PASS TK-LEAK idempotent sampling, duplicate and early submission rejected
+PASS TK-LEAK real robot dispatch
+PASS TK-LEAK actual NavMesh arrival
+PASS TK-LEAK live presentation follows business snapshot
+PASS TK-LEAK repair/accept/restore and duplicate prevention
+PASS TK-LEAK direct injection and original operation=False
+PASS TK-LEAK idempotent sampling, duplicate and early submission rejected
+PASS TK-LEAK real robot dispatch
+PASS TK-LEAK actual NavMesh arrival
+PASS TK-LEAK live presentation follows business snapshot
+PASS TK-LEAK repair/accept/restore and duplicate prevention
+PASS TK-LEVEL direct injection and original operation=True
+PASS TK-LEVEL idempotent sampling, duplicate and early submission rejected
+PASS TK-LEVEL real robot dispatch
+PASS TK-LEVEL actual NavMesh arrival
+PASS TK-LEVEL live presentation follows business snapshot
+PASS TK-LEVEL repair/accept/restore and duplicate prevention
+PASS TK-LEVEL direct injection and original operation=False
+PASS TK-LEVEL idempotent sampling, duplicate and early submission rejected
+PASS TK-LEVEL real robot dispatch
+PASS TK-LEVEL actual NavMesh arrival
+PASS TK-LEVEL live presentation follows business snapshot
+PASS TK-LEVEL repair/accept/restore and duplicate prevention
+PASS TK-SUPPORT direct injection and original operation=True
+PASS TK-SUPPORT idempotent sampling, duplicate and early submission rejected
+PASS TK-SUPPORT real robot dispatch
+PASS TK-SUPPORT actual NavMesh arrival
+PASS TK-SUPPORT live presentation follows business snapshot
+PASS TK-SUPPORT repair/accept/restore and duplicate prevention
+PASS TK-SUPPORT direct injection and original operation=False
+PASS TK-SUPPORT idempotent sampling, duplicate and early submission rejected
+PASS TK-SUPPORT real robot dispatch
+PASS TK-SUPPORT actual NavMesh arrival
+PASS TK-SUPPORT live presentation follows business snapshot
+PASS TK-SUPPORT repair/accept/restore and duplicate prevention
+PASS TK-CORROSION direct injection and original operation=True
+PASS TK-CORROSION idempotent sampling, duplicate and early submission rejected
+PASS TK-CORROSION real robot dispatch
+PASS TK-CORROSION actual NavMesh arrival
+PASS TK-CORROSION live presentation follows business snapshot
+PASS TK-CORROSION repair/accept/restore and duplicate prevention
+PASS TK-CORROSION direct injection and original operation=False
+PASS TK-CORROSION idempotent sampling, duplicate and early submission rejected
+PASS TK-CORROSION real robot dispatch
+PASS TK-CORROSION actual NavMesh arrival
+PASS TK-CORROSION live presentation follows business snapshot
+PASS TK-CORROSION repair/accept/restore and duplicate prevention
+PASS TK-FLANGE direct injection and original operation=True
+PASS TK-FLANGE idempotent sampling, duplicate and early submission rejected
+PASS TK-FLANGE real robot dispatch
+PASS TK-FLANGE actual NavMesh arrival
+PASS TK-FLANGE live presentation follows business snapshot
+PASS TK-FLANGE repair/accept/restore and duplicate prevention
+PASS TK-FLANGE direct injection and original operation=False
+PASS TK-FLANGE idempotent sampling, duplicate and early submission rejected
+PASS TK-FLANGE real robot dispatch
+PASS TK-FLANGE actual NavMesh arrival
+PASS TK-FLANGE live presentation follows business snapshot
+PASS TK-FLANGE repair/accept/restore and duplicate prevention
+PASS TK-SENSOR direct injection and original operation=True
+PASS TK-SENSOR idempotent sampling, duplicate and early submission rejected
+PASS TK-SENSOR real robot dispatch
+PASS TK-SENSOR actual NavMesh arrival
+PASS TK-SENSOR live presentation follows business snapshot
+PASS TK-SENSOR repair/accept/restore and duplicate prevention
+PASS TK-SENSOR direct injection and original operation=False
+PASS TK-SENSOR idempotent sampling, duplicate and early submission rejected
+PASS TK-SENSOR real robot dispatch
+PASS TK-SENSOR actual NavMesh arrival
+PASS TK-SENSOR live presentation follows business snapshot
+PASS TK-SENSOR repair/accept/restore and duplicate prevention
+PASS TK-VENT direct injection and original operation=True
+PASS TK-VENT idempotent sampling, duplicate and early submission rejected
+PASS TK-VENT real robot dispatch
+PASS TK-VENT actual NavMesh arrival
+PASS TK-VENT live presentation follows business snapshot
+PASS TK-VENT repair/accept/restore and duplicate prevention
+PASS TK-VENT direct injection and original operation=False
+PASS TK-VENT idempotent sampling, duplicate and early submission rejected
+PASS TK-VENT real robot dispatch
+PASS TK-VENT actual NavMesh arrival
+PASS TK-VENT live presentation follows business snapshot
+PASS TK-VENT repair/accept/restore and duplicate prevention
+PASS F-IMBAL direct injection and original operation=True
+PASS F-IMBAL idempotent sampling, duplicate and early submission rejected
+PASS F-IMBAL real robot dispatch
+PASS F-IMBAL actual NavMesh arrival
+PASS F-IMBAL live presentation follows business snapshot
+PASS F-IMBAL repair/accept/restore and duplicate prevention
+PASS F-IMBAL direct injection and original operation=False
+PASS F-IMBAL idempotent sampling, duplicate and early submission rejected
+PASS F-IMBAL real robot dispatch
+PASS F-IMBAL actual NavMesh arrival
+PASS F-IMBAL live presentation follows business snapshot
+PASS F-IMBAL repair/accept/restore and duplicate prevention
+PASS F-BLOCK direct injection and original operation=True
+PASS F-BLOCK idempotent sampling, duplicate and early submission rejected
+PASS F-BLOCK real robot dispatch
+PASS F-BLOCK actual NavMesh arrival
+PASS F-BLOCK live presentation follows business snapshot
+PASS F-BLOCK repair/accept/restore and duplicate prevention
+PASS F-BLOCK direct injection and original operation=False
+PASS F-BLOCK idempotent sampling, duplicate and early submission rejected
+PASS F-BLOCK real robot dispatch
+PASS F-BLOCK actual NavMesh arrival
+PASS F-BLOCK live presentation follows business snapshot
+PASS F-BLOCK repair/accept/restore and duplicate prevention
+PASS F-BEAR direct injection and original operation=True
+PASS F-BEAR idempotent sampling, duplicate and early submission rejected
+PASS F-BEAR real robot dispatch
+PASS F-BEAR actual NavMesh arrival
+PASS F-BEAR live presentation follows business snapshot
+PASS F-BEAR repair/accept/restore and duplicate prevention
+PASS F-BEAR direct injection and original operation=False
+PASS F-BEAR idempotent sampling, duplicate and early submission rejected
+PASS F-BEAR real robot dispatch
+PASS F-BEAR actual NavMesh arrival
+PASS F-BEAR live presentation follows business snapshot
+PASS F-BEAR repair/accept/restore and duplicate prevention
+PASS F-CRACK direct injection and original operation=True
+PASS F-CRACK idempotent sampling, duplicate and early submission rejected
+PASS F-CRACK real robot dispatch
+PASS F-CRACK actual NavMesh arrival
+PASS F-CRACK live presentation follows business snapshot
+PASS F-CRACK repair/accept/restore and duplicate prevention
+PASS F-CRACK direct injection and original operation=False
+PASS F-CRACK idempotent sampling, duplicate and early submission rejected
+PASS F-CRACK real robot dispatch
+PASS F-CRACK actual NavMesh arrival
+PASS F-CRACK live presentation follows business snapshot
+PASS F-CRACK repair/accept/restore and duplicate prevention
+PASS F-LOOSE direct injection and original operation=True
+PASS F-LOOSE idempotent sampling, duplicate and early submission rejected
+PASS F-LOOSE real robot dispatch
+PASS F-LOOSE actual NavMesh arrival
+PASS F-LOOSE live presentation follows business snapshot
+PASS F-LOOSE repair/accept/restore and duplicate prevention
+PASS F-LOOSE direct injection and original operation=False
+PASS F-LOOSE idempotent sampling, duplicate and early submission rejected
+PASS F-LOOSE real robot dispatch
+PASS F-LOOSE actual NavMesh arrival
+PASS F-LOOSE live presentation follows business snapshot
+PASS F-LOOSE repair/accept/restore and duplicate prevention
+PASS F-RUB direct injection and original operation=True
+PASS F-RUB idempotent sampling, duplicate and early submission rejected
+PASS F-RUB real robot dispatch
+PASS F-RUB actual NavMesh arrival
+PASS F-RUB live presentation follows business snapshot
+PASS F-RUB repair/accept/restore and duplicate prevention
+PASS F-RUB direct injection and original operation=False
+PASS F-RUB idempotent sampling, duplicate and early submission rejected
+PASS F-RUB real robot dispatch
+PASS F-RUB actual NavMesh arrival
+PASS F-RUB live presentation follows business snapshot
+PASS F-RUB repair/accept/restore and duplicate prevention
+PASS F-BLADE direct injection and original operation=True
+PASS F-BLADE idempotent sampling, duplicate and early submission rejected
+PASS F-BLADE real robot dispatch
+PASS F-BLADE actual NavMesh arrival
+PASS F-BLADE live presentation follows business snapshot
+PASS F-BLADE repair/accept/restore and duplicate prevention
+PASS F-BLADE direct injection and original operation=False
+PASS F-BLADE idempotent sampling, duplicate and early submission rejected
+PASS F-BLADE real robot dispatch
+PASS F-BLADE actual NavMesh arrival
+PASS F-BLADE live presentation follows business snapshot
+PASS F-BLADE repair/accept/restore and duplicate prevention
+PASS F-REVERSE direct injection and original operation=True
+PASS F-REVERSE idempotent sampling, duplicate and early submission rejected
+PASS F-REVERSE real robot dispatch
+PASS F-REVERSE actual NavMesh arrival
+PASS F-REVERSE live presentation follows business snapshot
+PASS F-REVERSE repair/accept/restore and duplicate prevention
+PASS F-REVERSE direct injection and original operation=False
+PASS F-REVERSE idempotent sampling, duplicate and early submission rejected
+PASS F-REVERSE real robot dispatch
+PASS F-REVERSE actual NavMesh arrival
+PASS F-REVERSE live presentation follows business snapshot
+PASS F-REVERSE repair/accept/restore and duplicate prevention
+PASS PLC-HOT direct injection and original operation=True
+PASS PLC-HOT idempotent sampling, duplicate and early submission rejected
+PASS PLC-HOT real robot dispatch
+PASS PLC-HOT actual NavMesh arrival
+PASS PLC-HOT live presentation follows business snapshot
+PASS PLC-HOT repair/accept/restore and duplicate prevention
+PASS PLC-HOT direct injection and original operation=False
+PASS PLC-HOT idempotent sampling, duplicate and early submission rejected
+PASS PLC-HOT real robot dispatch
+PASS PLC-HOT actual NavMesh arrival
+PASS PLC-HOT live presentation follows business snapshot
+PASS PLC-HOT repair/accept/restore and duplicate prevention
+PASS PLC-LOW direct injection and original operation=True
+PASS PLC-LOW idempotent sampling, duplicate and early submission rejected
+PASS PLC-LOW real robot dispatch
+PASS PLC-LOW actual NavMesh arrival
+PASS PLC-LOW live presentation follows business snapshot
+PASS PLC-LOW repair/accept/restore and duplicate prevention
+PASS PLC-LOW direct injection and original operation=False
+PASS PLC-LOW idempotent sampling, duplicate and early submission rejected
+PASS PLC-LOW real robot dispatch
+PASS PLC-LOW actual NavMesh arrival
+PASS PLC-LOW live presentation follows business snapshot
+PASS PLC-LOW repair/accept/restore and duplicate prevention
+PASS PLC-COMM direct injection and original operation=True
+PASS PLC-COMM idempotent sampling, duplicate and early submission rejected
+PASS PLC-COMM real robot dispatch
+PASS PLC-COMM actual NavMesh arrival
+PASS PLC-COMM live presentation follows business snapshot
+PASS PLC-COMM repair/accept/restore and duplicate prevention
+PASS PLC-COMM direct injection and original operation=False
+PASS PLC-COMM idempotent sampling, duplicate and early submission rejected
+PASS PLC-COMM real robot dispatch
+PASS PLC-COMM actual NavMesh arrival
+PASS PLC-COMM live presentation follows business snapshot
+PASS PLC-COMM repair/accept/restore and duplicate prevention
+PASS PLC-CONTACT direct injection and original operation=True
+PASS PLC-CONTACT idempotent sampling, duplicate and early submission rejected
+PASS PLC-CONTACT real robot dispatch
+PASS PLC-CONTACT actual NavMesh arrival
+PASS PLC-CONTACT live presentation follows business snapshot
+PASS PLC-CONTACT repair/accept/restore and duplicate prevention
+PASS PLC-CONTACT direct injection and original operation=False
+PASS PLC-CONTACT idempotent sampling, duplicate and early submission rejected
+PASS PLC-CONTACT real robot dispatch
+PASS PLC-CONTACT actual NavMesh arrival
+PASS PLC-CONTACT live presentation follows business snapshot
+PASS PLC-CONTACT repair/accept/restore and duplicate prevention
+PASS PLC-OVERLOAD direct injection and original operation=True
+PASS PLC-OVERLOAD idempotent sampling, duplicate and early submission rejected
+PASS PLC-OVERLOAD real robot dispatch
+PASS PLC-OVERLOAD actual NavMesh arrival
+PASS PLC-OVERLOAD live presentation follows business snapshot
+PASS PLC-OVERLOAD repair/accept/restore and duplicate prevention
+PASS PLC-OVERLOAD direct injection and original operation=False
+PASS PLC-OVERLOAD idempotent sampling, duplicate and early submission rejected
+PASS PLC-OVERLOAD real robot dispatch
+PASS PLC-OVERLOAD actual NavMesh arrival
+PASS PLC-OVERLOAD live presentation follows business snapshot
+PASS PLC-OVERLOAD repair/accept/restore and duplicate prevention
+PASS PLC-SENSOR direct injection and original operation=True
+PASS PLC-SENSOR idempotent sampling, duplicate and early submission rejected
+PASS PLC-SENSOR real robot dispatch
+PASS PLC-SENSOR actual NavMesh arrival
+PASS PLC-SENSOR live presentation follows business snapshot
+PASS PLC-SENSOR repair/accept/restore and duplicate prevention
+PASS PLC-SENSOR direct injection and original operation=False
+PASS PLC-SENSOR idempotent sampling, duplicate and early submission rejected
+PASS PLC-SENSOR real robot dispatch
+PASS PLC-SENSOR actual NavMesh arrival
+PASS PLC-SENSOR live presentation follows business snapshot
+PASS PLC-SENSOR repair/accept/restore and duplicate prevention
+PASS PLC-IO direct injection and original operation=True
+PASS PLC-IO idempotent sampling, duplicate and early submission rejected
+PASS PLC-IO real robot dispatch
+PASS PLC-IO actual NavMesh arrival
+PASS PLC-IO live presentation follows business snapshot
+PASS PLC-IO repair/accept/restore and duplicate prevention
+PASS PLC-IO direct injection and original operation=False
+PASS PLC-IO idempotent sampling, duplicate and early submission rejected
+PASS PLC-IO real robot dispatch
+PASS PLC-IO actual NavMesh arrival
+PASS PLC-IO live presentation follows business snapshot
+PASS PLC-IO repair/accept/restore and duplicate prevention
+PASS PLC-DRIVE direct injection and original operation=True
+PASS PLC-DRIVE idempotent sampling, duplicate and early submission rejected
+PASS PLC-DRIVE real robot dispatch
+PASS PLC-DRIVE actual NavMesh arrival
+PASS PLC-DRIVE live presentation follows business snapshot
+PASS PLC-DRIVE repair/accept/restore and duplicate prevention
+PASS PLC-DRIVE direct injection and original operation=False
+PASS PLC-DRIVE idempotent sampling, duplicate and early submission rejected
+PASS PLC-DRIVE real robot dispatch
+PASS PLC-DRIVE actual NavMesh arrival
+PASS PLC-DRIVE live presentation follows business snapshot
+PASS PLC-DRIVE repair/accept/restore and duplicate prevention
+PASS P-HOT progressive injection begins running
+PASS P-HOT progressive protection threshold
+PASS TK-PRESS progressive injection begins running
+PASS TK-PRESS progressive protection threshold
+PASS F-IMBAL progressive injection begins running
+PASS F-IMBAL progressive protection threshold
+PASS PLC-HOT progressive injection begins running
+PASS PLC-HOT progressive protection threshold
+PASS Four concurrent active instances remain independent
+PASS Training injection Guided
+PASS Training evidence requires arrival
+PASS Training actual arrival
+PASS Button in screen 关闭
+PASS Button text fits 关闭
+PASS Button in screen 记录检查
+PASS Button text fits 记录检查
+PASS Empty training evidence rejected
+PASS Wrong diagnosis rejected
+PASS Retest required before acceptance
+PASS Rejection preserves diagnostic history and requires rework
+PASS Training rework, retest, acceptance and archived summary
+PASS Training injection Exam
+PASS Exam neutral device title
+PASS Exam answer-bearing previews blocked
+PASS Training evidence requires arrival
+PASS Training actual arrival
+PASS Button in screen 关闭
+PASS Button text fits 关闭
+PASS Button in screen 记录检查
+PASS Button text fits 记录检查
+PASS Empty training evidence rejected
+PASS Wrong diagnosis rejected
+PASS Retest required before acceptance
+PASS Rejection preserves diagnostic history and requires rework
+PASS Training rework, retest, acceptance and archived summary
+PASS Two global resets clear cases, training, records and privacy state
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PERF current platform equipment fault preview: mean_ms=3.345063 p95_ms=3.395302 max_ms=17.3504 managed_bytes=19144704 allocated_bytes=482861796
+
+Result: PASS

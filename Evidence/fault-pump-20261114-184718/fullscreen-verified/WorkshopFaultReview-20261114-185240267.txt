@@ -1,0 +1,5 @@
+PASS 更多 / 进入全屏 desktop 2560 1600
+PASS 更多 / 切换窗口 restored 1280 720
+F11 result before fallback: 2560 1600
+PASS F11 enters fullscreen
+FAIL Cannot find an overload for "SetWindowPos" and the argument count: "6".

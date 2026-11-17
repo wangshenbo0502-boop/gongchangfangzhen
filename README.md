@@ -4,22 +4,24 @@
 
 **接手先看：** 本工程默认打开数字孪生监控场景；要查看小车部件和装配交互，请打开官方训练场景。现有小车是后续四类设备建模的外观与拆装交互参考。全部监控指标为本地模拟数据，故障示意不等于真实工业诊断或 Abaqus 求解。
 
-文档核对日期：**2026-11-13**。统一平台采用黑灰黄主题，主导航收敛为“车间总览、设备学习、实训任务”。AI 助手和更多位于左栏，知识导入位于“更多 → 资料管理”，小车装配位于“实训任务”。设备观察、拆装、故障演示按模式显示工具；有限元分析默认收起专业工具。新建故障后直接进入对应工单，设备名称自动带入，维修只填写故障原因。系统内拆装按视口像素提高渲染分辨率。验收范围见 [本次验证](Evidence/workflow-chat-20261113.md)。仓库中共五个模型：小车，以及泵、罐、风机、控制柜四台受监控设备。储罐、水泵、控制柜沿仓库右侧设备区排齐，风机位于侧边，操作面朝向巡检通道，避开白色网格区和绿色人行道。已移除小地图，保留自动巡检与方向键手动驾驶；两场景统一使用 `H` 隐藏/恢复 UI、`M` 静音/恢复声音。功能来源与边界见 [整合清单](Evidence/version-integration-20261111.md)，布局历史验收见 [统一平台与布局验证](Evidence/platform-layout-20261111.md)，风机本次接入见 [风机平台验证](Evidence/fan-platform-20261112.md)。
+文档核对日期：**2026-11-17**。统一平台采用黑灰黄主题，主导航收敛为“车间总览、设备学习、实训任务”。AI 助手和更多位于左栏，知识导入位于“更多 → 资料管理”，小车装配位于“实训任务”。设备观察、拆装、故障演示按模式显示工具；有限元分析默认收起专业工具。新建故障后直接进入对应工单，设备名称自动带入，维修只填写故障原因。系统内拆装按视口像素提高渲染分辨率。验收范围见 [本次验证](Evidence/workflow-chat-20261113.md)。仓库中共五个模型：小车，以及泵、罐、风机、控制柜四台受监控设备。储罐、水泵、控制柜沿仓库右侧设备区排齐，风机位于侧边，操作面朝向巡检通道，避开白色网格区和绿色人行道。已移除小地图，保留自动巡检与方向键手动驾驶；两场景统一使用 `H` 隐藏/恢复 UI、`M` 静音/恢复声音。功能来源与边界见 [整合清单](Evidence/version-integration-20261111.md)，布局历史验收见 [统一平台与布局验证](Evidence/platform-layout-20261111.md)，风机本次接入见 [风机平台验证](Evidence/fan-platform-20261112.md)。
 
 ## 快速启动与版本区分
 
 | 目的 | 入口 | 说明 |
 | --- | --- | --- |
-| 运行统一平台 | [WorkshopPlatform.exe](Build/WorkshopPlatform/WorkshopPlatform.exe) | 日常统一入口；包含监控平台与原小车装配训练 |
-| 打开设备独立展示器 | 设备学习 → 选择设备 → 详细展示 | 水泵、储罐、风机、控制柜各自打开配套 Unity 窗口 |
+| 运行统一平台 | [WorkshopPlatform.exe](Build/WorkshopPlatform/WorkshopPlatform.exe) | 已归入 2026-11-17 故障升级收尾版（原候选 194622083），757 项回归通过；按 F11 或通过“更多”切换全屏与窗口，验收范围见 3.3 节 |
+| 打开设备独立展示器 | 设备学习 → 选择设备 → 详细展示 | 水泵、储罐、风机、控制柜各自以桌面分辨率全屏打开。按 Alt+F4 关闭并回到主平台 |
 | 运行本工程监控大屏 | [WorkshopDemo.unity](Assets/WorkshopDemo/Scenes/WorkshopDemo.unity) | 当前默认构建场景；也可用 `Tools/Workshop Demo/Open Digital Twin` 打开 |
 | 查看小车装配和使用 | [urp_scene_with_training.unity](Assets/WorkshopDemo/External/FactoryTraining/Scenes/urp_scene_with_training.unity) | 官方样例保留；统一程序内通过“小车装配训练”进入并返回 |
 | 查看环境工作副本 | `Assets/WorkshopDemo/Scenes/FactoryFoundation.unity` | 环境工作副本，不是监控入口 |
 | 查看此前合并版程序 | `D:\UnityProjects\WorkshopInspectionDemo\Build\WorkshopCombined\WorkshopSystem.exe` | 属于另一个开发副本；按 `1` 进入装配，按 `2` 进入巡检，`H` 隐藏/恢复界面 |
 
+2026-11-15 本机正式版已部署全屏切换及四设备全屏展示。[验证与备份记录](Evidence/fault-pump-20261114-184718/progress.md)
+
 当前本机正式版已接入新储罐 TK-01。它在车间内按 60% 等比显示，保留原工位及巡检点，在设备学习页提供 12 总成拆装和独立展示入口。正式版已验证储罐拆装、漏损演示和巡检到场。[储罐接入验证](Evidence/tank-platform-20261113.md)
 
-`Build/` 中保留日常使用的 `WorkshopPlatform/` 和历史发布包 `Releases/`。本轮回收了旧构建、独立展示工程的 Unity 缓存及可重建的导入包。重新打开独立展示工程时，Unity 会重建对应缓存。[清理清单](Evidence/project-cleanup-20261113.json)
+`Build/` 中保留日常使用的 `WorkshopPlatform/` 和历史发布包 `Releases/`。2026-11-17 按用户要求，将原候选 `194622083` 整体归入正式目录；876 个文件迁移前后哈希一致。其余故障迭代构建、旧全屏备份和替换下来的正式版移入 Windows 回收站；历史验证记录保留，旧迭代路径仅作追溯。详见 [归整记录](Evidence/fault-module-20261116/build-consolidation-20261117.json)。此前独立展示工程缓存清理见 [历史清理清单](Evidence/project-cleanup-20261113.json)。
 
 本 README 描述当前目录 `D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统`。旧开发副本中的设备观察器、渐进裂口和故障参考分析已按源码迁移到统一平台；当前结果以本工程的新验证报告为准。2026-11-11 经用户确认，四个旧车间构建已移入回收站；受保护的 `WorkshopCombined` 副本保持原样，当前统一入口为 `Build/WorkshopPlatform/WorkshopPlatform.exe`。清单见 [旧构建清理记录](Evidence/version-cleanup-20261111.md)。
 
@@ -33,13 +35,13 @@
 
 知识检索与真实在线问答已于 2026-11-12 通过本机服务验证；历史 DeepSeek **401** 鉴权失败记录保留。配置见 [知识助手说明](Services/WorkshopAssistant/README.md)，密钥仅放在被忽略的 `.env`，不要提交。
 
-2026-11-12 已补入四类设备故障速查与工单答疑，知识库实测为 6 份资料、40 个片段；服务、数据库与中文检索通过。用户更新密钥后，重新创建助手容器以加载新配置，真实 `/api/chat` 返回 HTTP 200，回答附带知识引用。修改 `.env` 后需重新创建容器，仅保存文件不会更新运行中的环境变量。启动与验证范围见 [本次记录](Evidence/assistant-startup-20261112.md) 和 [密钥更新验证](Evidence/assistant-key-reload-20261112.md)；本次成功请求未携带 Unity 场景快照。
+2026-11-13 扩展了四类设备的故障速查、结构拆装、巡检案例和有限元读图，新增带项目截图的 Abaqus 入门文档。本机知识库实测为 11 份资料、81 个片段。修改 `.env` 后需重新创建助手容器以加载新环境变量；只更新知识文档时重启助手容器即可重新入库。[Abaqus 与故障分析入门](Services/WorkshopAssistant/knowledge/Abaqus故障分析入门.md) · [本次入库与检索验证](Evidence/assistant-knowledge-expansion-20261113.md) · [密钥更新验证](Evidence/assistant-key-reload-20261112.md)
 
 通过 Git 获取资源时先执行 `git lfs install`、`git lfs pull` 和 `git lfs fsck`。迁移时保留 `Assets` 及全部 `.meta`、`Packages`、`ProjectSettings`；资源缺失应先检查 LFS，不要重新提取全部美术资源。
 
 Git 仓库保存源码、资源和验证记录；Windows 统一程序以仓库 Release 附件发布。`Build/`、本机缓存、建模过程快照和密钥不提交，下载程序后应保留解压目录内全部配套文件。
 
-GitHub Releases 的 2026-11-11 下载包对应源码提交 `e970332`。完整解压 `WorkshopPlatform-Windows-x64-20261111.zip` 后运行 `WorkshopPlatform/WorkshopPlatform.exe`。后续模型和界面更新以仓库源码及本机正式版的验证记录为准。[历史 Windows 下载](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111) · [发布记录](Evidence/version-cleanup-20261111.md)
+当前 Windows 发布包为 `WorkshopPlatform-Windows-x64-20261117.zip`，完整解压后运行 `WorkshopPlatform/WorkshopPlatform.exe`，不要单独移动 EXE。该包来自已归整的正式目录，含四个独立展示器；发布标签为 `workshop-platform-20261117`，对应源码以该标签为准。[当前 Windows 下载](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261117) · [本次发布说明与校验值](Evidence/fault-module-20261116/github-release-20261117.md)。历史 2026-11-11 包对应源码提交 `e970332`，仍在 [历史 Release](https://github.com/wangshenbo0502-boop/gongchangfangzhen/releases/tag/workshop-platform-20261111) 保留。
 
 ## 小车模型与交互
 
@@ -161,7 +163,7 @@ GitHub Releases 的 2026-11-11 下载包对应源码提交 `e970332`。完整解
 
 实际网格、自检结果和限制见 [离心泵报告](model/reports/water-pump.md)、[重新打开验证](model/reports/water-pump-reopen-verification.json)、[独立展示器验证](Evidence/pump-viewer-20261111.md) 与 [统一平台水泵接入验证](Evidence/pump-platform-20261111.md)。精细泵与风机均已替换统一平台的对应展示模型，并提供独立详细展示入口。风机运行验证和水泵入口回归见 [风机平台验证](Evidence/fan-platform-20261112.md)。
 
-验收通过的储罐已接入主平台 TK-01。车间内按 60% 等比显示以适配原工位和巡检通道，设备观察中显示原始名义尺寸。打开“设备学习 → TK-01 → 拆装”可查看原 12 个总成的拆装路径，“详细展示”启动随平台打包的 [TankViewer.exe](model/TankViewer/TankViewer.exe)。“故障演示”使用预设的储罐教学模型。Unity 菜单 `Tools/Workshop Demo/Import Reviewed Tank` 可从独立展示器工程重新导入资源。见 [储罐展示器验证](Evidence/tank-viewer-fit-20261113.md) 和 [储罐接入验证](Evidence/tank-platform-20261113.md)。
+验收通过的储罐已接入主平台 TK-01。车间内按 60% 等比显示以适配原工位和巡检通道，设备观察中显示原始名义尺寸。打开“设备学习 → TK-01 → 拆装”可查看原 12 个总成的拆装路径，“详细展示”启动随平台打包的独立展示器。Unity 菜单 `Tools/Workshop Demo/Import Reviewed Tank` 可从独立展示器工程重新导入资源。[TankViewer.exe](model/TankViewer/TankViewer.exe) · [储罐展示器验证](Evidence/tank-viewer-fit-20261113.md) · [储罐接入验证](Evidence/tank-platform-20261113.md)
 
 ## 一、系统主题
 
@@ -224,7 +226,11 @@ GitHub Releases 的 2026-11-11 下载包对应源码提交 `e970332`。完整解
 
 ### 3.3 故障与巡检闭环
 
-当前四台设备各支持四种故障，共 **16 组可操作设备故障组合**，目录见 [WorkshopFaultCatalog.cs](Assets/WorkshopDemo/Scripts/WorkshopFaultCatalog.cs)。旧输送线、电机故障目录与参考算例作为资源保留，不再额外生成展示模型。
+故障升级源码中，四台设备各定义八种故障，共 **32 组可操作设备故障组合**，目录见 [WorkshopFaultCatalog.cs](Assets/WorkshopDemo/Scripts/WorkshopFaultCatalog.cs)。旧输送线、电机的 8 个故障定义与参考算例作为资源保留。当前正式入口为 [WorkshopPlatform.exe](Build/WorkshopPlatform/WorkshopPlatform.exe)，2026-11-17 已由验证通过的候选 `194622083` 整体迁入，文件内容一致。Unity 干净重编译恢复脚本映射后，46/46 个场景脚本引用可解析，缺失组件为 0；构建新增缺失脚本拦截，Editor 正常退出。该版本 1080p 综合业务回归 **757 PASS**；可见窗口风机 1080p 专项 **25 PASS**、汽蚀 720p 专项 **27 PASS**，各 23 张截图非空，裂面及叶轮气泡已人工查看。部署前候选与旧正式版各 671 个独立展示器文件保护核对通过，四份拆装配置一致，相关 `.meta` 缺失为 0。归整时未重新构建或重复业务回归；验证范围仍以原记录为准。详见 [本轮收尾与证据](Evidence/fault-module-20261116/progress.md)。
+
+此前 `214915712` 候选新增“看叶轮”“看轴承”可逆剖视、原叶片外缘最多 2 mm 的局部预设磨蚀、外圈滚道最多 1 mm 的局部预设损失，以及原吸入法兰孔内的教学滤网和受阻物。内部聚焦让开周围遮挡，恢复观察角度后显示完整设备。该候选的密封/汽蚀专项 100 PASS、720p 入口检查 32 PASS 仍归属原版。[轴承和入口证据](Evidence/fault-module-20261116/bearing-and-inlet-review.md)
+
+历史候选 `204305255` 的储罐专项及单案例 P-SEAL 引导实训真实鼠标闭环（含缺复验拦截）通过；六重点案例鼠标播放、末态及复位抽样属于历史候选 `220916628`。轴承和叶轮聚焦的可见画面检查属于 `214307642`，入口近景属于 `214915712`。这些鼠标、动态和性能成绩保留原版本范围，不转记为当前候选成绩。历史复位截图拒收及输入干扰见 [复位对照记录](Evidence/fault-module-20261116/fan-phase-220916628/contact-reset-20261117/verification.md)。部分精细效果、完整连续运动/声音及真实 ODB/Abaqus 对照仍未验收，T00–T13 不能整体验收。[交付状态与历史记录](Evidence/fault-module-20261116/progress.md)
 
 1. 选择设备，通过故障工况弹窗选择并注入适用故障；指标、外观、告警和统计同步更新。
 2. 可为多台设备注入并存告警，同一设备已有未处理故障时禁止重复注入。
@@ -233,7 +239,21 @@ GitHub Releases 的 2026-11-11 下载包对应源码提交 `e970332`。完整解
 5. 验收通过才清除故障并归档；设备恢复故障前的启停状态，原先人工停机的设备保持停机。
 6. “重置演示”清空告警和记录，恢复设备、机器人及观察状态。
 
-故障参数是教学设定，不能当作材料断裂极限。现有 Abaqus 接口用于导入 ODB 导出的区域极值时序，详见 [Abaqus 接入说明](Tools/Abaqus/README.md)；有接口不代表已有真实求解或逐节点断裂网格。当前验收使用内存合成协议数据，没有真实 Abaqus 求解结果。
+“深入分析”按可用结果提供 scikit-fem 参考件、Abaqus v1 区域极值曲线、v2 局部温度全场。v2 当前仅支持固定 DC3D4 网格的原始 NODAL NT11，可逐帧浏览和节点探测，不支持结构裂纹、XFEM 或整机映射。当前工程未随附真实 ODB 结果；合成协议通过不代表真实求解或源结果对照通过。[Abaqus 接入说明](Tools/Abaqus/README.md) · [四个局部算例待补资料](AnalysisCases/README.md)
+
+故障模式沿用已验收的 12／12／11／16 总成模型。储罐 TK-LEAK 提供局部湿润、滴漏、积液及预设 12 mm 派生穿孔，保留原壁面厚度；TK-CORROSION 提供名义 8→4 mm 局部派生减薄，实际测厚仍未提供。两者是预设几何，不是腐蚀求解，漏率仍未求解。全部储罐案例使用同一精细储罐。“视图 → 部件与参数”显示带来源的读数，“保存画面 / 导出”可导出案例数据。风机裂纹限定原叶片局部，采用预制曲线裂面和运行时独立裂面网格并保留后缘连接，不等同自然疲劳增长；本轮修正裂面三角形连接，当前候选可见截图已确认裂缝与开口，但高光纹理和较小开口仍限制自然断裂观感，未宣称 T04 精细视觉全部验收。不平衡支持 1×／5× 教学振动倍率；接点过热绑定 X1-01 带载端子，可查看局部热视图。其余工况具备案例卡和部件绑定，但部分仍为局部颜色或证据示意，不能等同于 32 套精细几何特效完成。
+
+水泵故障候选版接入 P-SEAL 机械密封泄漏和 P-CAV 汽蚀。打开“设备学习 → P-01 → 故障演示 → 水泵工况”切换案例。用“看密封”查看动静环、磨痕和滴漏，用“看流道”查看叶轮入口汽泡。“视图 → 部件与参数”提供教学曲线读数，按 M 可静音。两种案例均使用原 12 总成水泵。[水泵升级与验证记录](Evidence/fault-pump-20261115-103703377/progress.md)
+
+“实训任务 → 新建课题”可选普通模式、引导实训或独立考核，以及直接注入或渐进注入。训练要求到场后采集证据、选择诊断和维修动作、记录复验，再提交验收；驳回保留历史并要求重新维修。考核隐藏故障答案、预览和助手根因提示。学习滑条独立于业务快照，不修改工单或小车到场状态。
+
+用 `WorkshopDemo.Editor.WorkshopPlatformBuild.BuildFaultReview` 构建带时间戳的独立 Windows 候选版，复制配套独立展示器，保护原交付目录。运行参数 `-workshop-fault-upgrade-verify <新输出目录>` 默认执行 32 工况可逆预览、64 次启停组合实际巡检、训练及合成协议验证；加 `-workshop-check-pump` 或 `-workshop-check-tank` 分别执行专门案例检查。不要运行会覆盖场景的 Build Demo。需求原文见 [升级指导书](故障模块升级指导书.md) 与 [AI 实施任务书](故障模块AI实施任务书.md)。
+
+批量验收入口为 `Tools/FaultAssets/Test-FaultCandidate.ps1 -Candidate <候选EXE> -Output <新证据目录> -Suite all`，可单选 `regression`、`visuals` 或 `performance`。画面和性能使用可见窗口；当前视觉矩阵为每分辨率 170 张截图，非空检查仅证明捕获有效，人工审图另记。性能 PASS 仅代表完成采样，需另看帧时；可用 `-workshop-review-case <故障编码>` 定向采集视觉/性能。`Check-FaultDelivery.ps1` 可核对候选与日常目录的 671 个独立展示器文件、四份拆装配置、资源 `.meta` 和程序指纹。
+
+历史候选 `155109318`、`183735020` 因 Missing Script 拒收；Unity 干净重编译已恢复当前脚本映射，原始异常触发原因仍未确定。恢复后的中间候选 `194240704` 在 112 PASS 后遇到储罐湿润区尺寸的旧断言，本轮按既有收敛尺寸更新验证边界，最终候选 `194622083` 综合回归通过。最终候选首次隐藏窗口采集的黑图不作为视觉或性能证据；有效图像来自随后两组可见窗口专项。[交付与验证记录](Evidence/fault-module-20261116/progress.md)
+
+历史候选 `135205338` 有双分辨率视觉矩阵各 196 PASS、各 170 张非空图、TK-LEAK 专项 116 PASS 及六案例性能采样：1080p 平均帧时间约 3.333–7.693 ms、P95 约 3.426–8.598 ms；720p 平均约 3.333–7.437 ms、P95 约 3.433–8.148 ms。存在超过 16.67 ms 的慢帧，不构成稳定 60 FPS 保证。这些成绩仅属于历史候选；当前 `194622083` 没有新增可靠的可见窗口性能基准。真实 ODB 对照、四案例 Abaqus 求解和部分精细效果验收仍未完成。
 
 ### 3.4 数字孪生大屏与场景助手
 

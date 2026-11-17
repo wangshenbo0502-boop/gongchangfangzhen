@@ -1,0 +1,2 @@
+IndustrialFanViewer pid=37360 exited=False window=2822074 nativeResponding=True path=D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatform\Viewers\IndustrialFanViewer\IndustrialFanViewer.exe
+WaterPumpViewer pid=29908 exited=False window=3802808 nativeResponding=True path=D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatform\Viewers\WaterPumpViewer\WaterPumpViewer.exe

@@ -1,0 +1,45 @@
+PASS Four workshop devices and existing UI
+PASS Approved fan replaces procedural model: 11/590/98140
+PASS Reviewed pump retains 12 assemblies
+PASS All fan materials use supported reviewed shader
+PASS Authored reflection map and fan-only renderer anchors retained
+PASS Approved 2048/1024/512 base textures with normal and roughness maps
+PASS Existing fan station preserved
+PASS Grounded nominal metre scale within equipment area: Center: (7.15, 0.90, -1.10), Extents: (0.84, 0.93, 0.84)
+PASS Fan separated from all other equipment
+PASS Inlet and service face point toward inspection corridor
+PASS Scene physics raycast selects F-01
+PASS Only authored rotor turns around physical fan axis
+PASS Stop command stops reviewed rotor
+PASS 1201 forward/reverse motion samples match approved paths; max world error=9.653336E-07 m; coordinate-based float tolerance=1E-05 m
+PASS Authored blade bends before crack opens
+PASS Original blade seam opens while rear ligament remains connected
+PASS Clearing fault restores original blade geometry
+PASS Visible top UI raycast: 设备台账
+PASS Visible top UI raycast: Device F-01
+PASS Ledger selection binds F-01 and selected perimeter
+PASS Nonblank screenshot at native resolution: fan-in-workshop colors=1545
+PASS Visible top UI raycast: 整机拆装
+PASS Platform inspection uses same reviewed 11 assemblies
+PASS 1201 forward/reverse motion samples match approved paths; max world error=3.14568E-05 m; coordinate-based float tolerance=6.198883E-05 m
+PASS Visible top UI raycast: 全部拆开
+PASS Animated full fan disassembly reaches endpoint
+PASS Nonblank screenshot at native resolution: fan-platform-exploded colors=385
+PASS Visible top UI raycast: 重新组装
+PASS Visible top UI raycast: 全部拆开
+PASS Visible top UI raycast: 重新组装
+PASS Animation reverses and assembles without accumulated offsets
+PASS Nonblank screenshot at native resolution: fan-platform-assembled colors=618
+PASS Visible top UI raycast: 返回工况
+PASS Visible top UI raycast: 详细展示
+PASS Platform launches IndustrialFanViewer
+PASS Correct deployed viewer process responsive: D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatform\Viewers\IndustrialFanViewer\IndustrialFanViewer.exe
+PASS F-CRACK updates existing simulation, alarm, interlock and marker
+PASS Fan work order dispatches actual inspector
+PASS Robot actually reaches fan inspection point
+PASS Fan repair, acceptance, restart and record close loop
+PASS Visible top UI raycast: 详细展示
+PASS Platform launches WaterPumpViewer
+PASS Correct deployed viewer process responsive: D:\UnityProjects\工业车间设备三维可视化监控与交互巡检系统\Build\WorkshopPlatform\Viewers\WaterPumpViewer\WaterPumpViewer.exe
+PASS Original robot training scene still opens
+PASS Returning to platform restores reviewed fan

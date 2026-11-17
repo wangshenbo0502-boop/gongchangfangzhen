@@ -23,6 +23,7 @@ namespace WorkshopDemo
 
         public static WorkshopAbaqusResult Parse(string json, string device, string fault)
         {
+            var tree = WorkshopResultJson.Parse(json);
             var result = JsonUtility.FromJson<WorkshopAbaqusResult>(json);
             if (result == null || result.schemaVersion != 1 || result.source != "Abaqus ODB" ||
                 result.deviceId != device || result.faultCode != fault ||
@@ -36,6 +37,15 @@ namespace WorkshopDemo
                 (!result.hasStress && !result.hasDisplacement && !result.hasTemperature) ||
                 result.frames == null || result.frames.Length == 0 || result.frames.Length > 20000)
                 throw new ArgumentException("Abaqus result metadata, units or device/fault binding is invalid.");
+            var rows = WorkshopResultJson.Required(tree, "frames");
+            if (!rows.IsList) throw new ArgumentException("frames must be an array");
+            foreach (var row in rows.AsList)
+            {
+                WorkshopResultJson.Number(row, "time");
+                if (result.hasStress) WorkshopResultJson.Number(row, "maxStressMPa");
+                if (result.hasDisplacement) WorkshopResultJson.Number(row, "maxDisplacementMm");
+                if (result.hasTemperature) WorkshopResultJson.Number(row, "maxTemperatureC");
+            }
             float previous = -1;
             foreach (var frame in result.frames)
             {
@@ -64,7 +74,7 @@ namespace WorkshopDemo
             catch (Exception exception) when (exception is IOException || exception is ArgumentException ||
                 exception is UnauthorizedAccessException)
             {
-                source = "教学故障模型 · Abaqus 文件校验失败";
+                source = "Abaqus 文件校验失败：" + exception.Message;
                 Debug.LogWarning("Ignored Abaqus result: " + exception.Message);
                 return null;
             }

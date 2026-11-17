@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-16T01:02:47.7331166+08:00",
+  "candidate": "WorkshopFaultReview-20261116-005855959",
+  "checks": [
+    {
+      "scope": "original",
+      "root": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopPlatform\\Viewers",
+      "expected": 671,
+      "actual": 671,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "scope": "candidate",
+      "root": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-005855959\\Viewers",
+      "expected": 671,
+      "actual": 671,
+      "issues": [],
+      "pass": true
+    }
+  ]
+}

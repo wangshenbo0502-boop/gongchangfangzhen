@@ -1,0 +1,931 @@
+{
+    "schemaVersion": 1,
+    "bindings": [
+        {
+            "id": "tank.shell.frontLeak",
+            "model": "silo",
+            "paths": [
+                "TNK_01_Shell/TNK_01_Shell_8mmWall"
+            ],
+            "anchorLocalM": {
+                "x": -0.43540000915527346,
+                "y": -1.1354000568389893,
+                "z": -3.0
+            },
+            "normalLocal": {
+                "x": -0.29030001163482668,
+                "y": -0.9569000005722046,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.4399999976158142,
+                "y": 0.6399999856948853,
+                "z": 0.18000000715255738
+            },
+            "anchorCalibrated": true,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -1.200000286102295,
+                "z": -3.3249998092651369
+            },
+            "surfaceNormalLocal": {
+                "x": 0.04906802996993065,
+                "y": -0.9987954497337341,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_01_Shell_8mmWall"
+        },
+        {
+            "id": "tank.instruments.level",
+            "model": "silo",
+            "paths": [
+                "TNK_05_Instruments/TNK_05_Instruments_LevelLiquid",
+                "TNK_05_Instruments/TNK_05_Instruments_LevelLiquidMeniscus"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.051399946212768558,
+                "z": 6.127358620489076e-9
+            },
+            "surfaceNormalLocal": {
+                "x": -0.06540299952030182,
+                "y": -0.9978589415550232,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_05_Instruments_LevelLiquid"
+        },
+        {
+            "id": "pump.seal.faces",
+            "model": "water-pump",
+            "paths": [
+                "PMP_06_SealBearing/PMP_06_SealBearing_StaticSealFace",
+                "PMP_06_SealBearing/PMP_06_SealBearing_RotatingSealFace"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.3569999933242798,
+                "y": -0.07399998605251312,
+                "z": -0.6600000262260437
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9978589415550232,
+                "z": -0.06540348380804062
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_06_SealBearing_StaticSealFace"
+        },
+        {
+            "id": "pump.seal.chamber",
+            "model": "water-pump",
+            "paths": [
+                "PMP_06_SealBearing/PMP_06_SealBearing_SealChamber"
+            ],
+            "anchorLocalM": {
+                "x": -0.375,
+                "y": -0.03099999949336052,
+                "z": -0.6330000162124634
+            },
+            "normalLocal": {
+                "x": -0.5199999809265137,
+                "y": -0.8539999723434448,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.25,
+                "y": 0.30000001192092898,
+                "z": 0.14000000059604646
+            },
+            "anchorCalibrated": true,
+            "surfaceLocalM": {
+                "x": -0.3199999928474426,
+                "y": -0.14300000667572022,
+                "z": -0.6600000262260437
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9978588819503784,
+                "z": -0.06540312618017197
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_06_SealBearing_SealChamber"
+        },
+        {
+            "id": "pump.impeller.inlet",
+            "model": "water-pump",
+            "paths": [
+                "PMP_07_Impeller/water-pump_rotor/PMP_07_Impeller_BackwardBlade_01",
+                "PMP_09_ImpellerFrontShroud/PMP_07_Impeller_ConicalFrontShroud"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.5034999847412109,
+                "y": 0.14879895746707917,
+                "z": -0.5654973387718201
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9557936191558838,
+                "z": 0.29403823614120486
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_07_Impeller_BackwardBlade_01"
+        },
+        {
+            "id": "pump.inlet.cover",
+            "model": "water-pump",
+            "paths": [
+                "PMP_05_InletCover/PMP_05_InletCover_ContouredCover",
+                "PMP_04_Volute/PMP_04_Volute_GrowingSpiral12mm",
+                "PMP_09_ImpellerFrontShroud/PMP_07_Impeller_ConicalFrontShroud",
+                "PMP_04_Volute/PMP_04_Volute_FrontRegister"
+            ],
+            "anchorLocalM": {
+                "x": -0.5730000138282776,
+                "y": 0.0,
+                "z": -0.6600000262260437
+            },
+            "normalLocal": {
+                "x": -0.6800000071525574,
+                "y": -0.7329999804496765,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.4699999988079071,
+                "y": 0.4300000071525574,
+                "z": 0.30000001192092898
+            },
+            "anchorCalibrated": true,
+            "surfaceLocalM": {
+                "x": -0.6637499332427979,
+                "y": -0.28299999237060549,
+                "z": -0.6599999070167542
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9978589415550232,
+                "z": -0.06540331989526749
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_05_InletCover_ContouredCover"
+        },
+        {
+            "id": "pump.suction.bore",
+            "model": "water-pump",
+            "paths": [
+                "PMP_05_InletCover/PMP_05_InletCover_SuctionRaisedFace",
+                "PMP_05_InletCover/PMP_05_InletCover_SuctionPipe"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.847000002861023,
+                "y": -0.13099998235702516,
+                "z": -0.6599999666213989
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9978589415550232,
+                "z": -0.06540283560752869
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_05_InletCover_SuctionRaisedFace"
+        },
+        {
+            "id": "pump.discharge.gauge",
+            "model": "water-pump",
+            "paths": [
+                "PMP_04_Volute/PMP_04_Volute_GaugeNeedle",
+                "PMP_04_Volute/PMP_04_Volute_GaugeDial"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.527999997138977,
+                "y": -0.094200000166893,
+                "z": -1.190000057220459
+            },
+            "surfaceNormalLocal": {
+                "x": -0.40686288475990298,
+                "y": -0.8660286664962769,
+                "z": 0.29061487317085268
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_04_Volute_GaugeNeedle"
+        },
+        {
+            "id": "fan.impeller.crack",
+            "model": "industrial-fan",
+            "paths": [
+                "FAN_02_Impeller/industrial-fan_rotor/FAN_02_Impeller_TwistedAirfoil_01"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -1.140113353729248,
+                "y": 0.41205883026123049,
+                "z": 0.22902429103851319
+            },
+            "surfaceNormalLocal": {
+                "x": -0.5543860197067261,
+                "y": -0.09319602698087692,
+                "z": 0.8270252346992493
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedFan/industrial-fan.fbx / FAN_02_Impeller_TwistedAirfoil_01"
+        },
+        {
+            "id": "fan.impeller.hub",
+            "model": "industrial-fan",
+            "paths": [
+                "FAN_02_Impeller/industrial-fan_rotor/FAN_02_Impeller_Hub"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -1.107465147972107,
+                "y": -0.04990331456065178,
+                "z": 0.28649991750717165
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedFan/industrial-fan.fbx / FAN_02_Impeller_Hub"
+        },
+        {
+            "id": "cabinet.fieldTerminal.candidate",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_02_Terminals/CAB_02_Terminals_X1_01_ClampCage",
+                "CAB_02_Terminals/CAB_02_Terminals_X1_01_ProfiledInsulator",
+                "CAB_02_Terminals/CAB_02_Terminals_X1_01_MarkerBridge"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.0020000003278255464,
+                "z": 2.384186736925642e-10
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_02_Terminals_X1_01_ClampCage"
+        },
+        {
+            "id": "pump.bearing.housing",
+            "model": "water-pump",
+            "paths": [
+                "PMP_10_BearingHousing/PMP_06_SealBearing_BearingHousing"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.18050000071525575,
+                "y": -0.11299997568130493,
+                "z": -0.6600000262260437
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -0.9978589415550232,
+                "z": -0.06540290266275406
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_06_SealBearing_BearingHousing"
+        },
+        {
+            "id": "pump.coupling",
+            "model": "water-pump",
+            "paths": [
+                "PMP_02_Coupling/PMP_02_Coupling_ElastomerJaw"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.017499998211860658,
+                "z": 2.086162576020456e-9
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedPump/water-pump.fbx / PMP_02_Coupling_ElastomerJaw"
+        },
+        {
+            "id": "tank.pressure",
+            "model": "silo",
+            "paths": [
+                "TNK_05_Instruments/TNK_05_Instruments_PressureGaugeFace"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.0020000040531158449,
+                "z": 2.3841822960335437e-10
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": -3.365632039731281e-8
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_05_Instruments_PressureGaugeFace"
+        },
+        {
+            "id": "tank.support",
+            "model": "silo",
+            "paths": [
+                "TNK_00_Legs/TNK_00_Legs_BasePlate_01"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.1550000011920929,
+                "z": 1.847744357519332e-8
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_00_Legs_BasePlate_01"
+        },
+        {
+            "id": "tank.outlet.flange",
+            "model": "silo",
+            "paths": [
+                "TNK_09_Outlet/TNK_09_Outlet_UpperGasket",
+                "TNK_09_Outlet/TNK_09_Outlet_UpperFlange"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 7.430935866636901e-9,
+                "y": 0.2150000035762787,
+                "z": -0.6890000104904175
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_09_Outlet_UpperGasket"
+        },
+        {
+            "id": "tank.vent",
+            "model": "silo",
+            "paths": [
+                "TNK_11_TopAccessories/TNK_11_TopAccessories_VentNeck",
+                "TNK_11_TopAccessories/TNK_11_TopAccessories_VentFlange",
+                "TNK_11_TopAccessories/TNK_11_TopAccessories_VentWeatherCap"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.41999998688697817,
+                "y": 1.1169999837875367,
+                "z": -5.707494735717773
+            },
+            "surfaceNormalLocal": {
+                "x": -0.06540487706661225,
+                "y": -0.9978588223457336,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedTank/silo.fbx / TNK_11_TopAccessories_VentNeck"
+        },
+        {
+            "id": "fan.motor.bearing",
+            "model": "industrial-fan",
+            "paths": [
+                "FAN_04_Motor/FAN_04_Motor_EndBell"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.17599999904632569,
+                "y": -0.007667104247957468,
+                "z": -1.1061782836914063
+            },
+            "surfaceNormalLocal": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedFan/industrial-fan.fbx / FAN_04_Motor_EndBell"
+        },
+        {
+            "id": "fan.inlet",
+            "model": "industrial-fan",
+            "paths": [
+                "FAN_03_InletGuard/FAN_03_InletGuard_MountRing",
+                "FAN_03_InletGuard/FAN_03_InletGuard_ConcentricWire"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": -0.5710000395774841,
+                "y": -0.49666842818260195,
+                "z": -1.5695205926895142
+            },
+            "surfaceNormalLocal": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedFan/industrial-fan.fbx / FAN_03_InletGuard_MountRing"
+        },
+        {
+            "id": "fan.support",
+            "model": "industrial-fan",
+            "paths": [
+                "FAN_06_Struts/FAN_06_Struts_CradleFastener_HexHead"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.492000013589859,
+                "y": 0.19831982254981996,
+                "z": -1.1545000076293946
+            },
+            "surfaceNormalLocal": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedFan/industrial-fan.fbx / FAN_06_Struts_CradleFastener_HexHead"
+        },
+        {
+            "id": "cabinet.cooling",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_06_Cooling/CAB_06_Cooling_AngledLouver"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.006738113239407539,
+                "z": -0.0029999990947544576
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_06_Cooling_AngledLouver"
+        },
+        {
+            "id": "cabinet.supply",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_09_PowerSupply/CAB_09_PowerSupply_ACDC24V_Body"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.0559999942779541,
+                "z": 6.6757199768119339e-9
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_09_PowerSupply_ACDC24V_Body"
+        },
+        {
+            "id": "cabinet.plc",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_05_PLC/CAB_05_PLC_CPUFront",
+                "CAB_05_PLC/CAB_05_PLC_CPUStatusLED"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.009499996900558472,
+                "z": 1.1324886584063166e-9
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_05_PLC_CPUFront"
+        },
+        {
+            "id": "cabinet.breaker",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_04_Breakers/CAB_04_Breakers_MCCBBody"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.05400000512599945,
+                "z": 6.43730313498736e-9
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_04_Breakers_MCCBBody"
+        },
+        {
+            "id": "cabinet.drive",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_12_VariableSpeedDrives/CAB_12_VariableSpeedDrives_VFD1_LCDWindow"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.0005000010132789612,
+                "z": 5.960482107880694e-11
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_12_VariableSpeedDrives_VFD1_LCDWindow"
+        },
+        {
+            "id": "cabinet.network",
+            "model": "electrical-cabinet",
+            "paths": [
+                "CAB_13_IndustrialNetwork/CAB_13_IndustrialNetwork_DarkFrontFace",
+                "CAB_13_IndustrialNetwork/CAB_13_IndustrialNetwork_ActivityLED"
+            ],
+            "anchorLocalM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "normalLocal": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "focusSizeM": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "anchorCalibrated": false,
+            "surfaceLocalM": {
+                "x": 0.0,
+                "y": -0.007999986410140992,
+                "z": 9.536720302349977e-10
+            },
+            "surfaceNormalLocal": {
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "surfaceCached": true,
+            "surfaceSource": "Assets/WorkshopDemo/Art/ReviewedCabinet/electrical-cabinet.fbx / CAB_13_IndustrialNetwork_DarkFrontFace"
+        }
+    ]
+}

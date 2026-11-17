@@ -1,0 +1,21 @@
+Started 2026-11-13T21:12:57.7368230+08:00
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+PASS Four stations loaded at 1920x1080
+PASS TK-01 uses the approved geometry
+PASS Original station and inspection point, grounded scaled model and full-size nominal height
+PASS Tank envelope clears other equipment
+PASS Robot can reach the original approach point
+PASS Reviewed finishes and reflection are loaded
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Inspection shows the approved 12 assemblies and 14-second path
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+FAIL System.InvalidOperationException: Top raycast 全部拆开 (Equipment inspection)
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <42bfb8570f5943c2ab839c6070e010ff>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Hit (UnityEngine.UI.Selectable control) [0x00102] in <42bfb8570f5943c2ab839c6070e010ff>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Click (System.String name, UnityEngine.Transform scope) [0x00009] in <42bfb8570f5943c2ab839c6070e010ff>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyTank>d__19.MoveNext () [0x00647] in <42bfb8570f5943c2ab839c6070e010ff>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__6.MoveNext () [0x000c5] in <42bfb8570f5943c2ab839c6070e010ff>:0 
+Result: FAIL

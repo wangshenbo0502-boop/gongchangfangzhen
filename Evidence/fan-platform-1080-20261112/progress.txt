@@ -1,0 +1,6 @@
+PASS Four workshop devices and existing UI
+PASS Approved fan replaces procedural model: 11/590/98140
+PASS Reviewed pump retains 12 assemblies
+PASS All fan materials use supported reviewed shader
+PASS Approved 2048/1024/512 base textures with normal and roughness maps
+PASS Existing fan station preserved

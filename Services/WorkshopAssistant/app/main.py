@@ -4,6 +4,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import tempfile
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -195,13 +196,30 @@ class KnowledgeStore:
     def search(self, query: str):
         vector = json.dumps(self.embed([query])[0])
         with self.connect() as connection:
+            exact = []
+            codes = list(dict.fromkeys(re.findall(r"\b(?:PLC|TK|P|F)-[A-Z]+\b", query.upper())))[:5]
+            for code in codes:
+                rows = connection.execute("""
+                    SELECT source, chunk_index, content, 1.0 AS score
+                    FROM workshop_knowledge_chunks
+                    WHERE model=%s AND content ~ %s
+                    ORDER BY CASE WHEN content LIKE %s THEN 0 ELSE 1 END,
+                        length(content), source, chunk_index LIMIT 1
+                """, (MODEL, r"(^|[^A-Z0-9-])" + re.escape(code) + r"([^A-Z0-9-]|$)",
+                      "## " + code + " %")).fetchall()
+                for row in rows:
+                    if not any((r["source"], r["chunk_index"]) ==
+                               (row["source"], row["chunk_index"]) for r in exact):
+                        exact.append(dict(row, score=1.0, match="faultCode"))
             rows = connection.execute("""
                 SELECT source, chunk_index, content, 1-(embedding <=> %s::vector) AS score
                 FROM workshop_knowledge_chunks WHERE model=%s
                 ORDER BY embedding <=> %s::vector LIMIT 5
             """, (vector, MODEL, vector)).fetchall()
-        return [dict(row, score=round(float(row["score"]), 4)) for row in rows
-                if float(row["score"]) >= 0.30]
+        seen = {(row["source"], row["chunk_index"]) for row in exact}
+        semantic = [dict(row, score=round(float(row["score"]), 4)) for row in rows
+                    if float(row["score"]) >= 0.30 and (row["source"], row["chunk_index"]) not in seen]
+        return (exact + semantic)[:5]
 
     def list_documents(self):
         with self.connect() as connection:

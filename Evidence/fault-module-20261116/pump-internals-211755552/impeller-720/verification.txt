@@ -1,0 +1,47 @@
+Started 2026-11-16T21:19:06.8638177+08:00
+Unity 6000.3.8f1 / 1280x720
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: P-IMPELLER, fixed views, stages and milestone neighbors; images require separate visual review
+PASS Review uses current WorkshopDemo scene
+PASS P-IMPELLER preview offers a closed section
+PASS Enabled Pump section
+PASS Top raycast Pump section (Pump section)
+PASS P-IMPELLER UGUI section removes occluding parts
+PASS P-IMPELLER original internal parts remain visible
+PASS Pump impeller section hides complete cover assemblies including their attached gauges and fasteners
+PASS Pump wear is local, topology-preserving, at most 2 mm; inner blade remains intact
+PASS Pump blade reverse scrub is deterministic
+PASS Pump blade zero progress restores original shared mesh without asset mutation
+PASS Enabled Pump section
+PASS Top raycast Pump section (Pump section)
+PASS P-IMPELLER closing section restores every original renderer state
+PASS P-IMPELLER exiting fault mode restores visibility and studio layers
+PASS P-IMPELLER section and closeup layers stay isolated from the live equipment
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS P-IMPELLER full visual matrix captured
+PASS P-IMPELLER mechanism snapshot captured
+
+Result: PASS

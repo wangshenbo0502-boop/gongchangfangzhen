@@ -1,0 +1,13 @@
+{
+  "candidate": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-142302085\\WorkshopPlatform.exe",
+  "case": "regression-720",
+  "processId": 31032,
+  "startedAt": "2026-11-16T14:24:18.5712999+08:00",
+  "endedAt": "2026-11-16T14:24:40.6641804+08:00",
+  "width": 1280,
+  "height": 720,
+  "exitCode": 0,
+  "peakWorkingSetBytes": 876445696,
+  "memorySamples": 21,
+  "method": "External Windows process working set sampled each second; peak is a sampled lower bound."
+}

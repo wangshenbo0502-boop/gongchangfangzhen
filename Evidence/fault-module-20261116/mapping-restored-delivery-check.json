@@ -1,0 +1,53 @@
+{
+  "time": "2026-11-16T17:33:54.3586956+08:00",
+  "candidate": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-173010728\\WorkshopPlatform.exe",
+  "baseline": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Evidence\\fault-module-20261115\\protected-before.json",
+  "viewers": [
+    {
+      "root": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopPlatform\\Viewers",
+      "expected": 671,
+      "actual": 671,
+      "issues": [],
+      "pass": true
+    },
+    {
+      "root": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-173010728\\Viewers",
+      "expected": 671,
+      "actual": 671,
+      "issues": [],
+      "pass": true
+    }
+  ],
+  "fingerprints": [
+    {
+      "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-173010728\\WorkshopPlatform.exe",
+      "length": 667648,
+      "sha256": "3D2B0639CCC2E3BF326257F74AFCF6832808836A9BDB66B01473FE4D4D093889"
+    },
+    {
+      "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-173010728\\WorkshopPlatform_Data\\Managed\\Assembly-CSharp.dll",
+      "length": 538112,
+      "sha256": "EE316AAAD65FFCEC905876736C1497C47CD9EC5DD318C52E75D79511E8E92069"
+    }
+  ],
+  "assemblyContracts": [
+    {
+      "path": "Assets/WorkshopDemo/Resources/ReviewedEquipment/cabinet-parts.json",
+      "pass": true
+    },
+    {
+      "path": "Assets/WorkshopDemo/Resources/ReviewedEquipment/fan-parts.json",
+      "pass": true
+    },
+    {
+      "path": "Assets/WorkshopDemo/Resources/ReviewedEquipment/pump-parts.json",
+      "pass": true
+    },
+    {
+      "path": "Assets/WorkshopDemo/Resources/ReviewedEquipment/tank-parts.json",
+      "pass": true
+    }
+  ],
+  "missingMeta": [],
+  "pass": true
+}

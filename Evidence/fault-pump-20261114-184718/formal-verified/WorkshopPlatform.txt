@@ -1,0 +1,2 @@
+PASS WaterPumpViewer button launched PID 12132, desktop 2560 1600
+Result: PASS

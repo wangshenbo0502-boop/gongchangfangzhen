@@ -1,0 +1,51 @@
+{
+  "source": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\model\\source\\silo-viewer-fit-review.blend",
+  "sourceSha256": "e02d18a42c58192bbe9e9c57d826f266cfcec2905a2b917b9dd1cb1f1a717f96",
+  "derivedAsset": "D:\\UnityProjects\\\u5de5\u4e1a\u8f66\u95f4\u8bbe\u5907\u4e09\u7ef4\u53ef\u89c6\u5316\u76d1\u63a7\u4e0e\u4ea4\u4e92\u5de1\u68c0\u7cfb\u7edf\\Assets\\WorkshopDemo\\Resources\\WorkshopFaults\\tank-shell-thinned.fbx",
+  "derivedSha256": "b8adced15ff1872a2e458bec32b16cf7cb6cb083c36c09e516b35e463a272151",
+  "mechanism": "Preset spherical local thinning; not corrosion or stress solving",
+  "diameterM": null,
+  "nominalWallM": 0.008,
+  "centerRemainingWallM": 0.003999964479589835,
+  "presetRemovalDepthM": 0.004,
+  "unityLocalAnchorM": [
+    -0.4354,
+    -1.1354,
+    -3.0
+  ],
+  "originalVertices": 724,
+  "derivedVertices": 1337,
+  "unchangedNonlocalVertices": 724,
+  "originalNonmanifoldEdges": 0,
+  "derivedNonmanifoldEdges": 0,
+  "rimVertices": null,
+  "rimDepthM": null,
+  "originalBounds": [
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -1.2000000476837158,
+      1.7999999523162842
+    ],
+    [
+      1.5500000715255737,
+      5.099999904632568
+    ]
+  ],
+  "derivedBounds": [
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -1.2000000476837158,
+      1.7999999523162842
+    ],
+    [
+      1.5500000715255737,
+      5.099999904632568
+    ]
+  ]
+}

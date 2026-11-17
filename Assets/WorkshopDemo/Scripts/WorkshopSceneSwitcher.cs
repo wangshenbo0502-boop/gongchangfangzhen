@@ -12,6 +12,27 @@ namespace WorkshopDemo
         public const string InspectionScene = "Assets/WorkshopDemo/Scenes/WorkshopDemo.unity";
         public bool IsSwitching { get; private set; }
         public Font InterfaceFont { get; set; }
+        static Vector2Int windowSize;
+
+        public static void ToggleFullscreen()
+        {
+            if (Screen.fullScreen)
+            {
+                var size = windowSize;
+                if (size.x <= 0)
+                {
+                    var desktop = Screen.currentResolution;
+                    size = new Vector2Int(Mathf.Min(1280, desktop.width * 4 / 5), Mathf.Min(720, desktop.height * 4 / 5));
+                }
+                Screen.SetResolution(size.x, size.y, FullScreenMode.Windowed);
+            }
+            else
+            {
+                windowSize = new Vector2Int(Screen.width, Screen.height);
+                var desktop = Screen.currentResolution;
+                Screen.SetResolution(desktop.width, desktop.height, FullScreenMode.FullScreenWindow);
+            }
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Install()
@@ -28,6 +49,7 @@ namespace WorkshopDemo
         {
             var keyboard = Keyboard.current;
             if (keyboard == null || IsSwitching || WorkshopUI.Typing) return;
+            if (!Application.isEditor && keyboard.f11Key.wasPressedThisFrame) ToggleFullscreen();
             if (keyboard.digit1Key.wasPressedThisFrame || keyboard.numpad1Key.wasPressedThisFrame)
                 SwitchTo(AssemblyScene);
             else if (keyboard.digit2Key.wasPressedThisFrame || keyboard.numpad2Key.wasPressedThisFrame)

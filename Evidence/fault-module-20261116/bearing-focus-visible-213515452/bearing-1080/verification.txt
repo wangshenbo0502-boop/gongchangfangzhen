@@ -1,0 +1,49 @@
+Started 2026-11-16T21:39:13.5869277+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: P-BEAR, fixed views, stages and milestone neighbors; images require separate visual review
+PASS Review uses current WorkshopDemo scene
+PASS P-BEAR preview offers a closed section
+PASS Enabled Pump section
+PASS Top raycast Pump section (Pump section)
+PASS P-BEAR UGUI section removes occluding parts
+PASS P-BEAR original internal parts remain visible
+PASS Pump race loss is local, topology-preserving, at most 1 mm; most race vertices remain intact
+PASS Pump bearing closeup frames the damaged original race
+PASS Pump bearing teaching markers hide independently of nominal defect geometry
+PASS Pump bearing section marks the local reference and damaged race sector
+PASS Pump race reverse scrub is deterministic
+PASS Pump race zero progress restores original shared mesh without asset mutation
+PASS Enabled Pump section
+PASS Top raycast Pump section (Pump section)
+PASS P-BEAR closing section restores every original renderer state
+PASS P-BEAR exiting fault mode restores visibility and studio layers
+PASS P-BEAR section and closeup layers stay isolated from the live equipment
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 水泵工况
+PASS Button text fits 水泵工况
+PASS Button in screen Pump section
+PASS Button text fits Pump section
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS P-BEAR full visual matrix captured
+PASS P-BEAR mechanism snapshot captured
+
+Result: PASS

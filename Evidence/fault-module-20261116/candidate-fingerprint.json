@@ -1,0 +1,22 @@
+[
+  {
+    "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-005855959\\WorkshopPlatform.exe",
+    "length": 667648,
+    "sha256": "3D2B0639CCC2E3BF326257F74AFCF6832808836A9BDB66B01473FE4D4D093889"
+  },
+  {
+    "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261116-005855959\\WorkshopPlatform_Data\\Managed\\Assembly-CSharp.dll",
+    "length": 521216,
+    "sha256": "10A602F2C0B44817D5336BC3518354E93C78AD885F3236FDB07575CE8F7FC5D6"
+  },
+  {
+    "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\model\\source\\silo-viewer-fit-review.blend",
+    "length": 21355674,
+    "sha256": "E02D18A42C58192BBE9E9C57D826F266CFCEC2905A2B917B9DD1CB1F1A717F96"
+  },
+  {
+    "path": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Assets\\WorkshopDemo\\Resources\\WorkshopFaults\\tank-shell-perforated.fbx",
+    "length": 68060,
+    "sha256": "3FD52DBF2DF1A973FE7B5EE7B92E282A1F542D9F20DC9725A7A5098E72CFA0F3"
+  }
+]

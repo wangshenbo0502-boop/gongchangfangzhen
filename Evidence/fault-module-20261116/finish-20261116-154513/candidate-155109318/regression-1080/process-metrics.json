@@ -1,0 +1,13 @@
+{
+  "candidate": "R:\\Build\\WorkshopFaultReview-20261116-155109318\\WorkshopPlatform.exe",
+  "case": "regression-1080",
+  "processId": 29344,
+  "startedAt": "2026-11-16T15:52:32.1415391+08:00",
+  "endedAt": "2026-11-16T15:52:51.2395970+08:00",
+  "width": 1920,
+  "height": 1080,
+  "exitCode": 1,
+  "peakWorkingSetBytes": 452952064,
+  "memorySamples": 18,
+  "method": "External Windows process working set sampled each second; peak is a sampled lower bound."
+}

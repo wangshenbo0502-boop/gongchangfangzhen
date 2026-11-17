@@ -1,0 +1,2 @@
+PASS 更多 / 进入全屏 desktop 2560 1600
+FAIL Menu did not restore 1280x720: 2560 1600

@@ -1,0 +1,10 @@
+Started 2026-11-16T00:29:21.6688505+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: current candidate, six cases effects off/on, frame times, memory peaks, load and lifecycle; no historical baseline
+PASS Review uses current WorkshopDemo scene
+ENV GPU=NVIDIA GeForce RTX 4060 Laptop GPU API=Direct3D11 CPU=Intel(R) Core(TM) i9-14900HX RAM_MB=32559 quality=PC vsync=0 target_fps=-1 startup_seconds=6.981655
+Comparison is current-candidate effects off/on; it is not an upgrade-before/after baseline.
+PASS TK-LEAK effects=False eight-second performance sample
+PASS TK-LEAK effects=True eight-second performance sample
+PASS TK-LEAK closed studio inactive

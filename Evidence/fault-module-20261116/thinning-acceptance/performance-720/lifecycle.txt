@@ -1,0 +1,2 @@
+cycle=1 meshes=5556 materials=534 renderTextures=33 allocated_bytes=620560984 managed_bytes=14843904
+cycle=6 meshes=5556 materials=534 renderTextures=33 allocated_bytes=632784327 managed_bytes=15093760

@@ -1,0 +1,3 @@
+case,effects,frames,seconds,mean_ms,p95_ms,max_ms,peak_allocated_bytes,peak_working_set_bytes,open_seconds
+TK-LEAK,False,403,8.014945,19.88302,23.00262,56.79607,447857241,0,0.07514286
+TK-LEAK,True,396,8.015064,20.23994,23.04459,27.00233,465575229,0,0.07514286

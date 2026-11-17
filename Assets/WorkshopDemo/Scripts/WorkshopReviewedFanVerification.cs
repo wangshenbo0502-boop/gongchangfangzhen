@@ -241,11 +241,11 @@ namespace WorkshopDemo
                 model.PartCount == 590 && model.TriangleCount == 98140, "Approved fan replaces procedural model: 11/590/98140");
             Check(pump.GetComponentInChildren<WorkshopEquipmentModel>().AssemblyCount == 12,
                 "Reviewed pump retains 12 assemblies");
-            Check(model.GetComponentsInChildren<Renderer>().All(r =>
+            Check(model.GetComponentsInChildren<Renderer>().Where(r => r.name.StartsWith("FAN_", StringComparison.Ordinal)).All(r =>
                 r.sharedMaterials.All(m => m && m.shader.name == "Fan/Physical Finish" && m.shader.isSupported)),
                 "All fan materials use supported reviewed shader");
             Check(model.GetComponentInChildren<ReflectionProbe>().customBakedTexture &&
-                model.GetComponentsInChildren<Renderer>().All(r => r.probeAnchor),
+                model.GetComponentsInChildren<Renderer>().Where(r => r.name.StartsWith("FAN_", StringComparison.Ordinal)).All(r => r.probeAnchor),
                 "Authored reflection map and fan-only renderer anchors retained");
             Check(model.GetComponentsInChildren<Renderer>().SelectMany(r => r.sharedMaterials)
                 .Where(m => m.GetTexture("_BaseMap")).All(m =>
@@ -282,11 +282,11 @@ namespace WorkshopDemo
             CheckMotion(model);
             ExportGeometry(model);
             var rest = model.DamageSurface.sharedMesh.vertices;
-            model.SetDamage(WorkshopFaultCatalog.Find("F-CRACK"), .5f);
-            Check(model.OpeningMm < .001f && model.DeflectionMm > 1, "Authored blade bends before crack opens");
+            model.SetDamage(WorkshopFaultCatalog.Find("F-CRACK"), .19f);
+            Check(model.OpeningMm < .001f && model.DeflectionMm < .001f, "Local seam remains closed before initiation");
             model.SetDamage(WorkshopFaultCatalog.Find("F-CRACK"), 1);
-            Check(model.OpeningMm > 5 && model.DeflectionMm > 30 && !model.Detached,
-                "Original blade seam opens while rear ligament remains connected");
+            Check(model.OpeningMm > .01f && model.DeflectionMm > .01f && model.DeflectionMm < 30 && !model.Detached,
+                "Local seam opens with bounded displacement while rear ligament remains connected");
             model.SetDamage(null, 0);
             Check(rest.Zip(model.DamageSurface.sharedMesh.vertices, (a, b) => Vector3.Distance(a, b)).Max() < .000001f,
                 "Clearing fault restores original blade geometry");

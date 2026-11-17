@@ -1,13 +1,13 @@
 import asyncio
 from pathlib import Path
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, MagicMock, patch
 
 import httpx
 import pytest
 from fastapi import HTTPException
 
 from app.knowledge import chunks, documents
-from app.main import ChatRequest, authorize, chat, store
+from app.main import ChatRequest, KnowledgeStore, authorize, chat, store
 
 
 def test_chunking_preserves_tail_and_chinese():
@@ -23,8 +23,29 @@ def test_seed_documents_are_scene_specific():
     assert docs
     text = "\n".join(doc[3] for doc in docs)
     assert all(identifier in text for identifier in ("P-01", "TK-01", "F-01", "PLC-01"))
-    assert "5 个模型" in text and "16 个可操作工况" in text
+    assert "5 个模型" in text and "32" in text
     assert "模拟" in text and "未派发" in text
+    assert all(code in text for code in ("P-ALIGN", "P-DRY", "TK-VENT", "F-BLADE", "PLC-IO"))
+
+
+def test_explicit_fault_codes_survive_semantic_search_misses(monkeypatch):
+    instance = KnowledgeStore()
+    monkeypatch.setattr(instance, "embed", lambda _: [[0.0] * 512])
+    connection = MagicMock()
+    connection.__enter__.return_value = connection
+    monkeypatch.setattr(instance, "connect", lambda: connection)
+    exact = {"source": "泵.md", "chunk_index": 6, "content": "P-ALIGN 和 P-DRY 排查证据", "score": 1}
+    other = {"source": "储罐.md", "chunk_index": 1, "content": "储罐漏损", "score": .8}
+    connection.execute.return_value.fetchall.side_effect = [[exact], [exact], [other, exact]]
+    result = instance.search("p-align 和 P-DRY，P-ALIGN 与 P-01 有何关系")
+    assert len(result) == 2
+    assert result[0]["content"] == exact["content"]
+    assert result[0]["match"] == "faultCode"
+    assert result[1]["content"] == other["content"]
+    calls = connection.execute.call_args_list
+    assert len(calls) == 3
+    assert "P\\-ALIGN" in calls[0].args[1][1]
+    assert "P\\-DRY" in calls[1].args[1][1]
 
 
 def test_auth_rejects_wrong_token(monkeypatch):

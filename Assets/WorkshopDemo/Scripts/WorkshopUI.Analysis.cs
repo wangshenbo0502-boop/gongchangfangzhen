@@ -58,7 +58,23 @@ namespace WorkshopDemo
         {
             var device = simulation.Selected;
             if (!device) return;
-            var mode = WorkshopFaultCatalog.For(device.kind)[analysisMode.value];
+            if (simulation.IsExam(device)) { simulation.Notify("独立考核期间请根据现场证据诊断"); return; }
+            var fault = SelectedLearningFault();
+            var choices = new List<(string label, Action action)>();
+            var reference = WorkshopAnalysisResult.Load(fault.Code, out string referenceMessage);
+            var envelope = WorkshopAbaqusResult.Load(device.deviceId, fault.Code, out string envelopeMessage);
+            if (reference != null) choices.Add(("scikit-fem 参考件云图", OpenReferenceAnalysis));
+            if (envelope != null) choices.Add(("Abaqus ODB 包络", () => OpenAbaqusEnvelope(device, fault, envelope)));
+            AddFieldSources(device, fault, choices);
+            if (choices.Count == 1) { choices[0].action(); return; }
+            OpenQuickMenu(choices.Count == 0 ? "无可用分析结果\n" + referenceMessage + "\n" + envelopeMessage + "\n" + fieldSourceStatus : "选择分析来源", choices.ToArray());
+        }
+
+        void OpenReferenceAnalysis()
+        {
+            var device = simulation.Selected;
+            if (!device) return;
+            var mode = SelectedLearningFault();
             var result = WorkshopAnalysisResult.Load(mode.Code, out string message);
             if (result == null)
             {

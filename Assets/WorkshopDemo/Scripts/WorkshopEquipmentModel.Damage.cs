@@ -117,21 +117,19 @@ namespace WorkshopDemo
         }
 
         public void SetDamage(WorkshopFault fault, float progress)
+            => SetDamage(fault, progress, Mathf.Clamp01(progress) * (ProfileFor(fault)?.Duration ?? 18), null);
+
+        internal void SetDamage(WorkshopFault fault, float progress, float seconds, WorkshopDevice live)
         {
             Progress = fault == null ? 0 : Mathf.Clamp01(progress);
+            if (ApplyFaultProfile(fault, seconds, live)) return;
             if (ReviewedTankModel)
             {
                 Recipe = "验收版储罐外形";
                 return;
             }
             string code = fault?.Code ?? "";
-            if (reviewedDamage)
-            {
-                bool inspectSeal = code == "P-SEAL" && Progress > 0;
-                reviewedDamage.SetActive(inspectSeal);
-                foreach (var renderer in reviewedSealRenderers) renderer.enabled = !inspectSeal;
-            }
-            HasOpening = code == "F-CRACK" || code == "P-SEAL" || code == "TK-LEAK" ||
+            HasOpening = code == "F-CRACK" || code == "TK-LEAK" ||
                 code == "TK-SUPPORT" || code == "TK-PRESS" || code == "CV-JAM";
             Recipe = HasOpening ? "预设加载：弯曲 → 起裂 → 扩展 → 张开分离" :
                 fault?.Visual == FaultVisual.Heat ? "局部热变色示意" :

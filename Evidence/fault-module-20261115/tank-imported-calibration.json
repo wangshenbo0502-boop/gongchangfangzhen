@@ -1,0 +1,19 @@
+{
+  "anchorLocalM": [
+    -0.4354,
+    -1.1354,
+    -3
+  ],
+  "normalLocal": [
+    -0.2903,
+    -0.9569,
+    0
+  ],
+  "axisConversion": "Unity baked local=(Blender X, Blender Y, -Blender Z)",
+  "supersedesAnchor": "tank-perforation.json initial X sign assumption",
+  "method": "Imported mesh vertices inspected in Unity; runtime through-wall ray checks passed at 1920x1080 and 1280x720: zero centre intersections and two adjacent wall intersections",
+  "runtimeEvidence": [
+    "run-1080-calibrated/verification.txt",
+    "run-720-final/verification.txt"
+  ]
+}

@@ -1,0 +1,18 @@
+Started 2026-11-16T21:19:53.1327103+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: current candidate, P-IMPELLER effects off/on, frame times, memory peaks, load and lifecycle; no historical baseline
+PASS Review uses current WorkshopDemo scene
+PASS Opaque equipment window suspends background camera
+PASS Hidden UI restores original background camera state
+PASS Restored equipment UI suspends background camera again
+PASS Closing equipment restores background camera
+PASS Equipment lifecycle preserves an initially disabled background camera
+ENV GPU=NVIDIA GeForce RTX 4060 Laptop GPU API=Direct3D11 CPU=Intel(R) Core(TM) i9-14900HX RAM_MB=32559 quality=PC vsync=0 target_fps=-1 startup_seconds=6.824341
+Comparison is current-candidate effects off/on; it is not an upgrade-before/after baseline.
+PASS P-IMPELLER effects=False eight-second performance sample
+PASS P-IMPELLER effects=True eight-second performance sample
+PASS P-IMPELLER closed studio inactive
+Performance statistics recorded; PASS means collection succeeded, not a 60 FPS acceptance.
+
+Result: PASS

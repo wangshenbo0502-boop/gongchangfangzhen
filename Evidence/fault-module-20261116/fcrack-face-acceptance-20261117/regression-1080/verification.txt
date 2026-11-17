@@ -1,0 +1,9 @@
+Started 2026-11-17T18:36:00.0512247+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification
+FAIL System.InvalidOperationException: Current four-device monitoring scene
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <aed82222c530466fac304814ca378db4>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyUpgrade>d__33.MoveNext () [0x000c1] in <aed82222c530466fac304814ca378db4>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x0029c] in <aed82222c530466fac304814ca378db4>:0 
+Result: FAIL

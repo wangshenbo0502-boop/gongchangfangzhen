@@ -1,0 +1,122 @@
+Started 2026-11-16T01:16:09.7249554+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: four-device bindings and TK-LEAK; excludes other fault effects, solver data, real mouse and performance
+PASS Four stations loaded at 1920x1080
+PASS WorkshopDemo active
+PASS BIND-01 P-01 pump.seal.faces resolved independently
+PASS BIND-01 P-01 pump.impeller.inlet resolved independently
+PASS BIND-01 TK-01 tank.shell.frontLeak resolved independently
+PASS BIND-01 TK-01 tank.instruments.level resolved independently
+PASS BIND-01 F-01 fan.impeller.crack resolved independently
+PASS BIND-01 F-01 fan.impeller.hub resolved independently
+PASS BIND-01 PLC-01 cabinet.fieldTerminal.candidate resolved independently
+PASS TK-01 uses the approved geometry
+PASS Original station and inspection point, grounded scaled model and full-size nominal height
+PASS Tank envelope clears other equipment
+PASS Robot can reach the original approach point
+PASS Reviewed finishes and reflection are loaded
+PASS Enabled 查看设备
+PASS Top raycast 查看设备 (查看设备)
+PASS Inspection shows the approved 12 assemblies and 14-second path
+PASS Enabled 拆装
+PASS Top raycast 拆装 (拆装)
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS Manway cover clears axially before lateral travel
+PASS Enabled 重新组装
+PASS Top raycast 重新组装 (重新组装)
+PASS Mid-release reversal restores all home poses
+PASS Enabled 全部拆开
+PASS Top raycast 全部拆开 (全部拆开)
+PASS All 12 assemblies reach their separated positions
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS MOTION-01 Fault mode returns the tank along the authored route
+PASS Enabled 时间点
+PASS Top raycast 时间点 (时间点)
+PASS TK-LEAK timeline uses leak milestones
+PASS Enabled 最终状态
+PASS Top raycast 最终状态 (最终状态)
+PASS Queued terminal state waits for assembly
+PASS MOTION-01 All 12 assemblies seated before applying fault preview
+PASS MODEL-01 The same reviewed tank shows the local leak
+PASS Enabled 视图
+PASS Top raycast 视图 (视图)
+PASS Enabled 部件与参数
+PASS Top raycast 部件与参数 (部件与参数)
+PASS Teaching level and unavailable leak rate are identified
+PASS Button in screen 返回车间
+PASS Button text fits 返回车间
+PASS Button in screen 播放演化
+PASS Button text fits 播放演化
+PASS Button in screen 时间点
+PASS Button text fits 时间点
+PASS Button in screen 故障工况
+PASS Button text fits 故障工况
+PASS Button in screen 观察
+PASS Button text fits 观察
+PASS Button in screen 拆装
+PASS Button text fits 拆装
+PASS Button in screen 故障演示
+PASS Button text fits 故障演示
+PASS Button in screen 复位
+PASS Button text fits 复位
+PASS Button in screen 视图
+PASS Button text fits 视图
+PASS Button in screen 故障学习
+PASS Button text fits 故障学习
+PASS Button in screen 详细展示
+PASS Button text fits 详细展示
+PASS Enabled 视图
+PASS Top raycast 视图 (视图)
+PASS Enabled 故障近景
+PASS Top raycast 故障近景 (故障近景)
+PASS Close-up is local and faces the service aisle
+PASS Nominal leak anchor agrees at workshop and studio scales
+PASS SCRUB-01 Reverse and repeated jumps reconstruct identical droplets and readings
+PASS Enabled 复位
+PASS Top raycast 复位 (复位)
+PASS Enabled 复位
+PASS Top raycast 复位 (复位)
+PASS RESET-01 Two resets hide all leak effects
+PASS Enabled 观察
+PASS Top raycast 观察 (观察)
+PASS RESET-01 Observation restores tank, mesh, material and layer
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS TK-LEAK raises the linked marker and trips the station
+PASS LOOP-03 Duplicate injection and early repair are rejected
+PASS Actual robot dispatch
+PASS Enabled 设备操作
+PASS Top raycast 设备操作 (设备操作)
+PASS Enabled 观察与拆装
+PASS Top raycast 观察与拆装 (观察与拆装)
+PASS Enabled 故障演示
+PASS Top raycast 故障演示 (故障演示)
+PASS PREVIEW-01 Scrubbing during an open order never writes to live state
+PASS Enabled 返回车间
+PASS Top raycast 返回车间 (返回车间)
+PASS Closing the equipment window restores its preview
+PASS Robot reaches the actual tank approach point
+PASS LOOP-03 Leaving site revokes repair permission
+PASS Returning to the inspection point restores repair permission
+PASS Live presentation uses the tank's sampled level and replaces the schematic
+PASS Repair awaits acceptance and rejects duplicate submission
+PASS LOOP-03 Rejection preserves fault and allows redispatch
+PASS Robot reaches the actual tank approach point
+PASS Live presentation uses the tank's sampled level and replaces the schematic
+PASS Repair awaits acceptance and rejects duplicate submission
+PASS LOOP-01 Acceptance restores running condition once
+PASS Live leak presentation clears after acceptance
+PASS TK-LEAK raises the linked marker and trips the station
+PASS LOOP-03 Duplicate injection and early repair are rejected
+PASS Actual robot dispatch
+PASS Robot reaches the actual tank approach point
+PASS Live presentation uses the tank's sampled level and replaces the schematic
+PASS Repair awaits acceptance and rejects duplicate submission
+PASS LOOP-02 Acceptance preserves prior stop
+PASS Live leak presentation clears after acceptance
+PASS RESET-01 Two business resets leave no leakage or orders
+
+Result: PASS

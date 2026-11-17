@@ -1,0 +1,72 @@
+Started 2026-11-15T23:20:14.3538286+08:00
+Unity 6000.3.8f1 / 1920x1080
+Method: Windows Player, visible UGUI raycasts and control events, actual navigation
+Scope: 32 applicable cases, reversible preview, business loops, training and SYNTHETIC protocols; no real ODB verification
+PASS Current four-device monitoring scene
+PASS 32 applicable definitions plus 8 preserved historical definitions
+PASS BIND-01 P-01 pump.seal.faces resolved independently
+PASS BIND-01 P-01 pump.impeller.inlet resolved independently
+PASS BIND-01 TK-01 tank.shell.frontLeak resolved independently
+PASS BIND-01 TK-01 tank.instruments.level resolved independently
+PASS BIND-01 F-01 fan.impeller.crack resolved independently
+PASS BIND-01 F-01 fan.impeller.hub resolved independently
+PASS BIND-01 PLC-01 cabinet.fieldTerminal.candidate resolved independently
+PASS Envelope irregular-axis interpolation and clamping
+PASS Protocol rejection: wrong device
+PASS Protocol rejection: missing active channel
+PASS Protocol rejection: bad ODB hash
+PASS Protocol rejection: duplicate time
+PASS Envelope single temperature frame
+PASS V2 original labels, raw nodal values, discrete load axis and bounded frame cache
+PASS Protocol rejection: V2 wrong binding
+PASS Protocol rejection: V2 traversal
+PASS Protocol rejection: V2 static parameter cannot masquerade as seconds
+PASS Protocol rejection: V2 corrupted frame hash
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Button in screen 重新加载
+PASS Button text fits 重新加载
+PASS Synthetic temperature-only envelope rendered independently of a reference FEM
+PASS Button in screen 返回工况
+PASS Button text fits 返回工况
+PASS Synthetic original nodal field rendered in an independent viewport
+PASS P-HOT case definition and unique local binding
+PASS P-HOT deterministic reverse scrub and local focus
+PASS P-HOT no unrelated structural fracture
+PASS P-HOT exact geometry/transform/enabled/layer restoration after two resets
+PASS P-CAV case definition and unique local binding
+PASS P-CAV deterministic reverse scrub and local focus
+PASS P-CAV no unrelated structural fracture
+PASS P-CAV exact geometry/transform/enabled/layer restoration after two resets
+PASS P-SEAL case definition and unique local binding
+PASS P-SEAL deterministic reverse scrub and local focus
+PASS P-SEAL no unrelated structural fracture
+PASS P-SEAL exact geometry/transform/enabled/layer restoration after two resets
+PASS P-BEAR case definition and unique local binding
+PASS P-BEAR deterministic reverse scrub and local focus
+PASS P-BEAR no unrelated structural fracture
+PASS P-BEAR exact geometry/transform/enabled/layer restoration after two resets
+PASS P-ALIGN case definition and unique local binding
+PASS P-ALIGN deterministic reverse scrub and local focus
+PASS P-ALIGN no unrelated structural fracture
+PASS P-ALIGN exact geometry/transform/enabled/layer restoration after two resets
+PASS P-INLET case definition and unique local binding
+PASS P-INLET deterministic reverse scrub and local focus
+PASS P-INLET no unrelated structural fracture
+PASS P-INLET exact geometry/transform/enabled/layer restoration after two resets
+PASS P-IMPELLER case definition and unique local binding
+PASS P-IMPELLER deterministic reverse scrub and local focus
+PASS P-IMPELLER no unrelated structural fracture
+PASS P-IMPELLER exact geometry/transform/enabled/layer restoration after two resets
+PASS P-DRY case definition and unique local binding
+PASS P-DRY deterministic reverse scrub and local focus
+PASS P-DRY no unrelated structural fracture
+PASS P-DRY exact geometry/transform/enabled/layer restoration after two resets
+PASS Enabled 故障演示
+FAIL System.InvalidOperationException: Top raycast 故障演示 (none)
+  at WorkshopDemo.WorkshopCompactUIVerification.Check (System.Boolean condition, System.String message) [0x00003] in <0392bd6272844f68b1f745b91e0b602a>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Hit (UnityEngine.UI.Selectable control) [0x00102] in <0392bd6272844f68b1f745b91e0b602a>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification.Click (System.String name, UnityEngine.Transform scope) [0x00009] in <0392bd6272844f68b1f745b91e0b602a>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<VerifyUpgrade>d__32.MoveNext () [0x008b4] in <0392bd6272844f68b1f745b91e0b602a>:0 
+  at WorkshopDemo.WorkshopCompactUIVerification+<Start>d__7.MoveNext () [0x001c5] in <0392bd6272844f68b1f745b91e0b602a>:0 
+Result: FAIL

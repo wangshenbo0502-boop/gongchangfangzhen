@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace WorkshopDemo
 {
-    // Both cameras render the same equipment and the same changing mesh.
+    // Both cameras render the same equipment instance.
     public sealed class WorkshopEquipmentView : MonoBehaviour, IDragHandler, IScrollHandler
     {
         public WorkshopEquipmentModel Model { get; private set; }
@@ -18,9 +18,35 @@ namespace WorkshopDemo
         public float TargetDisassembly { get; private set; }
         public RenderTexture DetailTexture => detail;
         public bool Focused { get; private set; }
+        public bool FaultMode { get; private set; }
+        public bool WaitingForAssembly => FaultMode && Disassembly > 0;
+        internal WorkshopFaultProfile Profile => Model.ProfileFor(Fault);
+        internal float Duration => Profile?.Duration ?? 18;
+        internal bool CanShowPumpSection => FaultMode && !WaitingForAssembly && Profile != null &&
+            (((Fault.Code == "P-SEAL" || Fault.Code == "P-CAV") && Model.PumpFaultPresenter != null) ||
+                Model.LocalFaultPresenter?.CanShowSection == true);
+        internal bool ThermalVisible
+        {
+            get => Model.LocalFaultPresenter?.ThermalVisible ?? false;
+            set { if (Model.LocalFaultPresenter != null) Model.LocalFaultPresenter.ThermalVisible = value; SetProgress(Progress); }
+        }
+        internal float MotionScale
+        {
+            get => Model.LocalFaultPresenter?.MotionScale ?? 1;
+            set { if (Model.LocalFaultPresenter != null) Model.LocalFaultPresenter.MotionScale = value; SetProgress(Progress); }
+        }
+        internal bool TeachingVisible
+        {
+            get => Model.LocalFaultPresenter?.TeachingVisible ?? false;
+            set { if (Model.LocalFaultPresenter != null) Model.LocalFaultPresenter.TeachingVisible = value; SetProgress(Progress); }
+        }
+        internal bool PumpSectionOpen => CanShowPumpSection && ((Fault.Code == "P-SEAL" || Fault.Code == "P-CAV") ?
+            Model.PumpFaultPresenter.SectionOpen : Model.LocalFaultPresenter.SectionOpen);
         GameObject scene;
         WorkshopEquipmentModel tankFaultModel;
-        Camera viewCamera, detailCamera;
+        WorkshopDevice device;
+        Camera viewCamera, detailCamera, backgroundCamera;
+        bool backgroundRenderingSuppressed, backgroundCameraWasEnabled;
         RenderTexture target, detail;
         RectTransform rect;
         RawImage image, detailImage;
@@ -28,17 +54,25 @@ namespace WorkshopDemo
         float yaw = -25, pitch = 12, zoom = 1;
         float nextMesh;
         int focusAssembly = -1;
+        float? queuedProgress;
+        GameObject legacyDetail;
+        int legacyDetailLayer;
+        Quaternion previewRotorHome;
 
         public void Initialize(WorkshopDevice device, WorkshopFault fault, RawImage inset)
         {
             Fault = fault;
+            this.device = device;
             rect = (RectTransform)transform;
             image = GetComponent<RawImage>();
             detailImage = inset;
             canvas = GetComponentInParent<Canvas>();
+            backgroundCamera = WorkshopCamera.Main;
+            SetBackgroundRenderingSuppressed(canvas.enabled);
             scene = new GameObject("Inspectable equipment studio");
             scene.transform.position = new Vector3(260,100,100);
             Model = CreateStudioModel(device, true);
+            if (Model.Rotor) previewRotorHome = Model.Rotor.localRotation;
             viewCamera = Camera("Equipment orbit camera",28);
             detailCamera = Camera("Same component closeup camera",27);
             detail = Texture(720,560);
@@ -66,14 +100,47 @@ namespace WorkshopDemo
             return model;
         }
 
-        public void ShowTankFaultModel(WorkshopDevice device, bool show)
+        public void SetFaultMode(bool active)
         {
-            if (!Model.ReviewedTankModel || (DisplayModel != Model) == show) return;
-            if (show && !tankFaultModel) tankFaultModel = CreateStudioModel(device, false);
-            tankFaultModel.gameObject.SetActive(show);
-            Model.gameObject.SetActive(!show);
+            if (FaultMode == active) return;
+            Playing = false;
+            queuedProgress = null;
+            RestoreDetailLayer();
+            DisplayModel.SetDamage(null, 0);
+            if (Model.Rotor) Model.Rotor.localRotation = previewRotorHome;
+            FaultMode = active;
+            Progress = 0;
+            if (active) TargetDisassembly = 0;
+            UpdateDisplayModel();
             ResetView();
-            SetProgress(0);
+            if (active && !WaitingForAssembly) ApplyProgress(0);
+        }
+
+        internal void SelectPumpFault(WorkshopFault fault) => SelectFault(fault);
+
+        internal void SelectFault(WorkshopFault fault)
+        {
+            if (Fault == fault || !Model || fault == null || fault.Kind != Model.Kind) return;
+            SetFaultMode(false);
+            Fault = fault;
+            SetFaultMode(true);
+        }
+
+        internal void TogglePumpSection()
+        {
+            if (!CanShowPumpSection) return;
+            bool opened = !PumpSectionOpen;
+            if (Fault.Code == "P-SEAL" || Fault.Code == "P-CAV") Model.PumpFaultPresenter.SetSection(opened);
+            else Model.LocalFaultPresenter.SetSection(opened);
+            SetProgress(Progress);
+            if (opened) FocusDamage();
+            else ResetView();
+        }
+
+        void UpdateDisplayModel()
+        {
+            if (tankFaultModel) tankFaultModel.gameObject.SetActive(false);
+            Model.gameObject.SetActive(true);
         }
 
         Camera Camera(string name, int layer)
@@ -123,18 +190,77 @@ namespace WorkshopDemo
 
         public void SetProgress(float value)
         {
+            if (WaitingForAssembly)
+            {
+                queuedProgress = Mathf.Clamp01(value);
+                return;
+            }
+            ApplyProgress(value);
+        }
+
+        void ApplyProgress(float value)
+        {
             Progress = Mathf.Clamp01(value);
             var model = DisplayModel;
-            model.SetDamage(Fault,Progress);
-            if (!model.ReviewedCabinetModel && !model.ReviewedTankModel)
-                foreach (var filter in model.GetComponentsInChildren<MeshFilter>(true)) filter.gameObject.layer = 28;
-            if (model.DamageSurface) model.DamageSurface.gameObject.layer = 27;
+            model.SetDamage(FaultMode ? Fault : null, Progress);
+            if (FaultMode && Profile != null)
+            {
+                model.FaultPresenter?.SetDetailLayer(27);
+                model.PumpFaultPresenter?.SetDetailLayer(27);
+                model.LocalFaultPresenter?.SetDetailLayer(27);
+                if (model.Rotor && model.FaultFrame.HasValue && model.Kind == DeviceKind.Fan)
+                {
+                    var frame = model.FaultFrame.Value;
+                    float limit = WorkshopDevice.ProtectionProgress(Fault.Code) * Duration;
+                    float seconds = Fault.Trips ? Mathf.Min(frame.Seconds, limit) : frame.Seconds;
+                    float direction = Fault.Code == "F-REVERSE" && Progress > 0 ? -1 : 1;
+                    // Surface inspections share one rotor phase for direct geometric comparisons.
+                    if (Fault.Code == "F-CRACK" || Fault.Code == "F-BLADE" || Fault.Code == "F-RUB") seconds = 0;
+                    model.Rotor.localRotation = previewRotorHome * Quaternion.AngleAxis(
+                        Fault.Code == "F-IMBAL" ? WorkshopFaultProfile.ImbalancePreviewAngle(seconds,
+                            model.NominalRpm, Fault.SpeedRatio) : seconds * 180 * direction, Vector3.forward);
+                    model.LocalFaultPresenter?.SyncRotorPhase();
+                }
+            }
+            else if (FaultMode && model.TryGetFaultFocus(out _, out _))
+            {
+                var part = model.DamageSurface.gameObject;
+                if (legacyDetail != part)
+                {
+                    RestoreDetailLayer();
+                    legacyDetail = part;
+                    legacyDetailLayer = part.layer;
+                    part.layer = 27;
+                }
+            }
+            else RestoreDetailLayer();
             if (Progress >= 1) Playing = false;
         }
 
+        void RestoreDetailLayer()
+        {
+            Model.FaultPresenter?.SetDetailLayer(null);
+            Model.PumpFaultPresenter?.SetDetailLayer(null);
+            Model.LocalFaultPresenter?.SetDetailLayer(null);
+            if (!FaultMode && Model.Rotor) Model.Rotor.localRotation = previewRotorHome;
+            if (legacyDetail) legacyDetail.layer = legacyDetailLayer;
+            legacyDetail = null;
+        }
+
         public void SetDisassemblyTarget(float value)
-            => TargetDisassembly = Mathf.Clamp(value,0,Model.AssemblyCount);
-        public void FocusDamage() { Focused = true; focusAssembly = -1; zoom = 1; yaw = -8; pitch = 8; }
+        {
+            if (!FaultMode) TargetDisassembly = Mathf.Clamp(value, 0, Model.AssemblyCount);
+        }
+        public void FocusDamage()
+        {
+            if (WaitingForAssembly || !DisplayModel.TryGetFaultFocus(out _, out var normal)) return;
+            Focused = true;
+            focusAssembly = -1;
+            zoom = 1;
+            yaw = normal == Vector3.zero ? -8 : Mathf.Atan2(-normal.x, -normal.z) * Mathf.Rad2Deg;
+            pitch = normal == Vector3.zero ? 8 :
+                Mathf.Clamp(Mathf.Asin(Mathf.Clamp(normal.normalized.y, -1, 1)) * Mathf.Rad2Deg, -80, 80);
+        }
         public void FocusAssembly(int i) { Focused = true; focusAssembly = i; zoom = 1; }
         public void ResetView() { Focused = false; focusAssembly = -1; zoom = 1; yaw = -25; pitch = 12; }
         public void Preset(int value)
@@ -158,71 +284,127 @@ namespace WorkshopDemo
         {
             if (!Model) return;
             bool visible = canvas.enabled;
+            SetBackgroundRenderingSuppressed(visible);
             viewCamera.enabled = visible;
-            detailCamera.enabled = visible && detailImage.gameObject.activeInHierarchy;
-            if (!visible) { nextMesh = Time.unscaledTime+.05f; return; }
-            if (Playing && Time.unscaledTime >= nextMesh)
+            if (!visible)
             {
-                float elapsed = Mathf.Min(.2f,Time.unscaledTime-nextMesh+.05f);
+                detailCamera.enabled = false;
+                Model.PumpFaultPresenter?.UpdateAudio(false);
                 nextMesh = Time.unscaledTime+.05f;
-                SetProgress(Progress+elapsed/18);
+                return;
             }
-            else if (!Playing) nextMesh = Time.unscaledTime+.05f;
-            if (AutoOrbit) yaw += Time.unscaledDeltaTime*12;
+            bool assembling = WaitingForAssembly;
             float assemblySpeed = Model.AssemblySeconds > 0 ? Model.AssemblyCount / Model.AssemblySeconds : 2.5f;
             Disassembly = Mathf.MoveTowards(Disassembly,TargetDisassembly,Time.unscaledDeltaTime*assemblySpeed);
             Model.SetDisassembly(Disassembly,OpenDoor,RemoveGuard);
+            if (assembling && !WaitingForAssembly)
+            {
+                UpdateDisplayModel();
+                ApplyProgress(queuedProgress ?? 0);
+                queuedProgress = null;
+            }
+            if (Playing && FaultMode && !WaitingForAssembly && Profile != null)
+                SetProgress(Progress + Time.unscaledDeltaTime / Duration);
+            else if (Playing && FaultMode && !WaitingForAssembly && Time.unscaledTime >= nextMesh)
+            {
+                float elapsed = Mathf.Min(.2f,Time.unscaledTime-nextMesh+.05f);
+                nextMesh = Time.unscaledTime+.05f;
+                SetProgress(Progress+elapsed/Duration);
+            }
+            else if (!Playing || WaitingForAssembly) nextMesh = Time.unscaledTime+.05f;
+            detailCamera.enabled = visible && detailImage.gameObject.activeInHierarchy && !WaitingForAssembly &&
+                DisplayModel.TryGetFaultFocus(out _, out _);
+            Model.PumpFaultPresenter?.UpdateAudio(Playing && FaultMode && !WaitingForAssembly);
+            if (AutoOrbit) yaw += Time.unscaledDeltaTime*12;
         }
 
         void LateUpdate()
         {
-            if (!Model || !canvas.enabled) return;
+            if (!Model || !canvas.enabled)
+            {
+                if (detailCamera) detailCamera.enabled = false;
+                return;
+            }
             UpdateRenderTarget();
             viewCamera.aspect = rect.rect.width/Mathf.Max(1,rect.rect.height);
             var model = DisplayModel;
-            Bounds b = model.DamageSurface.GetComponent<Renderer>().bounds;
-            if (model.ReviewedTankModel && (!Focused || focusAssembly >= 0))
-                b = model.ReviewedTankBounds(Focused ? focusAssembly : -1);
-            else if (model.ReviewedCabinetModel && (!Focused || focusAssembly >= 0))
-                b = model.ReviewedCabinetBounds(Focused ? focusAssembly : -1);
-            else if (Focused && focusAssembly >= 0)
-            {
-                var renderers = model.AssemblyTransform(focusAssembly).GetComponentsInChildren<MeshRenderer>();
-                if (renderers.Length > 0)
-                {
-                    b = renderers[0].bounds;
-                    foreach (var r in renderers) if (r.enabled) b.Encapsulate(r.bounds);
-                }
-            }
-            if (!Focused && !model.ReviewedCabinetModel && !model.ReviewedTankModel)
-                foreach (var r in model.GetComponentsInChildren<MeshRenderer>())
-                    if (r.enabled) b.Encapsulate(r.bounds);
+            Bounds faultBounds = default;
+            bool hasFaultFocus = FaultMode && !WaitingForAssembly &&
+                model.TryGetFaultFocus(out faultBounds, out _);
+            // A close inspection of pump internals must not place surrounding casing in front of the lens.
+            bool internalInspection = Focused && focusAssembly < 0 && hasFaultFocus &&
+                PumpSectionOpen && model.LocalFaultPresenter?.SectionOpen == true;
+            viewCamera.cullingMask = internalInspection ? 1 << 27 : (1 << 28) | (1 << 27);
+            Bounds b;
+            if (Focused && focusAssembly < 0 && hasFaultFocus) b = faultBounds;
+            else if (model.ReviewedTankModel) b = model.ReviewedTankBounds(Focused ? focusAssembly : -1);
+            else if (model.ReviewedCabinetModel) b = model.ReviewedCabinetBounds(Focused ? focusAssembly : -1);
+            else b = model.VisibleBounds(Focused && focusAssembly >= 0 ? model.AssemblyTransform(focusAssembly) : null);
             Vector3 direction = Quaternion.Euler(pitch,yaw,0)*Vector3.back;
-            var rotation = Quaternion.LookRotation(-direction,Vector3.up);
-            float tangent = Mathf.Tan(viewCamera.fieldOfView*Mathf.Deg2Rad/2);
-            float fitted = .05f;
-            for (int i = 0; i < 8; i++)
-            {
-                Vector3 corner = Quaternion.Inverse(rotation)*Vector3.Scale(b.extents,
-                    new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1));
-                fitted = Mathf.Max(fitted,Mathf.Abs(corner.y)/tangent-corner.z,
-                    Mathf.Abs(corner.x)/(tangent*viewCamera.aspect)-corner.z);
-            }
-            float distance = fitted*1.12f*zoom;
+            float distance = FittedDistance(viewCamera, b, direction)*1.12f*zoom;
             viewCamera.transform.position = b.center+direction*distance;
             viewCamera.transform.LookAt(b.center);
-            var closeBounds = model.DamageSurface.GetComponent<Renderer>().bounds;
+            if (!detailCamera.enabled || !model.TryGetFaultFocus(out var closeBounds, out var normal)) return;
+            detailCamera.cullingMask = Fault.Code == "TK-LEAK"
+                ? (1 << 27) | (1 << 28)
+                : 1 << 27;
             detailCamera.aspect = (float)detail.width/detail.height;
-            float closeDistance = Mathf.Max(closeBounds.extents.y,closeBounds.extents.x/detailCamera.aspect)/
-                Mathf.Tan(detailCamera.fieldOfView*Mathf.Deg2Rad*.5f)+closeBounds.extents.z;
-            detailCamera.transform.position = closeBounds.center+
-                Quaternion.Euler(8,-9,0)*Vector3.back*Mathf.Max(.08f,closeDistance*1.24f);
+            Vector3 closeDirection = normal == Vector3.zero ? Quaternion.Euler(8,-9,0)*Vector3.back :
+                (normal + Vector3.up * .12f).normalized;
+            if (Fault.Code == "TK-LEAK" && model.FaultPresenter != null)
+            {
+                closeBounds = model.FaultPresenter.CloseupBounds;
+                closeDirection = (normal + model.transform.right * .24f + Vector3.up * .08f).normalized;
+            }
+            if (Fault.Code == "P-SEAL" && model.PumpFaultPresenter != null)
+                closeBounds = model.PumpFaultPresenter.CloseupBounds;
+            float framingScale = 1f;
+            closeBounds.extents *= framingScale;
+            float closeDistance = FittedDistance(detailCamera, closeBounds, closeDirection);
+            detailCamera.transform.position = closeBounds.center+closeDirection*Mathf.Max(.08f,closeDistance*1.24f);
             detailCamera.transform.LookAt(closeBounds.center);
         }
-        void OnEnable() { if (scene) scene.SetActive(true); }
-        void OnDisable() { if (scene) scene.SetActive(false); }
+
+        static float FittedDistance(Camera camera, Bounds bounds, Vector3 direction)
+        {
+            var inverse = Quaternion.Inverse(Quaternion.LookRotation(-direction, Vector3.up));
+            float tangent = Mathf.Tan(camera.fieldOfView * Mathf.Deg2Rad * .5f);
+            float distance = .05f;
+            for (int i = 0; i < 8; i++)
+            {
+                Vector3 corner = inverse * Vector3.Scale(bounds.extents,
+                    new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
+                distance = Mathf.Max(distance, Mathf.Abs(corner.y) / tangent - corner.z,
+                    Mathf.Abs(corner.x) / (tangent * camera.aspect) - corner.z);
+            }
+            return distance;
+        }
+        void SetBackgroundRenderingSuppressed(bool suppressed)
+        {
+            if (!backgroundCamera || backgroundRenderingSuppressed == suppressed) return;
+            if (suppressed)
+            {
+                backgroundCameraWasEnabled = backgroundCamera.enabled;
+                backgroundCamera.enabled = false;
+            }
+            else backgroundCamera.enabled = backgroundCameraWasEnabled;
+            backgroundRenderingSuppressed = suppressed;
+        }
+
+        void OnEnable()
+        {
+            if (scene) scene.SetActive(true);
+            if (canvas) SetBackgroundRenderingSuppressed(canvas.enabled);
+        }
+        void OnDisable()
+        {
+            SetBackgroundRenderingSuppressed(false);
+            if (Model) SetFaultMode(false);
+            if (scene) scene.SetActive(false);
+        }
         void OnDestroy()
         {
+            SetBackgroundRenderingSuppressed(false);
             if (viewCamera) viewCamera.targetTexture = null;
             if (detailCamera) detailCamera.targetTexture = null;
             if (scene) Destroy(scene);

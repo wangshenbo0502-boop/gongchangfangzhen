@@ -1,0 +1,1 @@
+PASS real Windows mouse at 1280x720: terminal preview exported 38% and an empty unavailable leak-rate value

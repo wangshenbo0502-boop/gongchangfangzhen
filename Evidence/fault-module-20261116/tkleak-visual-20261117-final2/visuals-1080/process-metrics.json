@@ -1,0 +1,13 @@
+{
+  "candidate": "D:\\UnityProjects\\工业车间设备三维可视化监控与交互巡检系统\\Build\\WorkshopFaultReview-20261117-133924994\\WorkshopPlatform.exe",
+  "case": "visuals-1080",
+  "processId": 28216,
+  "startedAt": "2026-11-17T13:40:23.5300493+08:00",
+  "endedAt": "2026-11-17T13:40:55.1153012+08:00",
+  "width": 1920,
+  "height": 1080,
+  "exitCode": 0,
+  "peakWorkingSetBytes": 1145024512,
+  "memorySamples": 31,
+  "method": "External Windows process working set sampled each second; peak is a sampled lower bound."
+}
